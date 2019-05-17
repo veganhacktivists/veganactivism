@@ -603,10 +603,13 @@ Post content on reddit.com</b> that's relevant to the community without directly
 							</b> unique visits with a total of 
 							<b>
 							<?
-							while ($row = $result_total_clicks->fetch_assoc()) {
-				
-							echo $row['total_clicks'];
-							}
+							if ($result_anonvoiceless->num_rows > 0) {
+											while($row = $result_total_clicks->fetch_assoc()) {
+												echo $row["total_clicks"];
+											}
+											} else {
+											echo "null";
+											}
 							?>
 							</b>
 							unique clicks that went directly to activist websites. <i>Thanks!</i>
