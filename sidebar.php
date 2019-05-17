@@ -568,6 +568,7 @@ Post content on reddit.com</b> that's relevant to the community without directly
 </div>
 						
 						<?php
+
 						$servername = "localhost";
 						$username = "vrdntf_vact_user";
 						$password = "cpsess9272889677";
@@ -603,9 +604,10 @@ Post content on reddit.com</b> that's relevant to the community without directly
 							</b> unique visits with a total of 
 							<b>
 							<?php
-							if ($result_anonvoiceless->num_rows > 0) {
+							
+							if ($result_total_clicks->num_rows > 0) {
 											while($row = $result_total_clicks->fetch_assoc()) {
-												echo $row["total_clicks"];
+												echo $row['total_clicks'];
 											}
 											} else {
 											echo "null";

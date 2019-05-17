@@ -1168,7 +1168,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 // thank you http://detectmobilebrowsers.com
 ?>
 						   
-						   <i><i class="far fa-smile-beam"></i>&nbsp;Special thanks to <a href="https://yourveganfallacyis.com" target="_blank" style="color:#ff0097;"><u>YourVeganFallacyIs</u></a> and <a href="http://reddit.com/u/AllieLikesReddit" target="_blank" style="color:#ff0097;"><u>AllieLikesReddit</u></a>! Also, <a href="http://Fidelumgames.wordpress.com" target="_blank" style="color:#ff0097;"><u>Jake Jollimore!</u></a></i> </font>
+						   <i><i class="far fa-smile-beam"></i>&nbsp;Special thanks to the organizations partnered with us to keep their pages updated!</i> </font>
 						   
                         </div>
 						<br>
