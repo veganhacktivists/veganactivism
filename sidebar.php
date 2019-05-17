@@ -602,7 +602,7 @@ Post content on reddit.com</b> that's relevant to the community without directly
 							?>
 							</b> unique visits with a total of 
 							<b>
-							<?
+							<?php
 							if ($result_anonvoiceless->num_rows > 0) {
 											while($row = $result_total_clicks->fetch_assoc()) {
 												echo $row["total_clicks"];
