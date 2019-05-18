@@ -8,10 +8,7 @@
 		<!-- END WELCOME IMPORT -->
 		
 		<?php
-		$servername = "localhost";
-		$username = "vrdntf_vact_user";
-		$password = "cpsess9272889677";
-		$dbname = "vrdntf_veganactivism";
+		include 'dbconfig.php';
 
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
