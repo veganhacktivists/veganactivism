@@ -1,6 +1,10 @@
 <div class="col-lg-4 mt-30px mt-lg-0">
-                        
-                      							<div class="widget bg-color-grayflame" style="padding: 12px 0px 1px 23px;">
+
+						<div class="widget bg-color-grayflame" style="padding: 12px 0px 1px 23px;">
+						<a href="https://veganactivism.org"><img src="https://i.imgur.com/NgQ72ay.png" style="width:315px;padding-bottom: 20px;"></a>
+						</div>
+							
+							<div class="widget bg-color-grayflame" style="padding: 12px 0px 1px 23px;">
                             <h5 class="widget-title" style="margin-bottom: 0px;"><i class="fas fa-bell"></i>&nbsp;&nbsp;Activism Newsletter</h5>
                             <ul class="list-unstyled post-simple-list mb-0" style="padding: 0px 36px 15px 6px;">
 							
