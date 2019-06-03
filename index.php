@@ -180,7 +180,7 @@
 						    <div class="col-md-6 col-lg-6">
                                 <article>
                                     <div class="post_img">
-                                        <img src="https://veganactivism.org/banners/meatthevictims.png" alt="In just 5 minutes you can help 5 or more people become Vegan right now!">
+                                        <img src="https://veganactivism.org/banners/meatthevictims.jpg" alt="In just 5 minutes you can help 5 or more people become Vegan right now!">
                                     </div>
                                     <div class="post_text">
                                 
