@@ -32,8 +32,8 @@ $destination = [
  'adoptacollege.org' => 'https://adoptacollege.org?ref=veganactivism.org',
  'facebook.com' => 'https://www.facebook.com/groups/digitalveganactivists?ref=veganactivism.org',
  '5minutes5vegans.org' => 'https://5minutes5vegans.org/?ref=veganactivism.org',
- 'veganoutreach.org/vegan-mentorship-program' => 'https://veganoutreach.org/vegan-mentorship-program/?ref=veganactivism.org',
- 'youaretheirvoice.com' => 'https://youaretheirvoice.com/contact?volunteer'
+ 'veganhacktivists.org' => 'https://veganhacktivists.org/?ref=veganactivism.org',
+ 'veganoutreach.org/vegan-mentorship-program' => 'https://veganoutreach.org/vegan-mentorship-program/?ref=veganactivism.org'
 ];
 
 

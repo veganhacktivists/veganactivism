@@ -59,9 +59,6 @@
 		$sql_foodnotbombs = "SELECT clicks FROM link_clicks WHERE (link_url = 'http://foodnotbombs.net/new_site/contacts.php?ref=veganactivism.org')";
 		$result_foodnotbombs = $conn->query($sql_foodnotbombs);
 		
-		$sql_youaretheirvoice = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://youaretheirvoice.com/contact?volunteer')";
-		$result_youaretheirvoice = $conn->query($sql_youaretheirvoice);
-		
 		$sql_adoptacollege = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://adoptacollege.org?ref=veganactivism.org')";
 		$result_adoptacollege = $conn->query($sql_adoptacollege);
 		
@@ -79,6 +76,9 @@
 		
 		$sql_5m5v = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://5minutes5vegans.org/?ref=veganactivism.org')";
 		$result_5m5v = $conn->query($sql_5m5v);
+		
+		$sql_veghack = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://veganhacktivists.org/?ref=veganactivism.org')";
+		$result_veghack = $conn->query($sql_veghack);
 		
 		?>
 								
@@ -1098,8 +1098,8 @@
                                             </span>
                                             <span class="post_meta_date" style="color: #000;"><b>
 											<?php 
-											if ($result_youaretheirvoice->num_rows > 0) {
-											while($row = $result_youaretheirvoice->fetch_assoc()) {
+											if ($result_veghack->num_rows > 0) {
+											while($row = $result_veghack->fetch_assoc()) {
 												echo $row["clicks"];
 											}
 											} else {
