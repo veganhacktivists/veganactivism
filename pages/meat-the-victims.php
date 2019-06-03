@@ -53,8 +53,9 @@
 											</h2>	
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;To start volunteering with Meat The Victims, click a button below!<br><br>
 
-										<button onclick="window.open('https://veganactivism.org/redirect.php?destination=meat-the-victims.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit Homepage</button>
 										<button onclick="window.open('https://meat-the-victims.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;margin-left: 6px;"><i class="fas fa-person-sign"></i>&nbsp;&nbsp;Volunteer Today</button>
+										<button onclick="window.open('https://veganactivism.org/redirect.php?destination=meat-the-victims.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit Homepage</button>
+										
 										
 			
 
