@@ -88,7 +88,7 @@
 
 	<body style="color:#494f56;">
     <div id="main-content" class="bg-color-gray">
-	<div class="page-container scene-main scene-main--fade_In" style="padding-top: 30px;background: url(https://veganactivism.org/images/background.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+	<div class="page-container scene-main scene-main--fade_In" style="padding-top: 30px;background: url(https://i.imgur.com/gYoDMOO.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
 	<div class="container mb-30px">
 	<div class="row">
 	<div class="col-lg-8">
