@@ -33,6 +33,8 @@ $destination = [
  'facebook.com' => 'https://www.facebook.com/groups/digitalveganactivists?ref=veganactivism.org',
  '5minutes5vegans.org' => 'https://5minutes5vegans.org/?ref=veganactivism.org',
  'veganhacktivists.org' => 'https://veganhacktivists.org/?ref=veganactivism.org',
+ 'veganuary.com' => 'https://veganuary.com/blog/fundraising-for-veganuary/?ref=veganactivism.org',
+ 'meat-the-victims.org' => 'https://meat-the-victims.org/?ref=veganactivism.org',
  'veganoutreach.org/vegan-mentorship-program' => 'https://veganoutreach.org/vegan-mentorship-program/?ref=veganactivism.org'
 ];
 

@@ -80,6 +80,12 @@
 		$sql_veghack = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://veganhacktivists.org/?ref=veganactivism.org')";
 		$result_veghack = $conn->query($sql_veghack);
 		
+		$sql_veganuary = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://veganuary.com/blog/fundraising-for-veganuary/?ref=veganactivism.org')";
+		$result_veganuary = $conn->query($sql_veganuary);
+		
+		$sql_meatthevictims = "SELECT clicks FROM link_clicks WHERE (link_url = 'https://meat-the-victims.org/?ref=veganactivism.org')";
+		$result_meatthevictims = $conn->query($sql_meatthevictims);
+		
 		?>
 								
                         <div class="row blog_posts cardPostStyle">
@@ -171,6 +177,42 @@
 						   
 						   
 						   
+						    <div class="col-md-6 col-lg-6">
+                                <article>
+                                    <div class="post_img">
+                                        <img src="https://veganactivism.org/banners/meatthevictims.png" alt="In just 5 minutes you can help 5 or more people become Vegan right now!">
+                                    </div>
+                                    <div class="post_text">
+                                
+                                        <h5 class="post_title">
+                                            <a href="https://veganactivism.org/pages/meat-the-victims">Peacefully enter farms & protest for media exposure and lives.
+                                            </a>
+                                        </h5>
+                                        <div class="post_content">
+                                            <p>Meat The Victims is a new generation of the growing community willing to disobey unjust laws together to abolish animal exploitation.</p>
+                                        </div>
+										
+										<a href="https://veganactivism.org/pages/meat-the-victims"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
+										<a href="https://veganactivism.org/redirect.php?destination=meat-the-victims.org" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit site</button></a>
+										
+									 <div class="post_meta_top">
+                                            <span class="post_meta_category">
+                                                ONLINE ACTIVISM
+                                            </span>
+                                            <span class="post_meta_date" style="color: #000;"><b>
+											<?php 
+											if ($result_meatthevictims->num_rows > 0) {
+											while($row = $result_meatthevictims->fetch_assoc()) {
+												echo $row["clicks"];
+											}
+											} else {
+											echo "null";
+											}
+											?> </b> &nbsp;Activists clicked on this.</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 						   
 						   
 						    <div class="col-md-6 col-lg-6">
@@ -1024,7 +1066,7 @@
 										
 									 <div class="post_meta_top">
                                             <span class="post_meta_category">
-                                                LOCAL ACTIVISM
+                                                ONLINE ACTIVISM
                                             </span>
                                             <span class="post_meta_date" style="color: #000;"><b>
 											<?php 
@@ -1052,7 +1094,44 @@
 							
 							
 							
+										   <div class="col-md-6 col-lg-6">
+                                <article>
+                                    <div class="post_img">
+                                        <img src="https://veganactivism.org/banners/veganuary.jpg" alt="Fundraising is a fun way of getting active with Veganuary!">
+                                    </div>
+                                    <div class="post_text">
+                                
+                                        <h5 class="post_title">
+                                            <a href="https://veganactivism.org/pages/veganuary">Fundraising is a fun way of getting active with Veganuary!
+                                            </a>
+                                        </h5>
+                                        <div class="post_content">
+                                            <p>Whether you’re a one-person fundraiser or a local group, the possibilities for helping are endless!</p>
+                                        </div>
+										
+										<a href="https://veganactivism.org/pages/veganuary"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
+										<a href="https://veganactivism.org/redirect.php?destination=veganuary.com" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit site</button></a>
+										
+									 <div class="post_meta_top">
+                                            <span class="post_meta_category">
+                                                LOCAL ACTIVISM
+                                            </span>
+                                            <span class="post_meta_date" style="color: #000;"><b>
+											<?php 
+											if ($result_veganuary->num_rows > 0) {
+											while($row = $result_veganuary->fetch_assoc()) {
+												echo $row["clicks"];
+											}
+											} else {
+											echo "null";
+											}
+											?> </b> &nbsp;Activists clicked on this.</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
 							
+										  
 							
 							
 							
