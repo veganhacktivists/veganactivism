@@ -11,12 +11,12 @@
 		<div class="row blog_posts cardPostStyle" style="padding: 0px 16px;">
                                 <article>
                                     <div class="post_img">
-                                        <img src="https://veganactivism.org/banners/full-size/big-vegan-hacktivists.jpg" alt="Get involved with: You Are Their Voice">
+                                        <img src="https://veganactivism.org/banners/full-size/big-veganuary.jpg" alt="Get involved with: Veganuary">
                                     </div>
                                     <div class="post_text">
                                        
                                         <h4 class="post_title">
-                                            Get involved with: Vegan Hacktivists
+                                            Get involved with: Veganuary
                                             </h4>
 										<hr style="margin: 0px;">
                                         <div class="post_content">
@@ -35,32 +35,27 @@
 											What are they all about?
 											</h2>
 
-											
-											
-											We're a group of passionate Vegan Activists that volunteer our time and skills towards projects assigned to us by You Are Their Voice. Every project we volunteer on aims to help spread compassion through Veganism by supporting both vegans, non-vegans and activists in some shape way or form. We commit to one project a month, with a cooldown period every three months. ❤ 
+											Veganuary is dedicated to changing public attitudes, while providing all the information and practical support required to make the transition to veganism as easy and enjoyable as possible. Veganuary has had an incredible degree of success in a very short time and is changing lives all over the world.
 											<br><br>
-										
-											In fact, VeganActivism.org is one of the Vegan Hacktivists very first projects! We're funded by <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;">our Patreon</a> supporters which in turn helps us support vegan activists in need of resources, along with funding us to continue to build more projects like this.
+											Veganuary’s founders, Jane and Matthew, knew that month-long pledges were not unusual, but felt that it could be done differently, and perhaps more successfully, by focusing on the month of January; a time for resolutions and new beginnings.
 											<br><br>
+											Veganuary.com is the largest website of its kind on the internet. With vegan recipes, expert advice and information, it provides all the answers to Why go vegan, but it is the support offered to answer How to go vegan that truly sets Veganuary apart.<br><br>
 											
 											<h2 class="post_title mb-20px">
 											What type of activism do they do?
 											</h2>		
-
-										
-											We build both online projects (like websites and apps) that help spread veganism, and we fund current and would-be vegan activists with resources they need such as printing materials, website hosting, transportation costs, sample food for booths, etc.
+											Veganuary’s vision is a world where veganism is a mainstream lifestyle choice, with positive action at all levels of society and government to promote the benefits of plant-based eating. We specialise in inspiring and educating people to make a significant lifestyle change, and then provide the support they need to help maintain it.
 											<br><br>
-									
-											Right now we're looking for online volunteers to volunteer their skills in both programming (LAMP Stack) and design (Photoshop, logo creation, banners, ect). If you have programming or design skills, we could really use your help!
+											Non-judgemental, approachable, realistic and fresh. Veganuary’s communications are designed to appeal to the wider, non-vegan community, as we believe this is key to achieving our vision. We have created safe, welcoming, and kind environments on all of our communication platforms and are committed to keeping them this way. We support and promote our aims and objectives, and that of organisations with whom we directly collaborate. These organisations share our vision for the future.
 											<br><br>
 									
 											<h2 class="post_title mb-20px">
 											How do I get involved?
 											</h2>	
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;To start volunteering with the Vegan Hacktivists, click a button below!<br><br>
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;To start volunteering with You Are Their Voice, click a button below!<br><br>
 
-										<button onclick="window.open('https://veganactivism.org/redirect.php?destination=veganhacktivists.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit Homepage</button>
-										<button onclick="window.open('https://veganhacktivists.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;margin-left: 6px;"><i class="fas fa-person-sign"></i>&nbsp;&nbsp;Volunteer Today</button>
+										<button onclick="window.open('https://veganactivism.org/redirect.php?destination=youaretheirvoice.com');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit Homepage</button>
+										<button onclick="window.open('https://youaretheirvoice.com/contact?volunteer');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;margin-left: 6px;"><i class="fas fa-person-sign"></i>&nbsp;&nbsp;Volunteer Today</button>
 										
 			
 

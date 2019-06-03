@@ -11,12 +11,12 @@
 		<div class="row blog_posts cardPostStyle" style="padding: 0px 16px;">
                                 <article>
                                     <div class="post_img">
-                                        <img src="https://veganactivism.org/banners/full-size/big-vegan-hacktivists.jpg" alt="Get involved with: You Are Their Voice">
+                                        <img src="https://veganactivism.org/banners/full-size/big-meat-the-victims.jpg" alt="Get involved with: Meat The Victims">
                                     </div>
                                     <div class="post_text">
                                        
                                         <h4 class="post_title">
-                                            Get involved with: Vegan Hacktivists
+                                            Get involved with: Meat The Victims
                                             </h4>
 										<hr style="margin: 0px;">
                                         <div class="post_content">
@@ -35,32 +35,26 @@
 											What are they all about?
 											</h2>
 
-											
-											
-											We're a group of passionate Vegan Activists that volunteer our time and skills towards projects assigned to us by You Are Their Voice. Every project we volunteer on aims to help spread compassion through Veganism by supporting both vegans, non-vegans and activists in some shape way or form. We commit to one project a month, with a cooldown period every three months. ❤ 
+											Meat The Victims is a new generation of the growing community of citizens willing to disobey unjust laws together to abolish animal exploitation. Locking down inside the very places the animals are kept hostage and allowing the public to meet the victims of their choices through personal footage with them.
 											<br><br>
-										
-											In fact, VeganActivism.org is one of the Vegan Hacktivists very first projects! We're funded by <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;">our Patreon</a> supporters which in turn helps us support vegan activists in need of resources, along with funding us to continue to build more projects like this.
-											<br><br>
-											
 											<h2 class="post_title mb-20px">
 											What type of activism do they do?
 											</h2>		
 
-										
-											We build both online projects (like websites and apps) that help spread veganism, and we fund current and would-be vegan activists with resources they need such as printing materials, website hosting, transportation costs, sample food for booths, etc.
+		
+											The first ever Meat the Victims took place on April 6th 2018 at the Australian piggery where Leah had met that Mother pig. Leah went back inside, but this time with 67 other activists who locked down the piggery at 4am. The outside team arrived at 8am and the media waited in suspense for the inside team to come out.
 											<br><br>
-									
-											Right now we're looking for online volunteers to volunteer their skills in both programming (LAMP Stack) and design (Photoshop, logo creation, banners, ect). If you have programming or design skills, we could really use your help!
+											The impact of this action for the animals was incredibly powerful. Between the media and the attendee’s footage being shared there were hundred of thousands of views. The truth shocked the pubic as they met the victims of their choices.
 											<br><br>
-									
+											Since that day Meat The Victims has become a global movement. A new generation of the growing community of citizens willing to disobey unjust laws together to abolish animal exploitation. Locking down inside the very places the animals are hostage and allowing the public to meet the victims of their choices.
+											<br><br>
 											<h2 class="post_title mb-20px">
 											How do I get involved?
 											</h2>	
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;To start volunteering with the Vegan Hacktivists, click a button below!<br><br>
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;To start volunteering with Meat The Victims, click a button below!<br><br>
 
-										<button onclick="window.open('https://veganactivism.org/redirect.php?destination=veganhacktivists.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit Homepage</button>
-										<button onclick="window.open('https://veganhacktivists.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;margin-left: 6px;"><i class="fas fa-person-sign"></i>&nbsp;&nbsp;Volunteer Today</button>
+										<button onclick="window.open('https://veganactivism.org/redirect.php?destination=meat-the-victims.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit Homepage</button>
+										<button onclick="window.open('https://meat-the-victims.org');" type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;margin-left: 6px;"><i class="fas fa-person-sign"></i>&nbsp;&nbsp;Volunteer Today</button>
 										
 			
 
