@@ -551,7 +551,7 @@
                                             </a>
                                         </h5>
                                         <div class="post_content">
-                                            <p>If you want to make a difference for animals, something you can do is to collaborate with Animal Ethics.</p>
+                                            <p>If you want to make a difference for animals, or provide resources for animal advocates, you can collaborate with Animal Ethics.</p>
                                         </div>
 										
 										<a href="https://veganactivism.org/pages/animal-ethics"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
@@ -1058,7 +1058,7 @@
                                             </a>
                                         </h5>
                                         <div class="post_content">
-                                            <p>Our vegan robots are constantly scanning social media, they retweet people we think are looking for help with going Vegan!</p>
+                                            <p>Our vegan robots are constantly scanning social media, they retweet people we think are looking for help!</p>
                                         </div>
 										
 										<a href="https://veganactivism.org/pages/5-minutes-5-vegans"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
