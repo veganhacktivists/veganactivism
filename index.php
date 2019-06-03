@@ -1077,20 +1077,20 @@
 							 <div class="col-md-6 col-lg-6">
                                 <article>
                                     <div class="post_img">
-                                        <img src="https://veganactivism.org/banners/you-are-their-voice.jpg" alt="Know code or graphic design? You Are Their Voice needs you!">
+                                        <img src="https://veganactivism.org/banners/vegan-hacktivists.jpg" alt="Know code or graphic design? The Vegan Hacktivists need you!">
                                     </div>
                                     <div class="post_text">
                                 
                                         <h5 class="post_title">
-                                            <a href="https://veganactivism.org/pages/you-are-their-voice">Know code or graphic design? You Are Their Voice needs you!
+                                            <a href="https://veganactivism.org/pages/you-are-their-voice">Know code or graphic design? The Vegan Hacktivists need you!
                                             </a>
                                         </h5>
                                         <div class="post_content">
-                                            <p>You Are Their Voice builds online projects like VeganActivism.org; we can really use the code & design help!</p>
+                                            <p>The Vegan Hacktivists build online projects like VeganActivism.org; we can really use the code & design help!</p>
                                         </div>
 										 
-										<a href="https://veganactivism.org/pages/you-are-their-voice"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
-										<a href="https://veganactivism.org/redirect.php?destination=youaretheirvoice.com" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit site</button></a>
+										<a href="https://veganactivism.org/pages/vegan-hacktivists"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
+										<a href="https://veganactivism.org/redirect.php?destination=veganhacktivists.org" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;margin-left: 7px;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="far fa-link"></i>&nbsp;&nbsp;Visit site</button></a>
 										
 									 <div class="post_meta_top">
                                             <span class="post_meta_category">
