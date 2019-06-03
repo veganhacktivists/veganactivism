@@ -36,10 +36,10 @@
 											</h2>
 
 											
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+											
 											We're a group of passionate Vegan Activists that volunteer our time and skills towards projects assigned to us by You Are Their Voice. Every project we volunteer on aims to help spread compassion through Veganism by supporting both vegans, non-vegans and activists in some shape way or form. We commit to one project a month, with a cooldown period every three months. ❤ 
 											<br><br>
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+										
 											In fact, VeganActivism.org is one of the Vegan Hacktivists very first projects! We're funded by <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;">our Patreon</a> supporters which in turn helps us support vegan activists in need of resources, along with funding us to continue to build more projects like this.
 											<br><br>
 											
@@ -47,10 +47,10 @@
 											What type of activism do they do?
 											</h2>		
 
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+										
 											We build both online projects (like websites and apps) that help spread veganism, and we fund current and would-be vegan activists with resources they need such as printing materials, website hosting, transportation costs, sample food for booths, etc.
 											<br><br>
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+									
 											Right now we're looking for online volunteers to volunteer their skills in both programming (LAMP Stack) and design (Photoshop, logo creation, banners, ect). If you have programming or design skills, we could really use your help!
 											<br><br>
 									
