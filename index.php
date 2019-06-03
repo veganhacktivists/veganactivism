@@ -1082,7 +1082,7 @@
                                     <div class="post_text">
                                 
                                         <h5 class="post_title">
-                                            <a href="https://veganactivism.org/pages/you-are-their-voice">Know code or graphic design? The Vegan Hacktivists need you!
+                                            <a href="https://veganactivism.org/pages/vegan-hacktivists">Know code or graphic design? The Vegan Hacktivists need you!
                                             </a>
                                         </h5>
                                         <div class="post_content">

@@ -11,7 +11,7 @@
 		<div class="row blog_posts cardPostStyle" style="padding: 0px 16px;">
                                 <article>
                                     <div class="post_img">
-                                        <img src="https://veganactivism.org/banners/full-size/big-you-are-their-voice.jpg" alt="Get involved with: You Are Their Voice">
+                                        <img src="https://veganactivism.org/banners/full-size/big-vegan-hacktivists.jpg" alt="Get involved with: You Are Their Voice">
                                     </div>
                                     <div class="post_text">
                                        
