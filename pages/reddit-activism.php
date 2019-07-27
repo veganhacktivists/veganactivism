@@ -37,15 +37,15 @@
 											</h2>		
 
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
-											Reddit is used by millions of people. By making an account and reaching out to others online, you have the opportunity to make a difference from your bedroom. An easy way to be a Reddit Activist is to use the comments section to your advantage. We recommend that you use a logical, calm, and personable tone. When you demonstrate strong familiarity with a subject, your reader is more likely to be receptive to the information that you provide, so use sources! Visit one of the guides below for some easy to share replies to commonly argued stances by pre-vegans.
+											Reddit is used by millions of people. By making an account and reaching out to others online, you have the opportunity to make a difference from your bedroom. An easy way to be a Reddit Activist is to use the comments section to your advantage. We recommend that you use a logical, calm, and personable tone. When you demonstrate strong familiarity with a subject, your reader is more likely to be receptive to the information that you provide, so use sources! Visit one of the guides below for some easy to share replies to commonly argued stances by pre-vegans. 
 											<br>
 											<br>
 											<h2 class="post_title mb-20px">
 											Reddit Activism Golden Guidlines
 											</h2>
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;Reddit communities do NOT tolerate <i>direct</i> agenda pushing. While there's nothing wrong with posting content that you enjoy or have an opinion on, posting something to directly push towards your agenda (politcal, moral, etc) is not what reddit is about.
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;Reddit communities do NOT tolerate <i>direct</i> agenda pushing. While there's nothing wrong with posting content that you enjoy or have an opinion on, posting something to directly push towards your agenda (political, moral, etc) is not what reddit is about.
 											<br><br>
-											With that said, if you adhere to the golden gudielines below (RAGG), you'll be able to post to reddit communities in the most respectful and relevant way possible.
+											With that said, if you adhere to the golden guidelines below (RAGG), you'll be able to post to Reddit communities in the most respectful and relevant way possible. 
 											<br><br>
 											<ul style="padding-left: 37px;">
 											<li>1. Always respect the subreddit's individual rules.</li>
@@ -82,9 +82,7 @@
 											<li><i style="color:#ff0097;">(r/recipes)</i>  Vegan Scrambled Eggs recipe to save the animals from death.</li>
 											</ul>
 										
-											Generally reddit communities will allow your posts if they are relevant and not preachy or confrontational. Again, there's nothing wrong with posting relevant material you enjoy to 
-											subreddits, it's when you directly push your lifestyle or political agenda in readers' faces that it becomes an issue. I think most community mods would agree. Either way, follow RAGG and 
-											you'll have the best chance to spread veganism and compassion using reddit moving forward without intruding on communities.
+											Generally reddit communities will allow your posts if they are relevant and not preachy or confrontational. Again, there's nothing wrong with posting relevant material you enjoy to subreddits, it's when you directly push your lifestyle or political agenda in readers' faces that it becomes an issue. I think most community mods would agree. Either way, follow RAGG and you'll have the best chance to spread veganism and compassion using reddit moving forward without intruding on communities. 
 											<br><br>
 											<h2 class="post_title mb-20px">
 											Example subs to post relevant content in:
@@ -93,15 +91,15 @@
 											<table>
 
 												  <tr style="border: 1px solid #ff0097;">
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Recipes" target="_blank">/r/Recipes</a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/GifRecipes" target="_blank">/r/GifRecipes</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Food" target="_blank">/r/Food</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Cooking" target="_blank">/r/Cooking</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/FoodPorn" target="_blank">/r/FoodPorn</a></td>
 
 												  </tr>
 												  
-												   <tr style="border: 1px solid #ff0097;">
-												   <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Nutrition" target="_blank">/r/Nutrition</a></td>
+<tr style="border: 1px solid #ff0097;">
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/LikeUs" target="_blank">/r/LikeUs</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Health" target="_blank">/r/Health</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Fitness" target="_blank">/r/Fitness</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/HealthyFood" target="_blank">/r/HealthyFood</a></td>
@@ -117,7 +115,7 @@
 </tr>
 
 <tr style="border: 1px solid #ff0097;">
-												  <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Skeptic" target="_blank">/r/Skeptic</a></td>
+												  <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/EyeBleach" target="_blank">/r/EyeBleach</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Philosophy" target="_blank">/r/Philosophy</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/CasualConversation" target="_blank">/r/CasualConversation</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/MorbidReality" target="_blank">/r/MorbidReality</a></td>
@@ -132,7 +130,7 @@
 </tr>
 
 <tr style="border: 1px solid #ff0097;">
-												   <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Enviroment" target="_blank">/r/Enviroment</a></td>
+												   <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Environment" target="_blank">/r/Environment</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Documentaries" target="_blank">/r/Documentaries</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/Futurology" target="_blank">/r/Futurology</a></td>
 <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="http://reddit.com/r/LoseIt" target="_blank">/r/LoseIt</a></td>
@@ -154,14 +152,47 @@
 											<h2 class="post_title mb-20px">
 											How to make a successful post:
 											</h2>
-											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;There are a few important parts to a post being successful. Quality content, good title, posted in an appropriate subreddit, and posted at the right time. For these last two points, I use <a href="http://redditlist.com/" target="_blank" style="color:#ff0097;">Reddit List</a> to help me figure out where to post content, and <a href="https://dashboard.laterforreddit.com/analysis/" target="_blank" style="color:#ff0097;">Reddit Later</a> to tell me when is the best time to post.
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;There are a few important parts to a post being successful. Quality content, good title, posted in an appropriate subreddit, and posted at the right time. 
 <br><br>
-For the other two parts to successful posts, there is no simple and easy guide. I follow several animal rights groups on Facebook, so some content I find there. Other content I find through searching Google News, Google Scholar, or YouTube, and some content I find right here on reddit, and simply repost it to other subreddits. Sometimes it will be a combination where something I see posted by an animal rights group may lead me to a study, I then search YouTube for videos showing a similar effect, and come across something entirely different that will make for a great gif image.
+<h5>Finding an appropriate subreddit</h5>
+<br>
+
+I recommend using <a href="http://redditlist.com/" target="_blank" style="color:#ff0097;">Reddit List</a>. This tool makes it easy to search for communities on any topic and see which ones are the largest and most active. For just about any type of content you post there will probably be a subreddit focused on that type of media (/r/gifs, /r/pics, /r/videos, /r/books, /r/documentaries, /r/news). If the content relates to a place there will be subreddits for the city, region, and country that place is in. If the content is cute there will be subreddits like /r/Aww, /r/EyeBleach, and /r/RarePuppers where it will fit in.
 
 <br><br>
-Finally, redditors upvote and click on a lot more image links than anything else. I have found /r/videos to be the most difficult subreddit to get karma in, while almost any image content is much more successful. If a video can be turned into a gif without losing its message, then it is definitely worth <a href="https://imgur.com/vidgif" target="_blank" style="color:#ff0097;">turning it into a gif</a>.
+<h5>Finding the best time to post and crafting an appropriate title</h5>
+<br>
+
+
+I recommend using <a href="http://redditsmarter.com/" target="_blank" style="color:#ff0097;">Reddit Smarter<a/> to help with this. Type in the name of any subreddit on the site. It will pull the most recent posts from that subreddit and will show you what scores posts tend to get by time of day, as well as how factors like the length of title and certain keywords impact scores by time of day. Be careful to follow the rules of the subreddit you are posting on when crafting a title. Some subreddits require that you do not alter the titles of articles you post.
 <br><br>
-<i>Thanks to <a href="https://reddit.com/user/lnfinity" target="_blank" style="color:#ff0097;">/u/lnfinity</a> for posting this on <a href="https://reddit.com/r/VeganActivism" target="_blank" style="color:#ff0097;">/r/VeganActivism</a>!</i>
+There is no need to sit around all day waiting for the optimal time to post a submission on Reddit. You can schedule your posts to get posted to Reddit from your account at the time you want them to. <a href="https://cronnit.us/" target="_blank" style="color:#ff0097;">Cronnit</a> is an excellent free tool for doing this.
+
+
+<br><br>
+<h5>Quality Content</h5>
+<br>
+
+There are four primary places where I find things that are worth sharing. Facebook, Instagram, YouTube, and <a href="https://www.google.com/alerts" target="_blank" style="color:#ff0097;">Google Alerts</a>.
+<br><br>
+Google Alerts allows you to set up keywords that you are interested in, and it will send you a single email each day with news stories that are relevant to the keywords you have chosen. I watch for keywords that will notify me about prominent authors and writers whose work I enjoy, breaking undercover investigations, news stories on the environmental impacts of animal agriculture, and relevant legislative issues like ag-gag laws.
+<br><br>
+On Facebook, Instagram, and YouTube, following animal rights groups like The Humane League, Animal Equality, Animal Charity Evaluators, and Mercy For Animals will be a good way to find content. I also recommend following companies like Tofurky, Veggie Grill, Beyond Meat, and Just that are making vegan products more widely available. I also follow many animal sanctuaries, vegan recipe pages, and individuals with cute pet pigs, chickens, and turkeys.
+<br><br>
+You can also find good content by using the search features on these sites. If you want to share videos of cows playing with balls or pigs snuggling search for those things on YouTube. If you want to share scientific articles on social bonds in animals you can search for that too! 
+<br><br>
+Redditors tend to upvote and click on a lot more image links than anything else. I have found /r/videos to be among the most difficult subreddits to get karma in, while almost any image content is much more successful. If a video can be turned into a gif without losing its message, then it is definitely worth turning it into a gif using Imgur or Gfycat. 
+
+<br><br>
+<h5>Where to comment</h5>
+<br>
+If you want to reach a lot of people with a comment, the most important thing is to make your comments early. The first 2-3 hours of a post’s life are the best time to get comments in. If you are commenting on a post that is 6 hours old, don’t expect many people to see your comment, and by 18 hours it is unlikely your comment will be seen by more than a couple people.
+<br><br>
+My favorite tool for finding good places to comment is the <a href="https://happytools.glitch.me/discussions/" target="_blank" style="color:#ff0097;">Discussions tool</a>. This will show you places where people are commenting about relevant keywords within the last few hours (I recommend keeping the limit to no more than 3 hours old so that you are commenting on the newest posts).
+
+
+<br><br>
+<i>A big thanks to <a href="https://reddit.com/user/lnfinity" target="_blank" style="color:#ff0097;">/u/lnfinity</a> for helping us with the above section of this guide to reddit activism, we really appreciate it!</i>
 <br><br>
 
 
@@ -210,8 +241,9 @@ Click the <a href="https://imgur.com/a/EGJSooj" target="_blank" style="color:#ff
 	
 
 As you can see, at the end of the day, we've improved the reputation of Vegans (which needs all the help that it can get), we've made a few unexpected connections, and we've made folks that we've responded to more open to Veganism in general (let alone the folks reading our comments). That's the kind of activism and kindess that ensures you're leaving the biggest and most postive impact for the animals and our planet.
-											
-											
+<br>
+<br>
+There is also no need to reply to every single person or comment. If someone is being truly antagonistic or hostile do not feel bad for simply not replying, and remember to use Reddit’s report feature when another commenter is violating subreddit or site-wide rules.
 
 <br><br>
 <h2 class="post_title mb-20px">
