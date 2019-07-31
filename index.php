@@ -371,7 +371,7 @@
                                             </a>
                                         </h5>
                                         <div class="post_content">
-                                            <p>Challenge 22+ offers users a free, supportive online framework for trying veganism for 22 days.</p>
+                                            <p>Challenge 22 offers users a free, supportive online framework for trying veganism for 22 days.</p>
                                         </div>
 										
 										<a href="https://veganactivism.org/pages/challenge-22"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#292323;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-info-square"></i>&nbsp;&nbsp;Learn more</button></a>
