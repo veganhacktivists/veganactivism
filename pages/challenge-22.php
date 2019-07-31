@@ -40,7 +40,7 @@
 											If you have been vegan for over 6 months, have patience and empathy for new vegans and the motivation to help make the vegan population grow, you’re exactly what Challange 22 is looking for! Join their mentoring program by hitting the "Volunteer" button below.
 											<br><br>
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
-											Challenge 22 offers participants a free, supportive online framework for trying veganism for 22 days. More than 100K people from all over the world have participated in the project since its launch in March 2014. 
+											Challenge 22 offers participants a free, supportive online framework for trying veganism for 22 days. More than 300K people from all over the world have participated in the project since its launch in March 2014. 
 While similar programs around the world are based on vegan starter-kits and email guides, Challenge 22 is an interactive program that offers a unique combination of group support and personal mentoring. 
 											<br><br>
 											
