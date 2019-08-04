@@ -365,12 +365,8 @@ Post content on reddit.com</b> that's relevant to the community without directly
 							?>
 							</b>
 							unique clicks that went directly to activist websites. <i>Thanks!</i>
-							<!--
 							<br><br>
-							<i class="fas fa-person-sign"></i> Follow us on <a href="https://twitter.com/YoureTheirVoice" style="color:#ff0097;" target="_blank">Twitter</a> or <a href="https://www.instagram.com/youaretheirvoice/" style="color:#ff0097;" target="_blank">Instagram</a>!
-							-->
-							<br><br>
-							Feel free to <a href="https://youaretheirvoice.com/contact?veganactivism" style="color:#ff0097;" target="_blank">contact us</a>, or <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;" target="_blank">donate if you can</a>, it's very appreciated!&nbsp;&nbsp;<i class="fas fa-hand-holding-heart"></i>
+							Feel free to <a href="https://veganhacktivists.org/contact?veganactivism" style="color:#ff0097;" target="_blank">contact us</a>, or <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;" target="_blank">donate if you can</a>, it's very appreciated!&nbsp;&nbsp;<i class="fas fa-hand-holding-heart"></i>
 							
 							</ul>
 							</div>
