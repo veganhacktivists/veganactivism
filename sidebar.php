@@ -376,7 +376,10 @@ Post content on reddit.com</b> that's relevant to the community without directly
 							
 							
 							
-							
+							<div class="widget bg-color-grayflame" style="padding: 12px 0px 12px 0px;">
+                            <center><a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/0Go5mpt.png" style="width:200px;padding-bottom: 10px;"></a></center>
+							<center>This site is designed and hosted by the <a href="https://veganhacktivists.org" style="color:#ff0097;" target="_blank">Vegan Hacktivists.</a></center>
+							</div>
 							
 							
 							
