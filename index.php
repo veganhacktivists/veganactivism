@@ -1207,14 +1207,14 @@
                                     <div class="post_text">
                                 
                                         <h5 class="post_title">
-                                            <a href="https://youaretheirvoice.com/contact?veganactivism">Add your organization here or recommend one for us! 
+                                            <a href="https://veganhacktivists.org/contact?veganactivism">Add your organization here or recommend one for us! 
                                             </a>
                                         </h5>
                                         <div class="post_content">
                                             <p>New organizations are added on a case-by-case basis. Let us know who you'd like to be added!</p>
                                         </div>
 										
-										<a href="https://youaretheirvoice.com/contact?veganactivism" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#bd1fc1;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add an Organization</button></a>
+										<a href="https://veganhacktivists.org/contact?veganactivism" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="display: inline; box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#bd1fc1;padding: 3px 15px 3px 15px;border-width: 2px;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add an Organization</button></a>
 										
 									 <div class="post_meta_top">
                                             <span class="post_meta_category">
