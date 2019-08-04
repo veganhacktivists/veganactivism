@@ -56,8 +56,8 @@
 									</button></a>
                                
 									
-                                    <a href="https://youaretheirvoice.com/" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#53e24f;padding: 3px 15px 3px 15px;border-width: 2px;">
-									<i class="fas fa-hands-helping"></i>&nbsp;&nbsp;&nbsp;Visit us: You Are Their Voice
+                                    <a href="https://veganhacktivists.org/" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#53e24f;padding: 3px 15px 3px 15px;border-width: 2px;">
+									<i class="fas fa-hands-helping"></i>&nbsp;&nbsp;&nbsp;Visit us: Vegan Hacktivists
 									</button></a>
 									
 									
@@ -65,8 +65,8 @@
 									<i class="fal fa-download"></i>&nbsp;&nbsp;&nbsp;Activist Resource Bundle
 									</button></a>
 									
-									<a href="https://youaretheirvoice.com/subscribe" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;padding: 3px 15px 3px 15px;border-width: 2px;">
-									<i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;You Are Their Voice Newsletter
+									<a href="https://veganhacktivists.org/subscribe" target="_blank"><button type="submit" class="btn rounded-1 btn-shadow " style="box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);margin-bottom: 10px;pointer-events: all; cursor: pointer;font-size: 16px;background-color:#dc3545;padding: 3px 15px 3px 15px;border-width: 2px;">
+									<i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;Vegan Hacktivists Newsletter
 									</button></a>
                                 </li>
                              
