@@ -5,7 +5,10 @@
     @include('partials.welcome-card')
 
     <div class="row">
-
+      @foreach($organizations as $organization)
+        @component('components.org-card', ['organization' => $organization])
+        @endcomponent
+      @endforeach
     </div>
   </div>
 
