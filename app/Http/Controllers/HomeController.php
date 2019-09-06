@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\OrganizationRepository;
+
 class HomeController extends Controller
 {
     /**
@@ -9,7 +11,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -17,8 +18,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(OrganizationRepository $repository)
     {
-        return view('home');
+        $organizations = $repository->all();
+
+        return view('home', compact('organizations'));
     }
 }
