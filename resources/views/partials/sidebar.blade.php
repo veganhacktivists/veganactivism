@@ -83,7 +83,244 @@
     </ul>
 </div>
 
-<div class="card p-5 my-3">things you can do card</div>
+<div class="card p-4 my-3">
+    <ul class="list-unstyled list mb-0">
+
+        <li>
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">1</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-red"> Always ask for vegan options</strong>
+                    when you're eating out, walking by a restaurant, store, or bar.
+                    Even if you already know that they don't have vegan options, asking creates a demand for it.
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">2</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-purple">Buy vegan-friendly stickers</strong>
+                    and place them on walls, lamp poles, & other public areas.
+                    You can also attach QR code stickers on meat products. Please respect local laws!
+                    <a href="https://www.etsy.com/market/vegan_activism_stickers" class="primary-color" target="_blank">Find stickers</a>.
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">3</span>
+
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-green">Move bookstore cookbooks</strong>
+                    so that plant-friendly recipes have more exposure near meat-based recipe books.
+                    Please be respectful and ask these stores first if you can rearrange them!
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">4</span>
+
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-yellow">Update your social media</strong>
+                    profile descriptions or website with a link to a vegan youtube video!
+                    Use a goo.gl link to track clicks and stats.
+                    We recommend
+                    <a href="https://www.youtube.com/watch?v=UROxRLbVils" class="primary-color" target="_blank">Gary</a> or
+                    <a href="https://www.youtube.com/watch?v=Z3u7hXpOm58" class="primary-color" target="_blank">Earthling Ed's</a> speech!
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">5</span>
+
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-light-pink">Print vegan-friendly flyers</strong>
+                    and pamphlets for people's mailboxes, or under their doors!
+                    <a href="https://www.youtube.com/watch?v=YMKUsOcvTHI" class="primary-color" target="_blank">
+                        Hand them out to people</a>, leave them at libraries, colleges, supermarkets, or hang them in public places!
+                    Print or order resources by
+                    <a href="https://veganactivism.org/resources/example-flyers-brochures-pamphlets-to-print.pdf" class="primary-color" target="_blank">clicking here</a>.
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">6</span>
+
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-dark-blue">Contact stores around you</strong>
+                    and ask them to carry more vegan / plant-based / dairy-free items!
+                    It creates demand, and it only takes a few seconds to google your local store's website and email address!
+                    <a href="https://veganactivism.org/resources/example-email-to-local-stores.pdf" class="primary-color" target="_blank">Example</a>.
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">7</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-light-blue">Host potlucks / vegan meals</strong>
+                    by inviting friends and family over and cooking for them! Show them how good plant-based meats, milks and desserts actually are!
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">8</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-yellow-sand">Leave positive Yelp reviews</strong>
+                    at restaurants that offered vegan options and give feedback to restaurants that you'd like to see more plant-based options!
+                    <a href="https://veganactivism.org/resources/example-business-restaurant-reviews.pdf" class="primary-color" target="_blank">Examples</a>.
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">9</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-light-purple">Wear vegan shirts / clothes</strong>
+                    and other items! By wearing vegan-friendly messages on your clothes you help normalize veganism and hopefully plant a few seeds in people around you!
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">10</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-light-red">Tweet or email celebrities</strong>
+                    that you look up to, whether they play music, star in movies, write books, respectfully ask them to consider looking into Veganism!
+                    <a href="https://veganactivism.org/resources/example-tweets-email-to-celebs.pdf" class="primary-color" target="_blank">Examples here</a>.
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">11</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-light-navy-blue">Donate to sanctuaries or</strong>
+                    organizations that could really use the funding! You could even sponsor an Animal at a sanctuary; your money is sorely needed.
+                    <a href="https://animalcharityevaluators.org/donate/" class="primary-color" target="_blank">Donation list</a>.
+                </div>
+            </div>
+        </li>
+
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">12</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-bright-green">Use your creative skillsets</strong>
+                    and create various forms of art like songs, poems, stories, drawings, and so on, to spread the message of going vegan!
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">13</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-dark-yellow">Set up a free public booth</strong>
+                    somewhere and give out small sample cups of plant-based milks to show people how good they are, and where to buy them from!
+                    Hand out pamphlets with information.
+                </div>
+            </div>
+        </li>
+
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">14</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-dark-blue">Ask your family to donate</strong>
+                    towards vegan organizations or sanctuaries in place of getting you birthday, wedding or christmas gifts!
+                    Plant some seeds in their mind! <a href="https://animalcharityevaluators.org/donate/" class="primary-color" target="_blank">Donate list</a>.
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">15</span>
+
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-light-green">Perform chalk activism on</strong>
+                    public streets to spread information, facts and more - legally. Make sure the chalk is vegan (Crayola isn’t vegan)!
+                </div>
+            </div>
+        </li>
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">16</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2 mb-4">
+                    <strong class="list-item-title bg-color-baby-blue">Change your WiFi network</strong>
+                    name to link directly to a free documentary! You can do "WATCHDOMINION.COM" or a similar link,
+                    it's a quick and easy thing to do! <a href="https://i.imgur.com/Mr2CZi4.jpg" target="_blank" class="primary-color">Screenshot</a>.
+                </div>
+            </div>
+        </li>
+
+
+        <li class="media">
+            <div class="row">
+                <div class="d-none d-sm-block col-sm-2 p-0 text-center">
+                    <span class="list-item-number">17</span>
+                </div>
+                <div class="col-12 col-sm-10 pl-2">
+                    <strong class="list-item-title bg-color-pink">Post content on reddit.com</strong>
+                    that's relevant to the community without directly pushing an agenda.
+                    <a href="https://veganactivism.org/pages/reddit-activism" class="primary-color">Click here</a> for a full guide on how to contribute there!
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
 
 <div class="card p-5 my-3">groups near you card</div>
 
