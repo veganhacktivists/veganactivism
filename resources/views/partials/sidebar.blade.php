@@ -8,8 +8,7 @@
     <h5 class="card-title"><i class="fas fa-bell"></i>&nbsp;&nbsp;
         Activism Newsletter
     </h5>
-    <ul class="list-unstyled post-simple-list mb-0" style="padding: 0px 15px 0px 6px;">
-
+    <ul class="mb-0" style="padding: 0px 15px 0px 6px;">
         <!-- Begin Mailchimp Signup Form -->
         <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
         <style type="text/css">
@@ -35,10 +34,54 @@
         </div>
         <!--End mc_embed_signup-->
     </ul>
-
 </div>
 
-<div class="card p-5 my-3">links card</div>
+<div class="card p-4 my-3 bg-color-gray">
+    <ul class="category-list list-unstyled mb-0">
+        <li>
+            <a href="https://reddit.com/r/VeganActivism" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple">
+                    <i class="far fa-comments mr-2"></i>
+                    Vegan Activist Community
+                </button>
+            </a>
+
+            <a href="https://discord.gg/MFzRHe5" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-pink">
+                    <i class="fa fa-map-signs mr-2"></i>
+                    Vegan Activism Discord
+                </button>
+            </a>
+
+            <a href="https://www.vegan.com/activism/" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-blue">
+                    <i class="fa fa-users mr-2"></i>
+                    Vegan.com Activism Guide
+                </button>
+            </a>
+
+            <a href="https://veganhacktivists.org/" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-green">
+                    <i class="fas fa-hands-helping mr-2"></i>
+                    Visit us: Vegan Hacktivists
+                </button>
+            </a>
+
+
+            <a href="https://veganactivism.org/vegan-activist-resource-bundle.zip" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-yellow">
+                    <i class="fa fa-download mr-2"></i> Activist Resource Bundle
+                </button>
+            </a>
+
+            <a href="https://veganhacktivists.org/subscribe" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-red">
+                    <i class="fas fa-envelope mr-2"></i> Vegan Hacktivists Newsletter
+                </button>
+            </a>
+        </li>
+    </ul>
+</div>
 
 <div class="card p-5 my-3">things you can do card</div>
 

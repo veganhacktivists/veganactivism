@@ -2,11 +2,32 @@ body {
     font-family: 'Poppins';
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     color: $title-color;
 }
 
 .card-title {
     font-size: 21px;
+}
+
+/* Buttons */
+.button-link {
+    box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);
+    margin-bottom: 10px;
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 3px 15px 3px 15px;
+    border-width: 2px;
+    color: $white;
+}
+
+.button-link:hover {
+    color: $white;
 }
