@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-
 body {
     font-family: 'Poppins';
 }
 
-.primary-color {
-    color: $primary;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: $title-color;
+}
+
+.card-title {
+    font-size: 21px;
 }
