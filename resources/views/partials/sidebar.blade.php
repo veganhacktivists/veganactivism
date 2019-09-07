@@ -339,7 +339,7 @@
 </div>
 
 <div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i>  Find Events Near You</h5>
+    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i> Find Events Near You</h5>
     <form class="form" action="https://veganactivism.org/redirect-mu.php" target="_blank">
         <table>
             <tr>
@@ -355,6 +355,20 @@
     <p class="card-footer-text">powered by meetup.com</p>
 </div>
 
-<div class="card p-5 my-3">visits count + contact/donate card</div>
+<div class="card p-4 my-3 bg-color-gray">
+    <h5 class="card-title"><i class="fas fa-bell mr-1"></i> VeganActivism.org</h5>
+    <ul class="list-unstyled mb-0">
+        We've had <strong>6826</strong> visits with a total of
+        <strong>5546</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
+        <br><br>
+        Feel free to <a href="https://veganhacktivists.org/contact?veganactivism" class="text-primary" target="_blank">contact us</a>, or
+        <a href="https://www.patreon.com/veganhacktivists" class="text-primary" target="_blank">donate if you can</a>,
+        it's very appreciated! <i class="fas fa-hand-holding-heart ml-1"></i>
 
-<div class="card p-5 my-3">vegan hactivists credit card</div>
+</div>
+
+<div class="card p-4 my-3 bg-color-gray text-center">
+    <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/0Go5mpt.png" style="width:200px;padding-bottom: 10px;"></a>
+    This site is designed and hosted by the <a href="https://veganhacktivists.org" class="text-primary" target="_blank">Vegan Hacktivists</a>
+
+</div>
