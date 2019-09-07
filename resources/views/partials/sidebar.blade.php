@@ -83,7 +83,7 @@
     </ul>
 </div>
 
-<div class="card p-4 my-3">
+<div class="card p-4 my-3 bg-color-gray">
     <ul class="list-unstyled list mb-0">
 
         <li>
@@ -108,7 +108,7 @@
                     <strong class="list-item-title bg-color-purple">Buy vegan-friendly stickers</strong>
                     and place them on walls, lamp poles, & other public areas.
                     You can also attach QR code stickers on meat products. Please respect local laws!
-                    <a href="https://www.etsy.com/market/vegan_activism_stickers" class="primary-color" target="_blank">Find stickers</a>.
+                    <a href="https://www.etsy.com/market/vegan_activism_stickers" class="text-primary" target="_blank">Find stickers</a>.
                 </div>
             </div>
         </li>
@@ -138,8 +138,8 @@
                     profile descriptions or website with a link to a vegan youtube video!
                     Use a goo.gl link to track clicks and stats.
                     We recommend
-                    <a href="https://www.youtube.com/watch?v=UROxRLbVils" class="primary-color" target="_blank">Gary</a> or
-                    <a href="https://www.youtube.com/watch?v=Z3u7hXpOm58" class="primary-color" target="_blank">Earthling Ed's</a> speech!
+                    <a href="https://www.youtube.com/watch?v=UROxRLbVils" class="text-primary" target="_blank">Gary</a> or
+                    <a href="https://www.youtube.com/watch?v=Z3u7hXpOm58" class="text-primary" target="_blank">Earthling Ed's</a> speech!
                 </div>
             </div>
         </li>
@@ -153,10 +153,10 @@
                 <div class="col-12 col-sm-10 pl-2 mb-4">
                     <strong class="list-item-title bg-color-light-pink">Print vegan-friendly flyers</strong>
                     and pamphlets for people's mailboxes, or under their doors!
-                    <a href="https://www.youtube.com/watch?v=YMKUsOcvTHI" class="primary-color" target="_blank">
+                    <a href="https://www.youtube.com/watch?v=YMKUsOcvTHI" class="text-primary" target="_blank">
                         Hand them out to people</a>, leave them at libraries, colleges, supermarkets, or hang them in public places!
                     Print or order resources by
-                    <a href="https://veganactivism.org/resources/example-flyers-brochures-pamphlets-to-print.pdf" class="primary-color" target="_blank">clicking here</a>.
+                    <a href="https://veganactivism.org/resources/example-flyers-brochures-pamphlets-to-print.pdf" class="text-primary" target="_blank">clicking here</a>.
                 </div>
             </div>
         </li>
@@ -171,7 +171,7 @@
                     <strong class="list-item-title bg-color-dark-blue">Contact stores around you</strong>
                     and ask them to carry more vegan / plant-based / dairy-free items!
                     It creates demand, and it only takes a few seconds to google your local store's website and email address!
-                    <a href="https://veganactivism.org/resources/example-email-to-local-stores.pdf" class="primary-color" target="_blank">Example</a>.
+                    <a href="https://veganactivism.org/resources/example-email-to-local-stores.pdf" class="text-primary" target="_blank">Example</a>.
                 </div>
             </div>
         </li>
@@ -196,7 +196,7 @@
                 <div class="col-12 col-sm-10 pl-2 mb-4">
                     <strong class="list-item-title bg-color-yellow-sand">Leave positive Yelp reviews</strong>
                     at restaurants that offered vegan options and give feedback to restaurants that you'd like to see more plant-based options!
-                    <a href="https://veganactivism.org/resources/example-business-restaurant-reviews.pdf" class="primary-color" target="_blank">Examples</a>.
+                    <a href="https://veganactivism.org/resources/example-business-restaurant-reviews.pdf" class="text-primary" target="_blank">Examples</a>.
                 </div>
             </div>
         </li>
@@ -221,7 +221,7 @@
                 <div class="col-12 col-sm-10 pl-2 mb-4">
                     <strong class="list-item-title bg-color-light-red">Tweet or email celebrities</strong>
                     that you look up to, whether they play music, star in movies, write books, respectfully ask them to consider looking into Veganism!
-                    <a href="https://veganactivism.org/resources/example-tweets-email-to-celebs.pdf" class="primary-color" target="_blank">Examples here</a>.
+                    <a href="https://veganactivism.org/resources/example-tweets-email-to-celebs.pdf" class="text-primary" target="_blank">Examples here</a>.
                 </div>
             </div>
         </li>
@@ -234,7 +234,7 @@
                 <div class="col-12 col-sm-10 pl-2 mb-4">
                     <strong class="list-item-title bg-color-light-navy-blue">Donate to sanctuaries or</strong>
                     organizations that could really use the funding! You could even sponsor an Animal at a sanctuary; your money is sorely needed.
-                    <a href="https://animalcharityevaluators.org/donate/" class="primary-color" target="_blank">Donation list</a>.
+                    <a href="https://animalcharityevaluators.org/donate/" class="text-primary" target="_blank">Donation list</a>.
                 </div>
             </div>
         </li>
@@ -274,7 +274,7 @@
                 <div class="col-12 col-sm-10 pl-2 mb-4">
                     <strong class="list-item-title bg-color-dark-blue">Ask your family to donate</strong>
                     towards vegan organizations or sanctuaries in place of getting you birthday, wedding or christmas gifts!
-                    Plant some seeds in their mind! <a href="https://animalcharityevaluators.org/donate/" class="primary-color" target="_blank">Donate list</a>.
+                    Plant some seeds in their mind! <a href="https://animalcharityevaluators.org/donate/" class="text-primary" target="_blank">Donate list</a>.
                 </div>
             </div>
         </li>
@@ -300,11 +300,10 @@
                 <div class="col-12 col-sm-10 pl-2 mb-4">
                     <strong class="list-item-title bg-color-baby-blue">Change your WiFi network</strong>
                     name to link directly to a free documentary! You can do "WATCHDOMINION.COM" or a similar link,
-                    it's a quick and easy thing to do! <a href="https://i.imgur.com/Mr2CZi4.jpg" target="_blank" class="primary-color">Screenshot</a>.
+                    it's a quick and easy thing to do! <a href="https://i.imgur.com/Mr2CZi4.jpg" target="_blank" class="text-primary">Screenshot</a>.
                 </div>
             </div>
         </li>
-
 
         <li class="media">
             <div class="row">
@@ -314,7 +313,7 @@
                 <div class="col-12 col-sm-10 pl-2">
                     <strong class="list-item-title bg-color-pink">Post content on reddit.com</strong>
                     that's relevant to the community without directly pushing an agenda.
-                    <a href="https://veganactivism.org/pages/reddit-activism" class="primary-color">Click here</a> for a full guide on how to contribute there!
+                    <a href="https://veganactivism.org/pages/reddit-activism" class="text-primary">Click here</a> for a full guide on how to contribute there!
                 </div>
             </div>
         </li>
@@ -322,9 +321,39 @@
     </ul>
 </div>
 
-<div class="card p-5 my-3">groups near you card</div>
+<div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
+    <h5 class="card-title"><i class="fas fa-hands-helping mr-1"></i> Find Groups Near You</h5>
+    <form class="form" action="https://veganactivism.org/redirect-fb.php" target="_blank">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your City Name">
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-secondary ml-2">Search</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p class="card-footer-text">powered by facebook.com</p>
+</div>
 
-<div class="card p-5 my-3">events near you card</div>
+<div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
+    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i>  Find Events Near You</h5>
+    <form class="form" action="https://veganactivism.org/redirect-mu.php" target="_blank">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your Zip Code">
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-secondary ml-2">Search</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p class="card-footer-text">powered by meetup.com</p>
+</div>
 
 <div class="card p-5 my-3">visits count + contact/donate card</div>
 

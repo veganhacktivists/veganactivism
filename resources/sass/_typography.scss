@@ -12,11 +12,23 @@ h6 {
     color: $title-color;
 }
 
+/* Cards */
 .card-title {
     font-size: 21px;
 }
 
+.card-footer-text {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 12px;
+}
+
 /* Buttons */
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .button-link {
     box-shadow: 0px 0px 0px 0px rgba(59, 66, 162, 0.23);
     margin-bottom: 10px;
@@ -36,6 +48,11 @@ h6 {
 .btn:active {
     outline: none !important;
     box-shadow: none !important;
+}
+
+.btn-secondary {
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px
 }
 
 /* Lists */
