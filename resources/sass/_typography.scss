@@ -120,6 +120,10 @@ h6 {
     color: $title-color;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
 /* Cards */
 .card-title {
     font-size: 21px;

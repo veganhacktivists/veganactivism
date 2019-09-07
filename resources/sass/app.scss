@@ -1,12 +1,14 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 // Variables
 @import '_variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//Global styles
+@import '_styles';
 
 //Typography
 @import '_typography';
