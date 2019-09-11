@@ -1,4 +1,4 @@
-<div class="card m-3 p-0 col" >
+<div class="card m-3 p-0 border-0 col" >
     <div class="embed-responsive embed-responsive-16by9">
         <img src="https://picsum.photos/id/237/1920/1080" class="card-img-top embed-responsive-item" alt="...">
     </div>
