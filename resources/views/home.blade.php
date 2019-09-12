@@ -10,6 +10,8 @@
         @endcomponent
       @endforeach
     </div>
+
+    @include('partials.special-thanks')
   </div>
 
   <div class="col-lg-4 mt-30 mt-lg-0">
