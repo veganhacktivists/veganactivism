@@ -9,8 +9,8 @@ class OrganizationsController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($orgslug)
+    public function show($orgslug)
     {
-        return view('details');
+        return view('organizations.show');
     }
 }

@@ -24,4 +24,4 @@ Route::delete('/account', 'DeleteAccountController')->name('account.destroy');
 Route::view('/contact', 'contact.form')->name('contact.form');
 Route::post('/contact', 'SendContactEmailController')->name('contact.send');
 
-Route::get('/pages/{orgslug}', 'OrganizationsController@index')->name('organizations.index');
+Route::get('/pages/{orgslug}', 'OrganizationsController@show')->name('organizations.show');
