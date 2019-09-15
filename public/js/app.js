@@ -991,7 +991,8 @@
       /*! no static exports found */
       /***/ function(module, exports, __webpack_require__) {
         'use strict'
-        /* WEBPACK VAR INJECTION */ ;(function(process) {
+        /* WEBPACK VAR INJECTION */
+        ;(function(process) {
           var utils = __webpack_require__(
             /*! ./utils */ './node_modules/axios/lib/utils.js',
           )
@@ -7065,7 +7066,6 @@
            * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
            * --------------------------------------------------------------------------
            */
-
           ;(function() {
             if (typeof $ === 'undefined') {
               throw new TypeError(
@@ -7119,20 +7119,21 @@
   \********************************************/
       /*! no static exports found */
       /***/ function(module, exports, __webpack_require__) {
-        var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__
-        /*!
-         * jQuery JavaScript Library v3.4.1
-         * https://jquery.com/
-         *
-         * Includes Sizzle.js
-         * https://sizzlejs.com/
-         *
-         * Copyright JS Foundation and other contributors
-         * Released under the MIT license
-         * https://jquery.org/license
-         *
-         * Date: 2019-05-01T21:04Z
-         */
+        var __WEBPACK_AMD_DEFINE_ARRAY__,
+          __WEBPACK_AMD_DEFINE_RESULT__
+          /*!
+           * jQuery JavaScript Library v3.4.1
+           * https://jquery.com/
+           *
+           * Includes Sizzle.js
+           * https://sizzlejs.com/
+           *
+           * Copyright JS Foundation and other contributors
+           * Released under the MIT license
+           * https://jquery.org/license
+           *
+           * Date: 2019-05-01T21:04Z
+           */
         ;(function(global, factory) {
           'use strict'
 
@@ -9899,11 +9900,9 @@
                         i > 1 &&
                           toSelector(
                             // If the preceding token was a descendant combinator, insert an implicit any-element `*`
-                            tokens
-                              .slice(0, i - 1)
-                              .concat({
-                                value: tokens[i - 2].type === ' ' ? '*' : '',
-                              }),
+                            tokens.slice(0, i - 1).concat({
+                              value: tokens[i - 2].type === ' ' ? '*' : '',
+                            }),
                           ).replace(rtrim, '$1'),
                         matcher,
                         i < j && matcherFromTokens(tokens.slice(i, j)),
@@ -15451,7 +15450,6 @@
               }
             })
           }
-
           ;(function() {
             var input = document.createElement('input'),
               select = document.createElement('select'),
@@ -18477,14 +18475,14 @@
       /***/ function(module, exports, __webpack_require__) {
         /* WEBPACK VAR INJECTION */ ;(function(global, module) {
           var __WEBPACK_AMD_DEFINE_RESULT__
-          /**
-           * @license
-           * Lodash <https://lodash.com/>
-           * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
-           * Released under MIT license <https://lodash.com/license>
-           * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
-           * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-           */
+            /**
+             * @license
+             * Lodash <https://lodash.com/>
+             * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
+             * Released under MIT license <https://lodash.com/license>
+             * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+             * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+             */
           ;(function() {
             /** Used as a safe reference for `undefined` in pre-ES5 environments. */
             var undefined
@@ -37093,7 +37091,8 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         'use strict'
         __webpack_require__.r(__webpack_exports__)
-        /* WEBPACK VAR INJECTION */ ;(function(global) {
+        /* WEBPACK VAR INJECTION */
+        ;(function(global) {
           /**!
            * @fileOverview Kickass library to create and place poppers near their reference elements.
            * @version 1.15.0
