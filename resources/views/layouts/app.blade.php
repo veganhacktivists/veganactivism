@@ -21,7 +21,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
   <body>
-    <div id="app">
       @include('inc.navbar')
 
       <main class="py-4">
@@ -31,6 +30,5 @@
           </div>
         </div>
       </main>
-    </div>
   </body>
 </html>
