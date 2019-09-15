@@ -35,16 +35,11 @@ class CreateOrganizationsTable extends Migration
             $table->text('activism');
 
             /*
-             * social link fields (minus website,
-             * which is above). "get involved".
-             * These vary between organizations,
-             * so I made them all optional.
+             * no links columns for now (except website above)
+             * because we want to try handling it through
+             * a one-to-many relationship that can track
+             * link clicks, icon names, etc.
              */
-            $table->string('volunteer_link')->nullable();
-            $table->string('events_link')->nullable();
-            $table->string('announcements_link')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('contact')->nullable();
 
             $table->timestamps();
         });
