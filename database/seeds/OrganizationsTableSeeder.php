@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 // composer require laracasts/testdummy
 use Laracasts\TestDummy\Factory as TestDummy;
 
@@ -23,9 +22,8 @@ class OrganizationsTableSeederTableSeeder extends Seeder
             ],
             'activism' => [
                 'The Cube of Truth is a peaceful static demonstration akin to an art performance. This demonstration operates in a structured manner that triggers curiosity and interest from the public; we attempt to lead bystanders to a vegan conclusion through a combination of local standard-practice animal exploitation footage and conversations with a value-based sales approach.',
-                'Masks, signs, and outreach literature are provided. Black clothing appropriate for the weather is essential, and please bring a fully charged laptop or tablet if you have one. '
+                'Masks, signs, and outreach literature are provided. Black clothing appropriate for the weather is essential, and please bring a fully charged laptop or tablet if you have one.',
             ],
-
         ]);
     }
 }
