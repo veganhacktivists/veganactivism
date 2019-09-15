@@ -26,13 +26,4 @@ class Link extends Model
     {
         return $this->belongsTo(Organization::class);
     }
-
-    /**
-     * Increment the click count for the link
-     */
-    public function incrementClickCount()
-    {
-        $this->click_count++;
-        $this->save();
-    }
 }

@@ -21,7 +21,7 @@ class Organization extends Model
      */
     public function website()
     {
-        return $this->links()->where('type', Link::TYPE_WEBSITE);
+        return $this->links()->where('type', Link::TYPE_WEBSITE)->first();
     }
 
     public function getRouteKeyName()

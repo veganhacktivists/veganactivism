@@ -21,6 +21,7 @@ class CreateLinksTable extends Migration
             $table->string('type')->default('website');
             $table->timestamps();
 
+            $table->index('url');
             $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }
