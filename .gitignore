@@ -12,7 +12,5 @@ yarn-error.log
 .idea/
 .php_cs.cache
 
-/public/css
-/public/js
 cghooks.lock
 _ide_helper.php

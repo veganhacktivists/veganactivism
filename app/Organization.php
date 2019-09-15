@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Organization extends Model
 {
+    protected $guarded = [];
+
     /**
-     * Retrieve the organization's links
+     * Retrieve the organization's links.
      */
     public function links()
     {
@@ -15,10 +17,15 @@ class Organization extends Model
     }
 
     /**
-     * Retrieve the organization's website
+     * Retrieve the organization's website.
      */
     public function website()
     {
         return $this->links()->where('type', Link::TYPE_WEBSITE);
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }
