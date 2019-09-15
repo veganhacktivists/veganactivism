@@ -8,6 +8,8 @@ class Organization extends Model
 {
     protected $guarded = [];
 
+    protected $casts = ['about' => 'array', 'activism' => 'array'];
+
     /**
      * Retrieve the organization's links.
      */
