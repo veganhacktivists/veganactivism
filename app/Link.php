@@ -17,7 +17,7 @@ class Link extends Model
      *
      * @var array
      */
-    protected $fillable = ['organization_id', 'url', 'clicks'];
+    protected $fillable = ['organization_id', 'url', 'click_count'];
 
     /**
      * Get the organization that owns the link.
