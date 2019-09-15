@@ -17,9 +17,11 @@ class CreateOrganizationsTable extends Migration
             /* fields visible everywhere */
             $table->string('slug')->index();
             $table->string('title');
-            $table->string('image_url');
+            $table->string('image_card_url');
+            $table->string('image_full_url');
 
             /* fields only visible on the home page card */
+            $table->text('call_to_action');
             $table->text('card_content');
 
             /*
