@@ -24,6 +24,15 @@ class Link extends Model
      */
     public function organization()
     {
-        return $this->belongsTo('App\Organization');
+        return $this->belongsTo(Organization::class);
+    }
+
+    /**
+     * Increment the click count for the link
+     */
+    public function incrementClickCount()
+    {
+        $this->click_count++;
+        $this->save();
     }
 }
