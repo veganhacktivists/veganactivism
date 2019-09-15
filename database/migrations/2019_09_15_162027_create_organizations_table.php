@@ -18,7 +18,6 @@ class CreateOrganizationsTable extends Migration
             $table->string('slug')->index();
             $table->string('title');
             $table->string('image_url');
-            $table->string('website');
 
             /* fields only visible on the home page card */
             $table->text('card_content');
@@ -35,10 +34,10 @@ class CreateOrganizationsTable extends Migration
             $table->text('activism');
 
             /*
-             * no links columns for now (except website above)
-             * because we want to try handling it through
-             * a one-to-many relationship that can track
-             * link clicks, icon names, etc.
+             * no links columns for now because we want to
+             * try handling it through a one-to-many
+             * relationship that can track link
+             * clicks, icon names, etc.
              */
 
             $table->timestamps();
