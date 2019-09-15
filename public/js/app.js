@@ -13704,12 +13704,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "organization",
   props: ['data'],
-  computed: {
-    detailsLink: function detailsLink() {
-      return 'pages/' + this.data.slug;
+  mounted: function mounted() {
+    console.log(this.data);
+  },
+  methods: {
+    detailsLink: function detailsLink(slug) {
+      return 'pages/' + slug;
     }
   }
 });
@@ -48988,59 +48997,66 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-6 col-lg-6" }, [
-    _c("div", { staticClass: "card my-3 border-0" }, [
-      _c("img", {
-        staticClass: "card-img-top",
-        attrs: { src: _vm.data.image_url, alt: _vm.data.title }
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _c("h4", { staticClass: "card-title" }, [
-          _c(
-            "a",
-            {
-              staticClass: "text-dark font-weight-bold",
-              attrs: { href: _vm.detailsLink }
-            },
-            [_vm._v(_vm._s(_vm.data.title))]
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "card-text" }, [
-          _vm._v(_vm._s(_vm.data.card_content))
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "my-2 mx-1 row" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-dark py-1 ",
-              attrs: { href: _vm.detailsLink }
-            },
-            [
-              _c("i", { staticClass: "fas fa-info-circle mr-1" }),
-              _vm._v("Learn More")
-            ]
-          ),
+  return _c(
+    "div",
+    { staticClass: "row" },
+    _vm._l(_vm.data, function(org) {
+      return _c("div", { staticClass: "col-md-6 col-lg-6" }, [
+        _c("div", { staticClass: "card my-3 border-0" }, [
+          _c("img", {
+            staticClass: "card-img-top",
+            attrs: { src: org.image_url, alt: org.title }
+          }),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-danger ml-3 py-1",
-              attrs: { href: _vm.data.website, target: "_blank" }
-            },
-            [
-              _c("i", { staticClass: "fas fa-link mr-1" }),
-              _vm._v("Visit Website")
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(0)
+          _c("div", { staticClass: "card-body" }, [
+            _c("h4", { staticClass: "card-title" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "text-dark font-weight-bold",
+                  attrs: { href: _vm.detailsLink(org.slug) }
+                },
+                [_vm._v(_vm._s(org.title))]
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(_vm._s(org.card_content))
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "my-2 mx-1 row" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-dark py-1 ",
+                  attrs: { href: _vm.detailsLink(org.slug) }
+                },
+                [
+                  _c("i", { staticClass: "fas fa-info-circle mr-1" }),
+                  _vm._v("Learn More")
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-danger ml-3 py-1",
+                  attrs: { href: org.website, target: "_blank" }
+                },
+                [
+                  _c("i", { staticClass: "fas fa-link mr-1" }),
+                  _vm._v("Visit Website")
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(0, true)
+          ])
+        ])
       ])
-    ])
-  ])
+    }),
+    0
+  )
 }
 var staticRenderFns = [
   function() {

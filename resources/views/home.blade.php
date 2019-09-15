@@ -5,12 +5,9 @@
     @include('partials.welcome-card')
 
     <div id="app">
-    <div class="row">
 
-      @foreach($organizations as $organization)
-        <organization :data="{{ json_encode($organization) }}"></organization>
-      @endforeach
-    </div>
+        <organization :data="{{ json_encode($organizations) }}"></organization>
+
     </div>
 
     @include('partials.special-thanks')
