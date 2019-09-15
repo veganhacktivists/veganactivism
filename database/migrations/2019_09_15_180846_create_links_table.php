@@ -17,10 +17,8 @@ class CreateLinksTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('organization_id');
             $table->string('url')->unique();
-
             $table->integer('click_count')->default(0);
             $table->string('type')->default('website');
-
             $table->timestamps();
 
             $table->index('url');
@@ -35,8 +33,6 @@ class CreateLinksTable extends Migration
      */
     public function down()
     {
-        Schema::table('links', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('links');
     }
 }
