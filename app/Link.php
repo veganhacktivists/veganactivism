@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Link extends Model
 {
+    const TYPE_WEBSITE = 'website';
+    const TYPE_TWITTER = 'twitter';
+    const TYPE_INSTAGRAM = 'instagram';
+    const TYPE_PATREON = 'patreon';
+    const TYPE_FACEBOOK = 'facebook';
+
     /**
      * The attributes that are mass assignable.
      *

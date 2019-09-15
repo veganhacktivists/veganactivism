@@ -18,9 +18,10 @@ class CreateLinksTable extends Migration
             $table->integer('organization_id');
             $table->string('url')->unique();
             $table->integer('click_count')->default(0);
+            $table->string('type')->default('website');
             $table->timestamps();
 
-            // $table->foreign('organization_id')->references('id')->on('organizations');
+            $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }
 
