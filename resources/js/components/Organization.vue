@@ -4,7 +4,7 @@
 
         <div v-for="org in data" class="col-md-6 col-lg-6">
             <div class="card my-3 border-0">
-                <img :src="org.image_url" class="card-img-top" :alt="org.title">
+                <img :src="org.image_card_url" class="card-img-top" :alt="org.title">
                 <div class="card-body">
                     <h4 class="card-title"><a :href="detailsLink(org.slug)" class="text-dark font-weight-bold">{{ org.title }}</a></h4>
                     <p class="card-text">{{ org.card_content}}</p>
