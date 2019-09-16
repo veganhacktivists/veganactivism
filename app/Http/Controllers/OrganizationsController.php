@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Organization;
+
 class OrganizationsController extends Controller
 {
     /**
@@ -9,8 +11,8 @@ class OrganizationsController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function show($orgslug)
+    public function show(Organization $organization)
     {
-        return view('organizations.show');
+        return view('organizations.show', compact('organization'));
     }
 }

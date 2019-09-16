@@ -28,7 +28,7 @@
     export default {
         name: "organization",
 
-        props: ['data'],
+        props: ['data', 'showRoute'],
 
         mounted() {
             console.log(this.data)
