@@ -4,11 +4,10 @@
   <div class="col-lg-8">
     @include('partials.welcome-card')
 
-    <div class="row">
-      @foreach($organizations as $organization)
-        @component('components.org-card', ['organization' => $organization])
-        @endcomponent
-      @endforeach
+    <div id="app">
+
+        <organization :data="{{ json_encode($organizations) }}"></organization>
+
     </div>
 
     @include('partials.special-thanks')
