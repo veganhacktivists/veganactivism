@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\OrganizationRepository;
+use App\Organization;
 
 class HomeController extends Controller
 {
@@ -18,9 +18,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(OrganizationRepository $repository)
+    public function index()
     {
-        $organizations = $repository->all();
+        $organizations = Organization::all();
 
         return view('home', compact('organizations'));
     }
