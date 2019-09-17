@@ -19,15 +19,36 @@ class Organization extends Model
     }
 
     /**
-     * Retrieve the organization's website.
+     * Retrieve the organization's website eloquent model.
+     * To get the url, add ->url; to this method call.
      */
     public function website()
     {
         return $this->links()->where('type', Link::TYPE_WEBSITE)->first();
     }
 
+    /**
+     * Access the website as if it is an included column.
+     * $organization->website_url;.
+     */
+    public function getWebsiteUrlAttribute()
+    {
+        return $this->website()->url;
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function toArray()
+    {
+        $default = parent::toArray();
+
+        $default['show_route'] = route('organizations.show', $this);
+
+        $default['website_url'] = $this->website_url;
+
+        return $default;
     }
 }
