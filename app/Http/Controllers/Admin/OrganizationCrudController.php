@@ -33,8 +33,23 @@ class OrganizationCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
 
-        // TODO: remove setFromDb() and manually define Fields and Columns
-        $this->crud->setFromDb();
+        //Columns
+        $this->crud->addColumn(['name' => 'slug', 'type' => 'text', 'label' => 'Slug']);
+        $this->crud->addColumn(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
+        $this->crud->addColumn(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Card Image url']);
+        $this->crud->addColumn(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Full Image url']);
+        $this->crud->addColumn( ['name' => 'call_to_action', 'type' => 'textarea', 'label' => 'Call to Action']);
+        $this->crud->addColumn(['name' => 'card_content', 'type' => 'textarea', 'label' => 'Card Content']);
+        $this->crud->addColumn(['name' => 'about', 'type' => 'textarea', 'label' => 'Activism']);
+
+        // Fields
+        $this->crud->addField(['name' => 'slug', 'type' => 'text', 'label' => 'Slug']);
+        $this->crud->addField(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
+        $this->crud->addField(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Card Image url']);
+        $this->crud->addField(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Full Image url']);
+        $this->crud->addField( ['name' => 'call_to_action', 'type' => 'textarea', 'label' => 'Call to Action']);
+        $this->crud->addField(['name' => 'card_content', 'type' => 'textarea', 'label' => 'Card Content']);
+        $this->crud->addField(['name' => 'about', 'type' => 'textarea', 'label' => 'Activism']);
 
         // add asterisk for fields that are required in OrganizationRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');

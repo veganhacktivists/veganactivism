@@ -16,10 +16,19 @@ class Organization extends Model
     */
 
     protected $table = 'organizations';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
+    protected $primaryKey = 'id';
+    public $timestamps = true;
     // protected $guarded = ['id'];
-    protected $fillable = [];
+    protected $fillable = [
+        'slug',
+        'title',
+        'image_card_url',
+        'image_full_url',
+        'call_to_action',
+        'card_content',
+        'about',
+        'activism'
+    ];
     // protected $hidden = [];
     // protected $dates = [];
 

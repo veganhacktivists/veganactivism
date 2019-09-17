@@ -26,7 +26,14 @@ class OrganizationRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'slug' => 'required|string|min:5|max:255',
+            'title' => 'required|string|min:5|max:255',
+            'image_card_url' => 'required|url',
+            'image_full_url' => 'required|url',
+            'call_to_action' => 'required|text',
+            'card_content' => 'required|text',
+            'about' => 'required|text',
+            'activism' => 'required|text'
         ];
     }
 
