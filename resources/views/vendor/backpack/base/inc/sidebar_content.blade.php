@@ -40,3 +40,9 @@
         </li>
     </ul>
 </li>
+
+<li>
+    <a href='{{ backpack_url('organization') }}'>
+        <i class='fa fa-building'></i> <span>Organizations</span>
+    </a>
+</li>
