@@ -30,10 +30,10 @@ class OrganizationRequest extends FormRequest
             'title' => 'required|string|min:5|max:255',
             'image_card_url' => 'required|url',
             'image_full_url' => 'required|url',
-            'call_to_action' => 'required|text',
-            'card_content' => 'required|text',
-            'about' => 'required|text',
-            'activism' => 'required|text'
+            'call_to_action' => 'required|string',
+            'card_content' => 'required|string',
+            'about' => 'required|string',
+            'activism' => 'required|string'
         ];
     }
 

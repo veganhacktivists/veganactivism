@@ -7,6 +7,12 @@
 </li>
 
 <li>
+    <a href='{{ backpack_url('organization') }}'>
+        <i class='fa fa-building'></i> <span>Organizations</span>
+    </a>
+</li>
+
+<li>
     <a href="{{ backpack_url('elfinder') }}">
         <i class="fa fa-files-o"></i>
         <span>{{ trans('backpack::crud.file_manager') }}</span>
@@ -39,10 +45,4 @@
             </a>
         </li>
     </ul>
-</li>
-
-<li>
-    <a href='{{ backpack_url('organization') }}'>
-        <i class='fa fa-building'></i> <span>Organizations</span>
-    </a>
 </li>
