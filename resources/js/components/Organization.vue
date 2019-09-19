@@ -1,7 +1,7 @@
 <template>
 
     <div class="row">
-
+q
         <div v-for="org in data" class="col-md-6 col-lg-6">
             <div class="card my-3 border-0">
                 <img :src="org.image_card_url" class="card-img-top" :alt="org.title">
@@ -28,7 +28,8 @@
     export default {
         name: "organization",
 
-        props: ['data']
+        props: ['data'],
+        
     }
 </script>
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ebb272bc2366a1fb81d0882cf66e9ec",
+    "content-hash": "ca11f7b059d6936224785fe7a179cf4b",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -376,6 +376,59 @@
                 "tinymce"
             ],
             "time": "2019-09-03T20:16:06+00:00"
+        },
+        {
+            "name": "calebporzio/livewire",
+            "version": "v0.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/livewire.git",
+                "reference": "ee87e4d7af339f62ffac43622910813e563386f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/livewire/zipball/ee87e4d7af339f62ffac43622910813e563386f9",
+                "reference": "ee87e4d7af339f62ffac43622910813e563386f9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.7|^6.0",
+                "illuminate/validation": "^5.7|^6.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.7|^6.0",
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "^7.5",
+                "psy/psysh": "@stable"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ],
+                    "aliases": {
+                        "Livewire": "Livewire\\Livewire"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Livewire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "Build and test rich client-side functionality: with only backend code.",
+            "time": "2019-09-11T15:47:11+00:00"
         },
         {
             "name": "composer/installers",
@@ -4521,9 +4574,9 @@
             "authors": [
                 {
                     "name": "Cristian Tone",
+                    "role": "Developer",
                     "email": "cristitone@outlook.com",
-                    "homepage": "http://updivision.com",
-                    "role": "Developer"
+                    "homepage": "http://updivision.com"
                 }
             ],
             "description": "Generate files for laravel projects",
