@@ -38,20 +38,80 @@ class OrganizationCrudController extends CrudController
         $this->crud->addColumn(['name' => 'slug', 'type' => 'text', 'label' => 'Slug']);
         $this->crud->addColumn(['name' => 'about', 'type' => 'text', 'label' => 'About']);
         $this->crud->addColumn(['name' => 'activism', 'type' => 'textarea', 'label' => 'Activism']);
-        $this->crud->addColumn( ['name' => 'call_to_action', 'type' => 'text', 'label' => 'Call to Action']);
+        $this->crud->addColumn(['name' => 'call_to_action', 'type' => 'text', 'label' => 'Call to Action']);
         $this->crud->addColumn(['name' => 'card_content', 'type' => 'text', 'label' => 'Card Content']);
         $this->crud->addColumn(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Card Image url']);
         $this->crud->addColumn(['name' => 'image_full_url', 'type' => 'text', 'label' => 'Full Image url']);
 
         // Fields
-        $this->crud->addField(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
-        $this->crud->addField(['name' => 'slug', 'type' => 'text', 'label' => 'Slug']);
-        $this->crud->addField(['name' => 'image_card_url', 'type' => 'url', 'label' => 'Card Image url']);
-        $this->crud->addField(['name' => 'image_full_url', 'type' => 'url', 'label' => 'Full Image url']);
-        $this->crud->addField( ['name' => 'call_to_action', 'type' => 'textarea', 'label' => 'Call to Action']);
-        $this->crud->addField(['name' => 'card_content', 'type' => 'textarea', 'label' => 'Card Content']);
-        $this->crud->addField(['name' => 'about', 'type' => 'summernote', 'label' => 'About']);
-        $this->crud->addField(['name' => 'activism', 'type' => 'summernote', 'label' => 'Activism']);
+        $this->crud->addField(
+            [
+                'name' => 'title',
+                'type' => 'text',
+                'label' => 'Title',
+                'attributes' => [
+                    'placeholder' => 'Organization title'
+                ]
+            ]
+        );
+        $this->crud->addField(
+            [
+                'name' => 'slug',
+                'type' => 'text',
+                'label' => 'Slug',
+                'attributes' => [
+                    'placeholder' => 'Organization slug'
+                ]
+            ]
+        );
+        $this->crud->addField([
+            'name' => 'image_card_url',
+            'type' => 'url',
+            'label' => 'Card Image url',
+            'attributes' => [
+                'placeholder' => 'URL to banner image'
+            ]
+        ]);
+        $this->crud->addField([
+            'name' => 'image_full_url',
+            'type' => 'url',
+            'label' => 'Full Image url',
+            'attributes' => [
+                'placeholder' => 'URL to full banner image'
+            ]
+        ]);
+        $this->crud->addField([
+            'name' => 'call_to_action',
+            'type' => 'textarea',
+            'label' => 'Call to Action',
+            'attributes' => [
+                'placeholder' => 'Call to action text'
+            ]
+        ]);
+        $this->crud->addField([
+            'name' => 'card_content',
+            'type' => 'textarea',
+            'label' => 'Card Content',
+            'attributes' => [
+                'placeholder' => 'Card content'
+            ]
+        ]);
+        $this->crud->addField([
+            'name' => 'about',
+            'type' => 'summernote',
+            'label' => 'About',
+            'attributes' => [
+                'placeholder' => 'About the organization'
+            ]
+        ]);
+        $this->crud->addField([
+            'name' => 'activism',
+            'type' => 'summernote',
+            'label' => 'Activism',
+            'attributes' => [
+                'placeholder' => 'Type of activism'
+            ]
+        ]);
 
         // add asterisk for fields that are required in OrganizationRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
