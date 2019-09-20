@@ -23,7 +23,7 @@ class OrganizationCrudController extends CrudController
         | CrudPanel Basic Information
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Models\Organization');
+        $this->crud->setModel('App\Organization');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/organization');
         $this->crud->setEntityNameStrings('organization', 'organizations');
 
