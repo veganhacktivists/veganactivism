@@ -4,11 +4,7 @@
   <div class="col-lg-8">
     @include('partials.welcome-card')
 
-    <div id="app">
-
-        <organization :data="{{ json_encode($organizations) }}"></organization>
-
-    </div>
+    @livewire('show-organizations')
 
     @include('partials.special-thanks')
   </div>
