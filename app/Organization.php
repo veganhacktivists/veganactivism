@@ -36,6 +36,15 @@ class Organization extends Model
         return $this->website()->url;
     }
 
+    /**
+     * Access the website clicks as if it is an included column.
+     * $organization->website_clicks;.
+     */
+    public function getWebsiteClicks()
+    {
+        return $this->website()->click_count;
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';
@@ -48,6 +57,8 @@ class Organization extends Model
         $default['show_route'] = route('organizations.show', $this);
 
         $default['website_url'] = $this->website_url;
+
+        $default['website_clicks'] = $this->getWebsiteClicks();
 
         return $default;
     }
