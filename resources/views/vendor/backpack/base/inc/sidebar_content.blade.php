@@ -18,14 +18,6 @@
     </a>
 </li>
 
-
-<li>
-    <a href="{{ backpack_url('elfinder') }}">
-        <i class="fa fa-files-o"></i>
-        <span>{{ trans('backpack::crud.file_manager') }}</span>
-    </a>
-</li>
-
 <li class="treeview">
     <a href="#">
         <i class="fa fa-group"></i>
