@@ -41,7 +41,7 @@ class LinkCrudController extends CrudController
         $this->crud->addField([
             'name' => 'type',
             'label' => 'Link Type',
-            'type' => 'select_from_array',
+            'type' => 'select2_from_array',
             'options' => [
                 Link::TYPE_WEBSITE => ucwords(Link::TYPE_WEBSITE),
                 Link::TYPE_FACEBOOK => ucwords(Link::TYPE_FACEBOOK),
@@ -54,6 +54,18 @@ class LinkCrudController extends CrudController
             'default' => 'one',
         ]);
 
+        $this->crud->addField([
+            // 1-n relationship
+            'label' => 'Organization', // Table column heading
+            'type' => 'select2_from_ajax',
+            'name' => 'organization_id', // the column that contains the ID of that connected entity
+            'entity' => 'organization', // the method that defines the relationship in the Model
+            'attribute' => 'title', // foreign key attribute that is shown to the user
+            'model' => 'App\Organization', // foreign key model
+            'data_source' => url('organizations'), // url to controller search function (with /{id} should return model)
+            'placeholder' => 'Select the organization', // placeholder for the select
+            'minimum_input_length' => 2, // minimum characters to type before querying results
+        ]);
 
         // add asterisk for fields that are required in LinkRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');

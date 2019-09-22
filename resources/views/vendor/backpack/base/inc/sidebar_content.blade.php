@@ -13,6 +13,13 @@
 </li>
 
 <li>
+    <a href='{{ backpack_url('link') }}'>
+        <i class='fa fa-link'></i> <span>Links</span>
+    </a>
+</li>
+
+
+<li>
     <a href="{{ backpack_url('elfinder') }}">
         <i class="fa fa-files-o"></i>
         <span>{{ trans('backpack::crud.file_manager') }}</span>
