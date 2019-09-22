@@ -3,6 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\HtmlString;
+use Illuminate\Support\Facades\Storage;
+use Parsedown;
 
 class Organization extends Model
 {
@@ -50,5 +53,20 @@ class Organization extends Model
         $default['website_url'] = $this->website_url;
 
         return $default;
+    }
+
+    public function getDetailsAttribute($value)
+    {
+        $fileName = 'organizations_details/'.$this->attributes['slug'].'.md';
+        if (Storage::disk('local')->exists($fileName)) {
+            $contents = Storage::get($fileName);
+        } else {
+            $contents = '';
+        }
+
+        return new HtmlString(
+            // @TODO Verify and set security options
+            Parsedown::instance()->text($contents)
+        );
     }
 }
