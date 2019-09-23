@@ -3,12 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Backpack\CRUD\CrudTrait;
 
 class Organization extends Model
 {
-    protected $guarded = [];
+    use CrudTrait;
 
-    protected $casts = ['about' => 'array', 'activism' => 'array'];
+    protected $guarded = [];
 
     /**
      * Retrieve the organization's links.
