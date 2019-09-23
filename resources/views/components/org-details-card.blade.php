@@ -7,18 +7,16 @@
         <hr>
         @if(strlen($organization->details) == 0)
           <h2 class="font-weight-bold">What are they all about?</h2>
-          @foreach($organization->about as $paragraph)
-            <p class="card-text">
-              <i class="fa-angle-double-right fa-w-14"></i> {{ $paragraph }}
-            </p>
-          @endforeach
+
+          <div class="card-text">
+            <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->about !!}
+          </div>
 
           <h2 class="font-weight-bold">What type of activism do they do?</h2>
-          @foreach($organization->activism as $paragraph)
-            <p class="card-text">
-              <i class="fa-angle-double-right fa-w-14"></i> {{ $paragraph }}
-            </p>
-          @endforeach
+
+          <div class="card-text">
+            <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->activism !!}
+          </div>
 
           <h2 class="font-weight-bold">How do I get involved?</h2>
           <p class="card-text">
