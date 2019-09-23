@@ -23,9 +23,10 @@
         </p>
 
         <div class="row justify-content-center">
-            @foreach($organization->links as $link)
-              @include('components.links.' . $link->type, ['url' => $link->url])
-            @endforeach
+            <a href="{{ $organization->website()->url }}?ref=veganactivism.org" target="_blank" class="btn btn-danger my-1 py-1"><i class="fas fa-link mr-2"></i>Visit Homepage</a>
+            <a href="" class="btn btn-dark ml-3 my-1 py-1"><i class="fas fa-calendar-alt mr-2"></i>View Events</a>
+            <a href="" target="_blank" class="btn btn-dark ml-3 my-1 py-1"><i class="fab fa-facebook-square mr-2"></i>Facebook</a>
+            <a href="" class="btn btn-dark ml-3 my-1 py-1"><i class="fas fa-envelope mr-2"></i>Contact</a>
         </div>
 
         <hr>
