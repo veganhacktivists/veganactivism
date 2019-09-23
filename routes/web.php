@@ -25,3 +25,5 @@ Route::view('/contact', 'contact.form')->name('contact.form');
 Route::post('/contact', 'SendContactEmailController')->name('contact.send');
 
 Route::get('/pages/{organization}', 'OrganizationsController@show')->name('organizations.show');
+Route::get('/organizations', 'OrganizationsController@index');
+Route::get('/organizations/{organization}', 'OrganizationsController@get');

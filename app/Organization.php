@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Storage;
 use Parsedown;

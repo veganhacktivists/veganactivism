@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ba3efbc032a5843cf805a7fd5699b31",
+    "content-hash": "8ebb272bc2366a1fb81d0882cf66e9ec",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -4521,9 +4521,9 @@
             "authors": [
                 {
                     "name": "Cristian Tone",
-                    "role": "Developer",
                     "email": "cristitone@outlook.com",
-                    "homepage": "http://updivision.com"
+                    "homepage": "http://updivision.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Generate files for laravel projects",
