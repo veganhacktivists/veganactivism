@@ -40,7 +40,7 @@ class Organization extends Model
      * Access the website clicks as if it is an included column.
      * $organization->website_clicks;.
      */
-    public function getWebsiteClicks()
+    public function getWebsiteClicksAttribute()
     {
         return $this->website()->click_count;
     }
@@ -58,7 +58,7 @@ class Organization extends Model
 
         $default['website_url'] = $this->website_url;
 
-        $default['website_clicks'] = $this->getWebsiteClicks();
+        $default['website_clicks'] = $this->website_clicks;
 
         return $default;
     }

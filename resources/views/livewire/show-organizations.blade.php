@@ -13,7 +13,7 @@
                 <div class="card my-3 border-0">
                     <img src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="org.show_route" class="text-dark font-weight-bold">{{ $organization['title'] }}</a></h4>
+                        <h4 class="card-title"><a href="{{ $organization['show_route'] }}"  class="text-dark font-weight-bold">{{ $organization['title'] }}</a></h4>
                         <p class="card-text">{{ $organization['card_content'] }}</p>
 
                         <div class="my-2 mx-1 row">
