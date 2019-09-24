@@ -8,6 +8,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\OrganizationRequest as StoreRequest;
 use App\Http\Requests\OrganizationRequest as UpdateRequest;
 use Backpack\CRUD\CrudPanel;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class OrganizationCrudController
@@ -111,6 +112,20 @@ class OrganizationCrudController extends CrudController
             'attributes' => [
                 'placeholder' => 'Type of activism'
             ]
+        ]);
+
+        $this->crud->addField([
+            // n-n relationship
+            'label' => 'Users', // Table column heading
+            'type' => 'select2_from_ajax_multiple',
+            'name' => 'users', // the column that contains the ID of that connected entity
+            'entity' => 'user', // the method that defines the relationship in your Model
+            'attribute' => 'name', // foreign key attribute that is shown to user
+            'model' => 'App\User', // foreign key model
+            'data_source' => url('users'), // url to controller search function (with /{id} should return model)
+            'placeholder' => 'Select a user', // placeholder for the select
+            'minimum_input_length' => 2, // minimum characters to type before querying results
+            'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
         ]);
 
         // add asterisk for fields that are required in OrganizationRequest

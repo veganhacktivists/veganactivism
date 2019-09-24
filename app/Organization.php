@@ -87,4 +87,9 @@ class Organization extends Model
 
         return $default;
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
