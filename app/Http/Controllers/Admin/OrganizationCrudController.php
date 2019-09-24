@@ -7,6 +7,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\OrganizationRequest as StoreRequest;
 use App\Http\Requests\OrganizationRequest as UpdateRequest;
+use App\Models\BackpackUser;
 use Backpack\CRUD\CrudPanel;
 use Illuminate\Support\Facades\Auth;
 
@@ -131,6 +132,20 @@ class OrganizationCrudController extends CrudController
         // add asterisk for fields that are required in OrganizationRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
+    }
+
+    // Override the search method that displays records in the organizations table
+    public function search()
+    {
+        $user = Auth::user();
+
+        if ($user->hasRole(BackpackUser::ROLE_ADMIN)) {
+            $this->crud->addClause('whereHas', 'users', function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            });
+        }
+
+        return parent::search();
     }
 
     public function store(StoreRequest $request)
