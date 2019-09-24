@@ -46,6 +46,15 @@ class Organization extends Model
         return $this->website()->url;
     }
 
+    /**
+     * Access the website clicks as if it is an included column.
+     * $organization->website_clicks;.
+     */
+    public function getWebsiteClicksAttribute()
+    {
+        return $this->website()->click_count;
+    }
+  
     public function getDetailsAttribute($value)
     {
         $fileName = 'organizations_details/'.$this->attributes['slug'].'.md';
@@ -73,6 +82,8 @@ class Organization extends Model
         $default['show_route'] = route('organizations.show', $this);
 
         $default['website_url'] = $this->website_url;
+
+        $default['website_clicks'] = $this->website_clicks;
 
         return $default;
     }

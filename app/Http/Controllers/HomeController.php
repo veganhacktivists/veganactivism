@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Organization;
-
 class HomeController extends Controller
 {
     /**
@@ -20,8 +18,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $organizations = Organization::all();
-
-        return view('home', compact('organizations'));
+        return view('home');
     }
 }
