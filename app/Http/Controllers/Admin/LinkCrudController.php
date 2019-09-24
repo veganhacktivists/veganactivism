@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\LinkRequest as StoreRequest;
 use App\Http\Requests\LinkRequest as UpdateRequest;
@@ -11,9 +10,9 @@ use App\Link;
 use Backpack\CRUD\CrudPanel;
 
 /**
- * Class LinkCrudController
- * @package App\Http\Controllers\Admin
- * @property-read CrudPanel $crud
+ * Class LinkCrudController.
+ *
+ * @property CrudPanel $crud
  */
 class LinkCrudController extends CrudController
 {
@@ -25,7 +24,7 @@ class LinkCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Link');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/link');
+        $this->crud->setRoute(config('backpack.base.route_prefix').'/link');
         $this->crud->setEntityNameStrings('link', 'links');
 
         /*
@@ -48,7 +47,7 @@ class LinkCrudController extends CrudController
                 Link::TYPE_INSTAGRAM => ucwords(Link::TYPE_INSTAGRAM),
                 Link::TYPE_PATREON => ucwords(Link::TYPE_PATREON),
                 Link::TYPE_TWITTER => ucwords(Link::TYPE_TWITTER),
-                Link::TYPE_YOUTUBE => ucwords(Link::TYPE_YOUTUBE)
+                Link::TYPE_YOUTUBE => ucwords(Link::TYPE_YOUTUBE),
             ],
             'allows_null' => false,
             'default' => 'one',
