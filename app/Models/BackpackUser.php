@@ -14,6 +14,27 @@ class BackpackUser extends User
 
     protected $table = 'users';
 
+    const ROLE_SUPER_ADMIN = 'Super Admin';
+    const ROLE_ADMIN = 'Admin';
+
+    // Permissions for Users
+    const PERMISSION_USERS_VIEW = 'View Users';
+    const PERMISSION_USERS_CREATE = 'Create Users';
+    const PERMISSION_USERS_EDIT = 'Edit Users';
+    const PERMISSION_USERS_DELETE = 'Delete Users';
+
+    // Permissions for Organizations
+    const PERMISSION_ORGANIZATIONS_VIEW = 'View Organizations';
+    const PERMISSION_ORGANIZATIONS_CREATE = 'Create Organizations';
+    const PERMISSION_ORGANIZATIONS_EDIT = 'Edit Orgnizations';
+    const PERMISSION_ORGANIZATIONS_DELETE = 'Delete Organizations';
+
+    // Permissions for Links
+    const PERMISSION_LINKS_VIEW = 'View Links';
+    const PERMISSION_LINKS_CREATE = 'Create Links';
+    const PERMISSION_LINKS_EDIT = 'Edit Links';
+    const PERMISSION_LINKS_DELETE = 'Delete Links';
+
     /**
      * Send the password reset notification.
      *
