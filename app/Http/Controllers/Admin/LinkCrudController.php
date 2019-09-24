@@ -7,7 +7,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\LinkRequest as StoreRequest;
 use App\Http\Requests\LinkRequest as UpdateRequest;
 use App\Link;
+use App\Models\BackpackUser;
 use Backpack\CRUD\CrudPanel;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class LinkCrudController.
@@ -69,6 +71,22 @@ class LinkCrudController extends CrudController
         // add asterisk for fields that are required in LinkRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
+    }
+
+    // Override the search method that displays records in the links table
+    public function search()
+    {
+        $user = Auth::user();
+
+        if ($user->hasRole(BackpackUser::ROLE_ADMIN)) {
+            $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
+                $query->whereHas('users', function ($query) use ($user) {
+                    $query->where('id', $user->id);
+                });
+            });
+        }
+
+        return parent::search();
     }
 
     public function store(StoreRequest $request)
