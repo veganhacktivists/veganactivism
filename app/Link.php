@@ -8,7 +8,7 @@ use Backpack\CRUD\CrudTrait;
 class Link extends Model
 {
     use CrudTrait;
-    
+
     const TYPE_WEBSITE = 'website';
     const TYPE_TWITTER = 'twitter';
     const TYPE_INSTAGRAM = 'instagram';
