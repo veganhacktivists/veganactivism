@@ -19,6 +19,7 @@ class CreateOrganizationsTable extends Migration
             $table->string('title');
             $table->string('image_card_url');
             $table->string('image_full_url');
+            $table->boolean('featured');
 
             /* fields only visible on the home page card */
             $table->text('call_to_action');
