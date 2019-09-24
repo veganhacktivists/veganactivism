@@ -5,7 +5,9 @@
     <div class="card-body">
         <h4 class="card-title font-weight-bold">Get involed with: {{ $organization->title }}</h4>
         <hr>
-        @if(strlen($organization->details) == 0)
+        @if($organization->hasDetails())
+          {{ $organization->details }}
+        @else
           <h2 class="font-weight-bold">What are they all about?</h2>
           @foreach($organization->about as $paragraph)
             <p class="card-text">
@@ -24,8 +26,6 @@
           <p class="card-text">
             <i class="fa-angle-double-right fa-w-14"></i> To start volunteering with {{ $organization->title }}, click a button below!
           </p>
-        @else
-          {{ $organization->details }}
         @endif
 
         <div class="row justify-content-center">
