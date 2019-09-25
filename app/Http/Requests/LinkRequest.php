@@ -33,10 +33,9 @@ class LinkRequest extends FormRequest
         }
 
         // verify that the user is an admin for the organization
-        $organization_id = Link::where('id', $this->link)->first()->organization_id;
-        $organization = $user->organizations()->where('id', $organization_id)->first();
-
-        return !is_null($organization);
+        $organization = $user->organizations()->where('id', $this->input('organization_id'))->first();
+        
+        return $organization ? true : false;
     }
 
     /**

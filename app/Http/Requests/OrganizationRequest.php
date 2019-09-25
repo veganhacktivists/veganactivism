@@ -31,9 +31,13 @@ class OrganizationRequest extends FormRequest
         }
 
         // verify that the user is an admin for the organization
-        $organization = $user->organizations()->where('id', $this->organization)->first();
+        if ($this->organization) {
+            $organization = $user->organizations()->where('id', $this->organization)->first();
 
-        return !is_null($organization);
+            return !is_null($organization);
+        }
+
+        return false;
     }
 
     /**
