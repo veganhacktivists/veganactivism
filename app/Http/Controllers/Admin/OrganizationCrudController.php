@@ -122,7 +122,7 @@ class OrganizationCrudController extends CrudController
         if ($this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
             $this->crud->addField([
                 // n-n relationship
-                'label' => 'Users', // Table column heading
+                'label' => 'Organization Admins', // Table column heading
                 'type' => 'select2_from_ajax_multiple',
                 'name' => 'users', // the column that contains the ID of that connected entity
                 'entity' => 'user', // the method that defines the relationship in your Model
