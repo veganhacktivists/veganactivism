@@ -167,6 +167,22 @@ class OrganizationCrudController extends CrudController
         return parent::search();
     }
 
+    // Override the edit method that displays the form for updating an organization
+    public function edit($id)
+    {
+        $user = $this->user;
+
+        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $organization = $user->organizations()->where('id', $id)->first();
+
+            if (!$organization) {
+                abort(403);
+            }
+        }        
+
+        return parent::edit($id);
+    }
+
     public function store(StoreRequest $request)
     {
         // your additional operations before save here

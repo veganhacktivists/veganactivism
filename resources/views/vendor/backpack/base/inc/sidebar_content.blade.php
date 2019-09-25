@@ -18,7 +18,7 @@
     </a>
 </li>
 
-@if (Auth::user()->hasRole(\App\Models\BackpackUser::ROLE_SUPER_ADMIN))
+@role(\App\Models\BackpackUser::ROLE_SUPER_ADMIN)
 <li class="treeview">
     <a href="#">
         <i class="fa fa-group"></i>
@@ -46,4 +46,4 @@
         </li>
     </ul>
 </li>
-@endif
+@endrole

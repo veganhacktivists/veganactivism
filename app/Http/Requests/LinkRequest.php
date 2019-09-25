@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 use App\Link;
+use App\Models\BackpackUser;
+use App\Organization;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -17,7 +19,24 @@ class LinkRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return backpack_auth()->check();
+        $isLoggedIn = backpack_auth()->check();
+
+        if (!$isLoggedIn) {
+            return false;
+        }
+
+        $user = backpack_user();
+
+        // authorize super admins
+        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            return true;
+        }
+
+        // verify that the user is an admin for the organization
+        $organization_id = Link::where('id', $this->link)->first()->organization_id;
+        $organization = $user->organizations()->where('id', $organization_id)->first();
+
+        return !is_null($organization);
     }
 
     /**
