@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ class UsersController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Support\Collection
      */
-    public function index(Request $request)
+    public function index(UserRequest $request)
     {
         $search_term = $request->input('q');
 
