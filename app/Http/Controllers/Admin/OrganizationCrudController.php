@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Auth;
  */
 class OrganizationCrudController extends CrudController
 {
+    private $user;
+
     public function setup()
     {
+        $this->user = Auth::user();
+
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Basic Information
@@ -129,15 +133,28 @@ class OrganizationCrudController extends CrudController
             'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
         ]);
 
+        $this->manageButtons();
+
         // add asterisk for fields that are required in OrganizationRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
+    // Manage default buttons by setting access
+    private function manageButtons()
+    {
+        $this->crud->allowAccess('show');
+
+        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess('create');
+            $this->crud->denyAccess('delete');
+        }
+    }
+
     // Override the search method that displays records in the organizations table
     public function search()
     {
-        $user = Auth::user();
+        $user = $this->user;
 
         if ($user->hasRole(BackpackUser::ROLE_ADMIN)) {
             $this->crud->addClause('whereHas', 'users', function ($query) use ($user) {

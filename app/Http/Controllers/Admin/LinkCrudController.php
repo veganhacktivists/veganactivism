@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Auth;
  */
 class LinkCrudController extends CrudController
 {
+    private $user;
+
     public function setup()
     {
+        $this->user = Auth::user();
+
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Basic Information
@@ -68,15 +72,25 @@ class LinkCrudController extends CrudController
             'minimum_input_length' => 2, // minimum characters to type before querying results
         ]);
 
+        $this->manageButtons();
+
         // add asterisk for fields that are required in LinkRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
+    // Manage default buttons by setting access
+    private function manageButtons()
+    {
+        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess('delete');
+        }
+    }
+
     // Override the search method that displays records in the links table
     public function search()
     {
-        $user = Auth::user();
+        $user = $this->user;
 
         if ($user->hasRole(BackpackUser::ROLE_ADMIN)) {
             $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
