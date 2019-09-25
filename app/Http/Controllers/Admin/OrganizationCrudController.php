@@ -158,7 +158,7 @@ class OrganizationCrudController extends CrudController
     {
         $user = $this->user;
 
-        if ($user->hasRole(BackpackUser::ROLE_ADMIN)) {
+        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
             $this->crud->addClause('whereHas', 'users', function ($query) use ($user) {
                 $query->where('user_id', $user->id);
             });
