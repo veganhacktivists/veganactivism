@@ -5,22 +5,27 @@
     <div class="card-body">
         <h4 class="card-title font-weight-bold">Get involved with: {{ $organization->title }}</h4>
         <hr>
-        <h2 class="font-weight-bold">What are they all about?</h2>
+        @if($organization->hasDetails())
+          {{ $organization->details }}
+        @else
+          <h2 class="font-weight-bold">What are they all about?</h2>
+
+
           <div class="card-text">
             <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->about !!}
           </div>
 
-        <h2 class="font-weight-bold">What type of activism do they do?</h2>
+          <h2 class="font-weight-bold">What type of activism do they do?</h2>
 
           <div class="card-text">
             <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->activism !!}
           </div>
 
-
-        <h2 class="font-weight-bold">How do I get involved?</h2>
-        <p class="card-text">
-          <i class="fa-angle-double-right fa-w-14"></i> To start volunteering with {{ $organization->title }}, click a button below!
-        </p>
+          <h2 class="font-weight-bold">How do I get involved?</h2>
+          <p class="card-text">
+            <i class="fa-angle-double-right fa-w-14"></i> To start volunteering with {{ $organization->title }}, click a button below!
+          </p>
+        @endif
 
         <div class="row justify-content-center">
             @foreach($organization->links as $link)
