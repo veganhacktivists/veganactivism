@@ -8,60 +8,58 @@ class PermissionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
         // Users CRUD operation permissions
         Permission::create([
-            'name' => BackpackUser::PERMISSION_USERS_CREATE
+            'name' => BackpackUser::PERMISSION_USERS_CREATE,
         ]);
 
         Permission::create([
-            'name' => BackpackUser::PERMISSION_USERS_VIEW
+            'name' => BackpackUser::PERMISSION_USERS_VIEW,
         ]);
 
         Permission::create([
-            'name' => BackpackUser::PERMISSION_USERS_EDIT
+            'name' => BackpackUser::PERMISSION_USERS_EDIT,
         ]);
 
         Permission::create([
-            'name' => BackpackUser::PERMISSION_USERS_DELETE
-        ]);
-
-        // Organization CRUD operation permissions
-        Permission::create([
-            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_CREATE
-        ]);
-
-        Permission::create([
-            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_VIEW
-        ]);
-
-        Permission::create([
-            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_EDIT
-        ]);
-
-        Permission::create([
-            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_DELETE
+            'name' => BackpackUser::PERMISSION_USERS_DELETE,
         ]);
 
         // Organization CRUD operation permissions
         Permission::create([
-            'name' => BackpackUser::PERMISSION_LINKS_CREATE
+            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_CREATE,
         ]);
 
         Permission::create([
-            'name' => BackpackUser::PERMISSION_LINKS_VIEW
+            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_VIEW,
         ]);
 
         Permission::create([
-            'name' => BackpackUser::PERMISSION_LINKS_EDIT
+            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_EDIT,
         ]);
 
         Permission::create([
-            'name' => BackpackUser::PERMISSION_LINKS_DELETE
+            'name' => BackpackUser::PERMISSION_ORGANIZATIONS_DELETE,
+        ]);
+
+        // Organization CRUD operation permissions
+        Permission::create([
+            'name' => BackpackUser::PERMISSION_LINKS_CREATE,
+        ]);
+
+        Permission::create([
+            'name' => BackpackUser::PERMISSION_LINKS_VIEW,
+        ]);
+
+        Permission::create([
+            'name' => BackpackUser::PERMISSION_LINKS_EDIT,
+        ]);
+
+        Permission::create([
+            'name' => BackpackUser::PERMISSION_LINKS_DELETE,
         ]);
     }
 }
