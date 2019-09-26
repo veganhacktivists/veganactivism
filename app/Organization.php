@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Storage;
 use Parsedown;
@@ -54,7 +53,7 @@ class Organization extends Model
     {
         return $this->website()->click_count;
     }
-  
+
     public function getDetailsAttribute($value)
     {
         $fileName = 'organizations_details/'.$this->attributes['slug'].'.md';

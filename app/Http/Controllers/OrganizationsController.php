@@ -21,9 +21,10 @@ class OrganizationsController extends Controller
     }
 
     /**
-     * Return a list of organizations
-     * 
+     * Return a list of organizations.
+     *
      * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Support\Collection
      */
     public function index(Request $request)
@@ -39,7 +40,7 @@ class OrganizationsController extends Controller
         }
 
         if ($search_term) {
-            $results->where('title', 'LIKE', '%' . $search_term . '%');
+            $results->where('title', 'LIKE', '%'.$search_term.'%');
         }
 
         $results = $results->paginate(10);
@@ -48,9 +49,10 @@ class OrganizationsController extends Controller
     }
 
     /**
-     * Return a specific organization
-     * 
+     * Return a specific organization.
+     *
      * @param \App\Organization $organization
+     *
      * @return \App\Organization
      */
     public function get(Organization $organization)
