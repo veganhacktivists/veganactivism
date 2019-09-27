@@ -34,7 +34,7 @@ class LinkRequest extends FormRequest
 
         // verify that the user is an admin for the organization
         $organization = $user->organizations()->where('id', $this->input('organization_id'))->first();
-        
+
         return $organization ? true : false;
     }
 
@@ -45,8 +45,14 @@ class LinkRequest extends FormRequest
      */
     public function rules()
     {
+        $urlValidation = 'required|url|min:5|max:255';
+
+        if (!$this->link) {
+            $urlValidation .= '|unique:links,url';
+        }
+
         return [
-            'url' => 'required|url|min:5|max:255|unique:links,url',
+            'url' => $urlValidation,
             'organization_id' => 'required|integer|exists:organizations,id',
             'type' => [
                 'required',
