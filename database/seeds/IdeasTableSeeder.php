@@ -6,8 +6,6 @@ class IdeasTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
@@ -82,7 +80,7 @@ class IdeasTableSeeder extends Seeder
             'description' => 'somewhere and give out small sample cups of plant-based milks to show people how good they are, and where to buy them from! Hand out pamphlets with information.',
             'color' => '#e28122',
         ]);
-        
+
         \App\Idea::create([
             'title' => 'Ask your family to donate',
             'description' => 'towards vegan organizations or sanctuaries in place of getting you birthday, wedding or christmas gifts! Plant some seeds in their mind! <a href="https://animalcharityevaluators.org/donate/" target="_blank">Donate list</a>.',
@@ -102,7 +100,7 @@ class IdeasTableSeeder extends Seeder
 
         \App\Idea::create([
             'title' => 'Post content on reddit.com',
-            'description' => 'that\s relevant to the community without directly pushing an agenda. <a href="https://veganactivism.org/pages/reddit-activism">Click here</a> for a full guide on how to contribute there!',
+            'description' => 'that\'s relevant to the community without directly pushing an agenda. <a href="https://veganactivism.org/pages/reddit-activism">Click here</a> for a full guide on how to contribute there!',
             'color' => '#ff0097',
         ]);
     }
