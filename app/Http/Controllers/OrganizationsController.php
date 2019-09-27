@@ -29,7 +29,7 @@ class OrganizationsController extends Controller
      */
     public function index(Request $request)
     {
-        $user = Auth::user();
+        $user = backpack_user();
 
         $search_term = $request->input('q');
 
