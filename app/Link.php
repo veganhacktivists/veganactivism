@@ -10,6 +10,8 @@ class Link extends Model
     use CrudTrait;
 
     const TYPE_WEBSITE = 'website';
+    const TYPE_EVENTS = 'events';
+    const TYPE_CONTACT = 'contact';
     const TYPE_TWITTER = 'twitter';
     const TYPE_INSTAGRAM = 'instagram';
     const TYPE_PATREON = 'patreon';
