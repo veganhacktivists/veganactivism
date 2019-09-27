@@ -46,7 +46,7 @@ class LinkRequest extends FormRequest
     public function rules()
     {
         return [
-            'url' => 'required|url|min:5|max:255',
+            'url' => 'required|url|min:5|max:255|unique:links,url',
             'organization_id' => 'required|integer|exists:organizations,id',
             'type' => [
                 'required',
