@@ -1,6 +1,6 @@
 <div class="card m-3 p-0 border-0 col" >
     <div class="embed-responsive embed-responsive-16by9">
-        <img src="https://picsum.photos/id/237/1920/1080" class="card-img-top embed-responsive-item" alt="...">
+        <img src={{ $organization->image_full_url}} class="card-img-top embed-responsive-item" alt="...">
     </div>
     <div class="card-body">
         <h4 class="card-title font-weight-bold">Get involved with: {{ $organization->title }}</h4>
@@ -39,5 +39,7 @@
             <div class="small text-muted my-2">VEGANACTIVISM.ORG</div>
             <a href="/" class="font-weight-bold primary"><i class="fas fa-arrow-left"></i> Go back to homepage</a>
         </div>
+        
     </div>
+
 </div>
