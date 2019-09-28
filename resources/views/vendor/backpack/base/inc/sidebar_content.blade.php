@@ -18,6 +18,12 @@
     </a>
 </li>
 
+<li>
+     <a href='{{ backpack_url('idea') }}'>
+            <i class="far fa-hand-peace"></i> <span>Ideas</span>
+        </a>
+</li>
+
 <li class="treeview">
     <a href="#">
         <i class="fa fa-group"></i>
