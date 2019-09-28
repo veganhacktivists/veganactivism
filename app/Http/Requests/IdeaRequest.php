@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\BackpackUser;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IdeaRequest extends FormRequest
@@ -13,8 +14,8 @@ class IdeaRequest extends FormRequest
      */
     public function authorize()
     {
-        // only allow updates if the user is logged in
-        return backpack_auth()->check();
+        // only allow updates if the user is logged in and the user is a Super Admin
+        return backpack_auth()->check() && backpack_user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN);
     }
 
     /**
@@ -25,7 +26,9 @@ class IdeaRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'title' => 'required|string|min:5|max:255',
+            'description' => 'required|min:5',
+            'color' => 'required|string'
         ];
     }
 
