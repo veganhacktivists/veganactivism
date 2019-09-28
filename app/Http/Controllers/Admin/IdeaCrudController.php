@@ -6,6 +6,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\IdeaRequest as StoreRequest;
 use App\Http\Requests\IdeaRequest as UpdateRequest;
+use App\Models\BackpackUser;
 use Backpack\CRUD\CrudPanel;
 
 /**
@@ -17,6 +18,8 @@ class IdeaCrudController extends CrudController
 {
     public function setup()
     {
+        abort_if(!backpack_user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN), 403);
+        
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Basic Information
