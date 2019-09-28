@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\OrganizationRequest as StoreRequest;
 use App\Http\Requests\OrganizationRequest as UpdateRequest;
@@ -12,9 +11,9 @@ use Backpack\CRUD\CrudPanel;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Class OrganizationCrudController
- * @package App\Http\Controllers\Admin
- * @property-read CrudPanel $crud
+ * Class OrganizationCrudController.
+ *
+ * @property CrudPanel $crud
  */
 class OrganizationCrudController extends CrudController
 {
@@ -30,7 +29,7 @@ class OrganizationCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Organization');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/organization');
+        $this->crud->setRoute(config('backpack.base.route_prefix').'/organization');
         $this->crud->setEntityNameStrings('organization', 'organizations');
 
         /*
@@ -48,6 +47,7 @@ class OrganizationCrudController extends CrudController
         $this->crud->addColumn(['name' => 'card_content', 'type' => 'text', 'label' => 'Card Content']);
         $this->crud->addColumn(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Card Image url']);
         $this->crud->addColumn(['name' => 'image_full_url', 'type' => 'text', 'label' => 'Full Image url']);
+        $this->crud->addColumn(['name' => 'featured', 'type' => 'checkbox', 'label' => 'Featured']);
 
         // Fields
         $this->crud->addField(
@@ -56,8 +56,8 @@ class OrganizationCrudController extends CrudController
                 'type' => 'text',
                 'label' => 'Title',
                 'attributes' => [
-                    'placeholder' => 'Organization title'
-                ]
+                    'placeholder' => 'Organization title',
+                ],
             ]
         );
         $this->crud->addField(
@@ -66,8 +66,8 @@ class OrganizationCrudController extends CrudController
                 'type' => 'text',
                 'label' => 'Slug',
                 'attributes' => [
-                    'placeholder' => 'Organization slug'
-                ]
+                    'placeholder' => 'Organization slug',
+                ],
             ]
         );
         $this->crud->addField([
@@ -75,51 +75,57 @@ class OrganizationCrudController extends CrudController
             'type' => 'url',
             'label' => 'Card Image url',
             'attributes' => [
-                'placeholder' => 'URL to banner image'
-            ]
+                'placeholder' => 'URL to banner image',
+            ],
         ]);
         $this->crud->addField([
             'name' => 'image_full_url',
             'type' => 'url',
             'label' => 'Full Image url',
             'attributes' => [
-                'placeholder' => 'URL to full banner image'
-            ]
+                'placeholder' => 'URL to full banner image',
+            ],
         ]);
         $this->crud->addField([
             'name' => 'call_to_action',
             'type' => 'textarea',
             'label' => 'Call to Action',
             'attributes' => [
-                'placeholder' => 'Call to action text'
-            ]
+                'placeholder' => 'Call to action text',
+            ],
         ]);
         $this->crud->addField([
             'name' => 'card_content',
             'type' => 'textarea',
             'label' => 'Card Content',
             'attributes' => [
-                'placeholder' => 'Card content'
-            ]
+                'placeholder' => 'Card content',
+            ],
         ]);
         $this->crud->addField([
             'name' => 'about',
             'type' => 'summernote',
             'label' => 'About',
             'attributes' => [
-                'placeholder' => 'About the organization'
-            ]
+                'placeholder' => 'About the organization',
+            ],
         ]);
         $this->crud->addField([
             'name' => 'activism',
             'type' => 'summernote',
             'label' => 'Activism',
             'attributes' => [
-                'placeholder' => 'Type of activism'
-            ]
+                'placeholder' => 'Type of activism',
+            ],
         ]);
 
         if ($this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $this->crud->addField([
+                'name' => 'featured',
+                'type' => 'checkbox',
+                'label' => 'Featured',
+            ]);
+
             $this->crud->addField([
                 // n-n relationship
                 'label' => 'Organization Admins', // Table column heading
