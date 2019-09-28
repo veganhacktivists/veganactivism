@@ -19,7 +19,7 @@ class IdeaCrudController extends CrudController
     public function setup()
     {
         abort_if(!backpack_user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN), 403);
-        
+
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Basic Information
