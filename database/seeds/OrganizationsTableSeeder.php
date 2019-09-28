@@ -11,6 +11,7 @@ class OrganizationsTableSeeder extends Seeder
         \App\Organization::create([
             'title' => 'Anonymous for the Voiceless',
             'slug' => 'anonymous-for-the-voiceless',
+            'featured' => true,
             'image_card_url' => 'https://veganactivism.org/banners/anonymous-for-the-voiceless.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-anonymous-for-the-voiceless.jpg',
             'call_to_action' => 'Participate in an Anonymous for the Voiceless "Cube of Truth"!',
@@ -22,6 +23,7 @@ class OrganizationsTableSeeder extends Seeder
         \App\Organization::create([
             'title' => 'The Save Movement',
             'slug' => 'the-save-movement',
+            'featured' => false,
             'image_card_url' => 'https://veganactivism.org/banners/the-save-movement.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-the-save-movement.jpg',
             'call_to_action' => 'Find a "The Save Movement" event nearby and bear witness!',
@@ -32,6 +34,7 @@ class OrganizationsTableSeeder extends Seeder
         \App\Organization::create([
            'title' => 'Meat The Victims',
             'slug' => 'meat-the-victims',
+            'featured' => false,
             'image_card_url' => 'https://veganactivism.org/banners/meat-the-victims.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-meat-the-victims.jpg',
             'call_to_action' => 'Peacefully enter farms & protest for media exposure and lives.',
@@ -42,6 +45,7 @@ class OrganizationsTableSeeder extends Seeder
         \App\Organization::create([
            'title' => 'Direct Action Everywhere',
             'slug' => 'direct-action-everywhere',
+            'featured' => true,
             'image_card_url' => 'https://veganactivism.org/banners/direct-action-everywhere.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-direct-action-everywhere.jpg',
             'call_to_action' => 'Join DxE, disruptive but peaceful protests, save live animals!',
