@@ -59,7 +59,7 @@ class LinkCrudController extends CrudController
             'default' => 'one',
         ]);
 
-        $this->crud->addField([
+        $organizationSelectField = [
             // 1-n relationship
             'label' => 'Organization', // Table column heading
             'type' => 'select2_from_ajax',
@@ -70,7 +70,13 @@ class LinkCrudController extends CrudController
             'data_source' => url('organizations'), // url to controller search function (with /{id} should return model)
             'placeholder' => 'Select the organization', // placeholder for the select
             'minimum_input_length' => 2, // minimum characters to type before querying results
-        ]);
+        ];
+
+        if ($this->user->hasRole(BackpackUser::ROLE_ADMIN) && $this->user->organizations()->count() === 1) {
+            $organizationSelectField['default'] = $this->user->organizations()->first()->id;
+        }
+
+        $this->crud->addField($organizationSelectField);
 
         $this->manageButtons();
 
