@@ -19,9 +19,7 @@ class UserCrudController extends BackpackUserCrudController
     {
         $this->user = backpack_user();
 
-        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            abort(403);
-        }
+        abort_if(!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN), 403);
 
         parent::setup();
 
