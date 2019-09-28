@@ -15,6 +15,9 @@
             <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->about !!}
           </div>
 
+          <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+          <div id="player" class="embed-responsive embed-responsive-16by9"></div>
+
           <h2 class="font-weight-bold">What type of activism do they do?</h2>
 
           <div class="card-text">
