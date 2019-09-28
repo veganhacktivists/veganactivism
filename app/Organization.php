@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Storage;
 use Parsedown;
@@ -54,7 +53,7 @@ class Organization extends Model
     {
         return $this->website()->click_count;
     }
-  
+
     public function getDetailsAttribute($value)
     {
         $fileName = 'organizations_details/'.$this->attributes['slug'].'.md';
@@ -86,5 +85,10 @@ class Organization extends Model
         $default['website_clicks'] = $this->website_clicks;
 
         return $default;
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
     }
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use App\Models\BackpackUser;
+use App\Organization;
 use Illuminate\Foundation\Http\FormRequest;
 
 class OrganizationRequest extends FormRequest
@@ -15,7 +17,27 @@ class OrganizationRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return backpack_auth()->check();
+        $isLoggedIn = backpack_auth()->check();
+
+        if (!$isLoggedIn) {
+            return false;
+        }
+
+        $user = backpack_user();
+
+        // authorize super admins
+        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            return true;
+        }
+
+        // verify that the user is an admin for the organization
+        if ($this->organization) {
+            $organization = $user->organizations()->where('id', $this->organization)->first();
+
+            return !is_null($organization);
+        }
+
+        return false;
     }
 
     /**

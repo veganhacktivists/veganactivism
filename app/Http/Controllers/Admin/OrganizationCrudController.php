@@ -7,7 +7,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\OrganizationRequest as StoreRequest;
 use App\Http\Requests\OrganizationRequest as UpdateRequest;
+use App\Models\BackpackUser;
 use Backpack\CRUD\CrudPanel;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class OrganizationCrudController
@@ -16,8 +18,12 @@ use Backpack\CRUD\CrudPanel;
  */
 class OrganizationCrudController extends CrudController
 {
+    private $user;
+
     public function setup()
     {
+        $this->user = Auth::user();
+
         /*
         |--------------------------------------------------------------------------
         | CrudPanel Basic Information
@@ -113,9 +119,66 @@ class OrganizationCrudController extends CrudController
             ]
         ]);
 
+        if ($this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $this->crud->addField([
+                // n-n relationship
+                'label' => 'Organization Admins', // Table column heading
+                'type' => 'select2_from_ajax_multiple',
+                'name' => 'users', // the column that contains the ID of that connected entity
+                'entity' => 'user', // the method that defines the relationship in your Model
+                'attribute' => 'name', // foreign key attribute that is shown to user
+                'model' => 'App\User', // foreign key model
+                'data_source' => url('users'), // url to controller search function (with /{id} should return model)
+                'placeholder' => 'Select a user', // placeholder for the select
+                'minimum_input_length' => 2, // minimum characters to type before querying results
+                'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
+            ]);
+        }
+
+        $this->manageButtons();
+
         // add asterisk for fields that are required in OrganizationRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
+    }
+
+    // Manage default buttons by setting access
+    private function manageButtons()
+    {
+        $this->crud->allowAccess('show');
+
+        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess('create');
+            $this->crud->denyAccess('delete');
+        }
+    }
+
+    // Override the search method that displays records in the organizations table
+    public function search()
+    {
+        $user = $this->user;
+
+        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $this->crud->addClause('whereHas', 'users', function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            });
+        }
+
+        return parent::search();
+    }
+
+    // Override the edit method that displays the form for updating an organization
+    public function edit($id)
+    {
+        $user = $this->user;
+
+        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $organization = $user->organizations()->where('id', $id)->first();
+
+            abort_if(!$organization, 403);
+        }
+
+        return parent::edit($id);
     }
 
     public function store(StoreRequest $request)

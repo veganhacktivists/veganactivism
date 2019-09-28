@@ -45,6 +45,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    public function organizations()
+    {
+        return $this->belongsToMany(Organization::class);
+    }
+
     public function isSubscribedToNewsletter()
     {
         return Mailchimp::isSubscribedToNewsletter($this->email);

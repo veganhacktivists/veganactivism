@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BackpackUser;
 use App\Organization;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OrganizationsController extends Controller
 {
@@ -18,28 +21,38 @@ class OrganizationsController extends Controller
     }
 
     /**
-     * Return a list of organizations
-     * 
+     * Return a list of organizations.
+     *
      * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Support\Collection
      */
     public function index(Request $request)
     {
+        $user = backpack_user();
+
         $search_term = $request->input('q');
 
-        if ($search_term) {
-            $results = Organization::where('title', 'LIKE', '%' . $search_term . '%')->paginate(10);
-        } else {
-            $results = Organization::paginate(10);
+        $results = DB::table('organizations');
+
+        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $results->join('organization_user', 'organization_id', '=', 'id')->where('user_id', $user->id);
         }
+
+        if ($search_term) {
+            $results->where('title', 'LIKE', '%'.$search_term.'%');
+        }
+
+        $results = $results->paginate(10);
 
         return $results;
     }
 
     /**
-     * Return a specific organization
-     * 
+     * Return a specific organization.
+     *
      * @param \App\Organization $organization
+     *
      * @return \App\Organization
      */
     public function get(Organization $organization)

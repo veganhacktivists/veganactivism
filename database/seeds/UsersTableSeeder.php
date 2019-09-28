@@ -19,8 +19,8 @@ class UsersTableSeeder extends Seeder
             'remember_token' => Str::random(10),
         ]);
 
-        $admin->assignRole('admin');
+        $admin->assignRole(BackpackUser::ROLE_SUPER_ADMIN);
 
-        factory(BackpackUser::class, 50)->create();
+        factory(BackpackUser::class, 5)->create();
     }
 }
