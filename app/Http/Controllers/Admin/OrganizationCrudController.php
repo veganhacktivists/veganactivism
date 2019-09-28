@@ -175,10 +175,8 @@ class OrganizationCrudController extends CrudController
         if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
             $organization = $user->organizations()->where('id', $id)->first();
 
-            if (!$organization) {
-                abort(403);
-            }
-        }        
+            abort_if(!$organization, 403);
+        }
 
         return parent::edit($id);
     }

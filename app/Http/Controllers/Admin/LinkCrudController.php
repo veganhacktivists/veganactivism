@@ -111,9 +111,7 @@ class LinkCrudController extends CrudController
         if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
             $organization = $user->organizations()->where('id', $this->crud->getEntry($id)->organization_id)->first();
 
-            if (!$organization) {
-                abort(403);
-            }
+            abort_if(!$organization, 403);
         }
 
         return parent::edit($id);
