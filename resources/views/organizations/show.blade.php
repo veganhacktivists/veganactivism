@@ -37,6 +37,7 @@
 @endsection
 
 @section('scripts')
+  @foreach($organization->youtubeVideos as $youtubeVideo)
   <script>
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -50,10 +51,10 @@
     //    after the API code downloads.
     var player;
     function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
+      player = new YT.Player('player-{{ $youtubeVideo->id }}', {
         height: '390',
         width: '640',
-        videoId: 'M7lc1UVf-VE',
+        videoId: "{{ $youtubeVideo->youtube_id }}",
         events: {
           'onReady': onPlayerReady,
           'onStateChange': onPlayerStateChange
@@ -80,4 +81,5 @@
       player.stopVideo();
     }
   </script>
+  @endforeach
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\YoutubeVideo;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Storage;
@@ -90,5 +91,10 @@ class Organization extends Model
     public function users()
     {
         return $this->belongsToMany(User::class);
+    }
+
+    public function youtubeVideos()
+    {
+        return $this->hasMany(YoutubeVideo::class);
     }
 }
