@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d9266c22f2b07001290d96f&product=sticky-share-buttons' async='async'></script>
     @livewireAssets
 
     <!-- Fonts -->
@@ -24,6 +25,8 @@
   <body>
       @include('inc.navbar')
 
+      <div class=”sharethis-inline-share-buttons”></div>
+      
       <main class="py-4">
         <div class="container mb-30">
           <div class="row">
