@@ -24,8 +24,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
   <body>
-      @include('inc.navbar')
-      
       <main class="py-4">
         <div class=”sharethis-inline-share-buttons”></div>
         <div class="container mb-30">
