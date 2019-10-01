@@ -18,6 +18,12 @@
   </a>
 </li>
 
+<li>
+  <a href='{{ backpack_url('youtubevideo') }}'>
+    <i class='fa fa-film'></i> <span>Embedded Youtube Videos</span>
+  </a>
+</li>
+
 @role(\App\Models\BackpackUser::ROLE_SUPER_ADMIN)
 <li>
   <a href='{{ backpack_url('idea') }}'>

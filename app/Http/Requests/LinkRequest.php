@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
 use App\Link;
 use App\Models\BackpackUser;
 use App\Organization;
@@ -63,9 +62,9 @@ class LinkRequest extends FormRequest
                     Link::TYPE_PATREON,
                     Link::TYPE_INSTAGRAM,
                     Link::TYPE_FACEBOOK,
-                    Link::TYPE_YOUTUBE
-                ])
-            ]
+                    Link::TYPE_YOUTUBE,
+                ]),
+            ],
         ];
     }
 
@@ -77,7 +76,6 @@ class LinkRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
         ];
     }
 
@@ -89,7 +87,6 @@ class LinkRequest extends FormRequest
     public function messages()
     {
         return [
-            //
         ];
     }
 }

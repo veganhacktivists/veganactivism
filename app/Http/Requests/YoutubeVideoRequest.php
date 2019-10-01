@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
+use App\Models\BackpackUser;
 use Illuminate\Foundation\Http\FormRequest;
 
 class YoutubeVideoRequest extends FormRequest
@@ -15,7 +15,23 @@ class YoutubeVideoRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return backpack_auth()->check();
+        $isLoggedIn = backpack_auth()->check();
+
+        if (!$isLoggedIn) {
+            return false;
+        }
+
+        $user = backpack_user();
+
+        // authorize super admins
+        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            return true;
+        }
+
+        // verify that the user is an admin for the organization
+        $organization = $user->organizations()->where('id', $this->input('organization_id'))->first();
+
+        return $organization ? true : false;
     }
 
     /**
@@ -25,8 +41,15 @@ class YoutubeVideoRequest extends FormRequest
      */
     public function rules()
     {
+        $urlValidation = 'required|url|min:5|max:255';
+
+        if (!$this->youtubeVideo) {
+            $urlValidation .= '|unique:youtube_videos,url';
+        }
+
         return [
-            // 'name' => 'required|min:5|max:255'
+            'url' => $urlValidation,
+            'organization_id' => 'required|integer|exists:organizations,id',
         ];
     }
 
@@ -38,7 +61,6 @@ class YoutubeVideoRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
         ];
     }
 
@@ -50,7 +72,6 @@ class YoutubeVideoRequest extends FormRequest
     public function messages()
     {
         return [
-            //
         ];
     }
 }
