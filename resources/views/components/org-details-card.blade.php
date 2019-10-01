@@ -1,6 +1,6 @@
 <div class="card m-3 p-0 border-0 col" >
     <div class="embed-responsive embed-responsive-16by9">
-        <img src={{ $organization->image_full_url}} class="card-img-top embed-responsive-item" alt="...">
+        <img src="{{ $organization->image_full_url}}" class="card-img-top embed-responsive-item" alt="...">
     </div>
     <div class="card-body">
         <h4 class="card-title font-weight-bold">Get involved with: {{ $organization->title }}</h4>
