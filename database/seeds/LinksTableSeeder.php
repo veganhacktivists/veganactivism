@@ -49,6 +49,28 @@ class LinksTableSeeder extends Seeder
                 \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/thehumaneleague/',
                 \App\Link::TYPE_CONTACT => 'https://thehumaneleague.org/take-action',
             ],
+            'hen-hero' => [
+              \App\Link::TYPE_WEBSITE => 'https://mercyforanimals.org/hen-heroes',
+                \App\Link::TYPE_CONTACT => 'https://mercyforanimals.org/contact-us',
+            ],
+            'animal-protectors' => [
+              \App\Link::TYPE_WEBSITE => 'http://www.animalprotectors.net',
+                \App\Link::TYPE_EVENTS => 'http://www.animalprotectors.net/events.html',
+                \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/animalprotectorsofav',
+                \App\Link::TYPE_CONTACT => 'http://www.animalprotectors.net/contact-us',
+            ],
+            'animal-ethics' => [
+              \App\Link::TYPE_WEBSITE => 'http://www.animal-ethics.org/volunteer/',
+              \App\Link::TYPE_EVENTS => 'http://www.animal-ethics.org/volunteer/',
+              \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/Animal-Ethics-1424658461139957/',
+              \App\Link::TYPE_CONTACT => 'http://www.animal-ethics.org/contact-us/',
+            ],
+            'peta-activism' => [
+              \App\Link::TYPE_WEBSITE => 'https://www.peta.org/about-peta/volunteer',
+                \App\Link::TYPE_EVENTS => 'https://www.facebook.com/pg/official.peta/events/',
+                \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/official.peta/',
+                \App\Link::TYPE_CONTACT => 'https://www.peta.org/about-peta/contact-peta/contact-options/',
+            ],
         ];
 
         foreach ($linksForSlug as $slug => $linksArr) {

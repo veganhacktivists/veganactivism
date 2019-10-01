@@ -103,5 +103,49 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>The Humane League was rated as a "Top Charity" by Animal Charity Evalators for each of their ranking periods! As well as certified Best In America by Independent Charities of America.</p><p>They exist to end the abuse of animals raised for food. They work to reform the way farm animals are treated while also inspiring people to make more compassionate food choices. Their strategy includes hard-hitting corporate campaigns and wide-ranging outreach and education programs, supported by an extensive network of organizations, activists and supporters around the world.</p>',
             'activism' => '<p>In the US, The Humane League has on-the-ground organizers in major cities across the country. These grassroots staff build and strengthen local communities of changemakers that support our work and spread their message, amplifying the ability to create meaningful change for farm animals.</p><p>They bring a pragmatic, objective approach in evaluating and testing our methods to determine what creates the most impact. That’s the purpose of Humane League Labs, where we engage in direct testing to improve our vegan advocacy and education efforts.</p><p>Their reach extends globally with the Open Wing Alliance. Through grants and training, they work in partnership with organizations on every continent with the singular goal of ending cages for laying hens.</p>',
         ]);
+        \App\Organization::create([
+            'title' => 'Hen Hero',
+            'slug' => 'hen-hero',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/hen-hero.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-hen-hero.jpg',
+            'call_to_action' => 'Be a Hen Hero for just a few minutes each day!',
+            'card_content' => 'Join thousands of people taking one-minute daily actions to help millions of animals by becoming a Hen Hero!',
+            'about' => 'Join our Hen Heroes team of online activists! Most of our Hen Hero actions take less than 60 seconds, but can spare hundreds of thousands of chickens a lifetime of suffering. Join Hen Heroes to receive one-minute daily actions to help end egregious animal abuse.',
+            'activism' => 'It will only take you one minute a day on social media to make a big difference for hens. Volunteers can sign up to receive daily emails with tasks that can be completed in under a few minutes. These tasks complement their corporate campaigns and often involve tweeting, emailing, calling, or posting on Facebook.',
+        ]);
+        \App\Organization::create([
+            'title' => 'Animal Protectors',
+            'slug' => 'animal-protectors',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/animal-protectors.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-animal-protectors.jpg',
+            'call_to_action' => 'Join Animal Protectors to stand up for animals online!',
+            'card_content' => 'Take small, easy, daily online actions that add up to a big difference for millions of animals!',
+            'about' => '<p>Animal Protectors is a non-profit shelter for cats and dogs located in New Kensington, PA. Non-profit means that they run completely off of donations and fundraising events. Their non-profit status gives them the ability to focus all their funds to caring for their animals and finding homes for them. They are also no-kill, meaning that they never euthanize for space. The mission of their no-kill shelter is to find safe, loving homes for abused, abandoned, and homeless animals in the A-K Valley and to educate the public about responsible pet ownership.</p><p>Their vision is to always be a trusted and caring no-kill animal shelter that the community looks to for animal rescue, education, and resources. Animal Protectors of Allegheny Valley was founded in 1966 as a network of foster homes providing temporary shelter and adoption services for abandoned and unwanted animals. From 1966 through 1985, volunteers fought to end the practice of euthanizing abandoned dogs in the city of New Kensington. The group raised funds to help with veterinary care and food for these strays by asking for donations from friends and relatives, many times paying the bills themselves.</p>',
+            'activism' => '<p>As part of our commitment to their community, they strive to educate on the realities of animal abuse and neglect, spaying/neutering, responsible pet ownership and pit bull education. They offer low cost microchipping, "soft paws" applications, (an alternative to de-clawing), and rabies clinics.</p><p>One of the hardest parts of their jobs is receiving an animal who has been abused. Once an abused animal is in their care, they take every step to help this animal to trust again. Recognizing cruelty is not as easy as it sounds. Often, people assume that an animal’s behavior – such as being timid or frightened – is a sign of abuse. This is not always the case.</p>',
+        ]);
+        \App\Organization::create([
+            'title' => 'Animal Ethics',
+            'slug' => 'animal-ethics',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/animal-ethics.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-animal-ethics.jpg',
+            'call_to_action' => 'Volunteer with Animal Ethics to make a difference globally.',
+            'card_content' => 'If you want to make a difference for animals, or provide resources for animal advocates, you can collaborate with Animal Ethics.',
+            'about' => '<p>Animal Ethics was formed to provide information and promote discussion and debate about issues in animal ethics, and to provide resources for animal advocates. Detailed information on the data regarding the situation of nonhuman animals as well as on the arguments to defend animals is not always available, and Animal Ethics intends to provide it to all those who want to help animals. In addition, they do outreach work themselves, aimed not at stopping particular ways in which animals are harmed (which other organizations are already addressing), but at achieving a shift in attitudes towards speciesism.</p><p>Our work deals with the way nonhuman animals are considered in everyday life, as well as how they are considered in fields that affect human attitudes and activities that are relevant to animals. These include academia, scientific fields, and the law. We look at the way nonhuman animals are impacted by current human activities, and how they might be impacted by future planned or unplanned human activities. This involves not only the ways we might harm them, but also how we might help them even when the cause of their plight is not human action.</p>',
+            'activism' => 'The field of animal ethics deals with why we should take nonhuman animals into consideration in our moral decisions, and the ways in which we should. This has tremendously relevant practical consequences. Many people currently have little regard for nonhuman animals. But more often, people do give some consideration to the interests of animals, but still have a discriminatory attitude towards them. We can morally consider someone but still discriminate against them in a way that harms them. We can also discriminate against them in ways that don’t harm them at all, such as by helping some individuals more than we help others, for reasons that are unfair. Animal ethics as a field addresses these questions, and it is our aim to deal with them.',
+        ]);
+        \App\Organization::create([
+            'title' => 'PETA Activism',
+            'slug' => 'peta-activism',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/peta-activism.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-peta-activism.jpg',
+            'call_to_action' => 'Peta needs your help around the world, take action with us!',
+            'card_content' => 'Our volunteers come from diverse backgrounds. No matter what your talents are, if you want to volunteer for animals, we have a place for you!',
+            'about' => '<p> People for the Ethical Treatment of Animals is an American animal rights organization based in Virgina. PETA is a nonprofit corporation with nearly 400 employees, it claims that it has 6.5 million members and supporters, in addition to claiming that it is the largest animal rights group in the world. Its slogan is "Animals are not ours to eat, wear, experiment on, use for entertainment, or abuse in any other way."</p><p>PETA focuses its attention on the four areas in which the largest numbers of animals suffer the most intensely for the longest periods of time: in laboratories, in the food industry, in the clothing trade, and in the entertainment industry. They also work on a variety of other issues, including the cruel killing of rodents, birds, and other animals who are often considered “pests” as well as cruelty to domesticated animals.</p>',
+            'activism' => 'PETA works through public education, cruelty investigations, research, animal rescue, legislation, special events, celebrity involvement, and protest campaigns.',
+        ]);
     }
 }
