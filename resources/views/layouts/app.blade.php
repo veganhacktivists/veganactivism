@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('scripts')
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5bee9ee57c3c810011b38b75&product=inline-share-buttons' async='async'></script>
     @livewireAssets
 
     <!-- Fonts -->
@@ -24,8 +25,9 @@
   </head>
   <body>
       @include('inc.navbar')
-
+      
       <main class="py-4">
+        <div class=”sharethis-inline-share-buttons”></div>
         <div class="container mb-30">
           <div class="row">
             @yield('content')
