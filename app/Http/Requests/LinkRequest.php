@@ -62,6 +62,7 @@ class LinkRequest extends FormRequest
                     Link::TYPE_PATREON,
                     Link::TYPE_INSTAGRAM,
                     Link::TYPE_FACEBOOK,
+                    Link::TYPE_VOLUNTEER,
                     Link::TYPE_YOUTUBE,
                 ]),
             ],

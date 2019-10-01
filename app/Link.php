@@ -16,6 +16,7 @@ class Link extends Model
     const TYPE_INSTAGRAM = 'instagram';
     const TYPE_PATREON = 'patreon';
     const TYPE_FACEBOOK = 'facebook';
+    const TYPE_VOLUNTEER = 'volunteer';
     const TYPE_YOUTUBE = 'youtube';
 
     /**

@@ -25,6 +25,18 @@ class LinksTableSeeder extends Seeder
                 \App\Link::TYPE_WEBSITE => 'https://www.directactioneverywhere.com/get-active-main#get-active-sub',
                 \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/directactioneverywhere/',
             ],
+            'the-vegan-society' => [
+                \App\Link::TYPE_WEBSITE => 'https://www.vegansociety.com/get-involved/volunteering-vegan-society',
+                \App\Link::TYPE_VOLUNTEER => 'https://www.vegansociety.com/get-involved/volunteering-vegan-society/volunteering-application-form',
+                \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/TheVeganSociety/',
+                \App\Link::TYPE_CONTACT => 'https://www.vegansociety.com/contact-us',
+            ],
+            'mercy-for-animals' => [
+              \App\Link::TYPE_WEBSITE => 'https://mercyforanimals.org/action-center',
+                \App\Link::TYPE_EVENTS => 'https://mercyforanimals.org/action-center',
+                \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/mercyforanimals/',
+                \App\Link::TYPE_CONTACT => 'https://mercyforanimals.org/contact-us',
+            ],
         ];
 
         foreach ($linksForSlug as $slug => $linksArr) {
