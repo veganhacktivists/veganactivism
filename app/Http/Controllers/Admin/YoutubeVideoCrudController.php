@@ -68,6 +68,20 @@ class YoutubeVideoCrudController extends CrudController
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
+    // Override the edit method that displays the form for updating an organization
+    public function edit($id)
+    {
+        $user = $this->user;
+
+        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+            $organization = $user->organizations()->where('id', $this->crud->getEntry($id)->organization_id)->first();
+
+            abort_if(!$organization, 403);
+        }
+
+        return parent::edit($id);
+    }
+
     public function store(StoreRequest $request)
     {
         // your additional operations before save here

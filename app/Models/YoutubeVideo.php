@@ -20,7 +20,7 @@ class YoutubeVideo extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['url'];
+    protected $fillable = ['organization_id', 'url'];
     // protected $hidden = [];
     // protected $dates = [];
 
