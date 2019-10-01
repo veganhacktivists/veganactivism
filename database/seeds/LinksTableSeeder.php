@@ -37,6 +37,18 @@ class LinksTableSeeder extends Seeder
                 \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/mercyforanimals/',
                 \App\Link::TYPE_CONTACT => 'https://mercyforanimals.org/contact-us',
             ],
+            'challenge-22' => [
+                \App\Link::TYPE_WEBSITE => 'https://db.challenge22.com/mentor-application-form.php',
+                \App\Link::TYPE_VOLUNTEER => 'https://db.challenge22.com/mentor-application-form.php',
+                \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/ChallengeTwentyTwo/',
+                \App\Link::TYPE_CONTACT => 'https://www.facebook.com/ChallengeTwentyTwo/',
+            ],
+            'the-humane-league' => [
+              \App\Link::TYPE_WEBSITE => 'https://thehumaneleague.org/fast-action-network/',
+                \App\Link::TYPE_EVENTS => 'https://thehumaneleague.org/events/',
+                \App\Link::TYPE_FACEBOOK => 'https://www.facebook.com/thehumaneleague/',
+                \App\Link::TYPE_CONTACT => 'https://thehumaneleague.org/take-action',
+            ],
         ];
 
         foreach ($linksForSlug as $slug => $linksArr) {
