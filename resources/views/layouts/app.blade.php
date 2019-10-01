@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('scripts')
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5bee9ee57c3c810011b38b75&product=inline-share-buttons' async='async'></script>
     @livewireAssets
 

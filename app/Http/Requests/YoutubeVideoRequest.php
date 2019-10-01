@@ -2,13 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\Link;
 use App\Models\BackpackUser;
-use App\Organization;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class LinkRequest extends FormRequest
+class YoutubeVideoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -46,25 +43,13 @@ class LinkRequest extends FormRequest
     {
         $urlValidation = 'required|url|min:5|max:255';
 
-        if (!$this->link) {
-            $urlValidation .= '|unique:links,url';
+        if (!$this->youtubeVideo) {
+            $urlValidation .= '|unique:youtube_videos,url';
         }
 
         return [
             'url' => $urlValidation,
             'organization_id' => 'required|integer|exists:organizations,id',
-            'type' => [
-                'required',
-                'string',
-                Rule::in([
-                    Link::TYPE_WEBSITE,
-                    Link::TYPE_TWITTER,
-                    Link::TYPE_PATREON,
-                    Link::TYPE_INSTAGRAM,
-                    Link::TYPE_FACEBOOK,
-                    Link::TYPE_YOUTUBE,
-                ]),
-            ],
         ];
     }
 

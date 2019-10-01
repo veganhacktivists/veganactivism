@@ -15,6 +15,11 @@
             <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->about !!}
           </div>
 
+          @foreach($organization->youtubeVideos as $youtubeVideo)
+            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+            <div id="player-{{ $youtubeVideo->id }}" class="embed-responsive embed-responsive-16by9 py-3"></div>
+          @endforeach
+
           <h2 class="font-weight-bold">What type of activism do they do?</h2>
 
           <div class="card-text">
