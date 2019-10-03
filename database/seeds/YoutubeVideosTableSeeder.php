@@ -44,12 +44,12 @@ class YoutubeVideosTableSeeder extends Seeder
             'narn-activism' => [
                 'https://youtu.be/pznxe5g2yUc',
             ],
-            'reddit-activism' => [],
-            'food-not-bombs' => [],
-            'vegan-mentorship-program' => [],
-            '5-minutes-5-vegans' => [],
-            'veganuary-activism' => [],
-            'vegan-hacktivists' => [],
+//            'reddit-activism' => [],
+//            'food-not-bombs' => [],
+//            'vegan-mentorship-program' => [],
+//            '5-minutes-5-vegans' => [],
+//            'veganuary-activism' => [],
+//            'vegan-hacktivists' => [],
         ];
 
         foreach ($linksForSlug as $slug => $linksArr) {

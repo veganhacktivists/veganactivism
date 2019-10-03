@@ -14,13 +14,14 @@ class CreateLinksTable extends Migration
         Schema::create('links', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('organization_id');
-            $table->string('url')->unique();
+            $table->string('url');
             $table->integer('click_count')->default(0);
             $table->string('type')->default('website');
             $table->timestamps();
 
             $table->index('url');
             $table->foreign('organization_id')->references('id')->on('organizations');
+            $table->unique(['organization_id', 'type', 'url']);
         });
     }
 

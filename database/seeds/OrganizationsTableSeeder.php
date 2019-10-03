@@ -99,7 +99,7 @@ class OrganizationsTableSeeder extends Seeder
             'image_card_url' => 'https://veganactivism.org/banners/the-humane-league.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-the-humane-league.jpg',
             'call_to_action' => 'Join The Humane League\'s Fast Action Network!',
-            'card_conent' => 'A group of dedicated online activists spending only a few minutes of their time each week to assist.',
+            'card_content' => 'A group of dedicated online activists spending only a few minutes of their time each week to assist.',
             'about' => '<p>The Humane League was rated as a "Top Charity" by Animal Charity Evalators for each of their ranking periods! As well as certified Best In America by Independent Charities of America.</p><p>They exist to end the abuse of animals raised for food. They work to reform the way farm animals are treated while also inspiring people to make more compassionate food choices. Their strategy includes hard-hitting corporate campaigns and wide-ranging outreach and education programs, supported by an extensive network of organizations, activists and supporters around the world.</p>',
             'activism' => '<p>In the US, The Humane League has on-the-ground organizers in major cities across the country. These grassroots staff build and strengthen local communities of changemakers that support our work and spread their message, amplifying the ability to create meaningful change for farm animals.</p><p>They bring a pragmatic, objective approach in evaluating and testing our methods to determine what creates the most impact. That’s the purpose of Humane League Labs, where we engage in direct testing to improve our vegan advocacy and education efforts.</p><p>Their reach extends globally with the Open Wing Alliance. Through grants and training, they work in partnership with organizations on every continent with the singular goal of ending cages for laying hens.</p>',
         ]);
@@ -203,5 +203,343 @@ class OrganizationsTableSeeder extends Seeder
 
             'activism' => '',
         ]);
+
+        \App\Organization::create([
+            'title' => 'Northwest Animal Rights Network',
+            'slug' => 'narn-activism',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/narn.png',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-narn.png',
+            'call_to_action' => 'Supporn NARN in several ways by visiting our website today!',
+            'card_content' => 'Whether you’re experienced in the world of activism or you’re dipping your toes for the first time, we look forward to working with you!',
+            'about' => '<p>Thank you for your interest in volunteering with Northwest Animal Rights Network (NARN). Volunteers are fundamental in our mission to end the exploitation of animals. Whether you’re an experience veteran in the world of animal activism or you’re dipping your toes in the water for the first time, we’re looking forward to working with you!</p>
+             <p>NARN has been dedicated to ending the exploitation of animals by raising awareness of animal suffering in the food, entertainment, experimentation, and fashion industries since 1986. Our volunteers come from diverse backgrounds and include teachers, engineers, social workers, students, computer programmers, and artists. Our efforts include outreach, demonstrations, litigation, and educational events. No matter what your talents are, we have a volunteer opportunity for you. There are so many ways to get involved with the Northwest Animal Rights Network that there are sure to be plenty of volunteer opportunities that fit your interest, skill, energy, and time available.</p>',
+            'activism' => '<p>Examples of volunteer work include:</p>
+            <ul>
+                <li>Handing out pamphlets and information (leafletting and tabling)</li>
+                <li>Tabling outreach at local events</li>
+                <li>Flyering at local events</li>
+                <li>Helping out with organizing events</li>
+                <li>Participating in work parties</li>
+                <li>Conducting online research</li>
+                <li>Writing blog posts</li>
+                <li>Design, poster design, logo making, etc.</li>
+                <li>Sign &amp; Poster making</li>
+                <li>Letter writing</li>
+                <li>Campaign management</li>
+                <li>Demonstrating at circuses, animal labs, furriers, etc.</li>
+                <li>Web programming (CSS, WordPress, etc.)</li>
+                <li>Event planning and management</li>
+                <li>Fundraising and development (broad activities)</li>
+                <li>Member recruiting and outreach (broad activities)</li>
+                <li>Marketing (social outreach, street teams, etc.)</li>
+           </ul>
+           <p>For more specific volunteer opportunities, our Monthly Volunteer Newsletter will highlight current needs. Please fill out our Volunteer Form below to be added to this list. If you’re not in the Northwest area and/or looking for ideas to help animals, here are some other ideas of What You Can Do to Help Animals.</p>',
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Reddit',
+            'slug' => 'reddit-activism',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/reddit-activism.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-reddit-activism.jpg',
+            'call_to_action' => 'Respectfully post relevant vegan-friendly reddit content!',
+            'card_content' => 'Reddit is a social news aggregation, web content, and discussion website with various types of communities. Post relevant content to plant seeds!',
+            'about' => 'Reddit is used by millions of people. By making an account and reaching out to others online, you have the opportunity to make a difference from your bedroom. An easy way to be a Reddit Activist is to use the comments section to your advantage. We recommend that you use a logical, calm, and personable tone. When you demonstrate strong familiarity with a subject, your reader is more likely to be receptive to the information that you provide, so use sources! Visit one of the guides below for some easy to share replies to commonly argued stances by pre-vegans.',
+            'activism' => '<p>Reddit communities do NOT tolerate direct agenda pushing. While there\'s nothing wrong with posting content that you enjoy or have an opinion on, posting something to directly push towards your agenda (political, moral, etc) is not what reddit is about.</p>
+            <p>With that said, if you adhere to the golden guidelines below (RAGG), you\'ll be able to post to Reddit communities in the most respectful and relevant way possible.</p>
+            <ul style="padding-left: 37px;">
+                <li>1. Always respect the subreddit\'s individual rules.</li>
+                <li>2. Always listen to the moderators if they message you with requests.</li>
+                <li>3. Always post content that\'s 100% relevant to the subreddit.</li>
+                <li>4. Always make sure the title is relevant and not agenda-pushing.</li>
+                <li>5. Always limit the amount of posts you make to an individual subreddit.</li>
+                <li>6. Always link to sources when making claims, no matter how frivolous.</li>
+                <li>7. Always remain respectful, calm, kill with kindness, no matter the troll.</li>
+                <li>8. Always stay in the thread and contribute to comments. Don\'t dine &amp; dash.</li>
+            </ul>
+            <h2 class="post_title mb-20px">
+                Examples of <i style="color:green;">good</i> posting:
+            </h2>
+            <ul style="padding-left: 37px;">
+                <li><i style="color:#ff0097;">(r/aww)</i> Baby cow overjoyed after seeing the sunlight first time!</li>
+                <li><i style="color:#ff0097;">(r/videos)</i>  Adorable little kid philosophizing about dinner!</li>
+                <li><i style="color:#ff0097;">(r/todayilearned)</i>  Cows have best friends &amp; become depressed when gone.</li>
+                <li><i style="color:#ff0097;">(r/pics)</i>  Act of kindness shown to pigs before heading into slaughterhouse.</li>
+                <li><i style="color:#ff0097;">(r/recipes)</i>  Scrambled "eggs" peppered tofu delight recipe!</li>
+            </ul>
+            <h2 class="post_title mb-20px">
+                Examples of <i style="color:red;">bad</i> posting:
+            </h2>
+            <ul style="padding-left: 37px;">
+                <li><i style="color:#ff0097;">(r/aww)</i>  Baby cow that was tortured for 3 years finally released.</li>
+                <li><i style="color:#ff0097;">(r/videos)</i>  Baby cow beaten to death by slaughterhouse exposed: go vegan!</li>
+                <li><i style="color:#ff0097;">(r/todayilearned)</i>  That going Vegan reverses heart-disease completely!</li>
+                <li><i style="color:#ff0097;">(r/pics)</i>  Dead pigs hanging on the slaughterhouse hangers for your bacon.</li>
+                <li><i style="color:#ff0097;">(r/recipes)</i>  Vegan Scrambled Eggs recipe to save the animals from death.</li>
+            </ul>
+            <p>Generally reddit communities will allow your posts if they are relevant and not preachy or confrontational. Again, there\'s nothing wrong with posting relevant material you enjoy to subreddits, it\'s when you directly push your lifestyle or political agenda in readers\' faces that it becomes an issue. I think most community mods would agree. Either way, follow RAGG and you\'ll have the best chance to spread veganism and compassion using reddit moving forward without intruding on communities.</p>
+            <h2 class="post_title mb-20px">
+                Example subs to post relevant content in:
+            </h2>
+            <table>
+
+												  <tbody><tr style="border: 1px solid #ff0097;">
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/GifRecipes" target="_blank">/r/GifRecipes</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Food" target="_blank">/r/Food</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Cooking" target="_blank">/r/Cooking</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/FoodPorn" target="_blank">/r/FoodPorn</a></td>
+            
+                                                              </tr>
+                                                              
+            <tr style="border: 1px solid #ff0097;">
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/LikeUs" target="_blank">/r/LikeUs</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Health" target="_blank">/r/Health</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Fitness" target="_blank">/r/Fitness</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/HealthyFood" target="_blank">/r/HealthyFood</a></td>
+            
+            </tr>
+            
+            <tr style="border: 1px solid #ff0097;">
+                                                               <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/TodayILearned" target="_blank">/r/TodayILearned</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/YouShouldKnow" target="_blank">/r/YouShouldKnow</a></td>
+            
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/ChangeMyView" target="_blank">/r/ChangeMyView</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/LifeProTips" target="_blank">/r/LifeProTips</a></td>
+            </tr>
+            
+            <tr style="border: 1px solid #ff0097;">
+                                                              <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/EyeBleach" target="_blank">/r/EyeBleach</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Philosophy" target="_blank">/r/Philosophy</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/CasualConversation" target="_blank">/r/CasualConversation</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/MorbidReality" target="_blank">/r/MorbidReality</a></td>
+            </tr>
+            
+            <tr style="border: 1px solid #ff0097;">
+                                                               <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Videos" target="_blank">/r/Videos</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Pics" target="_blank">/r/Pics</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/EatCheapAndHealthy" target="_blank">/r/EatCheapAndHealthy</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/News" target="_blank">/r/News</a></td>
+                                                            
+            </tr>
+            
+            <tr style="border: 1px solid #ff0097;">
+                                                               <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Environment" target="_blank">/r/Environment</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Documentaries" target="_blank">/r/Documentaries</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Futurology" target="_blank">/r/Futurology</a></td>
+            <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/LoseIt" target="_blank">/r/LoseIt</a></td>
+            </tr>
+            
+            <tr style="border: 1px solid #ff0097;">
+                                                              <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Aww" target="_blank">/r/Aww</a></td>
+                                                               <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/WTF" target="_blank">/r/WTF</a></td>
+                                                                <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/UpliftingNews" target="_blank">/r/UpliftingNews</a></td>
+             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/MadeMeSmile" target="_blank">/r/MadeMeSmile</a></td>
+            </tr>
+        </tbody></table>
+        <h2 class="post_title mb-20px">
+            How to make a successful post:
+        </h2>
+        <p>There are a few important parts to a post being successful. Quality content, good title, posted in an appropriate subreddit, and posted at the right time.</p>
+        <h5>Finding an appropriate subreddit</h5>
+<br>
+
+<p>I recommend using <a href="http://redditlist.com/" target="_blank" style="color:#ff0097;">Reddit List</a>. This tool makes it easy to search for communities on any topic and see which ones are the largest and most active. For just about any type of content you post there will probably be a subreddit focused on that type of media (/r/gifs, /r/pics, /r/videos, /r/books, /r/documentaries, /r/news). If the content relates to a place there will be subreddits for the city, region, and country that place is in. If the content is cute there will be subreddits like /r/Aww, /r/EyeBleach, and /r/RarePuppers where it will fit in.</p>
+
+<br><br>
+<h5>Finding the best time to post and crafting an appropriate title</h5>
+<br>
+I recommend using <a href="http://redditsmarter.com/" target="_blank" style="color:#ff0097;">Reddit Smarter<a/> to help with this. Type in the name of any subreddit on the site. It will pull the most recent posts from that subreddit and will show you what scores posts tend to get by time of day, as well as how factors like the length of title and certain keywords impact scores by time of day. Be careful to follow the rules of the subreddit you are posting on when crafting a title. Some subreddits require that you do not alter the titles of articles you post.
+<br><br>
+There is no need to sit around all day waiting for the optimal time to post a submission on Reddit. You can schedule your posts to get posted to Reddit from your account at the time you want them to. <a href="https://cronnit.us/" target="_blank" style="color:#ff0097;">Cronnit</a> is an excellent free tool for doing this.
+
+
+<br><br>
+<h5>Quality Content</h5>
+<br>
+
+There are four primary places where I find things that are worth sharing. Facebook, Instagram, YouTube, and <a href="https://www.google.com/alerts" target="_blank" style="color:#ff0097;">Google Alerts</a>.
+<br><br>
+Google Alerts allows you to set up keywords that you are interested in, and it will send you a single email each day with news stories that are relevant to the keywords you have chosen. I watch for keywords that will notify me about prominent authors and writers whose work I enjoy, breaking undercover investigations, news stories on the environmental impacts of animal agriculture, and relevant legislative issues like ag-gag laws.
+<br><br>
+On Facebook, Instagram, and YouTube, following animal rights groups like The Humane League, Animal Equality, Animal Charity Evaluators, and Mercy For Animals will be a good way to find content. I also recommend following companies like Tofurky, Veggie Grill, Beyond Meat, and Just that are making vegan products more widely available. I also follow many animal sanctuaries, vegan recipe pages, and individuals with cute pet pigs, chickens, and turkeys.
+<br><br>
+You can also find good content by using the search features on these sites. If you want to share videos of cows playing with balls or pigs snuggling search for those things on YouTube. If you want to share scientific articles on social bonds in animals you can search for that too! 
+<br><br>
+Redditors tend to upvote and click on a lot more image links than anything else. I have found /r/videos to be among the most difficult subreddits to get karma in, while almost any image content is much more successful. If a video can be turned into a gif without losing its message, then it is definitely worth turning it into a gif using Imgur or Gfycat. 
+
+<br><br>
+<h5>Where to comment</h5>
+<br>
+If you want to reach a lot of people with a comment, the most important thing is to make your comments early. The first 2-3 hours of a post’s life are the best time to get comments in. If you are commenting on a post that is 6 hours old, don’t expect many people to see your comment, and by 18 hours it is unlikely your comment will be seen by more than a couple people.
+<br><br>
+My favorite tool for finding good places to comment is the <a href="https://happytools.glitch.me/discussions/" target="_blank" style="color:#ff0097;">Discussions tool</a>. This will show you places where people are commenting about relevant keywords within the last few hours (I recommend keeping the limit to no more than 3 hours old so that you are commenting on the newest posts).
+
+
+<br><br>
+<i>A big thanks to <a href="https://reddit.com/user/lnfinity" target="_blank" style="color:#ff0097;">/u/lnfinity</a> for helping us with the above section of this guide to reddit activism, we really appreciate it!</i>
+<br><br>
+
+
+<h2 class="post_title mb-20px">
+How to respond to negative comments:
+</h2>
+There are three things in life you can’t escape: 1. Death. 2. Taxes. 3. People that will respond to your Vegan-related comments in terrible ways no matter how gentle or nice you were.
+ That said, as much as we really want to tell these people off, <b>other people are watching</b>, and those are the people that will be judging your response and judging Vegans as a whole
+based on what you do.
+
+<br>
+<br>
+They will walk away from reading your conversation with either a better view of Vegans, a worse view, or a re-inforced view of their current outlook.
+That\'s why it\'s so incredibly important to respond to ALL negative comments in polite, respectful ways, to the point of apologizing for something that\'s <i>not even your fault</i> and thanking them for something they don\'t deserve.
+<br><br>I know it feels wrong, but take a look at what happens when we put this in practice, take a look at the upvotes and downvotes, they speak louder to the flow of the conversation then the discussion itself.
+
+<br><br>
+Click the <a href="https://imgur.com/a/EGJSooj" target="_blank" style="color:#ff0097;">link here</a> or the click the image thumbnails below to see live responses made to negative comments. Note the upvotes and downvotes closely to each response: <br><br>
+
+
+<b>Below are live comments I made in the last /r/all thread I participated in:</b><br><br>
+<table>
+
+<tr style="border: 1px solid #ff0097;">
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/1.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/1-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/2.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/2-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/3.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/3-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/4.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/4-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/5.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/5-thumb.png" alt=""/></a></td>
+
+</tr>
+												  
+<tr style="border: 1px solid #ff0097;">
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/6.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/6-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/7.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/7-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/8.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/8-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/9.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/9-thumb.png" alt=""/></a></td>
+<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/10.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/10-thumb.png" alt=""/></a></td>
+
+</tr>
+</table>
+      
+
+	
+	
+	
+
+As you can see, at the end of the day, we\'ve improved the reputation of Vegans (which needs all the help that it can get), we\'ve made a few unexpected connections, and we\'ve made folks that we\'ve responded to more open to Veganism in general (let alone the folks reading our comments). That\'s the kind of activism and kindess that ensures you\'re leaving the biggest and most postive impact for the animals and our planet.
+<br>
+<br>
+There is also no need to reply to every single person or comment. If someone is being truly antagonistic or hostile do not feel bad for simply not replying, and remember to use Reddit’s report feature when another commenter is violating subreddit or site-wide rules.
+
+<br><br>
+<h2 class="post_title mb-20px">
+Links to use when commenting:
+</h2>
+I like to use the You Are Their Voice links in comments as they rely on direct quotes, studies and science more than blog posts, which tend to garner much more respect. You can find the full list on YouAreTheirVoice.com under "Equip Yourself", but for now, these three are great:
+
+		<br><br>									
+											
+			<ul style="padding-left: 30px;">
+											<li><b>Veganism is Healthy</b><br><a href="https://youaretheirvoice.com/pages/veganism-is-healthy" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/pages/veganism-is-healthy</a></li>
+											<li><b>The Clear Consensus</b><br><a href="https://youaretheirvoice.com/pages/the-clear-consensus" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/pages/the-clear-consensus</a></li>
+											<li><b>The Daunting Facts</b><br><a href="https://youaretheirvoice.com/pages/the-daunting-facts" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/pages/the-daunting-facts</a></li>
+										
+											</ul>
+											
+											<b>You can also use the PDF versions for easy sharing:</b>
+											<br><br>
+
+<ul style="padding-left: 30px;">
+											<li><b>Veganism is Healthy (PDF)</b><br><a href="https://youaretheirvoice.com/resources/veganism-is-healthy-print-friendly-en.pdf" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/resources/veganism-is-healthy-print-friendly-en.pdf</a></li>
+											<li><b>The Clear Consensus (PDF)</b><br><a href="https://youaretheirvoice.com/resources/the-clear-consensus-print-friendly-en.pdf" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/resources/the-clear-consensus-print-friendly-en.pdf</a></li>
+											<li><b>The Daunting Facts (PDF)</b><br><a href="https://youaretheirvoice.com/resources/the-daunting-facts-print-friendly-en.pdf" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/resources/the-daunting-facts-print-friendly-en.pdf</a></li>
+										
+											</ul>
+											
+											
+											<h2 class="post_title mb-20px">
+											Equip yourself with knowledge:
+											</h2>
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+											https://veganspeak.org/vegan-arguments/ <br>
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+											https://www.carnismdebunked.com/general-ethical/ <br> 
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+											http://www.godfist.com/vegansidekick/guide.php <br> 
+											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
+											https://yourveganfallacyis.com <br> 
+											<br>',
+        ]);
+
+//        \App\Organization::create([
+//            'title' => 'VegFund',
+//            'slug' => 'vegfund-activism',
+//            'featured' => false,
+//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+//            'card_content' => '',
+//            'about' => '',
+//            'activism' => ''
+//        ]);
+//
+//        \App\Organization::create([
+//            'title' => 'VegFund',
+//            'slug' => 'vegfund-activism',
+//            'featured' => false,
+//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+//            'card_content' => '',
+//            'about' => '',
+//            'activism' => ''
+//        ]);
+//
+//        \App\Organization::create([
+//            'title' => 'VegFund',
+//            'slug' => 'vegfund-activism',
+//            'featured' => false,
+//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+//            'card_content' => '',
+//            'about' => '',
+//            'activism' => ''
+//        ]);
+//
+//        \App\Organization::create([
+//            'title' => 'VegFund',
+//            'slug' => 'vegfund-activism',
+//            'featured' => false,
+//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+//            'card_content' => '',
+//            'about' => '',
+//            'activism' => ''
+//        ]);
+//
+//        \App\Organization::create([
+//            'title' => 'VegFund',
+//            'slug' => 'vegfund-activism',
+//            'featured' => false,
+//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+//            'card_content' => '',
+//            'about' => '',
+//            'activism' => ''
+//        ]);
+//
+//        \App\Organization::create([
+//            'title' => 'VegFund',
+//            'slug' => 'vegfund-activism',
+//            'featured' => false,
+//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+//            'card_content' => '',
+//            'about' => '',
+//            'activism' => ''
+//        ]);
     }
 }
