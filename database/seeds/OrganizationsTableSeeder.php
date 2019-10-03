@@ -11,7 +11,7 @@ class OrganizationsTableSeeder extends Seeder
         \App\Organization::create([
             'title' => 'Anonymous for the Voiceless',
             'slug' => 'anonymous-for-the-voiceless',
-            'featured' => true,
+            'featured' => false,
             'image_card_url' => 'https://veganactivism.org/banners/anonymous-for-the-voiceless.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-anonymous-for-the-voiceless.jpg',
             'call_to_action' => 'Participate in an Anonymous for the Voiceless "Cube of Truth"!',
@@ -32,7 +32,7 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => 'The goals of our regular vigils at slaughterhouse are to encourage people to adopt a nonviolent, vegan lifestyle, and, just as importantly, to nurture advocacy, activism and organizing on the part each participant. We document the animal victims and the activists via photos and videos and use social media to spread global awareness and activism.',
         ]);
         \App\Organization::create([
-           'title' => 'Meat The Victims',
+            'title' => 'Meat The Victims',
             'slug' => 'meat-the-victims',
             'featured' => false,
             'image_card_url' => 'https://veganactivism.org/banners/meat-the-victims.jpg',
@@ -43,9 +43,9 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => "<p>The first ever Meat the Victims took place on April 6th 2018 at the Australian piggery where Leah had met that Mother pig. Leah went back inside, but this time with 67 other activists who locked down the piggery at 4am. The outside team arrived at 8am and the media waited in suspense for the inside team to come out.</p><p>The impact of this action for the animals was incredibly powerful. Between the media and the attendee \u2019s footage being shared there were hundred of thousands of views. The truth shocked the pubic as they met the victims of their choices.</p><p>Since that day Meat The Victims has become a global movement. A new generation of the growing community of citizens willing to disobey unjust laws together to abolish animal exploitation. Locking down inside the very places the animals are hostage and allowing the public to meet the victims of their choices.</p>",
         ]);
         \App\Organization::create([
-           'title' => 'Direct Action Everywhere',
+            'title' => 'Direct Action Everywhere',
             'slug' => 'direct-action-everywhere',
-            'featured' => true,
+            'featured' => false,
             'image_card_url' => 'https://veganactivism.org/banners/direct-action-everywhere.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-direct-action-everywhere.jpg',
             'call_to_action' => 'Join DxE, disruptive but peaceful protests, save live animals!',
@@ -93,10 +93,10 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => '<p>First, Each mentee joins a secret Facebook group, which enables participants to share their experience and learn from each other. The group is mentored by experienced vegan volunteers – culinary experts, parents, students and longtime vegans. In addition to the group support, mentees can be assigned a personal mentor, for the space to share and ask privately. The program features experienced dietitians, who are happy to give nutritional advice. In addition, each day participants receive a small task. By the end of the Challenge, mentees are equipped with nutritional information, cooking tips and recipes that enable them to maintain a healthy, tasty vegan lifestyle.</p><p>It all happens in a very joyful and supportive atmosphere – people upload pictures of their dishes, share recipes and cooking tips, talk about their daily experience, and all in all, live a great adventure together with other people in the same spirit.</p>',
         ]);
         \App\Organization::create([
-           'title' => 'The Humane League',
-           'slug' => 'the-humane-league',
-           'featured' => false,
-           'image_card_url' => 'https://veganactivism.org/banners/the-humane-league.jpg',
+            'title' => 'The Humane League',
+            'slug' => 'the-humane-league',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/the-humane-league.jpg',
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-the-humane-league.jpg',
             'call_to_action' => 'Join The Humane League\'s Fast Action Network!',
             'card_conent' => 'A group of dedicated online activists spending only a few minutes of their time each week to assist.',
@@ -146,6 +146,62 @@ class OrganizationsTableSeeder extends Seeder
             'card_content' => 'Our volunteers come from diverse backgrounds. No matter what your talents are, if you want to volunteer for animals, we have a place for you!',
             'about' => '<p> People for the Ethical Treatment of Animals is an American animal rights organization based in Virgina. PETA is a nonprofit corporation with nearly 400 employees, it claims that it has 6.5 million members and supporters, in addition to claiming that it is the largest animal rights group in the world. Its slogan is "Animals are not ours to eat, wear, experiment on, use for entertainment, or abuse in any other way."</p><p>PETA focuses its attention on the four areas in which the largest numbers of animals suffer the most intensely for the longest periods of time: in laboratories, in the food industry, in the clothing trade, and in the entertainment industry. They also work on a variety of other issues, including the cruel killing of rodents, birds, and other animals who are often considered “pests” as well as cruelty to domesticated animals.</p>',
             'activism' => 'PETA works through public education, cruelty investigations, research, animal rescue, legislation, special events, celebrity involvement, and protest campaigns.',
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Vegan Outreach',
+            'slug' => 'vegan-outreach',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/vegan-outreach.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-vegan-mentorship-program.jpg',
+            'call_to_action' => 'Volunteer in many ways with the organization Vegan Outreach!',
+            'card_content' => 'The cruelty inflicted on farmed animals is terrible, but you can be a part of the movement that will end that abuse. Here’s how.',
+            'about' => '<p>Vegan Outreach gives focus on reaching the people who are motivated enough to make changes now—of which there are always many in our target audience who just need some additional encouragement. By steadily increasing the number of vegans they are laying the groundwork to more quickly reach a tipping point.</p><p>Founded in 1993, Vegan Outreach is a 501c3 nonprofit organization working to end violence towards animals. They seek a future when sentient animals are no longer exploited as commodities.</p>',
+            'activism' => '<p>Vegan Outreach creates goals for massive changes, by creating student outreach programs, in-depth activities, and long term support. Vegan Outreach campaigns to make switching to veganism easier, by campaigning to add vegan entrees at restaurants and other foodservice establishments, never shaming others, and putting the emphasis of veganism on avoiding obvious animal products, but using one\'s time and energy advocating to others rather focusing on personal purity or trace ingredients </p><p>An extremely noteable feature from Vegan Outreach, is their leafletting guides. If you are interested in leafletting, (https://veganoutreach.org/leafleting/) Vegan outreach can provide you with the materials to learn how to become an effective leafletter - through educating demonstrations, downloadable PDFS, and their own leafletting order form.</p>',
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Adopt A College',
+            'slug' => 'adopt-a-college',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/vegan-outreach.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-adopt-a-college.png',
+            'call_to_action' => 'Hand out pro-veg booklets and show virtual reality videos!',
+            'card_content' => 'Adopt a College (AAC) is a program in which activists hand out pro-veg booklets and show iAnimal virtual reality videos.',
+            'about' => '<p>Adopt a College (AAC) is a program in which activists hand out pro-veg booklets and show iAnimal virtual reality videos exposing the suffering of farmed animals. AAC reaches hundreds of thousands of college students who wouldn’t approach a literature table. We also leaflet high schools, concerts, festivals, and anywhere young adults can be found. Most of our activists aren’t students.</p><p>As of Dec 20, 2018, AAC activists have handed out 20,458,192 booklets and shown VR videos to 26,014 people at 3,941 schools!</p>',
+            'activism' => '',
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Digital Vegan Activists',
+            'slug' => 'digital-vegan-activists',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/digital-activists.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+            'call_to_action' => 'Support one pro-vegan comment a day on Facebook!',
+            'card_content' => 'We post one pro-vegan comment on non-vegan pages per day, members will click like and have it quickly rise to the top to spread information!',
+            'about' => '<p>	In this non-partisan vegan activist group, we do the following: Our daily leader scans or monitors a popular non-vegan Facebook page (examples include food and fashion pages, major news outlets). The leader makes a non-aggressive, pro-vegan comment on a post on that page. They post a link to their comment in the DVA group (this link is pinned for the day) As soon as possible after the link is posted, group members Like it (and add replies and additional comments if they choose to do so).The leader’s comment will rise to the top of its page in proportion to the number of Likes and replies it gets, and the speed at which they arrive! We support one link each day and celebrate each night! On some days, we will share additional submissions from members for your support.</p><h2 class="post_title mb-20px">What else should I know?</h2><p>In speaking to others online, we value thoughtful, reasoned, respectful commentary, questions, and the provision of links to help people make the connection and learn about veganism as an ethical position. We absolutely reject being rude, belittling people’s intelligence, their dignity, and any form of discriminatory language (e.g. sexism, racism, ableism, ageism, homophobia, etc.). We are here to raise awareness with a clear vegan message to help create a vegan world. We also reject any comments that promote less than veganism and abolition as a minimum standard, such as welfarism or reductionism, or any comments that may confuse people regarding veganism as the end goal and minimum standard. If you want to focus on improving treatment or reducing use, there are many other groups for that.</p>',
+
+            'activism' => '',
+        ]);
+
+        \App\Organization::create([
+            'title' => 'VegFund',
+            'slug' => 'vegfund-activism',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
+            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
+            'card_content' => 'VegFund empowers vegan activists worldwide by funding and supporting effective outreach activities that inspire a vegan lifestyle.',
+            'about' => '<p>The first thing you should know is that VegFund exists to support you in your efforts to inform people about the benefits of plant-based and vegan living. We provide grants, connections, and skills-building resources to animal rights, environmental, and human health advocates and organizations.  In 2018, VegFund supported nearly 1,000 vegan outreach activities spanning more than 45 countries. These activities ranged from film screenings and video outreach to vegfests, food samplings, conferences, research projects, vegan challenges, online veg pledges, and more. And, we\'ve been doing this since 2009!
+             
+             Hand-in-hand with financial support is our commitment to help you maximize the effectiveness of your outreach. VegFund develops trainings for activists, curates the very best research available on plant-based living and effective advocacy, and facilitates information sharing among activists in the vegan community.
+             
+             Take a look for yourself. Visit the Grants section of the VegFund website where you can read the details about our grant programs. And browse our Activist Stories for some real-life examples.
+             
+             Start planning your own event today!</p>',
+
+            'activism' => '',
         ]);
     }
 }
