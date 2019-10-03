@@ -43,7 +43,11 @@ class Organization extends Model
      */
     public function getWebsiteUrlAttribute()
     {
-        return $this->website()->url;
+        if ($this->website()) {
+            return $this->website()->url;
+        }
+
+        return '';
     }
 
     /**
@@ -52,7 +56,11 @@ class Organization extends Model
      */
     public function getWebsiteClicksAttribute()
     {
-        return $this->website()->click_count;
+        if ($this->website()) {
+            return $this->website()->click_count;
+        }
+
+        return 0;
     }
 
     public function getDetailsAttribute($value)
