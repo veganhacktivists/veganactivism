@@ -1,5 +1,8 @@
 body {
-    background: url(https://i.imgur.com/gYoDMOO.jpg) no-repeat center center fixed;
+    background: url(https://i.imgur.com/gYoDMOO.jpg) no-repeat ;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: top;
     font-size: 16px;
     line-height: 1.75;
     font-weight: 400;
