@@ -26,8 +26,11 @@
   <body>
       <main class="py-4">
         <div class=”sharethis-inline-share-buttons”></div>
+        
         <div class="container mb-30">
+            @include('inc.navbar')
           <div class="row">
+              
             @yield('content')
           </div>
         </div>
