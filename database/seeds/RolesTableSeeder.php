@@ -26,6 +26,7 @@ class RolesTableSeeder extends Seeder
             BackpackUser::PERMISSION_LINKS_CREATE,
             BackpackUser::PERMISSION_LINKS_EDIT,
             BackpackUser::PERMISSION_LINKS_DELETE,
+            BackpackUser::PERMISSION_NAVBAR_VIEW,
         ])->pluck('id')->toArray();
         $role->permissions()->attach($superAdminPermissionIds);
 
@@ -35,7 +36,8 @@ class RolesTableSeeder extends Seeder
             BackpackUser::PERMISSION_ORGANIZATIONS_EDIT,
             BackpackUser::PERMISSION_LINKS_VIEW,
             BackpackUser::PERMISSION_LINKS_CREATE,
-            BackpackUser::PERMISSION_LINKS_EDIT
+            BackpackUser::PERMISSION_LINKS_EDIT,
+            BackpackUser::PERMISSION_NAVBAR_VIEW,
         ])->pluck('id')->toArray();
         $role->permissions()->attach($adminPermissionIds);
     }

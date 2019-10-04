@@ -10,7 +10,9 @@ use Spatie\Permission\Traits\HasRoles;
 
 class BackpackUser extends User
 {
-    use InheritsRelationsFromParentModel, CrudTrait, HasRoles;
+    use InheritsRelationsFromParentModel;
+    use CrudTrait;
+    use HasRoles;
 
     protected $table = 'users';
 
@@ -34,6 +36,9 @@ class BackpackUser extends User
     const PERMISSION_LINKS_CREATE = 'Create Links';
     const PERMISSION_LINKS_EDIT = 'Edit Links';
     const PERMISSION_LINKS_DELETE = 'Delete Links';
+
+    // Permission for Navbar
+    const PERMISSION_NAVBAR_VIEW = 'View Navbar';
 
     /**
      * Send the password reset notification.
