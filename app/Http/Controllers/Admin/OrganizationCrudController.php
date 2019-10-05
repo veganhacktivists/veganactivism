@@ -75,7 +75,7 @@ class OrganizationCrudController extends CrudController
             'type' => 'url',
             'label' => 'Card Image url',
             'attributes' => [
-                'placeholder' => 'URL to banner image',
+                'placeholder' => 'URL to banner image (585x200)',
             ],
         ]);
         $this->crud->addField([
@@ -83,7 +83,7 @@ class OrganizationCrudController extends CrudController
             'type' => 'url',
             'label' => 'Full Image url',
             'attributes' => [
-                'placeholder' => 'URL to full banner image',
+                'placeholder' => 'URL to full banner image (1280x386)',
             ],
         ]);
         $this->crud->addField([
