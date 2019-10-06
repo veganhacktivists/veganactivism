@@ -18,6 +18,7 @@ class Link extends Model
     const TYPE_FACEBOOK = 'facebook';
     const TYPE_VOLUNTEER = 'volunteer';
     const TYPE_YOUTUBE = 'youtube';
+    const TYPE_REDDIT = 'reddit';
 
     /**
      * The attributes that are mass assignable.
