@@ -282,7 +282,7 @@ class OrganizationsTableSeeder extends Seeder
             <h2 class="post_title mb-20px">
                 Example subs to post relevant content in:
             </h2>
-            <table>
+            <table class="table">
 
 												  <tbody><tr style="border: 1px solid #ff0097;">
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/GifRecipes" target="_blank">/r/GifRecipes</a></td>
