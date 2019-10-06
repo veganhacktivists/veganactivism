@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\BackpackUser;
 use App\Organization;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class OrganizationsController extends Controller
@@ -17,6 +16,10 @@ class OrganizationsController extends Controller
      */
     public function show(Organization $organization)
     {
+        if ($organization->website()) {
+            $organization->website()->increment('click_count');
+        }
+
         return view('organizations.show', compact('organization'));
     }
 
