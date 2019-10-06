@@ -32,7 +32,7 @@
           </p>
         @endif
 
-        <div class="row justify-content-center">
+        <div class="row">
             @foreach($organization->links as $link)
               @include('components.links.' . $link->type, ['url' => $link->url])
             @endforeach
