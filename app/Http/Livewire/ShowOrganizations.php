@@ -12,7 +12,7 @@ class ShowOrganizations extends Component
 
     public function mount()
     {
-        $this->organizations = Organization::all()->toArray();
+        $this->organizations = $this->getFreshOrganizations()->toArray();
     }
 
     public function render()
@@ -20,20 +20,25 @@ class ShowOrganizations extends Component
         return view('livewire.show-organizations');
     }
 
-    public function updatedSort($value)
+    public function setSort($value)
     {
         switch ($value) {
             case 'created_at':
-                $this->organizations = collect($this->organizations)->sortByDesc('id', SORT_REGULAR, true)->values()->all();
+                $this->organizations = collect($this->getFreshOrganizations())->sortBy('id')->values()->all();
                 break;
             case 'created_at_older':
-                $this->organizations = collect($this->organizations)->sortBy('id', SORT_REGULAR, true)->values()->all();
+                $this->organizations = collect($this->getFreshOrganizations())->sortByDesc('id')->values()->all();
                 break;
             case 'clicks':
-                $this->organizations = collect($this->organizations)->sortBy('website_clicks', SORT_REGULAR, true)->values()->all();
+                $this->organizations = collect($this->getFreshOrganizations())->sortByDesc('website_clicks')->values()->all();
                 break;
             default:
                 break;
        }
+    }
+
+    private function getFreshOrganizations()
+    {
+        return Organization::all();
     }
 }
