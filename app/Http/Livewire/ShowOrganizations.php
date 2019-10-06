@@ -30,7 +30,7 @@ class ShowOrganizations extends Component
                 $this->organizations = Organization::orderBy('created_at', 'DESC')->get()->toArray();
                 break;
             case 'clicks':
-                $this->organizations = collect($this->organizations)->sortBy('website_clicks')->values()->all();
+                $this->organizations = collect($this->organizations)->sortBy('website_clicks', 'DESC')->values()->all();
                 break;
             default:
                 break;
