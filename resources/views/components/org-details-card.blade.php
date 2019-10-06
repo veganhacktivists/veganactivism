@@ -1,7 +1,5 @@
 <div class="card m-3 p-0 border-0 col" >
-    <div class="embed-responsive embed-responsive-16by9">
         <img src="{{ $organization->image_full_url}}" class="card-img-top embed-responsive-item" alt="...">
-    </div>
     <div class="card-body">
         <h4 class="card-title font-weight-bold">Get involved with: {{ $organization->title }}</h4>
         <hr>
@@ -12,7 +10,7 @@
 
 
           <div class="card-text">
-            <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->about !!}
+            <i class="fa-double-right fas"></i> {!! $organization->about !!}
           </div>
 
           @foreach($organization->youtubeVideos as $youtubeVideo)
@@ -20,15 +18,17 @@
             <div id="player-{{ $youtubeVideo->id }}" class="embed-responsive embed-responsive-16by9 py-3"></div>
           @endforeach
 
+         @if($organization->activism != null) 
           <h2 class="font-weight-bold">What type of activism do they do?</h2>
 
           <div class="card-text">
-            <i class="fa-angle-double-right fa-w-14"></i> {!! $organization->activism !!}
+            <i class="fa-angle-right fas"></i> {!! $organization->activism !!}
           </div>
+        @endif
 
           <h2 class="font-weight-bold">How do I get involved?</h2>
           <p class="card-text">
-            <i class="fa-angle-double-right fa-w-14"></i> To start volunteering with {{ $organization->title }}, click a button below!
+            <i class="fa-angle-right fas"></i> To start volunteering with {{ $organization->title }}, click a button below!
           </p>
         @endif
 
