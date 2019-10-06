@@ -13,7 +13,7 @@
                     <div class="card my-3 border-0">   
                     <img src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="{{ $organization['show_route'] }}"  class="text-dark font-weight-bold">{{ $organization['title'] }}
+                        <h4 class="card-title"><a href="{{ $organization['show_route'] }}"  class="text-dark font-weight-bold">{{ $organization['call_to_action'] }}
                         
                             @if($organization['featured'] == 1)
                                 <span class="badge badge-primary">Featured</span>
