@@ -24,10 +24,10 @@ class ShowOrganizations extends Component
     {
         switch ($value) {
             case 'created_at':
-                $this->organizations = Organization::orderBy('id', 'DESC')->get()->toArray();
+                $this->organizations = collect($this->organizations)->sortByDesc('id', SORT_REGULAR, true)->values()->all();
                 break;
             case 'created_at_older':
-                $this->organizations = Organization::orderBy('id', 'ASC')->get()->toArray();
+                $this->organizations = collect($this->organizations)->sortBy('id', SORT_REGULAR, true)->values()->all();
                 break;
             case 'clicks':
                 $this->organizations = collect($this->organizations)->sortBy('website_clicks', SORT_REGULAR, true)->values()->all();
