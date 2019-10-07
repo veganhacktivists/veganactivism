@@ -246,7 +246,7 @@ class OrganizationsTableSeeder extends Seeder
             'call_to_action' => 'Respectfully post relevant vegan-friendly reddit content!',
             'card_content' => 'Reddit is a social news aggregation, web content, and discussion website with various types of communities. Post relevant content to plant seeds!',
             'about' => 'Reddit is used by millions of people. By making an account and reaching out to others online, you have the opportunity to make a difference from your bedroom. An easy way to be a Reddit Activist is to use the comments section to your advantage. We recommend that you use a logical, calm, and personable tone. When you demonstrate strong familiarity with a subject, your reader is more likely to be receptive to the information that you provide, so use sources! Visit one of the guides below for some easy to share replies to commonly argued stances by pre-vegans.',
-            'activism' => '<p>Reddit communities do NOT tolerate direct agenda pushing. While there\'s nothing wrong with posting content that you enjoy or have an opinion on, posting something to directly push towards your agenda (political, moral, etc) is not what reddit is about.</p>
+            'activism' => 'Reddit communities do NOT tolerate direct agenda pushing. While there\'s nothing wrong with posting content that you enjoy or have an opinion on, posting something to directly push towards your agenda (political, moral, etc) is not what reddit is about.
             <p>With that said, if you adhere to the golden guidelines below (RAGG), you\'ll be able to post to Reddit communities in the most respectful and relevant way possible.</p>
             <ul style="padding-left: 37px;">
                 <li>1. Always respect the subreddit\'s individual rules.</li>
@@ -470,76 +470,96 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
 											<br>',
         ]);
 
-//        \App\Organization::create([
-//            'title' => 'VegFund',
-//            'slug' => 'vegfund-activism',
-//            'featured' => false,
-//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
-//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
-//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
-//            'card_content' => '',
-//            'about' => '',
-//            'activism' => ''
-//        ]);
-//
-//        \App\Organization::create([
-//            'title' => 'VegFund',
-//            'slug' => 'vegfund-activism',
-//            'featured' => false,
-//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
-//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
-//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
-//            'card_content' => '',
-//            'about' => '',
-//            'activism' => ''
-//        ]);
-//
-//        \App\Organization::create([
-//            'title' => 'VegFund',
-//            'slug' => 'vegfund-activism',
-//            'featured' => false,
-//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
-//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
-//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
-//            'card_content' => '',
-//            'about' => '',
-//            'activism' => ''
-//        ]);
-//
-//        \App\Organization::create([
-//            'title' => 'VegFund',
-//            'slug' => 'vegfund-activism',
-//            'featured' => false,
-//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
-//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
-//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
-//            'card_content' => '',
-//            'about' => '',
-//            'activism' => ''
-//        ]);
-//
-//        \App\Organization::create([
-//            'title' => 'VegFund',
-//            'slug' => 'vegfund-activism',
-//            'featured' => false,
-//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
-//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
-//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
-//            'card_content' => '',
-//            'about' => '',
-//            'activism' => ''
-//        ]);
-//
-//        \App\Organization::create([
-//            'title' => 'VegFund',
-//            'slug' => 'vegfund-activism',
-//            'featured' => false,
-//            'image_card_url' => 'https://veganactivism.org/banners/vegfund.png',
-//            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-digital-activists.jpg',
-//            'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
-//            'card_content' => '',
-//            'about' => '',
-//            'activism' => ''
-//        ]);
+        \App\Organization::create([
+            'title' => 'Food Not Bombs',
+            'slug' => 'food-not-bombs',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/food-not-bombs.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-food-not-bombs.jpg',
+            'call_to_action' => 'Help save wasted food with Food not Bombs and donate it!',
+            'card_content' => 'We recover mostly vegan food that would have been discarded and then share it as a way of protesting poverty and war. Help us!',
+            'about' => 'Food Not Bombs is gaining momentum throughout the world. There are hundreds of autonomous chapters sharing free vegetarian food with hungry people and protesting war and poverty. Food Not Bombs is not a charity. This energetic all volunteer grassroots movement is active throughout the Americas, Europe, Africa, the Middle East, Asia and Australia. For over 30 years the movement has worked to end hunger and has supported actions to stop the globalization of the economy, restrictions to the movements of people, end exploitation and the destruction of the earth and its beings.
+           <br><br>
+           We recover food that would have been discarded and share it as a way of protesting war and poverty. With fifty cents of every U.S. federal tax dollar going to the military and forty percent of our food being discarded while so many people were struggling to feed their families that we could inspire the public to press for military spending to be redirected to human needs. We also reduce food waste and meet the direct need of our community by collecting discarded food, preparing vegan meals that we share with the hungry while providing literature about the need to change our society. Food Not Bombs also provides food to protesters and striking workers and organizes food relief after natural and political crisis.
+           <br><br>',
+            'activism' => 'Food Not Bombs is often the first to provide food and supplies to the survivors of disasters. Food Not Bombs was also the first to provide hot meals to the rescue workers responding to September 11th World Trade Center attacks. Food Not Bombs volunteers were among the first to provide food and help to the survivors of the Asian Tsunami and Hurricane Katrina. Our volunteers organized a national collection program and delivered bus and truckloads of food and supplies to the gulf region becoming the only organization to share daily meals in New Orleans after Katrina.
+           <br><br>
+           
+           Food Not Bombs works in coalition with groups like Earth First!, The Leonard Peltier Defense Committee, Anarchist Black Cross, the IWW, Homes Not Jails, Anti Racist Action, Farm Animal Rights Movement, In Defense of Animals, the Free Radio Movement and other organizations on the cutting edge of positive social change and resistance to the new global austerity program. Food Not Bombs is now preparing for the economic crash organizing Food Not Lawns community gardens, housing the homeless with Homes Not Jails, organizing additional meals each week while starting new Food Not Bombs chapters in as many communities as possible.
+           <br><br>'
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Vegan Outreach',
+            'slug' => 'vegan-mentorship-program',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/vegan-mentorship-program.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-vegan-outreach.jpg',
+            'call_to_action' => 'Help Vegan Outreach with their Vegan Mentorship Program! ',
+            'card_content' => 'Are you an experienced vegan who wants to help others adopt this compassionate lifestyle? Well, you’re in the right place too!',
+            'about' => 'Vegan Outreach gives focus on reaching the people who are motivated enough to make changes now—of which there are always many in our target audience who just need some additional encouragement. By steadily increasing the number of vegans they are laying the groundwork to more quickly reach a tipping point.
+           <br><br>
+           Founded in 1993, Vegan Outreach is a 501c3 nonprofit organization working to end violence towards animals. They seek a future when sentient animals are no longer exploited as commodities.
+           <br><br>',
+            'activism' => 'Vegan Outreach creates goals for massive changes, by creating student outreach programs, in-depth activities, and long term support. Vegan Outreach campaigns to make switching to veganism easier, by campaigning to add vegan entrees at restaurants and other foodservice establishments, never shaming others, and putting the emphasis of veganism on avoiding obvious animal products, but using one\'s time and energy advocating to others rather focusing on personal purity or trace ingredients
+           <br><br>
+           An extremely noteable feature from Vegan Outreach, is their leafletting guides. If you are interested in leafletting, (https://veganoutreach.org/leafleting/) Vegan outreach can provide you with the materials to learn how to become an effective leafletter - through educating demonstrations, downloadable PDFS, and their own leafletting order form.
+           <br><br>'
+        ]);
+
+        \App\Organization::create([
+            'title' => '5 minutes 5 vegans',
+            'slug' => '5-minutes-5-vegans',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/5-minutes-5-vegans.png',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-5-minutes-5-vegans.png',
+            'call_to_action' => 'In just 5 minutes you can help 5 or more people become Vegan!',
+            'card_content' => 'Our vegan robots are constantly scanning social media, they retweet people we think are looking for help!',
+            'about' => 'Our vegan robots are constantly scanning social media, they retweet people we think are looking for help with going Vegan. Below are a bunch of quick-copy resources you can reply with quickly if you\'d like. Simply scroll through the lists on the right and talk to the ones that could use a little help! Our main social media tab for activism is through Twitter thanks to the <a href="https://twitter.com/vegassist" target="_blank">@VegAssist</a> bot created by <a href="https://twitter.com/plorry" target="_blank">@plorry</a> (Andrew Gardner).',
+            'activism' => ' Please make sure to check if someone else hasn\'t already tweeted out / posted the resources you\'re about to give. If you\'re using a copied resource from the site, please be sure to customize it and add a personal touch, if people post the same thing it may look like spam and the user in question may be pushed away from Veganism. Try to make all your responses personal!
+            <br><br>
+            <b>Note:</b> Please <a href="http://plorry.github.io/VegAssist/#engagement-guidelines" target="_blank"><u>click here</u></a> for detailed guidelines that you should read before interacting with users, specifically for twitter. Reading this before starting will give your activism a greater and more positive impact!<br><br>
+            
+            <b>Note:</b> Please <a href="http://plorry.github.io/VegAssist/#engagement-guidelines" target="_blank"><u>click here</u></a> for detailed guidelines that you should read before interacting with users, specifically for twitter. Reading this before starting will give your activism a greater and more positive impact!<br><br>'
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Veganuary',
+            'slug' => 'veganuary-activism',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/veganuary.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-veganuary.jpg',
+            'call_to_action' => 'Fundraising is a fun way of getting active with Veganuary!',
+            'card_content' => 'Whether you’re a one-person fundraiser or a local group, the possibilities for helping are endless!',
+            'about' => 'Veganuary is dedicated to changing public attitudes, while providing all the information and practical support required to make the transition to veganism as easy and enjoyable as possible. Veganuary has had an incredible degree of success in a very short time and is changing lives all over the world.
+            <br><br>
+            Veganuary’s founders, Jane and Matthew, knew that month-long pledges were not unusual, but felt that it could be done differently, and perhaps more successfully, by focusing on the month of January; a time for resolutions and new beginnings.
+            <br><br>
+            Veganuary.com is the largest website of its kind on the internet. With vegan recipes, expert advice and information, it provides all the answers to Why go vegan, but it is the support offered to answer How to go vegan that truly sets Veganuary apart.<br><br>',
+            'activism' => 'Veganuary’s vision is a world where veganism is a mainstream lifestyle choice, with positive action at all levels of society and government to promote the benefits of plant-based eating. We specialise in inspiring and educating people to make a significant lifestyle change, and then provide the support they need to help maintain it.
+            <br><br>
+            Non-judgemental, approachable, realistic and fresh. Veganuary’s communications are designed to appeal to the wider, non-vegan community, as we believe this is key to achieving our vision. We have created safe, welcoming, and kind environments on all of our communication platforms and are committed to keeping them this way. We support and promote our aims and objectives, and that of organisations with whom we directly collaborate. These organisations share our vision for the future.
+            <br><br>'
+        ]);
+
+        \App\Organization::create([
+            'title' => 'Vegan Hacktivists',
+            'slug' => 'vegan-hacktivists',
+            'featured' => false,
+            'image_card_url' => 'https://veganactivism.org/banners/vegan-hacktivists.jpg',
+            'image_full_url' => 'https://veganactivism.org/banners/full-size/big-vegan-hacktivists.jpg',
+            'call_to_action' => 'Know code or graphic design? The Vegan Hacktivists need you!',
+            'card_content' => 'The Vegan Hacktivists build online projects like VeganActivism.org; we can really use the code & design help!',
+            'about' => 'We\'re a group of passionate Vegan Activists that volunteer our time and skills towards projects assigned to us by You Are Their Voice. Every project we volunteer on aims to help spread compassion through Veganism by supporting both vegans, non-vegans and activists in some shape way or form. We commit to one project a month, with a cooldown period every three months. ❤ 
+            <br><br>
+        
+            In fact, VeganActivism.org is one of the Vegan Hacktivists very first projects! We\'re funded by <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;">our Patreon</a> supporters which in turn helps us support vegan activists in need of resources, along with funding us to continue to build more projects like this.
+            <br><br>',
+            'activism' => 'We build both online projects (like websites and apps) that help spread veganism, and we fund current and would-be vegan activists with resources they need such as printing materials, website hosting, transportation costs, sample food for booths, etc.
+            <br><br>
+    
+            Right now we\'re looking for online volunteers to volunteer their skills in both programming (LAMP Stack) and design (Photoshop, logo creation, banners, ect). If you have programming or design skills, we could really use your help!
+            <br><br>'
+        ]);
     }
 }
