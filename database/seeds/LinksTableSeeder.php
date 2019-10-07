@@ -116,6 +116,7 @@ class LinksTableSeeder extends Seeder
             'vegan-mentorship-program' => [
                 \App\Link::TYPE_WEBSITE => ['url' => 'https://veganoutreach.org/vegan-mentorship-program/', 'click_count' => 94],
                 \App\Link::TYPE_CONTACT => ['url' => 'https://veganoutreach.org/contact/', 'click_count' => 0],
+                \App\Link::TYPE_FACEBOOK => ['url' => 'https://www.facebook.com/veganoutreach/', 'click_count' => 0],
             ],
             '5-minutes-5-vegans' => [
                 \App\Link::TYPE_WEBSITE => ['url' => 'https://5minutes5vegans.org/', 'click_count' => 140],
