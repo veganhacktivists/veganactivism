@@ -4,6 +4,12 @@
     </div>
 </div>
 
+<style>
+.p-4 {
+padding-bottom: 14px !important;
+}
+</style>
+
 <div class="card my-3 p-4 bg-color-gray">
     <h5 class="card-title"><i class="fas fa-bell"></i>&nbsp;&nbsp;
         Activism Newsletter
