@@ -64,6 +64,10 @@ class LinkRequest extends FormRequest
                     Link::TYPE_FACEBOOK,
                     Link::TYPE_VOLUNTEER,
                     Link::TYPE_YOUTUBE,
+                    Link::TYPE_CONTACT,
+                    Link::TYPE_EVENTS,
+                    Link::TYPE_VOLUNTEER,
+                    Link::TYPE_REDDIT
                 ]),
             ],
         ];

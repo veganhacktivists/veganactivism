@@ -4,6 +4,12 @@
     </div>
 </div>
 
+<style>
+.p-4 {
+padding-bottom: 14px !important;
+}
+</style>
+
 <div class="card my-3 p-4 bg-color-gray">
     <h5 class="card-title"><i class="fas fa-bell"></i>&nbsp;&nbsp;
         Activism Newsletter
@@ -17,6 +23,12 @@
                 clear: left;
                 font: 14px Helvetica, Arial, sans-serif;
             }
+			#mc_embed_signup form {
+			display: block;
+			position: relative;
+			text-align: left;
+			padding: 10px 0 0px 3%;
+			}
 
             /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */

@@ -2,7 +2,7 @@
   <div class="card my-3 border-0">
     <img src={{$organization->image_url}} class="card-img-top" alt={{ $organization->title }}>
     <div class="card-body">
-      <h4 class="card-title"><a href="{{ route('organizations.show', $organization->slug) }}" class="text-dark font-weight-bold">{{ $organization->title }}</a></h4>
+      <h4 class="card-title"><a href="{{ route('organizations.show', $organization->slug) }}" class="text-dark font-weight-bold" style="line-height: 1.45;">{{ $organization->title }}</a></h4>
       <p class="card-text">{{ $organization->card_content }}</p>
 
       <div class="my-2 mx-1 row">
