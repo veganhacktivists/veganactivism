@@ -136,7 +136,7 @@ padding-bottom: 14px !important;
 <div class="card p-4 my-3 bg-color-gray">
     <h5 class="card-title"><i class="fas fa-bell mr-1"></i> VeganActivism.org</h5>
     <ul class="list-unstyled mb-0">
-    We've had <strong>{{ 6826 + Visitor::count()}}</strong> visits with a total of
+    We've had <strong>{{ Visitor::count() }}</strong> visits with a total of
         <strong>{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
         <br><br>
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
