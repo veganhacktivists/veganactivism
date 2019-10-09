@@ -30,3 +30,6 @@ Route::get('/organizations/{organization}', 'OrganizationsController@get');
 
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}', 'UsersController@get');
+
+
+Route::get('/redirect/{to}', 'RedirectController@index')->name('redirect.to');
