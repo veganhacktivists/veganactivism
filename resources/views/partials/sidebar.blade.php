@@ -37,10 +37,10 @@ padding-bottom: 14px !important;
             <form style="background-color: #f9f9f9;" action="https://youaretheirvoice.us20.list-manage.com/subscribe/post?u=0baba35be8f6397f7ac1066f1&amp;id=5fd11d4221" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
 
-                    <input style="width: 100%;" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your Email Address" required>
+                    <input style="width: 100%;" type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Enter your Email Address" required>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0baba35be8f6397f7ac1066f1_5fd11d4221" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe to Newsletter!" name="subscribe" id="mc-embedded-subscribe" class="button" style="width: 100%;background-color:#ff0097;"></div>
+                    <div class="clear"><input type="submit" value="Subscribe to Newsletter!" name="subscribe" id="mc-embedded-subscribe" class="button btn text-white mt-1" style="width: 100%;background-color:#ff0097;"></div>
                 </div>
             </form>
         </div>
@@ -55,13 +55,6 @@ padding-bottom: 14px !important;
                 <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple">
                     <i class="far fa-comments mr-2"></i>
                     Vegan Activist Community
-                </button>
-            </a>
-
-            <a href="https://discord.gg/MFzRHe5" target="_blank">
-                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-pink">
-                    <i class="fa fa-map-signs mr-2"></i>
-                    Vegan Activism Discord
                 </button>
             </a>
 
@@ -101,7 +94,7 @@ padding-bottom: 14px !important;
 
 <div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
     <h5 class="card-title"><i class="fas fa-hands-helping mr-1"></i> Find Groups Near You</h5>
-    <form class="form" action="https://veganactivism.org/redirect-fb.php" target="_blank">
+<form class="form" type="POST" action="{{ route('redirect.to', 'facebook') }}" target="_blank">
         <table>
             <tr>
                 <td>
@@ -118,7 +111,7 @@ padding-bottom: 14px !important;
 
 <div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
     <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i> Find Events Near You</h5>
-    <form class="form" action="https://veganactivism.org/redirect-mu.php" target="_blank">
+    <form class="form" action="{{ route('redirect.to', 'meetup') }}" target="_blank">
         <table>
             <tr>
                 <td>
