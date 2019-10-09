@@ -12,3 +12,21 @@ body {
 .card {
     border-radius: 5px;
 }
+
+// Ribbon
+.ribbon-holder {
+    overflow: hidden;
+    position: relative;
+}
+
+.ribbon {
+    position: absolute;
+    background: $primary;
+    color: white;
+    transform: rotate(45deg);
+    text-align: center;
+    top: 32px;
+    right: -32px;
+    width: 150px;
+    font-size: 12px;
+}

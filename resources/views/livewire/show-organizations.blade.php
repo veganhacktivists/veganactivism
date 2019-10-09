@@ -11,15 +11,19 @@
         @foreach ($organizations as $organization)
         <div class="col-md-6 col-lg-6">
             <div class="card my-3 border-0">
-                <img src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
+
+                <div class="ribbon-holder">
+                    @if ($organization['featured'] == 1)
+                    <div class="ribbon ribbon-holder">Featured</div>
+                    @endif
+                    <img src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
+                </div>
+
                 <div class="card-body">
-                    <h5 class="mb-3"><a href="{{ $organization['show_route'] }}" class="text-dark font-weight-bold">{{ $organization['call_to_action'] }}
-
-                            @if($organization['featured'] == 1)
-                            <span class="badge badge-primary">Featured</span>
-                            @endif
-
-                        </a></h5>
+                    <h5 class="mb-3">
+                        <a href="{{ $organization['show_route'] }}" class="text-dark font-weight-bold">{{ $organization['call_to_action'] }}
+                        </a>
+                    </h5>
                     <p class="card-text">{{ $organization['card_content'] }}</p>
                     <div class="my-2 mx-1 row">
                         <a href="{{ $organization['show_route'] }}" class="btn btn-dark py-1"><i class="fas fa-info-circle mr-1"></i>Learn More</a>
