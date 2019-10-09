@@ -29,7 +29,7 @@ class OrganizationCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Organization');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/organization');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/organization');
         $this->crud->setEntityNameStrings('organization', 'organizations');
 
         /*
@@ -89,17 +89,20 @@ class OrganizationCrudController extends CrudController
         $this->crud->addField([
             'name' => 'call_to_action',
             'type' => 'textarea',
-            'label' => 'Call to Action',
+            'label' => 'Call to Action (max 65 characters)',
             'attributes' => [
                 'placeholder' => 'Call to action text',
+                'maxLength' => 65
             ],
+            ''
         ]);
         $this->crud->addField([
             'name' => 'card_content',
             'type' => 'textarea',
-            'label' => 'Card Content',
+            'label' => 'Card Content (max 125 characters)',
             'attributes' => [
                 'placeholder' => 'Card content',
+                'maxLength' => 125
             ],
         ]);
         $this->crud->addField([
