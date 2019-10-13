@@ -13,7 +13,7 @@
             <div class="card my-3 border-0">
 
                 <div class="ribbon-holder">
-                    @if ($organization['featured'] == 1)
+                    @if ($organization['featured'] === 1)
                     <div class="ribbon ribbon-holder">Featured</div>
                     @endif
                     <img src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
