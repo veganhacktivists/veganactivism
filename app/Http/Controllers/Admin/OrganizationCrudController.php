@@ -29,7 +29,7 @@ class OrganizationCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Organization');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/organization');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/organization');
         $this->crud->setEntityNameStrings('organization', 'organizations');
 
         /*
@@ -45,8 +45,7 @@ class OrganizationCrudController extends CrudController
         $this->crud->addColumn(['name' => 'activism', 'type' => 'textarea', 'label' => 'Activism']);
         $this->crud->addColumn(['name' => 'call_to_action', 'type' => 'text', 'label' => 'Call to Action']);
         $this->crud->addColumn(['name' => 'card_content', 'type' => 'text', 'label' => 'Card Content']);
-        $this->crud->addColumn(['name' => 'image_card_url', 'type' => 'text', 'label' => 'Card Image url']);
-        $this->crud->addColumn(['name' => 'image_full_url', 'type' => 'text', 'label' => 'Full Image url']);
+        $this->crud->addColumn(['name' => 'image_full_url', 'type' => 'text', 'label' => 'Image url']);
         $this->crud->addColumn(['name' => 'featured', 'type' => 'checkbox', 'label' => 'Featured']);
 
         // Fields
@@ -71,14 +70,6 @@ class OrganizationCrudController extends CrudController
             ]
         );
         $this->crud->addField([
-            'name' => 'image_card_url',
-            'type' => 'url',
-            'label' => 'Card Image url',
-            'attributes' => [
-                'placeholder' => 'URL to banner image (585x200)',
-            ],
-        ]);
-        $this->crud->addField([
             'name' => 'image_full_url',
             'type' => 'url',
             'label' => 'Full Image url',
@@ -89,17 +80,20 @@ class OrganizationCrudController extends CrudController
         $this->crud->addField([
             'name' => 'call_to_action',
             'type' => 'textarea',
-            'label' => 'Call to Action',
+            'label' => 'Call to Action (max 65 characters)',
             'attributes' => [
                 'placeholder' => 'Call to action text',
+                'maxLength' => 65
             ],
+            ''
         ]);
         $this->crud->addField([
             'name' => 'card_content',
             'type' => 'textarea',
-            'label' => 'Card Content',
+            'label' => 'Card Content (max 125 characters)',
             'attributes' => [
                 'placeholder' => 'Card content',
+                'maxLength' => 125
             ],
         ]);
         $this->crud->addField([
@@ -190,6 +184,7 @@ class OrganizationCrudController extends CrudController
     public function store(StoreRequest $request)
     {
         // your additional operations before save here
+        $request->merge(['image_card_url' => $request->input('image_full_url')]);
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
@@ -199,6 +194,7 @@ class OrganizationCrudController extends CrudController
     public function update(UpdateRequest $request)
     {
         // your additional operations before save here
+        $request->merge(['image_card_url' => $request->input('image_full_url')]);
         $redirect_location = parent::updateCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry

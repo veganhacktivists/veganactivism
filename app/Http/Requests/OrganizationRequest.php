@@ -50,10 +50,9 @@ class OrganizationRequest extends FormRequest
         return [
             'slug' => 'required|string|min:5|max:255',
             'title' => 'required|string|min:5|max:255',
-            'image_card_url' => 'required|url',
             'image_full_url' => 'required|url',
-            'call_to_action' => 'required|string',
-            'card_content' => 'required|string',
+            'call_to_action' => 'required|string|max:65',
+            'card_content' => 'required|string|max:125',
             'about' => 'required|string',
             'activism' => 'required|string'
         ];
