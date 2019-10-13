@@ -9,7 +9,7 @@
           <div class="collapse navbar-collapse w-100" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="text-secondary" style="color:#ff0097;" href="{{backpack_url()}}">Organization Admin</a>
+              <a style="color:#ff0097;" href="{{backpack_url()}}">Organization Admin</a>
             </li>
           </ul>
         </div>
