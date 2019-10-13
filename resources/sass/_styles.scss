@@ -21,12 +21,12 @@ body {
 
 .ribbon {
     position: absolute;
-    background: $primary;
+    background: #dc3545;
     color: white;
     transform: rotate(45deg);
     text-align: center;
-    top: 32px;
+    top: 28px;
     right: -32px;
     width: 150px;
-    font-size: 12px;
+    font-size: 17px;
 }
