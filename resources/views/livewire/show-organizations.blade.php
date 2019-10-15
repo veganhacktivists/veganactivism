@@ -8,7 +8,7 @@
 	@endif
 			
     <select class="form-control col-3" wire:change="setSort($event.target.value)">
-        <option value="default">Sort By</option>
+        <option value="default">Sort Bye</option>
         <option value="created_at">Recent</option>
         <option value="created_at_older">Older</option>
         <option value="clicks">Clicks</option>
