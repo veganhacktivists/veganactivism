@@ -15,10 +15,17 @@ padding-bottom: 14px !important;
 <div class="card p-4 my-3 bg-color-gray">
     <ul class="category-list list-unstyled mb-0">
         <li>
+		
             <a href="https://reddit.com/r/VeganActivism" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple">
                     <i class="far fa-comments mr-2"></i>
                     Vegan Activist Community
+                </button>
+            </a>
+			<a href="https://reddit.com/r/VeganActivism" target="_blank">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#f64646;">
+                    <i class="far fa-comments mr-2"></i>
+                    Share: Vegan Bootcamp
                 </button>
             </a>
 
@@ -30,22 +37,22 @@ padding-bottom: 14px !important;
             </a>
 
             <a href="https://veganhacktivists.org/" target="_blank">
-                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-green">
+                <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#3ca539;">
                     <i class="fas fa-hands-helping mr-2"></i>
                     Visit us: Vegan Hacktivists
                 </button>
             </a>
 
-
-            <a href="https://veganactivism.org/vegan-activist-resource-bundle.zip" target="_blank">
+			
+            <a href="https://vegancheatsheet.org" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-yellow">
-                    <i class="fa fa-download mr-2"></i> Activist Resource Bundle
+                    <i class="fa fa-download mr-2"></i> Vegan Cheatsheet Resource
                 </button>
             </a>
 
             <a href="https://veganhacktivists.org/subscribe" target="_blank">
-                <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-red">
-                    <i class="fas fa-envelope mr-2"></i> Vegan Hacktivists Newsletter
+                <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#ff0097;">
+                    <i class="fas fa-envelope mr-2"></i> Subscribe to our Newsletter
                 </button>
             </a>
         </li>
