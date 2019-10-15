@@ -8,7 +8,7 @@
 	@else
 	<a href="/login" style="position: absolute;right: 15px;">
 	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #343a40;">
-	Login<i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;</button>
+	Login&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
 	</a>	
 	@endif
 			
