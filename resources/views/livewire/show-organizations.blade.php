@@ -16,7 +16,7 @@
                     @if ($organization['featured'] === 1)
                     <div class="ribbon ribbon-holder">Featured</div>
                     @endif
-                    <img src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
+                    <img style="height: 120px;" src={{ $organization['image_card_url']}} class="card-img-top" alt={{ $organization['title'] }}>
                 </div>
 
                 <div class="card-body">
