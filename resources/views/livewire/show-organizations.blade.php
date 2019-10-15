@@ -21,7 +21,7 @@
 
                 <div class="card-body">
                     <h5 class="mb-3">
-                        <a href="{{ $organization['show_route'] }}" class="text-dark font-weight-bold">{{ $organization['call_to_action'] }}
+                        <a href="{{ $organization['show_route'] }}" class="text-dark font-weight-bold" style="line-height: 1.5 !important;">{{ $organization['call_to_action'] }}
                         </a>
                     </h5>
                     <p class="card-text">{{ $organization['card_content'] }}</p>
@@ -29,7 +29,7 @@
                         <a href="{{ $organization['show_route'] }}" class="btn btn-dark py-1"><i class="fas fa-info-circle mr-1"></i>Learn More</a>
                         <a href="{{ $organization['website_url'] }}" target="_blank" class="btn btn-danger ml-3 py-1"><i class="fas fa-link mr-1"></i>Visit Website</a>
                     </div>
-                    <p class="card-text"><small class="text-muted">STREET ACTIVISM - </small> <small><strong>{{ $organization['website_clicks']}}</strong> Activists clicked on this.</small></p>
+                    <p class="card-text"><small><strong>{{ $organization['website_clicks']}}</strong> Activists clicked on this.</small></p>
                 </div>
             </div>
         </div>
