@@ -24,7 +24,7 @@ padding-bottom: 14px !important;
             </a>
 			<a href="https://reddit.com/r/VeganActivism" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#f64646;">
-                    <i class="far fa-comments mr-2"></i>
+                    <i class="fas fa-leaf mr-2"></i>
                     Share: Vegan Bootcamp
                 </button>
             </a>
