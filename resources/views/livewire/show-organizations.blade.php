@@ -1,10 +1,15 @@
 <div>
 	
 	@if(Auth::check() && backpack_user()->can(\App\Models\BackpackUser::PERMISSION_NAVBAR_VIEW))
-	<a href="{{backpack_url()}}" target="_blank" style="position: absolute;right: 15px;">
+	<a href="{{backpack_url()}}" style="position: absolute;right: 15px;">
 	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #dc3545;">
 	<i class="fas fa-user-cog mr-2"></i> Administration Panel</button>
 	</a>
+	@else
+	<a href="/login" style="position: absolute;right: 15px;">
+	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #343a40;">
+	<i class="fas fa-user-cog mr-2"></i> Login to edit your page!</button>
+	</a>	
 	@endif
 			
     <select class="form-control col-3" wire:change="setSort($event.target.value)">
