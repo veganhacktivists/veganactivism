@@ -1,56 +1,56 @@
-define(function () {
+define(function() {
   // Hebrew
   return {
-    errorLoading: function () {
-      return 'שגיאה בטעינת התוצאות';
+    errorLoading: function() {
+      return 'שגיאה בטעינת התוצאות'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = 'נא למחוק ';
+      var message = 'נא למחוק '
 
       if (overChars === 1) {
-        message += 'תו אחד';
+        message += 'תו אחד'
       } else {
-        message += overChars + ' תווים';
+        message += overChars + ' תווים'
       }
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'נא להכניס ';
+      var message = 'נא להכניס '
 
       if (remainingChars === 1) {
-        message += 'תו אחד';
+        message += 'תו אחד'
       } else {
-        message += remainingChars + ' תווים';
+        message += remainingChars + ' תווים'
       }
 
-      message += ' או יותר';
+      message += ' או יותר'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'טוען תוצאות נוספות…';
+    loadingMore: function() {
+      return 'טוען תוצאות נוספות…'
     },
-    maximumSelected: function (args) {
-      var message = 'באפשרותך לבחור עד ';
+    maximumSelected: function(args) {
+      var message = 'באפשרותך לבחור עד '
 
       if (args.maximum === 1) {
-        message += 'פריט אחד';
+        message += 'פריט אחד'
       } else {
-        message += args.maximum + ' פריטים';
+        message += args.maximum + ' פריטים'
       }
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'לא נמצאו תוצאות';
+    noResults: function() {
+      return 'לא נמצאו תוצאות'
     },
-    searching: function () {
-      return 'מחפש…';
-    }
-  };
-});
+    searching: function() {
+      return 'מחפש…'
+    },
+  }
+})

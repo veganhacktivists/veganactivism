@@ -1,48 +1,49 @@
-define(function () {
+define(function() {
   // Italian
   return {
-    errorLoading: function () {
-      return 'I risultati non possono essere caricati.';
+    errorLoading: function() {
+      return 'I risultati non possono essere caricati.'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = 'Per favore cancella ' + overChars + ' caratter';
+      var message = 'Per favore cancella ' + overChars + ' caratter'
 
       if (overChars !== 1) {
-        message += 'i';
+        message += 'i'
       } else {
-        message += 'e';
+        message += 'e'
       }
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'Per favore inserisci ' +remainingChars+ ' o più caratteri';
+      var message =
+        'Per favore inserisci ' + remainingChars + ' o più caratteri'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'Caricando più risultati…';
+    loadingMore: function() {
+      return 'Caricando più risultati…'
     },
-    maximumSelected: function (args) {
-      var message = 'Puoi selezionare solo ' + args.maximum + ' element';
+    maximumSelected: function(args) {
+      var message = 'Puoi selezionare solo ' + args.maximum + ' element'
 
       if (args.maximum !== 1) {
-        message += 'i';
+        message += 'i'
       } else {
-        message += 'o';
+        message += 'o'
       }
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'Nessun risultato trovato';
+    noResults: function() {
+      return 'Nessun risultato trovato'
     },
-    searching: function () {
-      return 'Sto cercando…';
-    }
-  };
-});
+    searching: function() {
+      return 'Sto cercando…'
+    },
+  }
+})

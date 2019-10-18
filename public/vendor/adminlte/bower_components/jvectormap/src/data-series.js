@@ -10,52 +10,68 @@
  * @param {Number} params.min Maximum value of the data set. Could be calculated automatically if not provided.
  */
 jvm.DataSeries = function(params, elements, map) {
-  var scaleConstructor;
+  var scaleConstructor
 
-  params = params || {};
-  params.attribute = params.attribute || 'fill';
+  params = params || {}
+  params.attribute = params.attribute || 'fill'
 
-  this.elements = elements;
-  this.params = params;
-  this.map = map;
+  this.elements = elements
+  this.params = params
+  this.map = map
 
   if (params.attributes) {
-    this.setAttributes(params.attributes);
+    this.setAttributes(params.attributes)
   }
 
   if (jvm.$.isArray(params.scale)) {
-    scaleConstructor = (params.attribute === 'fill' || params.attribute === 'stroke') ? jvm.ColorScale : jvm.NumericScale;
-    this.scale = new scaleConstructor(params.scale, params.normalizeFunction, params.min, params.max);
+    scaleConstructor =
+      params.attribute === 'fill' || params.attribute === 'stroke'
+        ? jvm.ColorScale
+        : jvm.NumericScale
+    this.scale = new scaleConstructor(
+      params.scale,
+      params.normalizeFunction,
+      params.min,
+      params.max,
+    )
   } else if (params.scale) {
-    this.scale = new jvm.OrdinalScale(params.scale);
+    this.scale = new jvm.OrdinalScale(params.scale)
   } else {
-    this.scale = new jvm.SimpleScale(params.scale);
+    this.scale = new jvm.SimpleScale(params.scale)
   }
 
-  this.values = params.values || {};
-  this.setValues(this.values);
+  this.values = params.values || {}
+  this.setValues(this.values)
 
   if (this.params.legend) {
-    this.legend = new jvm.Legend($.extend({
-      map: this.map,
-      series: this
-    }, this.params.legend))
+    this.legend = new jvm.Legend(
+      $.extend(
+        {
+          map: this.map,
+          series: this,
+        },
+        this.params.legend,
+      ),
+    )
   }
-};
+}
 
 jvm.DataSeries.prototype = {
-  setAttributes: function(key, attr){
+  setAttributes: function(key, attr) {
     var attrs = key,
-        code;
+      code
 
     if (typeof key == 'string') {
       if (this.elements[key]) {
-        this.elements[key].setStyle(this.params.attribute, attr);
+        this.elements[key].setStyle(this.params.attribute, attr)
       }
     } else {
       for (code in attrs) {
         if (this.elements[code]) {
-          this.elements[code].element.setStyle(this.params.attribute, attrs[code]);
+          this.elements[code].element.setStyle(
+            this.params.attribute,
+            attrs[code],
+          )
         }
       }
     }
@@ -67,71 +83,83 @@ jvm.DataSeries.prototype = {
    */
   setValues: function(values) {
     var max = -Number.MAX_VALUE,
-        min = Number.MAX_VALUE,
-        val,
-        cc,
-        attrs = {};
+      min = Number.MAX_VALUE,
+      val,
+      cc,
+      attrs = {}
 
-    if (!(this.scale instanceof jvm.OrdinalScale) && !(this.scale instanceof jvm.SimpleScale)) {
+    if (
+      !(this.scale instanceof jvm.OrdinalScale) &&
+      !(this.scale instanceof jvm.SimpleScale)
+    ) {
       // we have a color scale as an array
-      if (typeof this.params.min === 'undefined' || typeof this.params.max === 'undefined') {
+      if (
+        typeof this.params.min === 'undefined' ||
+        typeof this.params.max === 'undefined'
+      ) {
         // min and/or max are not defined, so calculate them
         for (cc in values) {
-          val = parseFloat(values[cc]);
-          if (val > max) max = val;
-          if (val < min) min = val;
+          val = parseFloat(values[cc])
+          if (val > max) max = val
+          if (val < min) min = val
         }
       }
 
       if (typeof this.params.min === 'undefined') {
-        this.scale.setMin(min);
-        this.params.min = min;
+        this.scale.setMin(min)
+        this.params.min = min
       } else {
-        this.scale.setMin(this.params.min);
+        this.scale.setMin(this.params.min)
       }
 
       if (typeof this.params.max === 'undefined') {
-        this.scale.setMax(max);
-        this.params.max = max;
+        this.scale.setMax(max)
+        this.params.max = max
       } else {
-        this.scale.setMax(this.params.max);
+        this.scale.setMax(this.params.max)
       }
 
       for (cc in values) {
         if (cc != 'indexOf') {
-          val = parseFloat(values[cc]);
+          val = parseFloat(values[cc])
           if (!isNaN(val)) {
-            attrs[cc] = this.scale.getValue(val);
+            attrs[cc] = this.scale.getValue(val)
           } else {
-            attrs[cc] = this.elements[cc].element.style.initial[this.params.attribute];
+            attrs[cc] = this.elements[cc].element.style.initial[
+              this.params.attribute
+            ]
           }
         }
       }
     } else {
       for (cc in values) {
         if (values[cc]) {
-          attrs[cc] = this.scale.getValue(values[cc]);
+          attrs[cc] = this.scale.getValue(values[cc])
         } else {
-          attrs[cc] = this.elements[cc].element.style.initial[this.params.attribute];
+          attrs[cc] = this.elements[cc].element.style.initial[
+            this.params.attribute
+          ]
         }
       }
     }
 
-    this.setAttributes(attrs);
-    jvm.$.extend(this.values, values);
+    this.setAttributes(attrs)
+    jvm.$.extend(this.values, values)
   },
 
-  clear: function(){
+  clear: function() {
     var key,
-        attrs = {};
+      attrs = {}
 
     for (key in this.values) {
       if (this.elements[key]) {
-        attrs[key] = this.elements[key].element.shape.style.initial[this.params.attribute];
+        attrs[key] = this.elements[key].element.shape.style.initial[
+          this.params.attribute
+        ]
       }
     }
-    this.setAttributes(attrs);
-    this.values = {};
+    this.setAttributes(attrs)
+    this.values = {}
   },
 
   /**
@@ -139,9 +167,9 @@ jvm.DataSeries.prototype = {
    * @param {Array} scale Values representing scale.
    */
   setScale: function(scale) {
-    this.scale.setScale(scale);
+    this.scale.setScale(scale)
     if (this.values) {
-      this.setValues(this.values);
+      this.setValues(this.values)
     }
   },
 
@@ -150,9 +178,9 @@ jvm.DataSeries.prototype = {
    * @param {Function|String} normilizeFunction.
    */
   setNormalizeFunction: function(f) {
-    this.scale.setNormalizeFunction(f);
+    this.scale.setNormalizeFunction(f)
     if (this.values) {
-      this.setValues(this.values);
+      this.setValues(this.values)
     }
-  }
-};
+  },
+}

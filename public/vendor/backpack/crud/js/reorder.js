@@ -1,10 +1,9 @@
 /*
-*
-* Backpack Crud / Reorder
-*
-*/
+ *
+ * Backpack Crud / Reorder
+ *
+ */
 
-jQuery(function($){
-
-    'use strict';
-});
+jQuery(function($) {
+  'use strict'
+})

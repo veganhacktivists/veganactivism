@@ -1,52 +1,52 @@
-define(function () {
+define(function() {
   // Greek (el)
   return {
-    errorLoading: function () {
-      return 'Τα αποτελέσματα δεν μπόρεσαν να φορτώσουν.';
+    errorLoading: function() {
+      return 'Τα αποτελέσματα δεν μπόρεσαν να φορτώσουν.'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = 'Παρακαλώ διαγράψτε ' + overChars + ' χαρακτήρ';
+      var message = 'Παρακαλώ διαγράψτε ' + overChars + ' χαρακτήρ'
 
       if (overChars == 1) {
-        message += 'α';
+        message += 'α'
       }
       if (overChars != 1) {
-        message += 'ες';
+        message += 'ες'
       }
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'Παρακαλώ συμπληρώστε ' + remainingChars +
-        ' ή περισσότερους χαρακτήρες';
+      var message =
+        'Παρακαλώ συμπληρώστε ' + remainingChars + ' ή περισσότερους χαρακτήρες'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'Φόρτωση περισσότερων αποτελεσμάτων…';
+    loadingMore: function() {
+      return 'Φόρτωση περισσότερων αποτελεσμάτων…'
     },
-    maximumSelected: function (args) {
-      var message = 'Μπορείτε να επιλέξετε μόνο ' + args.maximum + ' επιλογ';
+    maximumSelected: function(args) {
+      var message = 'Μπορείτε να επιλέξετε μόνο ' + args.maximum + ' επιλογ'
 
       if (args.maximum == 1) {
-        message += 'ή';
+        message += 'ή'
       }
 
       if (args.maximum != 1) {
-        message += 'ές';
+        message += 'ές'
       }
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'Δεν βρέθηκαν αποτελέσματα';
+    noResults: function() {
+      return 'Δεν βρέθηκαν αποτελέσματα'
     },
-    searching: function () {
-      return 'Αναζήτηση…';
-    }
-  };
-});
+    searching: function() {
+      return 'Αναζήτηση…'
+    },
+  }
+})

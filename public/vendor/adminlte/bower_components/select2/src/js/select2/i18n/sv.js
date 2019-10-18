@@ -1,37 +1,36 @@
-define(function () {
+define(function() {
   // Swedish
   return {
-    errorLoading: function () {
-      return 'Resultat kunde inte laddas.';
+    errorLoading: function() {
+      return 'Resultat kunde inte laddas.'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = 'Vänligen sudda ut ' + overChars + ' tecken';
+      var message = 'Vänligen sudda ut ' + overChars + ' tecken'
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'Vänligen skriv in ' + remainingChars +
-                    ' eller fler tecken';
+      var message = 'Vänligen skriv in ' + remainingChars + ' eller fler tecken'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'Laddar fler resultat…';
+    loadingMore: function() {
+      return 'Laddar fler resultat…'
     },
-    maximumSelected: function (args) {
-      var message = 'Du kan max välja ' + args.maximum + ' element';
+    maximumSelected: function(args) {
+      var message = 'Du kan max välja ' + args.maximum + ' element'
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'Inga träffar';
+    noResults: function() {
+      return 'Inga träffar'
     },
-    searching: function () {
-      return 'Söker…';
-    }
-  };
-});
+    searching: function() {
+      return 'Söker…'
+    },
+  }
+})

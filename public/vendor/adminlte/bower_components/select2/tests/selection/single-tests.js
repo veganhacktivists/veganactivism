@@ -1,117 +1,115 @@
-module('Selection containers - Single');
+module('Selection containers - Single')
 
-var SingleSelection = require('select2/selection/single');
+var SingleSelection = require('select2/selection/single')
 
-var $ = require('jquery');
-var Options = require('select2/options');
-var Utils = require('select2/utils');
+var $ = require('jquery')
+var Options = require('select2/options')
+var Utils = require('select2/utils')
 
-var options = new Options({});
+var options = new Options({})
 
-test('display uses templateSelection', function (assert) {
-  var called = false;
-
-  var templateOptions = new Options({
-    templateSelection: function (data) {
-      called = true;
-
-      return data.text;
-    }
-  });
-
-  var selection = new SingleSelection(
-    $('#qunit-fixture .single'),
-    templateOptions
-  );
-
-  var out = selection.display({
-    text: 'test'
-  });
-
-  assert.ok(called);
-
-  assert.equal(out, 'test');
-});
-
-test('templateSelection can addClass', function (assert) {
-  var called = false;
+test('display uses templateSelection', function(assert) {
+  var called = false
 
   var templateOptions = new Options({
-    templateSelection: function (data, container) {
-      called = true;
-      container.addClass('testclass');
-      return data.text;
-    }
-  });
+    templateSelection: function(data) {
+      called = true
+
+      return data.text
+    },
+  })
 
   var selection = new SingleSelection(
     $('#qunit-fixture .single'),
-    templateOptions
-  );
+    templateOptions,
+  )
 
-  var $container = selection.selectionContainer();
-  
   var out = selection.display({
-    text: 'test'
-  }, $container);
+    text: 'test',
+  })
 
-  assert.ok(called);
+  assert.ok(called)
 
-  assert.equal(out, 'test');
-  
-  assert.ok($container.hasClass('testclass'));
-});
+  assert.equal(out, 'test')
+})
 
-test('empty update clears the selection', function (assert) {
+test('templateSelection can addClass', function(assert) {
+  var called = false
+
+  var templateOptions = new Options({
+    templateSelection: function(data, container) {
+      called = true
+      container.addClass('testclass')
+      return data.text
+    },
+  })
+
   var selection = new SingleSelection(
     $('#qunit-fixture .single'),
-    options
-  );
+    templateOptions,
+  )
 
-  var $selection = selection.render();
-  var $rendered = $selection.find('.select2-selection__rendered');
+  var $container = selection.selectionContainer()
 
-  $rendered.text('testing');
+  var out = selection.display(
+    {
+      text: 'test',
+    },
+    $container,
+  )
 
-  selection.update([]);
+  assert.ok(called)
 
-  assert.equal($rendered.text(), '');
-});
+  assert.equal(out, 'test')
 
-test('update renders the data text', function (assert) {
-  var selection = new SingleSelection(
-    $('#qunit-fixture .single'),
-    options
-  );
+  assert.ok($container.hasClass('testclass'))
+})
 
-  var $selection = selection.render();
-  var $rendered = $selection.find('.select2-selection__rendered');
+test('empty update clears the selection', function(assert) {
+  var selection = new SingleSelection($('#qunit-fixture .single'), options)
 
-  selection.update([{
-    text: 'test'
-  }]);
+  var $selection = selection.render()
+  var $rendered = $selection.find('.select2-selection__rendered')
 
-  assert.equal($rendered.text(), 'test');
-});
+  $rendered.text('testing')
 
-test('escapeMarkup is being used', function (assert) {
-  var selection = new SingleSelection(
-    $('#qunit-fixture .single'),
-    options
-  );
+  selection.update([])
 
-  var $selection = selection.render();
-  var $rendered = $selection.find('.select2-selection__rendered');
+  assert.equal($rendered.text(), '')
+})
 
-  var unescapedText = '<script>bad("stuff");</script>';
+test('update renders the data text', function(assert) {
+  var selection = new SingleSelection($('#qunit-fixture .single'), options)
 
-  selection.update([{
-    text: unescapedText
-  }]);
+  var $selection = selection.render()
+  var $rendered = $selection.find('.select2-selection__rendered')
+
+  selection.update([
+    {
+      text: 'test',
+    },
+  ])
+
+  assert.equal($rendered.text(), 'test')
+})
+
+test('escapeMarkup is being used', function(assert) {
+  var selection = new SingleSelection($('#qunit-fixture .single'), options)
+
+  var $selection = selection.render()
+  var $rendered = $selection.find('.select2-selection__rendered')
+
+  var unescapedText = '<script>bad("stuff");</script>'
+
+  selection.update([
+    {
+      text: unescapedText,
+    },
+  ])
 
   assert.equal(
     $rendered.text(),
     unescapedText,
-    'The text should be escaped by default to prevent injection'
-  );
-});
+    'The text should be escaped by default to prevent injection',
+  )
+})

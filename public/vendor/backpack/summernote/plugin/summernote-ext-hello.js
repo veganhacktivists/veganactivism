@@ -1,89 +1,91 @@
-(function (factory) {
+;(function(factory) {
   /* global define */
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['jquery'], factory);
+    define(['jquery'], factory)
   } else {
     // Browser globals: jQuery
-    factory(window.jQuery);
+    factory(window.jQuery)
   }
-}(function ($) {
+})(function($) {
   // template
-  var tmpl = $.summernote.renderer.getTemplate();
+  var tmpl = $.summernote.renderer.getTemplate()
 
   /**
-   * @class plugin.hello 
-   * 
-   * Hello Plugin  
+   * @class plugin.hello
+   *
+   * Hello Plugin
    */
   $.summernote.addPlugin({
     /** @property {String} name name of plugin */
     name: 'hello',
-    /** 
-     * @property {Object} buttons 
+    /**
+     * @property {Object} buttons
      * @property {Function} buttons.hello   function to make button
      * @property {Function} buttons.helloDropdown   function to make button
      * @property {Function} buttons.helloImage   function to make button
      */
-    buttons: { // buttons
-      hello: function () {
-
+    buttons: {
+      // buttons
+      hello: function() {
         return tmpl.iconButton('fa fa-header', {
-          event : 'hello',
+          event: 'hello',
           title: 'hello',
-          hide: true
-        });
+          hide: true,
+        })
       },
-      helloDropdown: function () {
-
-
-        var list = '<li><a data-event="helloDropdown" href="#" data-value="summernote">summernote</a></li>';
-        list += '<li><a data-event="helloDropdown" href="#" data-value="codemirror">Code Mirror</a></li>';
-        var dropdown = '<ul class="dropdown-menu">' + list + '</ul>';
+      helloDropdown: function() {
+        var list =
+          '<li><a data-event="helloDropdown" href="#" data-value="summernote">summernote</a></li>'
+        list +=
+          '<li><a data-event="helloDropdown" href="#" data-value="codemirror">Code Mirror</a></li>'
+        var dropdown = '<ul class="dropdown-menu">' + list + '</ul>'
 
         return tmpl.iconButton('fa fa-header', {
           title: 'hello',
           hide: true,
-          dropdown : dropdown
-        });
+          dropdown: dropdown,
+        })
       },
-      helloImage : function () {
+      helloImage: function() {
         return tmpl.iconButton('fa fa-file-image-o', {
-          event : 'helloImage',
+          event: 'helloImage',
           title: 'helloImage',
-          hide: true
-        });
-      }
-
+          hide: true,
+        })
+      },
     },
 
     /**
-     * @property {Object} events 
+     * @property {Object} events
      * @property {Function} events.hello  run function when button that has a 'hello' event name  fires click
      * @property {Function} events.helloDropdown run function when button that has a 'helloDropdown' event name  fires click
      * @property {Function} events.helloImage run function when button that has a 'helloImage' event name  fires click
      */
-    events: { // events
-      hello: function (event, editor, layoutInfo) {
+    events: {
+      // events
+      hello: function(event, editor, layoutInfo) {
         // Get current editable node
-        var $editable = layoutInfo.editable();
+        var $editable = layoutInfo.editable()
 
         // Call insertText with 'hello'
-        editor.insertText($editable, 'hello ');
+        editor.insertText($editable, 'hello ')
       },
-      helloDropdown: function (event, editor, layoutInfo, value) {
+      helloDropdown: function(event, editor, layoutInfo, value) {
         // Get current editable node
-        var $editable = layoutInfo.editable();
+        var $editable = layoutInfo.editable()
 
         // Call insertText with 'hello'
-        editor.insertText($editable, 'hello ' + value + '!!!!');
+        editor.insertText($editable, 'hello ' + value + '!!!!')
       },
-      helloImage : function (event, editor, layoutInfo) {
-        var $editable = layoutInfo.editable();
+      helloImage: function(event, editor, layoutInfo) {
+        var $editable = layoutInfo.editable()
 
-        var img = $('<img src="http://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg" />');
-        editor.insertNode($editable, img[0]);
-      }
-    }
-  });
-}));
+        var img = $(
+          '<img src="http://upload.wikimedia.org/wikipedia/commons/b/b0/NewTux.svg" />',
+        )
+        editor.insertNode($editable, img[0])
+      },
+    },
+  })
+})

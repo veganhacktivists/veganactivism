@@ -1,10 +1,9 @@
 /*
-*
-* Backpack Crud / Revisions
-*
-*/
+ *
+ * Backpack Crud / Revisions
+ *
+ */
 
-jQuery(function($){
-
-    'use strict';
-});
+jQuery(function($) {
+  'use strict'
+})

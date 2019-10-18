@@ -1,30 +1,30 @@
-define(function () {
+define(function() {
   // Indonesian
   return {
-    errorLoading: function () {
-      return 'Data tidak boleh diambil.';
+    errorLoading: function() {
+      return 'Data tidak boleh diambil.'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      return 'Hapuskan ' + overChars + ' huruf';
+      return 'Hapuskan ' + overChars + ' huruf'
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      return 'Masukkan ' + remainingChars + ' huruf lagi';
+      return 'Masukkan ' + remainingChars + ' huruf lagi'
     },
-    loadingMore: function () {
-      return 'Mengambil data…';
+    loadingMore: function() {
+      return 'Mengambil data…'
     },
-    maximumSelected: function (args) {
-      return 'Anda hanya dapat memilih ' + args.maximum + ' pilihan';
+    maximumSelected: function(args) {
+      return 'Anda hanya dapat memilih ' + args.maximum + ' pilihan'
     },
-    noResults: function () {
-      return 'Tidak ada data yang sesuai';
+    noResults: function() {
+      return 'Tidak ada data yang sesuai'
     },
-    searching: function () {
-      return 'Mencari…';
-    }
-  };
-});
+    searching: function() {
+      return 'Mencari…'
+    },
+  }
+})

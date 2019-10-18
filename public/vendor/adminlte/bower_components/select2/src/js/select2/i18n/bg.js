@@ -1,47 +1,47 @@
-define(function () {
+define(function() {
   // Bulgarian
   return {
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = 'Моля въведете с ' + overChars + ' по-малко символ';
+      var message = 'Моля въведете с ' + overChars + ' по-малко символ'
 
       if (overChars > 1) {
-        message += 'a';
+        message += 'a'
       }
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'Моля въведете още ' + remainingChars + ' символ';
+      var message = 'Моля въведете още ' + remainingChars + ' символ'
 
       if (remainingChars > 1) {
-        message += 'a';
+        message += 'a'
       }
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'Зареждат се още…';
+    loadingMore: function() {
+      return 'Зареждат се още…'
     },
-    maximumSelected: function (args) {
-      var message = 'Можете да направите до ' + args.maximum + ' ';
+    maximumSelected: function(args) {
+      var message = 'Можете да направите до ' + args.maximum + ' '
 
       if (args.maximum > 1) {
-        message += 'избора';
+        message += 'избора'
       } else {
-        message += 'избор';
+        message += 'избор'
       }
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'Няма намерени съвпадения';
+    noResults: function() {
+      return 'Няма намерени съвпадения'
     },
-    searching: function () {
-      return 'Търсене…';
-    }
-  };
-});
+    searching: function() {
+      return 'Търсене…'
+    },
+  }
+})

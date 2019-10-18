@@ -1,36 +1,36 @@
-define(function () {
+define(function() {
   // Japanese
   return {
-    errorLoading: function () {
-      return '結果が読み込まれませんでした';
+    errorLoading: function() {
+      return '結果が読み込まれませんでした'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = overChars + ' 文字を削除してください';
+      var message = overChars + ' 文字を削除してください'
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = '少なくとも ' + remainingChars + ' 文字を入力してください';
+      var message = '少なくとも ' + remainingChars + ' 文字を入力してください'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return '読み込み中…';
+    loadingMore: function() {
+      return '読み込み中…'
     },
-    maximumSelected: function (args) {
-      var message = args.maximum + ' 件しか選択できません';
+    maximumSelected: function(args) {
+      var message = args.maximum + ' 件しか選択できません'
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return '対象が見つかりません';
+    noResults: function() {
+      return '対象が見つかりません'
     },
-    searching: function () {
-      return '検索しています…';
-    }
-  };
-});
+    searching: function() {
+      return '検索しています…'
+    },
+  }
+})

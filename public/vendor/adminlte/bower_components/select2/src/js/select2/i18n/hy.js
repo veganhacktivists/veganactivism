@@ -1,38 +1,38 @@
-define(function () {
+define(function() {
   // Armenian
   return {
-    errorLoading: function () {
-      return 'Արդյունքները հնարավոր չէ բեռնել։';
+    errorLoading: function() {
+      return 'Արդյունքները հնարավոր չէ բեռնել։'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = 'Խնդրում ենք հեռացնել ' + overChars + ' նշան';
+      var message = 'Խնդրում ենք հեռացնել ' + overChars + ' նշան'
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'Խնդրում ենք մուտքագրել ' + remainingChars +
-        ' կամ ավել նշաններ';
+      var message =
+        'Խնդրում ենք մուտքագրել ' + remainingChars + ' կամ ավել նշաններ'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'Բեռնվում են նոր արդյունքներ․․․';
+    loadingMore: function() {
+      return 'Բեռնվում են նոր արդյունքներ․․․'
     },
-    maximumSelected: function (args) {
-      var message = 'Դուք կարող եք ընտրել առավելագույնը ' + args.maximum +
-        ' կետ';
+    maximumSelected: function(args) {
+      var message =
+        'Դուք կարող եք ընտրել առավելագույնը ' + args.maximum + ' կետ'
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'Արդյունքներ չեն գտնվել';
+    noResults: function() {
+      return 'Արդյունքներ չեն գտնվել'
     },
-    searching: function () {
-      return 'Որոնում․․․';
-    }
-  };
-});
+    searching: function() {
+      return 'Որոնում․․․'
+    },
+  }
+})

@@ -1,36 +1,36 @@
-define(function () {
+define(function() {
   // Turkish
   return {
-    errorLoading: function (){
-      return 'Sonuç yüklenemedi';
+    errorLoading: function() {
+      return 'Sonuç yüklenemedi'
     },
-    inputTooLong: function (args) {
-      var overChars = args.input.length - args.maximum;
+    inputTooLong: function(args) {
+      var overChars = args.input.length - args.maximum
 
-      var message = overChars + ' karakter daha girmelisiniz';
+      var message = overChars + ' karakter daha girmelisiniz'
 
-      return message;
+      return message
     },
-    inputTooShort: function (args) {
-      var remainingChars = args.minimum - args.input.length;
+    inputTooShort: function(args) {
+      var remainingChars = args.minimum - args.input.length
 
-      var message = 'En az ' + remainingChars + ' karakter daha girmelisiniz';
+      var message = 'En az ' + remainingChars + ' karakter daha girmelisiniz'
 
-      return message;
+      return message
     },
-    loadingMore: function () {
-      return 'Daha fazla…';
+    loadingMore: function() {
+      return 'Daha fazla…'
     },
-    maximumSelected: function (args) {
-      var message = 'Sadece ' + args.maximum + ' seçim yapabilirsiniz';
+    maximumSelected: function(args) {
+      var message = 'Sadece ' + args.maximum + ' seçim yapabilirsiniz'
 
-      return message;
+      return message
     },
-    noResults: function () {
-      return 'Sonuç bulunamadı';
+    noResults: function() {
+      return 'Sonuç bulunamadı'
     },
-    searching: function () {
-      return 'Aranıyor…';
-    }
-  };
-});
+    searching: function() {
+      return 'Aranıyor…'
+    },
+  }
+})
