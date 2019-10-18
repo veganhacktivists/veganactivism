@@ -17,7 +17,7 @@ class BackpackUser extends User
     protected $table = 'users';
 
     const ROLE_SUPER_ADMIN = 'Super Admin';
-    const ROLE_ADMIN = 'Admin';
+    const ROLE_ADMIN = 'Organization Admin';
 
     // Permissions for Users
     const PERMISSION_USERS_VIEW = 'View Users';
