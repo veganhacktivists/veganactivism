@@ -25,7 +25,7 @@ padding-bottom: 14px !important;
 			<a href="https://veganbootcamp.org" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#f64646;">
                     <i class="fas fa-leaf mr-2"></i>
-                    Share: Vegan Bootcamp
+                    Vegan Bootcamp Challenge
                 </button>
             </a>
 
@@ -38,7 +38,7 @@ padding-bottom: 14px !important;
 
             <a href="https://stickerswithpurpose.org/" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#3ca539;">
-                    <i class="fas fa-bullhorn"></i>
+                    <i class="fas fa-bullhorn"></i> 
                     Vegan Activism Sticker Store
                 </button>
             </a>
