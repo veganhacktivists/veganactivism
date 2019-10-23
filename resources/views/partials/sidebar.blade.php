@@ -36,10 +36,10 @@ padding-bottom: 14px !important;
                 </button>
             </a>
 
-            <a href="https://veganhacktivists.org/" target="_blank">
+            <a href="https://stickerswithpurpose.org/" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#3ca539;">
-                    <i class="fas fa-hands-helping mr-2"></i>
-                    Visit us: Vegan Hacktivists
+                    <i class="fas fa-bullhorn"></i>
+                    Vegan Activism Sticker Store
                 </button>
             </a>
 
