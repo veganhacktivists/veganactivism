@@ -1,5 +1,0 @@
-[25-Dec-2018 13:40:12 America/Chicago] PHP Parse error:  syntax error, unexpected ''/visitors.txt'' (T_CONSTANT_ENCAPSED_STRING) in /home1/vrdntf/public_html/veganactivism.org/sidebar.php on line 565
-[25-Dec-2018 13:50:59 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home1/vrdntf/public_html/veganactivism.org/sidebar.php on line 572
-[25-Dec-2018 13:51:18 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home1/vrdntf/public_html/veganactivism.org/sidebar.php on line 571
-[25-Dec-2018 13:51:24 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home1/vrdntf/public_html/veganactivism.org/sidebar.php on line 571
-[02-Mar-2019 00:33:29 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home1/vrdntf/public_html/veganactivism.org/sidebar.php on line 546
