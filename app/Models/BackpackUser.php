@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Organization;
 use App\User;
 use Backpack\Base\app\Models\Traits\InheritsRelationsFromParentModel;
 use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
@@ -59,11 +58,5 @@ class BackpackUser extends User
     public function getEmailForPasswordReset()
     {
         return $this->email;
-    }
-
-    public function canEdit(Organization $organization)
-    {
-        return $this->can(self::PERMISSION_ORGANIZATIONS_EDIT)
-            || $this->organizations->contains($organization);
     }
 }
