@@ -18,9 +18,11 @@ class AddOnDeleteCascadeToForeignKeys extends Migration
         });
 
         Schema::table('organization_user', function (Blueprint $table) {
-            $table->dropForeign(['organization_id', 'user_id']);
+            $table->dropForeign(['organization_id']);
 
             $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('CASCADE');
+
+            $table->dropForeign(['user_id']);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
         });
 
@@ -43,9 +45,11 @@ class AddOnDeleteCascadeToForeignKeys extends Migration
         });
 
         Schema::table('organization_user', function (Blueprint $table) {
-            $table->dropForeign(['organization_id', 'user_id']);
+            $table->dropForeign(['organization_id']);
 
             $table->foreign('organization_id')->references('id')->on('organizations');
+
+            $table->dropForeign(['user_id']);
             $table->foreign('user_id')->references('id')->on('users');
         });
 
