@@ -1,7 +1,16 @@
 <div class="card m-3 p-0 border-0 col" >
         <img src="{{ $organization->image_full_url}}" class="card-img-top embed-responsive-item" alt="...">
     <div class="card-body">
-        <h4 class="card-title font-weight-bold">Get involved with {{ $organization->title }}!</h4>
+        <div class="row px-4 justify-content-between">
+          <span class="card-title font-weight-bold">Get involved with {{ $organization->title }}!</span>
+
+          @if(Auth::check() && backpack_user()->canEdit($organization))
+            <a href="/admin/organization/{{$organization->id}}/edit">
+              <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #343a40;">
+                Edit&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
+            </a>
+          @endif
+        </div>
         <hr>
         @if($organization->hasDetails())
           {{ $organization->details }}
