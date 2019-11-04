@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class AuthenticateUser
@@ -28,8 +29,6 @@ class AuthenticateUser
             Auth::login($event->user, $event->user->remmeber);
         }
 
-        \Redis::set('user_session:'.Auth::user()->id, json_encode(Auth::user()->toArray()));
-
-        dd(\Redis::get('user_session:'.Auth::user()->id));
+        \Redis::zAdd(User::LOGGED_IN_USERS_SET, Auth::user()->id);
     }
 }

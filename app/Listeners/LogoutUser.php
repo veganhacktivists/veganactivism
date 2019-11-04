@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class LogoutUser
@@ -36,6 +37,8 @@ class LogoutUser
         }
 
         if (Auth::check()) {
+            \Redis::sRem(User::LOGGED_IN_USERS_SET, Auth::user()->id);
+
             Auth::logout();
         }
     }

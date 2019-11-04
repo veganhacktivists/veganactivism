@@ -18,6 +18,8 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasRoles;
     use Notifiable;
 
+    const LOGGED_IN_USERS_SET = 'logged_in_users';
+
     /**
      * The attributes that are mass assignable.
      *
