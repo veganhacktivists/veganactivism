@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\OrgLinkClicked;
 use App\Listeners\AuthenticateUser;
+use App\Listeners\IncementOrgLinkClicks;
 use App\Listeners\LogoutUser;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
@@ -29,6 +31,10 @@ class EventServiceProvider extends ServiceProvider
 
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+
+        OrgLinkClicked::class => [
+            IncementOrgLinkClicks::class,
         ],
     ];
 
