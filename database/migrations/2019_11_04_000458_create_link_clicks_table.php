@@ -27,7 +27,7 @@ class CreateLinkClicksTable extends Migration
 
     /**
      * Reverse the migrations.
-     */
+     */ m
     public function down()
     {
         Schema::dropIfExists('link_clicks');
