@@ -2,6 +2,8 @@
 
 namespace App\Events;
 
+use App\Organization;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Foundation\Events\Dispatchable;
@@ -13,11 +15,18 @@ class OrgLinkClicked
     use InteractsWithSockets;
     use SerializesModels;
 
+    private $organization;
+
+    private $user;
+
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct(Organization $organization, Authenticatable $user)
     {
+        $this->organization = $organization;
+
+        $this->user = $user;
     }
 
     /**
@@ -27,6 +36,6 @@ class OrgLinkClicked
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new PrivateChannel('org-link-clicks');
     }
 }

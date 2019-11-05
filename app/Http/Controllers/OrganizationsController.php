@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OrgLinkClicked;
 use App\Models\BackpackUser;
 use App\Organization;
 use Illuminate\Http\Request;
@@ -19,6 +20,8 @@ class OrganizationsController extends Controller
         if ($organization->website()) {
             $organization->website()->increment('click_count');
         }
+
+        new OrgLinkClicked($organization, auth()->user());
 
         return view('organizations.show', compact('organization'));
     }
