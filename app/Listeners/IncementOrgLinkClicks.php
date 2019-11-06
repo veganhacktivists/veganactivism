@@ -25,6 +25,6 @@ class IncementOrgLinkClicks
      */
     public function handle($event)
     {
-        //
+        dd($event);
     }
 }

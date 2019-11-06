@@ -29,6 +29,6 @@ class AuthenticateUser
             Auth::login($event->user, $event->user->remmeber);
         }
 
-        \Redis::zAdd(User::LOGGED_IN_USERS_SET, Auth::user()->id);
+        \Redis::zAdd(User::LOGGED_IN_USERS_SET, [], time(), Auth::user()->id);
     }
 }
