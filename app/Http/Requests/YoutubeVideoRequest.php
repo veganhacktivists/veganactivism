@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Models\BackpackUser;
+use App\Rules\YoutubeVideoLimit;
 use Illuminate\Foundation\Http\FormRequest;
 
 class YoutubeVideoRequest extends FormRequest
@@ -47,9 +48,15 @@ class YoutubeVideoRequest extends FormRequest
             $urlValidation .= '|unique:youtube_videos,url';
         }
 
+        $organizationRules = ['required', 'integer', 'exists' => ['organization' => ['id']]];
+
+        if ($this->method() == 'POST') {
+            $organizationRules[] = new YoutubeVideoLimit;
+        }
+
         return [
             'url' => $urlValidation,
-            'organization_id' => 'required|integer|exists:organizations,id',
+            'organization_id' => $organizationRules
         ];
     }
 
@@ -60,8 +67,7 @@ class YoutubeVideoRequest extends FormRequest
      */
     public function attributes()
     {
-        return [
-        ];
+        return [];
     }
 
     /**
@@ -71,7 +77,6 @@ class YoutubeVideoRequest extends FormRequest
      */
     public function messages()
     {
-        return [
-        ];
+        return [];
     }
 }
