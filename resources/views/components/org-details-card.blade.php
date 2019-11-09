@@ -42,7 +42,9 @@
 
         <div class="row">
             @foreach($organization->links as $link)
-              @include('components.links.' . $link->type, ['url' => $link->url])
+              @if(View::exists('components.links.' . $link->type))
+                @include('components.links.' . $link->type, ['url' => $link->url])
+              @endif
             @endforeach
         </div>
 
