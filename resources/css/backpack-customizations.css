@@ -5,3 +5,7 @@ body {
 a.btn {
     font-size: 14px;
 }
+
+.info small {
+    font-size: 12px;
+}
