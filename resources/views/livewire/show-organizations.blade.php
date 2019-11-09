@@ -21,7 +21,7 @@
 
     <div class="row">
         @foreach ($organizations as $organization)
-          @livewire('org-home-card', $organization, key($organization->id))
+          @livewire('org-home-card', $organization, key($organization['id']))
         @endforeach
 
         <div class="col-md-6 col-lg-6">

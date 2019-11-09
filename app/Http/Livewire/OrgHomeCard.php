@@ -2,14 +2,13 @@
 
 namespace App\Http\Livewire;
 
-use App\Organization;
 use Livewire\Component;
 
 class OrgHomeCard extends Component
 {
     public $organization;
 
-    public function mount(Organization $organization)
+    public function mount($organization)
     {
         $this->organization = $organization;
     }
