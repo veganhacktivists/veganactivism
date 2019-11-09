@@ -58,6 +58,7 @@ class LinkCrudController extends CrudController
                 Link::TYPE_EVENTS => ucwords(Link::TYPE_EVENTS),
                 Link::TYPE_VOLUNTEER => ucwords(Link::TYPE_VOLUNTEER),
                 Link::TYPE_REDDIT => ucwords(Link::TYPE_REDDIT),
+                Link::TYPE_NEWSLETTER => ucwords(Link::TYPE_NEWSLETTER),
             ],
             'allows_null' => false,
             'default' => 'one',
