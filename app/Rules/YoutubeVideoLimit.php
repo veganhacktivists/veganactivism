@@ -38,6 +38,6 @@ class YoutubeVideoLimit implements Rule
      */
     public function message()
     {
-        return 'YouTube video limit exceeded';
+        return 'This organization cannot have more than ' . self::VIDEO_LIMIT . ' YouTube videos';
     }
 }
