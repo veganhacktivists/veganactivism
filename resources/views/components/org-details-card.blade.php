@@ -42,17 +42,25 @@
 
         <div class="row">
             @foreach($organization->links as $link)
-              @include('components.links.' . $link->type, ['url' => $link->url])
+              @if(View::exists('components.links.' . $link->type))
+                @include('components.links.' . $link->type, ['url' => $link->url])
+              @endif
             @endforeach
         </div>
 
         <hr>
 
-        <div class="post-navigation">
-            <div class="small text-muted my-2">VEGANACTIVISM.ORG</div>
+        <div class="small text-muted my-2">VEGANACTIVISM.ORG</div>
+
+        <div class="row">
+          <div class="col-sm-6 post-navigation">
             <a href="/" class="font-weight-bold primary"><i class="fas fa-arrow-left"></i> Go back to homepage</a>
-        </div>
-        
+          </div>
+
+          <div class="col-sm-6 post-navigation text-right">
+            <div class="small text-muted">Page last updated: {{ \Carbon\Carbon::parse($organization->updated_at)->diffForHumans() }}</div>
+          </div>
+        </div>        
     </div>
 
 </div>
