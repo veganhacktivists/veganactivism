@@ -30,6 +30,14 @@ class AuthenticateUser
             Auth::login($event->user, $event->user->remmeber);
         }
 
-        Redis::zadd('logged-in-users', 1, strval(Auth::user()->id));
+        $userId = strval(Auth::user()->id);
+
+        /*
+         * Create a redis set with the user's
+         * id as the key and org ids as the
+         * unique values. Just use 0 as
+         * the only org id at the start
+         */
+        Redis::command('sadd', ['user-clicks-'.$userId, 0]);
     }
 }
