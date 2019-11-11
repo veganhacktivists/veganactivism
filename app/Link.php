@@ -20,6 +20,7 @@ class Link extends Model
     const TYPE_YOUTUBE = 'youtube';
     const TYPE_REDDIT = 'reddit';
     const TYPE_NEWSLETTER = 'newsletter';
+    const TYPE_EMAIL = 'email';
 
     /**
      * The attributes that are mass assignable.

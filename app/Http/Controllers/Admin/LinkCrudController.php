@@ -30,7 +30,7 @@ class LinkCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Link');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/link');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/link');
         $this->crud->setEntityNameStrings('link', 'links');
 
         /*
@@ -42,7 +42,7 @@ class LinkCrudController extends CrudController
         $this->crud->addColumn(['name' => 'url', 'type' => 'url', 'label' => 'URL']);
         $this->crud->addColumn(['name' => 'type', 'type' => 'text', 'label' => 'Link Type']);
 
-        $this->crud->addField(['name' => 'url', 'type' => 'url', 'label' => 'URL']);
+        $this->crud->addField(['name' => 'url', 'type' => 'text', 'label' => 'URL']);
         $this->crud->addField([
             'name' => 'type',
             'label' => 'Link Type',
@@ -59,6 +59,7 @@ class LinkCrudController extends CrudController
                 Link::TYPE_VOLUNTEER => ucwords(Link::TYPE_VOLUNTEER),
                 Link::TYPE_REDDIT => ucwords(Link::TYPE_REDDIT),
                 Link::TYPE_NEWSLETTER => ucwords(Link::TYPE_NEWSLETTER),
+                Link::TYPE_EMAIL => ucwords(Link::TYPE_EMAIL),
             ],
             'allows_null' => false,
             'default' => 'one',
