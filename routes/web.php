@@ -25,16 +25,16 @@ Route::view('/contact', 'contact.form')->name('contact.form');
 Route::post('/contact', 'SendContactEmailController')->name('contact.send');
 
 Route::get('/pages/{organization}', 'OrganizationsController@show')->name('organizations.show');
-Route::get('/organizations', 'OrganizationsController@index');
+Route::get('/organizations', 'OrganizationsController@index')->name('organizations.index');
 Route::get('/organizations/{organization}', 'OrganizationsController@get');
+
+Route::post('/organizations/{organization}/clicks', 'OrganizationClicksController@store')->name('organizations.clicks.store');
 
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}', 'UsersController@get');
-
 
 Route::get('/redirect/{to}', 'RedirectController@index')->name('redirect.to');
 
 Route::group(['middleware' => 'web', 'prefix' => config('backpack.base.route_prefix')], function () {
     Route::get('logout', 'Auth\LoginController@logout')->name('backpack.auth.logout');
 });
-

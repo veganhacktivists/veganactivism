@@ -2,7 +2,9 @@
 
 namespace App\Listeners;
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 
 class AuthenticateUser
 {
@@ -27,5 +29,15 @@ class AuthenticateUser
         if (!Auth::check()) {
             Auth::login($event->user, $event->user->remmeber);
         }
+
+        $user = Auth::user();
+
+        /*
+         * Create a redis set with the user's
+         * id as the key and org ids as the
+         * unique values. Just use 0 as
+         * the only org id at the start
+         */
+        Redis::command('sadd', [$user->redisOrgLinksSet(), 0]);
     }
 }
