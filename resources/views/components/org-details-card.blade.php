@@ -38,7 +38,7 @@
           <p class="card-text">
             To start volunteering with {{ $organization->title }}, click a button below!
           </p>
-        @endif
+      @endif
 
         <div class="row">
             @foreach($organization->links as $link)
