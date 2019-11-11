@@ -3,7 +3,6 @@
 namespace App\Events;
 
 use App\Organization;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 
@@ -12,14 +11,14 @@ class OrgLinkClicked
     use Dispatchable;
     use SerializesModels;
 
-    private $organization;
+    public $organization;
 
-    private $user;
+    public $user;
 
     /**
      * Create a new event instance.
      */
-    public function __construct(Organization $organization, Authenticatable $user)
+    public function __construct(Organization $organization, $user)
     {
         $this->organization = $organization;
 

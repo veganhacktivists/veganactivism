@@ -18,10 +18,8 @@ class OrganizationsController extends Controller
     public function show(Organization $organization)
     {
         if ($organization->website()) {
-            $organization->website()->increment('click_count');
+            event(new OrgLinkClicked($organization, auth()->user() ?: null));
         }
-
-        new OrgLinkClicked($organization, auth()->user());
 
         return view('organizations.show', compact('organization'));
     }

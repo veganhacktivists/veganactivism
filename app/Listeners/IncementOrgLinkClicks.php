@@ -2,29 +2,19 @@
 
 namespace App\Listeners;
 
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Events\OrgLinkClicked;
 
 class IncementOrgLinkClicks
 {
     /**
-     * Create the event listener.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * Handle the event.
      *
-     * @param  object  $event
-     * @return void
+     * @param object $event
      */
-    public function handle($event)
+    public function handle(OrgLinkClicked $event)
     {
-        dd($event);
+        if (!$event->user) {
+            $event->organization->increment('click_count');
+        }
     }
 }
