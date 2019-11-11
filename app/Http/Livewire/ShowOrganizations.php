@@ -8,11 +8,15 @@ use App\Organization;
 class ShowOrganizations extends Component
 {
     public $sort;
-    public $organizations;
+
+    public $featuredOrganizations;
+
+    public $regularOrganizations;
 
     public function mount()
     {
-        $this->organizations = $this->getFreshOrganizations()->toArray();
+        $this->featuredOrganizations = Organization::featured()->get()->toArray();
+        $this->regularOrganizations = $this->getFreshOrganizations()->toArray();
     }
 
     public function render()
@@ -24,13 +28,13 @@ class ShowOrganizations extends Component
     {
         switch ($value) {
             case 'created_at':
-                $this->organizations = Organization::orderBy('id', 'DESC')->get()->toArray();
+                $this->regularOrganizations = Organization::orderBy('id', 'DESC')->get()->toArray();
                 break;
             case 'created_at_older':
-                $this->organizations = Organization::orderBy('id', 'ASC')->get()->toArray();
+                $this->regularOrganizations = Organization::orderBy('id', 'ASC')->get()->toArray();
                 break;
             case 'clicks':
-                $this->organizations = collect($this->getFreshOrganizations())->sortByDesc('website_clicks')->values()->all();
+                $this->regularOrganizations = collect($this->getFreshOrganizations())->sortByDesc('website_clicks')->values()->all();
                 break;
             default:
                 break;
@@ -39,6 +43,6 @@ class ShowOrganizations extends Component
 
     private function getFreshOrganizations()
     {
-        return Organization::all();
+        return Organization::notFeatured()->get();
     }
 }

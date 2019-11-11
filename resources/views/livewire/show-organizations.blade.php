@@ -20,7 +20,11 @@
     </select>
 
     <div class="row">
-        @foreach ($organizations as $organization)
+        @foreach ($featuredOrganizations as $organization)
+          @livewire('org-home-card', $organization, key($organization['id']))
+        @endforeach
+
+        @foreach ($regularOrganizations as $organization)
           @livewire('org-home-card', $organization, key($organization['id']))
         @endforeach
 
