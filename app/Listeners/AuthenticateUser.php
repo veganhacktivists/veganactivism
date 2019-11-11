@@ -30,7 +30,7 @@ class AuthenticateUser
             Auth::login($event->user, $event->user->remmeber);
         }
 
-        $userId = strval(Auth::user()->id);
+        $user = Auth::user();
 
         /*
          * Create a redis set with the user's
@@ -38,6 +38,6 @@ class AuthenticateUser
          * unique values. Just use 0 as
          * the only org id at the start
          */
-        Redis::command('sadd', ['user-clicks-'.$userId, 0]);
+        Redis::command('sadd', [$user->redisOrgLinksSet(), 0]);
     }
 }

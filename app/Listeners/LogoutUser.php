@@ -38,13 +38,13 @@ class LogoutUser
         }
 
         if (Auth::check()) {
-            $userId  = strval(Auth::user()->id);
-
-            $userClicksSet = 'user-clicks-'.$userId
+            $userClicksSet = Auth::user()->redisOrgLinksSet();
 
             $orgIdsClicked = Redis::command('smembers', [$userClicksSet]);
 
-            foreach($orgIdsClicked as $orgId) {
+//            dd($orgIdsClicked);
+
+            foreach ($orgIdsClicked as $orgId) {
                 Redis::command('srem', [$userClicksSet, $orgId]);
             }
 
