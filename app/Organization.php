@@ -15,6 +15,16 @@ class Organization extends Model
 
     protected $guarded = [];
 
+    public function scopeFeatured($query)
+    {
+        return $query->where('featured', true);
+    }
+
+    public function scopeNotFeatured($query)
+    {
+        return $query->where('featured', false);
+    }
+
     /**
      * Retrieve the organization's links.
      */
