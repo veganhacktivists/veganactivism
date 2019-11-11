@@ -67,7 +67,8 @@ class LinkRequest extends FormRequest
                     Link::TYPE_CONTACT,
                     Link::TYPE_EVENTS,
                     Link::TYPE_VOLUNTEER,
-                    Link::TYPE_REDDIT
+                    Link::TYPE_REDDIT,
+                    Link::TYPE_NEWSLETTER
                 ]),
             ],
         ];

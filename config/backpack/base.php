@@ -44,6 +44,7 @@ return [
 
     // Overlays - CSS files that change the look and feel of the admin panel
     'overlays' => [
+        '../resources/css/backpack-customizations.css',
         'vendor/backpack/base/backpack.bold.css',
         'vendor/backpack/base/backpack.content.is.king.css',
     ],
