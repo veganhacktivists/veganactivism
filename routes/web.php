@@ -28,8 +28,6 @@ Route::get('/pages/{organization}', 'OrganizationsController@show')->name('organ
 Route::get('/organizations', 'OrganizationsController@index')->name('organizations.index');
 Route::get('/organizations/{organization}', 'OrganizationsController@get');
 
-Route::post('/organizations/{organization}/clicks', 'OrganizationClicksController@store')->name('organizations.clicks.store');
-
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}', 'UsersController@get');
 

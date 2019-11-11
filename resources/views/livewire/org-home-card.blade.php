@@ -17,7 +17,7 @@
       <div class="my-2 mx-1 row">
         <a href="{{ $organization['show_route'] }}" class="btn btn-dark py-1"><i class="fas fa-info-circle mr-1"></i>Learn More</a>
         <a href="{{ $organization['website_url'] }}" target="_blank" class="btn btn-danger ml-3 py-1"
-           onclick="axios.post('/organizations/{{ $organization['id'] }}/clicks')">
+           onclick="axios.post('{{route('organizations.clicks.store', $organization['id'])}}')">
           <i class="fas fa-link mr-1"></i>Visit Website
         </a>
       </div>
