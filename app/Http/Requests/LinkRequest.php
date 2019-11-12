@@ -44,7 +44,9 @@ class LinkRequest extends FormRequest
      */
     public function rules()
     {
-        $urlValidation = 'required|url|min:5|max:255';
+        $urlValidation = 'required|min:5|max:255';
+
+        $urlValidation .= $this->input('type') === Link::TYPE_EMAIL ? '|email' : '|url';
 
         if (!$this->link) {
             $urlValidation .= '|unique:links,url';
@@ -68,7 +70,8 @@ class LinkRequest extends FormRequest
                     Link::TYPE_EVENTS,
                     Link::TYPE_VOLUNTEER,
                     Link::TYPE_REDDIT,
-                    Link::TYPE_NEWSLETTER
+                    Link::TYPE_NEWSLETTER,
+                    Link::TYPE_EMAIL
                 ]),
             ],
         ];
