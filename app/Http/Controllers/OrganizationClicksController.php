@@ -10,7 +10,7 @@ class OrganizationClicksController extends Controller
     public function store(Organization $organization)
     {
         if ($organization->website) {
-            event(new OrgLinkClicked($organization, \Auth::user()));
+            event(new OrgLinkClicked($organization, auth()->user() ?: null));
         }
     }
 }
