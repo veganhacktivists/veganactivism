@@ -106,6 +106,11 @@ class User extends Authenticatable implements MustVerifyEmail
         }
     }
 
+    public function redisOrgLinksSet()
+    {
+        return 'user-clicks-'.$this->id;
+    }
+
     private function isPasswordCorrect(string $password)
     {
         return Hash::check($password, $this->password);

@@ -2,7 +2,9 @@
 
 namespace App\Listeners;
 
+use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 
 class LogoutUser
 {
@@ -36,6 +38,16 @@ class LogoutUser
         }
 
         if (Auth::check()) {
+            $userClicksSet = Auth::user()->redisOrgLinksSet();
+
+            $orgIdsClicked = Redis::command('smembers', [$userClicksSet]);
+
+//            dd($orgIdsClicked);
+
+            foreach ($orgIdsClicked as $orgId) {
+                Redis::command('srem', [$userClicksSet, $orgId]);
+            }
+
             Auth::logout();
         }
     }
