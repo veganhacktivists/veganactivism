@@ -29,7 +29,7 @@ class YoutubeVideoCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
         $this->crud->setModel('App\Models\YoutubeVideo');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/youtubevideo');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/youtubevideo');
         $this->crud->setEntityNameStrings('youtubevideo', 'youtube_videos');
 
         /*
@@ -85,6 +85,7 @@ class YoutubeVideoCrudController extends CrudController
     public function store(StoreRequest $request)
     {
         // your additional operations before save here
+        $request->merge(['url' => $this->getEmbedYoutubeUrl($request->input('url'))]);
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
@@ -94,6 +95,7 @@ class YoutubeVideoCrudController extends CrudController
     public function update(UpdateRequest $request)
     {
         // your additional operations before save here
+        $request->merge(['url' => $this->getEmbedYoutubeUrl($request->input('url'))]);
         $redirect_location = parent::updateCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
@@ -122,5 +124,13 @@ class YoutubeVideoCrudController extends CrudController
         if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
             $this->crud->denyAccess('delete');
         }
+    }
+
+    // Convert a YouTube link to an embeddable url 
+    private function getEmbedYoutubeUrl($url)
+    {
+        $pattern = "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i";
+        $replacement = "www.youtube.com/embed/$2";
+        return preg_replace($pattern, $replacement, $url);
     }
 }
