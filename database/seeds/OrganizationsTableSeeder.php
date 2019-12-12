@@ -399,31 +399,60 @@ Click the <a href="https://imgur.com/a/EGJSooj" target="_blank" style="color:#ff
 
 
 <b>Below are live comments I made in the last /r/all thread I participated in:</b><br><br>
-<table>
+<div class="row text-center m-2">
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/1.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/1-thumb.png" alt="" /></a>
+    </div>
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/2.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/2-thumb.png" alt="" /></a>
+    </div>
+</div>
 
-<tr style="border: 1px solid #ff0097;">
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/1.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/1-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/2.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/2-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/3.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/3-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/4.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/4-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/5.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/5-thumb.png" alt=""/></a></td>
+<div class="row text-center m-2">
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/3.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/3-thumb.png" alt="" /></a>
+    </div>
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/4.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/4-thumb.png" alt="" /></a>
+    </div>
+</div>
 
-</tr>
-												  
-<tr style="border: 1px solid #ff0097;">
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/6.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/6-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/7.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/7-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/8.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/8-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/9.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/9-thumb.png" alt=""/></a></td>
-<td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a class="example-image-link" href="https://veganactivism.org/images/example-responses/10.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="https://veganactivism.org/images/example-responses/thumb/10-thumb.png" alt=""/></a></td>
+<div class="row text-center m-2">
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/5.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/5-thumb.png" alt="" /></a>
+    </div>
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/6.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/6-thumb.png" alt="" /></a>
+    </div>
+</div>
 
-</tr>
-</table>
-      
+<div class="row text-center m-2">
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/7.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/7-thumb.png" alt="" /></a>
+    </div>
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/8.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/8-thumb.png" alt="" /></a>
+    </div>
+</div>
 
-	
-	
-	
+<div class="row text-center m-2">
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/9.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/9-thumb.png" alt="" /></a>
+    </div>
+    <div class="col-12 col-sm-6" style="border: 1px solid #ff0097;">
+        <a href="https://veganactivism.org/images/example-responses/10.png"><img
+                src="https://veganactivism.org/images/example-responses/thumb/10-thumb.png" alt="" /></a>
+    </div>
+</div>
 
 As you can see, at the end of the day, we\'ve improved the reputation of Vegans (which needs all the help that it can get), we\'ve made a few unexpected connections, and we\'ve made folks that we\'ve responded to more open to Veganism in general (let alone the folks reading our comments). That\'s the kind of activism and kindess that ensures you\'re leaving the biggest and most postive impact for the animals and our planet.
 <br>
