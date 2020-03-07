@@ -15,7 +15,7 @@ padding-bottom: 14px !important;
 <div class="card p-4 my-3 bg-color-gray">
     <ul class="category-list list-unstyled mb-0">
         <li>
-		
+
             <a href="https://reddit.com/r/VeganActivism" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple">
                     <i class="far fa-comments mr-2"></i>
@@ -38,12 +38,12 @@ padding-bottom: 14px !important;
 
             <a href="https://stickerswithpurpose.org/" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#3ca539;">
-                    <i class="fas fa-bullhorn mr-2"></i> 
+                    <i class="fas fa-bullhorn mr-2"></i>
                     Vegan Activism Sticker Store
                 </button>
             </a>
 
-			
+
             <a href="https://vegancheatsheet.org" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-yellow">
                     <i class="fa fa-download mr-2"></i> Vegan Cheatsheet Resource
@@ -138,7 +138,12 @@ padding-bottom: 14px !important;
 <div class="card p-4 my-3 bg-color-gray">
     <h5 class="card-title"><i class="fas fa-bell mr-1"></i> VeganActivism.org</h5>
     <ul class="list-unstyled mb-0">
-    We've had <strong>{{ Visitor::count() }}</strong> visits with a total of
+    {{--
+        Hardcode a base value as the site was not actually logging user visits
+        for while, so this artificially get the count to a more accruate number.
+        Base value was taken from cloudfares estimated user visits.
+    --}}
+    We've had <strong>{{ 51756 + Visitor::count() }}</strong> visits with a total of
         <strong>{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
         <br><br>
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
