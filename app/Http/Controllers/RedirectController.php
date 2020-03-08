@@ -29,4 +29,14 @@ class RedirectController extends Controller
 
         return view('home');
     }
+
+    /**
+     * Redirects User to Vegan Hacktavists contact page.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function contact()
+    {
+        return redirect()->away('https://veganhacktivists.org/contact?veganactivism');
+    }
 }
