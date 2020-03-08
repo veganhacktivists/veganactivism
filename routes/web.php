@@ -21,8 +21,7 @@ Route::put('/settings', 'SettingsController@update')->name('settings.update');
 
 Route::delete('/account', 'DeleteAccountController')->name('account.destroy');
 
-Route::view('/contact', 'contact.form')->name('contact.form');
-Route::post('/contact', 'SendContactEmailController')->name('contact.send');
+Route::get('/contact', 'RedirectController@contact')->name('contact.form');
 
 Route::get('/pages/{organization}', 'OrganizationsController@show')->name('organizations.show');
 Route::get('/organizations', 'OrganizationsController@index')->name('organizations.index');
