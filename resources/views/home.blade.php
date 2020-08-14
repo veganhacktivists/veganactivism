@@ -6,6 +6,7 @@
 	
 	<div class="card my-3">
   <div class="card-body pl-4 pr-4">
+  <h4 style="padding-bottom: 5px;"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Global Animal Rights Activism Map </h4>
    <iframe width="100%" height="300px" frameborder="0" allowfullscreen="" src="//umap.openstreetmap.fr/de/map/animal-rights-map_487135?scaleControl=false&amp;miniMap=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;allowEdit=false&amp;moreControl=true&amp;searchControl=true&amp;tilelayersControl=false&amp;embedControl=null&amp;datalayersControl=expanded&amp;onLoadPanel=caption&amp;captionBar=false&amp;fullscreenControl=false&amp;locateControl=true&amp;measureControl=false" style="overflow:hidden;height:300px;width:100%"></iframe>
 
   <div class="my-2 mx-1 row" style="
