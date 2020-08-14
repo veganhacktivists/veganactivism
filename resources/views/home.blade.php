@@ -6,7 +6,7 @@
 	
 	<div class="card my-3">
   <div class="card-body pl-4 pr-4">
-  	<a href="/login" style="position: absolute;right: 24px;margin-top: -5px;">
+  	<a href="https://animalrightsmap.org/" target="_blank" style="position: absolute;right: 24px;margin-top: -5px;">
 	<button type="submit" class="btn btn-danger ml-3 py-1" style="">
 	Open Map&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
 	</a>	
