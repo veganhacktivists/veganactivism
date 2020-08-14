@@ -36,10 +36,10 @@ padding-bottom: 14px !important;
                 </button>
             </a>
 
-            <a href="https://stickerswithpurpose.org/" target="_blank">
+            <a href="https://animalrightsmap.org" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#3ca539;">
                     <i class="fas fa-bullhorn mr-2"></i>
-                    Vegan Activism Sticker Store
+                    Global Animal Rights Map
                 </button>
             </a>
 
