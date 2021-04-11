@@ -4,6 +4,12 @@
   <div class="col-lg-8">
     @include('partials.welcome-card')
 	
+	<div class="card border rounded flex flex-row align-items-center p-2 bg-color-gray" style="
+    background-color: #fff2a1;
+">
+  <i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Joined any of the organizations below? Nice!&nbsp;<a href="https://activisthub.org/" target="_blank">Track your impact!</a>
+</div>
+
 	<div class="card my-3">
   <div class="card-body pl-4 pr-4">
   	<a href="https://animalrightsmap.org/" target="_blank" style="position: absolute;right: 24px;margin-top: -5px;">
