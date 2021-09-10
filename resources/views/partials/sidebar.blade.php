@@ -31,7 +31,7 @@ padding-bottom: 14px !important;
 
             <a href="https://veganhacktivists.org/grants" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-blue">
-                    <i class="fa fa-dollar mr-2"></i>
+                    <i class="fa fa-thumbs-up mr-2"></i>
                     Get $1000 Activism Funding
                 </button>
             </a>
