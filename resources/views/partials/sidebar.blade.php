@@ -147,7 +147,7 @@ padding-bottom: 14px !important;
         <strong>{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
         <br><br>
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
-        <a href="https://www.patreon.com/veganhacktivists" target="_blank">donate if you can</a>,
+        <a href="https://veganhacktivists.org/support" target="_blank">donate if you can</a>,
         it's very appreciated! <i class="fas fa-hand-holding-heart ml-1"></i>
 
 </div>
