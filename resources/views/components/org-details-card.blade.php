@@ -2,7 +2,7 @@
         <img src="{{ $organization->image_full_url}}" class="card-img-top embed-responsive-item" alt="...">
     <div class="card-body">
         <div class="row px-4 justify-content-between">
-          <span class="card-title font-weight-bold">Get involved with {{ $organization->title }}!</span>
+          <span class="card-title font-weight-bold" style="color:#292929;">Get involved with {{ $organization->title }}!</span>
 
           @if(Auth::check() && backpack_user()->canEdit($organization))
             <a href="/admin/organization/{{$organization->id}}/edit">
@@ -15,7 +15,7 @@
         @if($organization->hasDetails())
           {{ $organization->details }}
         @else
-          <h2 class="font-weight-bold">What are they all about?</h2>
+          <h2 class="font-weight-bold" style="color:#292929;">What are they all about?</h2>
 
           <div class="card-text">
             {!! $organization->about !!}
@@ -26,15 +26,15 @@
             <div id="player-{{ $youtubeVideo->id }}" class="embed-responsive embed-responsive-16by9 py-3"></div>
           @endforeach
 
-         @if($organization->activism != null) 
-          <h2 class="font-weight-bold">What type of activism do they do?</h2>
+         @if($organization->activism != null)
+          <h2 class="font-weight-bold" style="color:#292929;">What type of activism do they do?</h2>
 
           <div class="card-text">
             {!! $organization->activism !!}
           </div>
         @endif
 		  <br>
-          <h2 class="font-weight-bold">How do I get involved?</h2>
+          <h2 class="font-weight-bold" style="color:#292929;">How do I get involved?</h2>
           <p class="card-text">
             To start volunteering with {{ $organization->title }}, click a button below!
           </p>
@@ -54,13 +54,13 @@
 
         <div class="row">
           <div class="col-sm-6 post-navigation">
-            <a href="/" class="font-weight-bold primary"><i class="fas fa-arrow-left"></i> Go back to homepage</a>
+            <a href="/" class="font-weight-bold primary" style="color:#292929;"><i class="fas fa-arrow-left"></i> Go back to homepage</a>
           </div>
 
           <div class="col-sm-6 post-navigation text-right">
             <div class="small text-muted">Page last updated: {{ \Carbon\Carbon::parse($organization->updated_at)->diffForHumans() }}</div>
           </div>
-        </div>        
+        </div>
     </div>
 
 </div>

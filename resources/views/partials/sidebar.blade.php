@@ -22,10 +22,10 @@ padding-bottom: 14px !important;
                     Vegan Activist Community
                 </button>
             </a>
-			<a href="https://veganbootcamp.org" target="_blank">
+			<a href="https://activisthub.org" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#f64646;">
                     <i class="fas fa-leaf mr-2"></i>
-                    Vegan Bootcamp Challenge
+                    Track your activist impact
                 </button>
             </a>
 
@@ -50,7 +50,7 @@ padding-bottom: 14px !important;
                 </button>
             </a>
 
-            <a href="https://veganhacktivists.org/subscribe" target="_blank">
+            <a href="https://veganhacktivists.org/newsletter" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#ff0097;">
                     <i class="fas fa-envelope mr-2"></i> Subscribe to our Newsletter
                 </button>
@@ -63,13 +63,13 @@ padding-bottom: 14px !important;
    @livewire('show-microactivsm')
 </div>
 
-<div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-hands-helping mr-1"></i> Find Groups Near You</h5>
+<div class="card pr-4 pl-4 pt-3 pb-4 my-3 bg-color-gray">
+    <h5 class="card-title" style="color:#292929;"><i class="fas fa-hands-helping mr-1"></i> Nearby groups</h5>
 <form class="form" type="POST" action="{{ route('redirect.to', 'facebook') }}" target="_blank">
         <table>
             <tr>
                 <td>
-                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your City Name">
+                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your city ">
                 </td>
                 <td>
                     <button type="submit" class="btn btn-secondary ml-2">Search</button>
@@ -77,16 +77,15 @@ padding-bottom: 14px !important;
             </tr>
         </table>
     </form>
-    <p class="card-footer-text">powered by facebook.com</p>
 </div>
 
-<div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i> Find Events Near You</h5>
+<div class="card pr-4 pl-4 pt-3 pb-4 my-3 bg-color-gray">
+    <h5 class="card-title" style="color:#292929;"><i class="fas fa-calendar-alt mr-1"></i> Nearby events</h5>
     <form class="form" action="{{ route('redirect.to', 'meetup') }}" target="_blank">
         <table>
             <tr>
                 <td>
-                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your Zip Code">
+                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your zip">
                 </td>
                 <td>
                     <button type="submit" class="btn btn-secondary ml-2">Search</button>
@@ -94,66 +93,27 @@ padding-bottom: 14px !important;
             </tr>
         </table>
     </form>
-    <p class="card-footer-text">powered by meetup.com</p>
-</div>
-
-<div class="card my-3 p-4 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-bell"></i>&nbsp;&nbsp;
-        Activism Newsletter
-    </h5>
-    <ul class="mb-0" style="padding: 0px 15px 0px 6px;">
-        <!-- Begin Mailchimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-            #mc_embed_signup {
-                background: #fff;
-                clear: left;
-                font: 14px Helvetica, Arial, sans-serif;
-            }
-			#mc_embed_signup form {
-			display: block;
-			position: relative;
-			text-align: left;
-			padding: 10px 0 0px 3%;
-			}
-
-            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
-        <div id="mc_embed_signup">
-            <form style="background-color: #f9f9f9;" action="https://youaretheirvoice.us20.list-manage.com/subscribe/post?u=0baba35be8f6397f7ac1066f1&amp;id=5fd11d4221" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-
-                    <input style="width: 100%;" type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Enter your Email Address" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0baba35be8f6397f7ac1066f1_5fd11d4221" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe to Newsletter!" name="subscribe" id="mc-embedded-subscribe" class="button btn text-white mt-1" style="width: 100%;background-color:#ff0097;"></div>
-                </div>
-            </form>
-        </div>
-        <!--End mc_embed_signup-->
-    </ul>
 </div>
 
 <div class="card p-4 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-bell mr-1"></i> VeganActivism.org</h5>
+    <h5 style="color:#292929;"> VeganActivism.org</h5>
     <ul class="list-unstyled mb-0">
     {{--
         Hardcode a base value as the site was not actually logging user visits
         for while, so this artificially get the count to a more accruate number.
         Base value was taken from cloudfares estimated user visits.
     --}}
-    We've had <strong>{{ 51756 + Visitor::count() }}</strong> visits with a total of
-        <strong>{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
+    We've had <strong style="color:#292929;">{{ 51756 + Visitor::count() }}</strong> visits with a total of
+        <strong style="color:#292929;">{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
         <br><br>
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
-        <a href="https://www.patreon.com/veganhacktivists" target="_blank">donate if you can</a>,
+        <a href="https://veganhacktivists.org/support" target="_blank">donate if you can</a>,
         it's very appreciated! <i class="fas fa-hand-holding-heart ml-1"></i>
 
 </div>
 
-<div class="card p-3 my-3 bg-color-gray text-center">
-    <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/Dn4T6BC.png" style="width:200px;padding-bottom: 10px;"></a>
-    This site is designed and hosted by the <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
+<div class="card p-3 my-3 bg-color-gray text-center pt-4 pb-4" style="background-color: #292929;">
+    <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/4L6Hvgn.png" style="width:200px;padding-bottom: 10px;"></a>
+    <span style="color:white;" class="pt-2">Designed with love by</span> <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
 
 </div>
