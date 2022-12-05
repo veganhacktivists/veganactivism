@@ -22,10 +22,10 @@ padding-bottom: 14px !important;
                     Vegan Activist Community
                 </button>
             </a>
-			<a href="https://veganbootcamp.org" target="_blank">
+			<a href="https://activisthub.org" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#f64646;">
                     <i class="fas fa-leaf mr-2"></i>
-                    Vegan Bootcamp Challenge
+                    Track your activist impact
                 </button>
             </a>
 
@@ -50,7 +50,7 @@ padding-bottom: 14px !important;
                 </button>
             </a>
 
-            <a href="https://veganhacktivists.org/subscribe" target="_blank">
+            <a href="https://veganhacktivists.org/newsletter" target="_blank">
                 <button type="submit" class="btn rounded-1 btn-shadow button-link" style="background-color:#ff0097;">
                     <i class="fas fa-envelope mr-2"></i> Subscribe to our Newsletter
                 </button>
