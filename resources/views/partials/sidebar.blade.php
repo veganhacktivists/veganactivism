@@ -64,12 +64,12 @@ padding-bottom: 14px !important;
 </div>
 
 <div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-hands-helping mr-1"></i> Find Groups Near You</h5>
+    <h5 class="card-title"><i class="fas fa-hands-helping mr-1"></i> Find nearby groups</h5>
 <form class="form" type="POST" action="{{ route('redirect.to', 'facebook') }}" target="_blank">
         <table>
             <tr>
                 <td>
-                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your City Name">
+                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your city ">
                 </td>
                 <td>
                     <button type="submit" class="btn btn-secondary ml-2">Search</button>
@@ -77,16 +77,15 @@ padding-bottom: 14px !important;
             </tr>
         </table>
     </form>
-    <p class="card-footer-text">powered by facebook.com</p>
 </div>
 
 <div class="card pr-4 pl-4 pt-3 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i> Find Events Near You</h5>
+    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i> Find nearby events</h5>
     <form class="form" action="{{ route('redirect.to', 'meetup') }}" target="_blank">
         <table>
             <tr>
                 <td>
-                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your Zip Code">
+                    <input type="text" class="form-control" name="location" placeholder="&nbsp;Enter your zip">
                 </td>
                 <td>
                     <button type="submit" class="btn btn-secondary ml-2">Search</button>
@@ -94,7 +93,6 @@ padding-bottom: 14px !important;
             </tr>
         </table>
     </form>
-    <p class="card-footer-text">powered by meetup.com</p>
 </div>
 
 <div class="card p-4 my-3 bg-color-gray">
