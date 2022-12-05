@@ -153,7 +153,7 @@ padding-bottom: 14px !important;
 </div>
 
 <div class="card p-3 my-3 bg-color-gray text-center">
-    <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/Dn4T6BC.png" style="width:200px;padding-bottom: 10px;"></a>
-    This site is designed and hosted by the <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
+    <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/4L6Hvgn.png" style="width:200px;padding-bottom: 10px;"></a>
+    Designed with love by <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
 
 </div>
