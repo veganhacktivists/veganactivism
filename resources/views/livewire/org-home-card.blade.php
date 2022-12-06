@@ -21,7 +21,7 @@
           <i class="fas fa-link mr-1"></i>Visit
         </a>
       </div>
-      <p class="card-text"><small><strong>{{ @format($organization['website_clicks']) }}</strong> Activists clicked on this.</small></p>
+      <p class="card-text"><small><strong>{{ number_format($organization['website_clicks'], 0); }}</strong> Activists clicked on this.</small></p>
     </div>
   </div>
 </div>
