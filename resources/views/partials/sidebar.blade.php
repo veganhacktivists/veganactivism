@@ -96,7 +96,7 @@ padding-bottom: 14px !important;
 </div>
 
 <div class="card p-4 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-bell mr-1"></i> VeganActivism.org</h5>
+    <h5 style="color:#494f56;"> VeganActivism.org</h5>
     <ul class="list-unstyled mb-0">
     {{--
         Hardcode a base value as the site was not actually logging user visits
