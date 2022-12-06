@@ -100,10 +100,10 @@ padding-bottom: 14px !important;
     <ul class="list-unstyled mb-0">
     {{--
         Hardcode a base value as the site was not actually logging user visits
-        for while, so this artificially get the count to a more accruate number.
+        for while, so this artificially get the count to a more accurate number.
         Base value was taken from cloudfares estimated user visits.
     --}}
-    We've had <strong style="color:#292929;">{{ number_format(51756 + Visitor::count()) }}</strong> visits with a total of
+    We've had <strong style="color:#292929;">{{ number_format(197640 + Visitor::count()) }}</strong> visits with a total of
         <strong style="color:#292929;">{{ number_format(\App\Facades\ClickCount::getAllClicks()) }}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
         <br><br>
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
