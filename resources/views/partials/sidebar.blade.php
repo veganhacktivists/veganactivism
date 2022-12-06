@@ -103,8 +103,8 @@ padding-bottom: 14px !important;
         for while, so this artificially get the count to a more accruate number.
         Base value was taken from cloudfares estimated user visits.
     --}}
-    We've had <strong>{{ 51756 + Visitor::count() }}</strong> visits with a total of
-        <strong>{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
+    We've had <strong style="color:#292929;">{{ 51756 + Visitor::count() }}</strong> visits with a total of
+        <strong style="color:#292929;">{{ \App\Facades\ClickCount::getAllClicks()}}</strong> unique clicks that went directly to activist websites. <i>Thanks!</i>
         <br><br>
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
         <a href="https://veganhacktivists.org/support" target="_blank">donate if you can</a>,
