@@ -114,6 +114,6 @@ padding-bottom: 14px !important;
 
 <div class="card p-3 my-3 bg-color-gray text-center pt-4 pb-4" style="background-color: #292929;">
     <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/4L6Hvgn.png" style="width:200px;padding-bottom: 10px;"></a>
-    <span style="color:white;">Designed with love by</span> <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
+    <span style="color:white;" class="pt-2">Designed with love by</span> <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
 
 </div>
