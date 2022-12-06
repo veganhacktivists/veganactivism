@@ -64,7 +64,7 @@ padding-bottom: 14px !important;
 </div>
 
 <div class="card pr-4 pl-4 pt-3 pb-4 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-hands-helping mr-1"></i> Find nearby groups</h5>
+    <h5 class="card-title" style="color:#292929;"><i class="fas fa-hands-helping mr-1"></i> Nearby groups</h5>
 <form class="form" type="POST" action="{{ route('redirect.to', 'facebook') }}" target="_blank">
         <table>
             <tr>
@@ -80,7 +80,7 @@ padding-bottom: 14px !important;
 </div>
 
 <div class="card pr-4 pl-4 pt-3 pb-4 my-3 bg-color-gray">
-    <h5 class="card-title"><i class="fas fa-calendar-alt mr-1"></i> Find nearby events</h5>
+    <h5 class="card-title" style="color:#292929;"><i class="fas fa-calendar-alt mr-1"></i> Nearby events</h5>
     <form class="form" action="{{ route('redirect.to', 'meetup') }}" target="_blank">
         <table>
             <tr>
@@ -96,7 +96,7 @@ padding-bottom: 14px !important;
 </div>
 
 <div class="card p-4 my-3 bg-color-gray">
-    <h5 style="color:#494f56;"> VeganActivism.org</h5>
+    <h5 style="color:#292929;"> VeganActivism.org</h5>
     <ul class="list-unstyled mb-0">
     {{--
         Hardcode a base value as the site was not actually logging user visits
