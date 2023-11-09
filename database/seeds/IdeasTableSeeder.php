@@ -66,8 +66,8 @@ class IdeasTableSeeder extends Seeder
             'color' => '#b098f7',
         ]);
         \App\Idea::create([
-            'title' => 'Donate to sanctuaries or',
-            'description' => 'organizations that could really use the funding! You could even sponsor an Animal at a sanctuary; your money is sorely needed. <a href="https://animalcharityevaluators.org/donate/" target="_blank">Donation list</a>.',
+            'title' => 'Donate to sanctuaries',
+            'description' => 'or organizations that could really use the funding! You could even sponsor an Animal at a sanctuary; your money is sorely needed. <a href="https://animalcharityevaluators.org/donate/" target="_blank">Donation list</a>.',
             'color' => '#8194e8',
         ]);
         \App\Idea::create([
@@ -88,8 +88,8 @@ class IdeasTableSeeder extends Seeder
         ]);
 
         \App\Idea::create([
-            'title' => 'Perform chalk activism on',
-            'description' => 'public streets to spread information, facts and more - legally. Make sure the chalk is vegan (Crayola isn’t vegan)!',
+            'title' => 'Perform chalk activism',
+            'description' => 'on public streets to spread information, facts and more - legally. Make sure the chalk is vegan (Crayola isn’t vegan)!',
             'color' => '#64c714',
         ]);
         \App\Idea::create([
