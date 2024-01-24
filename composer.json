@@ -7,27 +7,6 @@
         "laravel"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type":"package",
-            "package":{
-                "name": "xrstf/ip-utils",
-                "version": "1.1.0",
-                "dist": {
-                    "type": "tar",
-                    "reference": "cc45ef4b259218f384568b0729efd9243cb9f51e",
-                    "url": "https://codeload.github.com/HookedMedia/ip-utils/legacy.tar.gz/cc45ef4b259218f384568b0729efd9243cb9f51e",
-                    "shasum": ""
-                },
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/HookedMedia/ip-utils.git",
-                    "reference": "cc45ef4b259218f384568b0729efd9243cb9f51e"
-                }
-            },
-            "url":"https://github.com/HookedMedia/ip-utils"
-        }
-    ],
     "require": {
         "xrstf/ip-utils": "1.1.0",
         "php": "^7.3",

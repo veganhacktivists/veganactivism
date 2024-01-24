@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5abf98b24113a4353c2efa2e89596bfe",
+    "content-hash": "f1667d2e283665217062e676bd12efa8",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -5024,19 +5024,55 @@
         },
         {
             "name": "xrstf/ip-utils",
-            "version": "1.1.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/HookedMedia/ip-utils.git",
-                "reference": "cc45ef4b259218f384568b0729efd9243cb9f51e"
+                "url": "https://github.com/xrstf/ip-utils.git",
+                "reference": "5cf2b9322fb3302c48f1684d3f0d8c0346028f38"
             },
             "dist": {
-                "type": "tar",
-                "url": "https://codeload.github.com/HookedMedia/ip-utils/legacy.tar.gz/cc45ef4b259218f384568b0729efd9243cb9f51e",
-                "reference": "cc45ef4b259218f384568b0729efd9243cb9f51e",
+                "type": "zip",
+                "url": "https://api.github.com/repos/xrstf/ip-utils/zipball/5cf2b9322fb3302c48f1684d3f0d8c0346028f38",
+                "reference": "5cf2b9322fb3302c48f1684d3f0d8c0346028f38",
                 "shasum": ""
             },
-            "type": "library"
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-default": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "IpUtils\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christoph Mewes",
+                    "homepage": "http://www.xrstf.de/"
+                }
+            ],
+            "description": "small library to deal with IPv4 & IPv6 addresses and subnets",
+            "keywords": [
+                "IP",
+                "ipv4",
+                "ipv6",
+                "matching",
+                "subnet"
+            ],
+            "support": {
+                "issues": "https://github.com/xrstf/ip-utils/issues",
+                "source": "https://github.com/xrstf/ip-utils/tree/v1.1.0"
+            },
+            "time": "2013-12-04T00:57:13+00:00"
         }
     ],
     "packages-dev": [
