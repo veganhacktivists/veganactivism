@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Visitor;
 
 class LogVisit
 {
@@ -16,7 +15,7 @@ class LogVisit
      */
     public function handle($request, Closure $next)
     {
-        Visitor::log();
+        // Visitor::log();
 
         return $next($request);
     }
