@@ -2,8 +2,8 @@
 
 namespace App;
 
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
-use Backpack\CRUD\CrudTrait;
 
 class Idea extends Model
 {

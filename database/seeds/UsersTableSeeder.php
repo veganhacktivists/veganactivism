@@ -20,7 +20,5 @@ class UsersTableSeeder extends Seeder
         ]);
 
         $admin->assignRole(BackpackUser::ROLE_SUPER_ADMIN);
-
-        factory(BackpackUser::class, 5)->create();
     }
 }

@@ -4,16 +4,16 @@ namespace App\Models;
 
 use App\Organization;
 use App\User;
-use Backpack\Base\app\Models\Traits\InheritsRelationsFromParentModel;
 use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
-use Backpack\CRUD\CrudTrait;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Permission\Traits\HasRoles;
 
 class BackpackUser extends User
 {
-    use InheritsRelationsFromParentModel;
     use CrudTrait;
     use HasRoles;
+    use HasFactory;
 
     protected $table = 'users';
 

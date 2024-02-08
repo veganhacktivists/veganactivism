@@ -3,11 +3,11 @@
 namespace App;
 
 use App\Models\YoutubeVideo;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Storage;
 use Parsedown;
-use Backpack\CRUD\CrudTrait;
 
 class Organization extends Model
 {
