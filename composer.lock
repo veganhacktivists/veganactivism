@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84563ea438e0967025f6b07aadbe331f",
+    "content-hash": "d2a0e8024eabd62045c223f9626500ea",
     "packages": [
         {
             "name": "backpack/basset",
@@ -244,6 +244,66 @@
                 "source": "https://github.com/Laravel-Backpack/PermissionManager/tree/7.1.1"
             },
             "time": "2023-10-31T09:51:10+00:00"
+        },
+        {
+            "name": "backpack/theme-coreuiv2",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Backpack/theme-coreuiv2.git",
+                "reference": "10e943a491e1f4ad5fb5e095105dc7a77628f0ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Backpack/theme-coreuiv2/zipball/10e943a491e1f4ad5fb5e095105dc7a77628f0ec",
+                "reference": "10e943a491e1f4ad5fb5e095105dc7a77628f0ec",
+                "shasum": ""
+            },
+            "require": {
+                "backpack/crud": "^6.2.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~5|~6",
+                "phpunit/phpunit": "~9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Backpack\\ThemeCoreuiv2\\AddonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Backpack\\ThemeCoreuiv2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@backpackforlaravel.com",
+                    "homepage": "https://backpackforlaravel.com"
+                }
+            ],
+            "description": "UI that uses CoreUI v2 and Bootstrap v4, provided as a legacy theme for Backpack v6.",
+            "homepage": "https://github.com/backpack/theme-coreuiv2",
+            "keywords": [
+                "Backpack Addon",
+                "Backpack for Laravel",
+                "ThemeCoreuiv2",
+                "backpack",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Backpack/theme-coreuiv2/issues",
+                "source": "https://github.com/Laravel-Backpack/theme-coreuiv2/tree/1.2.3"
+            },
+            "time": "2024-01-30T17:51:14+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",

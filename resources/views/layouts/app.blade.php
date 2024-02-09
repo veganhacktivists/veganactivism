@@ -42,7 +42,7 @@
       <main class="py-4">
         <div class=”sharethis-inline-share-buttons”></div>
 
-        <div class="container mb-30">
+        <div class="container mb-30" style="max-width: 1140px">
             @include('inc.navbar')
           <div class="row">
 
