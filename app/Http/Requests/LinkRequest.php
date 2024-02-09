@@ -2,9 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\Link;
+use App\Models\Link;
 use App\Models\BackpackUser;
-use App\Organization;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

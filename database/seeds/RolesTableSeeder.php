@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\BackpackUser;
-use App\Role;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
 

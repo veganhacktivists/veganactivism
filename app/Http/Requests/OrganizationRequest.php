@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 use App\Models\BackpackUser;
-use App\Organization;
+use App\Models\Organization;
 use Illuminate\Foundation\Http\FormRequest;
 
 class OrganizationRequest extends FormRequest

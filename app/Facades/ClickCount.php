@@ -8,7 +8,7 @@ class ClickCount extends Facade
 {
     public static function getAllClicks()
     {
-        $clicks = \App\Link::all();
+        $clicks = \App\Models\Link::all();
         $total = 0;
         foreach ($clicks as $click) {
             $total += $click->click_count;

@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Role;
+use App\Models\Role;
 use App\Models\BackpackUser;
 use Illuminate\Console\Command;
 use Illuminate\Database\QueryException;
@@ -92,7 +92,7 @@ class SeedProduction extends Command
 
     private function seedCustomData()
     {
-        $org = \App\Organization::create([
+        $org = \App\Models\Organization::create([
             'title' => 'Anonymous for the Voiceless',
             'slug' => 'anonymous-for-the-voiceless',
             'image_card_url' => 'https://veganactivism.org/banners/anonymous-for-the-voiceless.jpg',

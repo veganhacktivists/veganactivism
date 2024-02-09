@@ -2,7 +2,6 @@
 
 namespace App\Listeners;
 
-use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redis;
 
@@ -30,6 +29,7 @@ class AuthenticateUser
             Auth::login($event->user, $event->user->remmeber);
         }
 
+        /** @var App\Models\User $user */
         $user = Auth::user();
 
         /*

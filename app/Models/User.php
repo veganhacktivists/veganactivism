@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Hash;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;

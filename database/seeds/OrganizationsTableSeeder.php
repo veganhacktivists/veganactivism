@@ -8,7 +8,7 @@ class OrganizationsTableSeeder extends Seeder
 {
     public function run()
     {
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Anonymous for the Voiceless',
             'slug' => 'anonymous-for-the-voiceless',
             'featured' => false,
@@ -20,7 +20,7 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => '<p>The Cube of Truth is a peaceful static demonstration akin to an art performance. This demonstration operates in a structured manner that triggers curiosity and interest from the public; we attempt to lead bystanders to a vegan conclusion through a combination of local standard-practice animal exploitation footage and conversations with a value-based sales approach.</p><p>Masks, signs, and outreach literature are provided. Black clothing appropriate for the weather is essential, and please bring a fully charged laptop or tablet if you have one.</p>',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'The Save Movement',
             'slug' => 'the-save-movement',
             'featured' => false,
@@ -31,7 +31,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => "The Save Movement is comprised of groups around the world who bear witness of pigs, cows, chickens and other farmed animals en route to slaughter. Our goals are to raise awareness about the plight of farmed animals, to help people become vegan, and to build a mass-based, grassroots animal justice movement. The Save Movement started in December 2010 with the inception of Toronto Pig Save. Today there are over 560 groups in Canada, the U.S., U.K. &amp; Ireland, Australia, continental Europe, Hong Kong, South Asia, East Asia, South Africa, Mexico and Central\/South America.\",\"We encourage you to bear witness of animals sent to slaughter in your own community. Find out if there is a Save group near you (map of Save groups) or consider starting a Save group. We\u2019ll help you with tips, resources, and support.",
             'activism' => 'The goals of our regular vigils at slaughterhouse are to encourage people to adopt a nonviolent, vegan lifestyle, and, just as importantly, to nurture advocacy, activism and organizing on the part each participant. We document the animal victims and the activists via photos and videos and use social media to spread global awareness and activism.',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Meat The Victims',
             'slug' => 'meat-the-victims',
             'featured' => false,
@@ -42,7 +42,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => 'Meat The Victims is a new generation of the growing community of citizens willing to disobey unjust laws together to abolish animal exploitation. Locking down inside the very places the animals are kept hostage and allowing the public to meet the victims of their choices through personal footage with them.',
             'activism' => "<p>The first ever Meat the Victims took place on April 6th 2018 at the Australian piggery where Leah had met that Mother pig. Leah went back inside, but this time with 67 other activists who locked down the piggery at 4am. The outside team arrived at 8am and the media waited in suspense for the inside team to come out.</p><p>The impact of this action for the animals was incredibly powerful. Between the media and the attendee \u2019s footage being shared there were hundred of thousands of views. The truth shocked the pubic as they met the victims of their choices.</p><p>Since that day Meat The Victims has become a global movement. A new generation of the growing community of citizens willing to disobey unjust laws together to abolish animal exploitation. Locking down inside the very places the animals are hostage and allowing the public to meet the victims of their choices.</p>",
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Direct Action Everywhere',
             'slug' => 'direct-action-everywhere',
             'featured' => false,
@@ -53,7 +53,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>Our activists engage in creative nonviolent direct action to confront speciesism. That can mean disruptive demonstrations inside or outside restaurants, grocery stores, animal labs, zoos, or anywhere else that promotes speciesist violence. It can also include leafleting or tabling, creative street theater, open rescues, or anything else in accordance with our Organizing Principles. It can even mean confronting friends and family members when they engage in behavior that normalizes animal exploitation.</p><p>Peaceful protests on the street are pretty normal and accepted by the public these days, even if begrudgingly. Disrupting people while they break bread, however, is a complete breach of the status quo, thereby conveying the seriousness of the issues and inspiring people all over the world to take action for animals.</p>',
             'activism' => '<p>Open Rescue means going into farms without concealing our identities, documenting the conditions, and proudly rescuing dying animals. We do open rescues because they powerfully demonstrate that when animals are a commodity, even the best-of-the-best farms are inherently violent. Further, we save individuals like Angie and Sarah, and we share their incredible stories - stories that will move the world.</p><p>We encourage all chapters to organize at least one demonstration per month. Typically, these demonstrations are coordinated globally. Additionally, our activists often attend protests organized by other local animal rights groups. Ultimately, we encourage and empower every DxE activist and chapter to take creative, autonomous action any time!</p>',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'The Vegan Society',
             'slug' => 'the-vegan-society',
             'featured' => false,
@@ -70,7 +70,7 @@ class OrganizationsTableSeeder extends Seeder
                             <li><a style="color:#ff5959;" href="https://www.vegansociety.com/get-involved/volunteering-vegan-society/office-volunteering" target="_blank">Office Volunteering</a></li>
                         </ul>"',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Mercy For Animals',
             'slug' => 'mercy-for-animals',
             'featured' => false,
@@ -81,7 +81,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>Mercy For Animals exists to end the greatest cause of suffering on the planet: the exploitation of animals for food, in particular, industrial animal agriculture, aquaculture, and fishing.</p><p>These forms of food production cause egregious animal suffering and have detrimental effects on the planet and people.</p><p>MFA is dedicated to eradicating this cruel food system and replacing it with one that is not just kind to animals but essential for the future of our planet and all who share it.</p>',
             'activism' => '<p>Mercy For Animals engages in a variety of farmed animal advocacy programs, often involving filming or promoting footage from their undercover investigations of factory farms. They promote investigation footage primarily through the media and online campaigns. MFA also engages in legal work and corporate campaigns on behalf of animals, and they conduct grassroots outreach designed to change individuals’ attitudes and behavior towards farmed animals.</p><p>Over the past few years, MFA has developed strong online outreach programs in the U.S. and internationally. They report that, in the first eight months of 2016, their pro-veg web pages have been viewed approximately 29.8 million times and their social media content has been shared approximately 3.8 million times. They’ve distributed Vegetarian Starter Guides both digitally and in print, and have convinced almost 1 million individuals to pledge to go vegetarian. In addition to individual outreach, MFA has successfully conducted corporate outreach. In the first eight months of 2016 they’ve achieved, on their own or in conjunction with other groups, approximately 58 corporate policy changes. They’ve helped convince corporations to stop producing or using eggs from caged hens and to prohibit the slaughtering of broiler chickens while conscious.</p>',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Challenge 22',
             'slug' => 'challenge-22',
             'featured' => false,
@@ -92,7 +92,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>If you have been vegan for over 6 months, have patience and empathy for new vegans and the motivation to help make the vegan population grow, you’re exactly what Challange 22 is looking for! Join their mentoring program by hitting the "Volunteer" button below.</p><p>Challenge 22 offers participants a free, supportive online framework for trying veganism for 22 days. More than 300K people from all over the world have participated in the project since its launch in March 2014. While similar programs around the world are based on vegan starter-kits and email guides, Challenge 22 is an interactive program that offers a unique combination of group support and personal mentoring.</p>',
             'activism' => '<p>First, Each mentee joins a secret Facebook group, which enables participants to share their experience and learn from each other. The group is mentored by experienced vegan volunteers – culinary experts, parents, students and longtime vegans. In addition to the group support, mentees can be assigned a personal mentor, for the space to share and ask privately. The program features experienced dietitians, who are happy to give nutritional advice. In addition, each day participants receive a small task. By the end of the Challenge, mentees are equipped with nutritional information, cooking tips and recipes that enable them to maintain a healthy, tasty vegan lifestyle.</p><p>It all happens in a very joyful and supportive atmosphere – people upload pictures of their dishes, share recipes and cooking tips, talk about their daily experience, and all in all, live a great adventure together with other people in the same spirit.</p>',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'The Humane League',
             'slug' => 'the-humane-league',
             'featured' => false,
@@ -103,7 +103,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>The Humane League was rated as a "Top Charity" by Animal Charity Evalators for each of their ranking periods! As well as certified Best In America by Independent Charities of America.</p><p>They exist to end the abuse of animals raised for food. They work to reform the way farm animals are treated while also inspiring people to make more compassionate food choices. Their strategy includes hard-hitting corporate campaigns and wide-ranging outreach and education programs, supported by an extensive network of organizations, activists and supporters around the world.</p>',
             'activism' => '<p>In the US, The Humane League has on-the-ground organizers in major cities across the country. These grassroots staff build and strengthen local communities of changemakers that support our work and spread their message, amplifying the ability to create meaningful change for farm animals.</p><p>They bring a pragmatic, objective approach in evaluating and testing our methods to determine what creates the most impact. That’s the purpose of Humane League Labs, where we engage in direct testing to improve our vegan advocacy and education efforts.</p><p>Their reach extends globally with the Open Wing Alliance. Through grants and training, they work in partnership with organizations on every continent with the singular goal of ending cages for laying hens.</p>',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Hen Hero',
             'slug' => 'hen-hero',
             'featured' => false,
@@ -114,7 +114,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => 'Join our Hen Heroes team of online activists! Most of our Hen Hero actions take less than 60 seconds, but can spare hundreds of thousands of chickens a lifetime of suffering. Join Hen Heroes to receive one-minute daily actions to help end egregious animal abuse.',
             'activism' => 'It will only take you one minute a day on social media to make a big difference for hens. Volunteers can sign up to receive daily emails with tasks that can be completed in under a few minutes. These tasks complement their corporate campaigns and often involve tweeting, emailing, calling, or posting on Facebook.',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Animal Protectors',
             'slug' => 'animal-protectors',
             'featured' => false,
@@ -125,7 +125,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>Animal Protectors is a non-profit shelter for cats and dogs located in New Kensington, PA. Non-profit means that they run completely off of donations and fundraising events. Their non-profit status gives them the ability to focus all their funds to caring for their animals and finding homes for them. They are also no-kill, meaning that they never euthanize for space. The mission of their no-kill shelter is to find safe, loving homes for abused, abandoned, and homeless animals in the A-K Valley and to educate the public about responsible pet ownership.</p><p>Their vision is to always be a trusted and caring no-kill animal shelter that the community looks to for animal rescue, education, and resources. Animal Protectors of Allegheny Valley was founded in 1966 as a network of foster homes providing temporary shelter and adoption services for abandoned and unwanted animals. From 1966 through 1985, volunteers fought to end the practice of euthanizing abandoned dogs in the city of New Kensington. The group raised funds to help with veterinary care and food for these strays by asking for donations from friends and relatives, many times paying the bills themselves.</p>',
             'activism' => '<p>As part of our commitment to their community, they strive to educate on the realities of animal abuse and neglect, spaying/neutering, responsible pet ownership and pit bull education. They offer low cost microchipping, "soft paws" applications, (an alternative to de-clawing), and rabies clinics.</p><p>One of the hardest parts of their jobs is receiving an animal who has been abused. Once an abused animal is in their care, they take every step to help this animal to trust again. Recognizing cruelty is not as easy as it sounds. Often, people assume that an animal’s behavior – such as being timid or frightened – is a sign of abuse. This is not always the case.</p>',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Animal Ethics',
             'slug' => 'animal-ethics',
             'featured' => false,
@@ -136,7 +136,7 @@ class OrganizationsTableSeeder extends Seeder
             'about' => '<p>Animal Ethics was formed to provide information and promote discussion and debate about issues in animal ethics, and to provide resources for animal advocates. Detailed information on the data regarding the situation of nonhuman animals as well as on the arguments to defend animals is not always available, and Animal Ethics intends to provide it to all those who want to help animals. In addition, they do outreach work themselves, aimed not at stopping particular ways in which animals are harmed (which other organizations are already addressing), but at achieving a shift in attitudes towards speciesism.</p><p>Our work deals with the way nonhuman animals are considered in everyday life, as well as how they are considered in fields that affect human attitudes and activities that are relevant to animals. These include academia, scientific fields, and the law. We look at the way nonhuman animals are impacted by current human activities, and how they might be impacted by future planned or unplanned human activities. This involves not only the ways we might harm them, but also how we might help them even when the cause of their plight is not human action.</p>',
             'activism' => 'The field of animal ethics deals with why we should take nonhuman animals into consideration in our moral decisions, and the ways in which we should. This has tremendously relevant practical consequences. Many people currently have little regard for nonhuman animals. But more often, people do give some consideration to the interests of animals, but still have a discriminatory attitude towards them. We can morally consider someone but still discriminate against them in a way that harms them. We can also discriminate against them in ways that don’t harm them at all, such as by helping some individuals more than we help others, for reasons that are unfair. Animal ethics as a field addresses these questions, and it is our aim to deal with them.',
         ]);
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'PETA Activism',
             'slug' => 'peta-activism',
             'featured' => false,
@@ -148,7 +148,7 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => 'PETA works through public education, cruelty investigations, research, animal rescue, legislation, special events, celebrity involvement, and protest campaigns.',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Vegan Outreach',
             'slug' => 'vegan-outreach',
             'featured' => false,
@@ -160,7 +160,7 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => '<p>Vegan Outreach creates goals for massive changes, by creating student outreach programs, in-depth activities, and long term support. Vegan Outreach campaigns to make switching to veganism easier, by campaigning to add vegan entrees at restaurants and other foodservice establishments, never shaming others, and putting the emphasis of veganism on avoiding obvious animal products, but using one\'s time and energy advocating to others rather focusing on personal purity or trace ingredients </p><p>An extremely noteable feature from Vegan Outreach, is their leafletting guides. If you are interested in leafletting, (https://veganoutreach.org/leafleting/) Vegan outreach can provide you with the materials to learn how to become an effective leafletter - through educating demonstrations, downloadable PDFS, and their own leafletting order form.</p>',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Adopt A College',
             'slug' => 'adopt-a-college',
             'featured' => false,
@@ -172,7 +172,7 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => '',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Digital Vegan Activists',
             'slug' => 'digital-vegan-activists',
             'featured' => false,
@@ -185,7 +185,7 @@ class OrganizationsTableSeeder extends Seeder
             'activism' => '',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'VegFund',
             'slug' => 'vegfund-activism',
             'featured' => false,
@@ -194,17 +194,17 @@ class OrganizationsTableSeeder extends Seeder
             'call_to_action' => 'VegFund offers a wide variety of grants for vegan advocacy!',
             'card_content' => 'VegFund empowers vegan activists worldwide by funding and supporting effective outreach activities that inspire a vegan lifestyle.',
             'about' => '<p>The first thing you should know is that VegFund exists to support you in your efforts to inform people about the benefits of plant-based and vegan living. We provide grants, connections, and skills-building resources to animal rights, environmental, and human health advocates and organizations.  In 2018, VegFund supported nearly 1,000 vegan outreach activities spanning more than 45 countries. These activities ranged from film screenings and video outreach to vegfests, food samplings, conferences, research projects, vegan challenges, online veg pledges, and more. And, we\'ve been doing this since 2009!
-             
+
              Hand-in-hand with financial support is our commitment to help you maximize the effectiveness of your outreach. VegFund develops trainings for activists, curates the very best research available on plant-based living and effective advocacy, and facilitates information sharing among activists in the vegan community.
-             
+
              Take a look for yourself. Visit the Grants section of the VegFund website where you can read the details about our grant programs. And browse our Activist Stories for some real-life examples.
-             
+
              Start planning your own event today!</p>',
 
             'activism' => '',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Northwest Animal Rights Network',
             'slug' => 'narn-activism',
             'featured' => false,
@@ -237,7 +237,7 @@ class OrganizationsTableSeeder extends Seeder
            <p>For more specific volunteer opportunities, our Monthly Volunteer Newsletter will highlight current needs. Please fill out our Volunteer Form below to be added to this list. If you’re not in the Northwest area and/or looking for ideas to help animals, here are some other ideas of What You Can Do to Help Animals.</p>',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Reddit',
             'slug' => 'reddit-activism',
             'featured' => false,
@@ -289,47 +289,47 @@ class OrganizationsTableSeeder extends Seeder
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Food" target="_blank">/r/Food</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Cooking" target="_blank">/r/Cooking</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/FoodPorn" target="_blank">/r/FoodPorn</a></td>
-            
+
                                                               </tr>
-                                                              
+
             <tr style="border: 1px solid #ff0097;">
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/LikeUs" target="_blank">/r/LikeUs</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Health" target="_blank">/r/Health</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Fitness" target="_blank">/r/Fitness</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/HealthyFood" target="_blank">/r/HealthyFood</a></td>
-            
+
             </tr>
-            
+
             <tr style="border: 1px solid #ff0097;">
                                                                <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/TodayILearned" target="_blank">/r/TodayILearned</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/YouShouldKnow" target="_blank">/r/YouShouldKnow</a></td>
-            
+
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/ChangeMyView" target="_blank">/r/ChangeMyView</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/LifeProTips" target="_blank">/r/LifeProTips</a></td>
             </tr>
-            
+
             <tr style="border: 1px solid #ff0097;">
                                                               <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/EyeBleach" target="_blank">/r/EyeBleach</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Philosophy" target="_blank">/r/Philosophy</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/CasualConversation" target="_blank">/r/CasualConversation</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/MorbidReality" target="_blank">/r/MorbidReality</a></td>
             </tr>
-            
+
             <tr style="border: 1px solid #ff0097;">
                                                                <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Videos" target="_blank">/r/Videos</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Pics" target="_blank">/r/Pics</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/EatCheapAndHealthy" target="_blank">/r/EatCheapAndHealthy</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/News" target="_blank">/r/News</a></td>
-                                                            
+
             </tr>
-            
+
             <tr style="border: 1px solid #ff0097;">
                                                                <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Environment" target="_blank">/r/Environment</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Documentaries" target="_blank">/r/Documentaries</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Futurology" target="_blank">/r/Futurology</a></td>
             <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/LoseIt" target="_blank">/r/LoseIt</a></td>
             </tr>
-            
+
             <tr style="border: 1px solid #ff0097;">
                                                               <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/Aww" target="_blank">/r/Aww</a></td>
                                                                <td style="border: 1px solid #ff0097; padding: 5px 10px 5px 10px;"><a href="https://reddit.com/r/WTF" target="_blank">/r/WTF</a></td>
@@ -364,9 +364,9 @@ Google Alerts allows you to set up keywords that you are interested in, and it w
 <br><br>
 On Facebook, Instagram, and YouTube, following animal rights groups like The Humane League, Animal Equality, Animal Charity Evaluators, and Mercy For Animals will be a good way to find content. I also recommend following companies like Tofurky, Veggie Grill, Beyond Meat, and Just that are making vegan products more widely available. I also follow many animal sanctuaries, vegan recipe pages, and individuals with cute pet pigs, chickens, and turkeys.
 <br><br>
-You can also find good content by using the search features on these sites. If you want to share videos of cows playing with balls or pigs snuggling search for those things on YouTube. If you want to share scientific articles on social bonds in animals you can search for that too! 
+You can also find good content by using the search features on these sites. If you want to share videos of cows playing with balls or pigs snuggling search for those things on YouTube. If you want to share scientific articles on social bonds in animals you can search for that too!
 <br><br>
-Redditors tend to upvote and click on a lot more image links than anything else. I have found /r/videos to be among the most difficult subreddits to get karma in, while almost any image content is much more successful. If a video can be turned into a gif without losing its message, then it is definitely worth turning it into a gif using Imgur or Gfycat. 
+Redditors tend to upvote and click on a lot more image links than anything else. I have found /r/videos to be among the most difficult subreddits to get karma in, while almost any image content is much more successful. If a video can be turned into a gif without losing its message, then it is definitely worth turning it into a gif using Imgur or Gfycat.
 
 <br><br>
 <h5>Where to comment</h5>
@@ -465,15 +465,15 @@ Links to use when commenting:
 </h2>
 I like to use the You Are Their Voice links in comments as they rely on direct quotes, studies and science more than blog posts, which tend to garner much more respect. You can find the full list on YouAreTheirVoice.com under "Equip Yourself", but for now, these three are great:
 
-		<br><br>									
-											
+		<br><br>
+
 			<ul style="padding-left: 30px;">
 											<li><b>Veganism is Healthy</b><br><a href="https://youaretheirvoice.com/pages/veganism-is-healthy" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/pages/veganism-is-healthy</a></li>
 											<li><b>The Clear Consensus</b><br><a href="https://youaretheirvoice.com/pages/the-clear-consensus" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/pages/the-clear-consensus</a></li>
 											<li><b>The Daunting Facts</b><br><a href="https://youaretheirvoice.com/pages/the-daunting-facts" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/pages/the-daunting-facts</a></li>
-										
+
 											</ul>
-											
+
 											<b>You can also use the PDF versions for easy sharing:</b>
 											<br><br>
 
@@ -481,25 +481,25 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
 											<li><b>Veganism is Healthy (PDF)</b><br><a href="https://youaretheirvoice.com/resources/veganism-is-healthy-print-friendly-en.pdf" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/resources/veganism-is-healthy-print-friendly-en.pdf</a></li>
 											<li><b>The Clear Consensus (PDF)</b><br><a href="https://youaretheirvoice.com/resources/the-clear-consensus-print-friendly-en.pdf" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/resources/the-clear-consensus-print-friendly-en.pdf</a></li>
 											<li><b>The Daunting Facts (PDF)</b><br><a href="https://youaretheirvoice.com/resources/the-daunting-facts-print-friendly-en.pdf" target="_blank" style="color:#ff0097;">https://youaretheirvoice.com/resources/the-daunting-facts-print-friendly-en.pdf</a></li>
-										
+
 											</ul>
-											
-											
+
+
 											<h2 class="post_title mb-20px">
 											Equip yourself with knowledge:
 											</h2>
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
 											https://veganspeak.org/vegan-arguments/ <br>
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
-											https://www.carnismdebunked.com/general-ethical/ <br> 
+											https://www.carnismdebunked.com/general-ethical/ <br>
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
-											http://www.godfist.com/vegansidekick/guide.php <br> 
+											http://www.godfist.com/vegansidekick/guide.php <br>
 											<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;
-											https://yourveganfallacyis.com <br> 
+											https://yourveganfallacyis.com <br>
 											<br>',
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Food Not Bombs',
             'slug' => 'food-not-bombs',
             'featured' => false,
@@ -513,12 +513,12 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
            <br><br>',
             'activism' => 'Food Not Bombs is often the first to provide food and supplies to the survivors of disasters. Food Not Bombs was also the first to provide hot meals to the rescue workers responding to September 11th World Trade Center attacks. Food Not Bombs volunteers were among the first to provide food and help to the survivors of the Asian Tsunami and Hurricane Katrina. Our volunteers organized a national collection program and delivered bus and truckloads of food and supplies to the gulf region becoming the only organization to share daily meals in New Orleans after Katrina.
            <br><br>
-           
+
            Food Not Bombs works in coalition with groups like Earth First!, The Leonard Peltier Defense Committee, Anarchist Black Cross, the IWW, Homes Not Jails, Anti Racist Action, Farm Animal Rights Movement, In Defense of Animals, the Free Radio Movement and other organizations on the cutting edge of positive social change and resistance to the new global austerity program. Food Not Bombs is now preparing for the economic crash organizing Food Not Lawns community gardens, housing the homeless with Homes Not Jails, organizing additional meals each week while starting new Food Not Bombs chapters in as many communities as possible.
            <br><br>'
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Vegan Outreach',
             'slug' => 'vegan-mentorship-program',
             'featured' => false,
@@ -536,7 +536,7 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
            <br><br>'
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => '5 minutes 5 vegans',
             'slug' => '5-minutes-5-vegans',
             'featured' => false,
@@ -548,11 +548,11 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
             'activism' => ' Please make sure to check if someone else hasn\'t already tweeted out / posted the resources you\'re about to give. If you\'re using a copied resource from the site, please be sure to customize it and add a personal touch, if people post the same thing it may look like spam and the user in question may be pushed away from Veganism. Try to make all your responses personal!
             <br><br>
             <b>Note:</b> Please <a href="http://plorry.github.io/VegAssist/#engagement-guidelines" target="_blank"><u>click here</u></a> for detailed guidelines that you should read before interacting with users, specifically for twitter. Reading this before starting will give your activism a greater and more positive impact!<br><br>
-            
+
             <b>Note:</b> Please <a href="http://plorry.github.io/VegAssist/#engagement-guidelines" target="_blank"><u>click here</u></a> for detailed guidelines that you should read before interacting with users, specifically for twitter. Reading this before starting will give your activism a greater and more positive impact!<br><br>'
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Veganuary',
             'slug' => 'veganuary-activism',
             'featured' => false,
@@ -571,7 +571,7 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
             <br><br>'
         ]);
 
-        \App\Organization::create([
+        \App\Models\Organization::create([
             'title' => 'Vegan Hacktivists',
             'slug' => 'vegan-hacktivists',
             'featured' => false,
@@ -579,14 +579,14 @@ I like to use the You Are Their Voice links in comments as they rely on direct q
             'image_full_url' => 'https://veganactivism.org/banners/full-size/big-vegan-hacktivists.jpg',
             'call_to_action' => 'Know code or graphic design? The Vegan Hacktivists need you!',
             'card_content' => 'The Vegan Hacktivists build online projects like VeganActivism.org; we can really use the code & design help!',
-            'about' => 'We\'re a group of passionate Vegan Activists that volunteer our time and skills towards projects assigned to us by You Are Their Voice. Every project we volunteer on aims to help spread compassion through Veganism by supporting both vegans, non-vegans and activists in some shape way or form. We commit to one project a month, with a cooldown period every three months. ❤ 
+            'about' => 'We\'re a group of passionate Vegan Activists that volunteer our time and skills towards projects assigned to us by You Are Their Voice. Every project we volunteer on aims to help spread compassion through Veganism by supporting both vegans, non-vegans and activists in some shape way or form. We commit to one project a month, with a cooldown period every three months. ❤
             <br><br>
-        
+
             In fact, VeganActivism.org is one of the Vegan Hacktivists very first projects! We\'re funded by <a href="https://www.patreon.com/veganhacktivists" style="color:#ff0097;">our Patreon</a> supporters which in turn helps us support vegan activists in need of resources, along with funding us to continue to build more projects like this.
             <br><br>',
             'activism' => 'We build both online projects (like websites and apps) that help spread veganism, and we fund current and would-be vegan activists with resources they need such as printing materials, website hosting, transportation costs, sample food for booths, etc.
             <br><br>
-    
+
             Right now we\'re looking for online volunteers to volunteer their skills in both programming (LAMP Stack) and design (Photoshop, logo creation, banners, ect). If you have programming or design skills, we could really use your help!
             <br><br>'
         ]);

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -31,9 +31,9 @@ class UsersController extends Controller
     /**
      * Return a specific user.
      *
-     * @param \App\User $user
+     * @param \App\Models\User $user
      *
-     * @return \App\User
+     * @return \App\Models\User
      */
     public function get(User $user)
     {

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\OrgLinkClicked;
-use App\Organization;
+use App\Models\Organization;
 
 class OrganizationClicksController extends Controller
 {

@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-use App\Organization;
-use App\User;
+use App\Models\Organization;
 use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

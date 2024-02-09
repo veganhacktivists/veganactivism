@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Organization;
+use App\Models\Organization;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 

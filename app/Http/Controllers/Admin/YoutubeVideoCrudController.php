@@ -49,7 +49,7 @@ class YoutubeVideoCrudController extends CrudController
             'name' => 'organization_id', // the column that contains the ID of that connected entity
             'entity' => 'organization', // the method that defines the relationship in the Model
             'attribute' => 'title', // foreign key attribute that is shown to the user
-            'model' => 'App\Organization', // foreign key model
+            'model' => 'App\Models\Organization', // foreign key model
             'data_source' => url('organizations'), // url to controller search function (with /{id} should return model)
             'placeholder' => 'Select the organization', // placeholder for the select
             'minimum_input_length' => 2, // minimum characters to type before querying results

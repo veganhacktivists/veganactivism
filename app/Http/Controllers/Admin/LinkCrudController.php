@@ -6,7 +6,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\LinkRequest as StoreRequest;
 use App\Http\Requests\LinkRequest as UpdateRequest;
-use App\Link;
+use App\Models\Link;
 use App\Models\BackpackUser;
 use Backpack\CRUD\CrudPanel;
 use Illuminate\Support\Facades\Auth;
@@ -29,7 +29,7 @@ class LinkCrudController extends CrudController
         | CrudPanel Basic Information
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Link');
+        $this->crud->setModel('App\Models\Link');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/link');
         $this->crud->setEntityNameStrings('link', 'links');
 
@@ -72,7 +72,7 @@ class LinkCrudController extends CrudController
             'name' => 'organization_id', // the column that contains the ID of that connected entity
             'entity' => 'organization', // the method that defines the relationship in the Model
             'attribute' => 'title', // foreign key attribute that is shown to the user
-            'model' => 'App\Organization', // foreign key model
+            'model' => 'App\Models\Organization', // foreign key model
             'data_source' => url('organizations'), // url to controller search function (with /{id} should return model)
             'placeholder' => 'Select the organization', // placeholder for the select
             'minimum_input_length' => 2, // minimum characters to type before querying results

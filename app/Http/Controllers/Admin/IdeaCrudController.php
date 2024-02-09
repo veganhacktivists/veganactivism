@@ -25,7 +25,7 @@ class IdeaCrudController extends CrudController
         | CrudPanel Basic Information
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Idea');
+        $this->crud->setModel('App\Models\Idea');
         $this->crud->setRoute(config('backpack.base.route_prefix').'/idea');
         $this->crud->setEntityNameStrings('idea', 'ideas');
 
