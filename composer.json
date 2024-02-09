@@ -11,6 +11,7 @@
         "php": "^8.3",
         "backpack/crud": "^6.0",
         "backpack/permissionmanager": "^7.0",
+        "backpack/pro": "^2.1",
         "backpack/theme-coreuiv2": "^1.2",
         "barryvdh/laravel-elfinder": "^0.5.2",
         "guzzlehttp/guzzle": "~7.2",
@@ -90,5 +91,11 @@
         "cghooks": "vendor/bin/cghooks",
         "php-cs-fixer": "vendor/bin/php-cs-fixer fix $(git diff --cached --name-only --diff-filter=ACM -- '*.php') --stop-on-violation --config .php_cs",
         "prettier": "yarn run prettier"
+    },
+    "repositories": {
+        "backpack": {
+            "type": "composer",
+            "url": "https://repo.backpackforlaravel.com/"
+        }
     }
 }
