@@ -20,7 +20,6 @@ class OrganizationRequest extends FormRequest
         if (!$isLoggedIn) {
             return false;
         }
-
         $user = backpack_user();
 
         // authorize super admins
@@ -28,9 +27,10 @@ class OrganizationRequest extends FormRequest
             return true;
         }
 
+        $organizationId = request()->id;
         // verify that the user is an admin for the organization
-        if ($this->organization) {
-            $organization = $user->organizations()->where('id', $this->organization)->first();
+        if (!!$organizationId) {
+            $organization = $user->organizations()->where('id', $organizationId)->first();
 
             return !is_null($organization);
         }
