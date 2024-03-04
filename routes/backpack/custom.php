@@ -17,4 +17,5 @@ Route::group([
     Route::crud('link', 'LinkCrudController');
     // Route::crud('idea', 'IdeaCrudController');
     // Route::resource('youtubevideo', 'YoutubeVideoCrudController');
+    Route::crud('youtube-video', 'YoutubeVideoCrudController');
 }); // this should be the absolute last line of this file

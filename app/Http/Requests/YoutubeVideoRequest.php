@@ -44,7 +44,7 @@ class YoutubeVideoRequest extends FormRequest
     {
         $urlValidation = 'required|url|min:5|max:255';
 
-        if (!$this->youtubeVideo) {
+        if (!request()->id) {
             $urlValidation .= '|unique:youtube_videos,url';
         }
 
