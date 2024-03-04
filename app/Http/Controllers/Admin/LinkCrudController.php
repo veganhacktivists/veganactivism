@@ -31,6 +31,15 @@ class LinkCrudController extends CrudController
         CRUD::setModel(\App\Models\Link::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/link');
         CRUD::setEntityNameStrings('link', 'links');
+        $user = backpack_user();
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess('delete');
+            $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
+                $query->whereHas('users', function ($query) use ($user) {
+                    $query->where('id', $user->id);
+                });
+            });
+        }
     }
 
     /**
@@ -102,7 +111,7 @@ class LinkCrudController extends CrudController
 
         $user = backpack_user();
         if ($user->hasRole(User::ROLE_ADMIN) && $user->organizations()->count() === 1) {
-            $organizationSelectField['default'] = $this->user->organizations()->first()->id;
+            $organizationSelectField['default'] = $user->organizations()->first()->id;
         }
 
         $this->crud->addField($organizationSelectField);

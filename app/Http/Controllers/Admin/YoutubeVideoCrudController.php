@@ -30,6 +30,15 @@ class YoutubeVideoCrudController extends CrudController
         CRUD::setModel(\App\Models\YoutubeVideo::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/youtube-video');
         CRUD::setEntityNameStrings('youtube video', 'youtube videos');
+        $user = backpack_user();
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess('delete');
+            $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
+                $query->whereHas('users', function ($query) use ($user) {
+                    $query->where('id', $user->id);
+                });
+            });
+        }
     }
 
     /**
@@ -75,7 +84,7 @@ class YoutubeVideoCrudController extends CrudController
 
         $user = backpack_user();
         if ($user->hasRole(User::ROLE_ADMIN) && $user->organizations()->count() === 1) {
-            $organizationSelectField['default'] = $this->user->organizations()->first()->id;
+            $organizationSelectField['default'] = $user->organizations()->first()->id;
         }
 
         $this->crud->addField($organizationSelectField);

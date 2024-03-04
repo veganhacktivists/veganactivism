@@ -31,6 +31,14 @@ class OrganizationCrudController extends CrudController
         CRUD::setModel(\App\Models\Organization::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/organization');
         CRUD::setEntityNameStrings('organization', 'organizations');
+        $user = backpack_user();
+
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess(['create', 'delete']);
+            $this->crud->addClause('whereHas', 'users', function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            });
+        }
     }
 
     /**
