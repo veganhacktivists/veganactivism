@@ -47,7 +47,7 @@ class LinkRequest extends FormRequest
 
         $urlValidation .= $this->input('type') === Link::TYPE_EMAIL ? '|email' : '|url';
 
-        if (!$this->link) {
+        if (!request()->id) {
             $urlValidation .= '|unique:links,url';
         }
 

@@ -2,48 +2,70 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Backpack\CRUD\app\Http\Controllers\CrudController;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\LinkRequest as StoreRequest;
-use App\Http\Requests\LinkRequest as UpdateRequest;
-use App\Models\Link;
+use App\Http\Requests\LinkRequest;
 use App\Models\BackpackUser;
-use Backpack\CRUD\CrudPanel;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Link;
+use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class LinkCrudController.
- *
- * @property CrudPanel $crud
+ * Class LinkCrudController
+ * @package App\Http\Controllers\Admin
+ * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
 class LinkCrudController extends CrudController
 {
-    private $user;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
+    /**
+     * Configure the CrudPanel object. Apply settings to all operations.
+     * 
+     * @return void
+     */
     public function setup()
     {
-        $this->user = Auth::user();
+        CRUD::setModel(\App\Models\Link::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/link');
+        CRUD::setEntityNameStrings('link', 'links');
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Models\Link');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/link');
-        $this->crud->setEntityNameStrings('link', 'links');
+    /**
+     * Define what happens when the List operation is loaded.
+     * 
+     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+     * @return void
+     */
+    protected function setupListOperation()
+    {
+        $this->crud->addColumn([
+             'name' => 'url',
+             'label' => 'URL',
+        ]);
+        $this->crud->addColumn([
+             'name' => 'type',
+             'label' => 'Link Type',
+        ]);
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-
-        $this->crud->addColumn(['name' => 'url', 'type' => 'url', 'label' => 'URL']);
-        $this->crud->addColumn(['name' => 'type', 'type' => 'text', 'label' => 'Link Type']);
-
-        $this->crud->addField(['name' => 'url', 'type' => 'text', 'label' => 'URL']);
-        $this->crud->addField([
+    /**
+     * Define what happens when the Create operation is loaded.
+     * 
+     * @see https://backpackforlaravel.com/docs/crud-operation-create
+     * @return void
+     */
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(LinkRequest::class);
+        CRUD::field([
+            'name' => 'url',
+            'type' => 'text',
+            'label' => 'URL',
+        ]);
+        CRUD::field([
             'name' => 'type',
             'label' => 'Link Type',
             'type' => 'select2_from_array',
@@ -78,72 +100,24 @@ class LinkCrudController extends CrudController
             'minimum_input_length' => 2, // minimum characters to type before querying results
         ];
 
-        if ($this->user->hasRole(BackpackUser::ROLE_ADMIN) && $this->user->organizations()->count() === 1) {
+        // /* @var \App\Models\BackpackUser $user */
+        $user = backpack_user();
+        if ($user->hasRole(BackpackUser::ROLE_ADMIN) && $user->organizations()->count() === 1) {
             $organizationSelectField['default'] = $this->user->organizations()->first()->id;
         }
 
         $this->crud->addField($organizationSelectField);
 
-        $this->manageButtons();
-
-        // add asterisk for fields that are required in LinkRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
-    // Manage default buttons by setting access
-    private function manageButtons()
+    /**
+     * Define what happens when the Update operation is loaded.
+     * 
+     * @see https://backpackforlaravel.com/docs/crud-operation-update
+     * @return void
+     */
+    protected function setupUpdateOperation()
     {
-        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $this->crud->denyAccess('delete');
-        }
-    }
-
-    // Override the search method that displays records in the links table
-    public function search()
-    {
-        $user = $this->user;
-
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
-                $query->whereHas('users', function ($query) use ($user) {
-                    $query->where('id', $user->id);
-                });
-            });
-        }
-
-        return parent::search();
-    }
-
-    // Override the edit method that displays the form for updating an organization
-    public function edit($id)
-    {
-        $user = $this->user;
-
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $organization = $user->organizations()->where('id', $this->crud->getEntry($id)->organization_id)->first();
-
-            abort_if(!$organization, 403);
-        }
-
-        return parent::edit($id);
-    }
-
-    public function store(StoreRequest $request)
-    {
-        // your additional operations before save here
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    public function update(UpdateRequest $request)
-    {
-        // your additional operations before save here
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->setupCreateOperation();
     }
 }
