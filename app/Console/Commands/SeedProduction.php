@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\Role;
-use App\Models\BackpackUser;
+use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
@@ -72,7 +72,7 @@ class SeedProduction extends Command
         do {
             $password = $this->secret('Password');
         } while (!$password);
-        $user = (new BackpackUser())->fill([
+        $user = (new User())->fill([
             'name' => $name,
             'email' => $email,
             'password' => Hash::make($password),

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Models\BackpackUser;
+use App\Models\User;
 use App\Rules\YoutubeVideoLimit;
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -25,7 +25,7 @@ class YoutubeVideoRequest extends FormRequest
         $user = backpack_user();
 
         // authorize super admins
-        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if ($user->hasRole(User::ROLE_SUPER_ADMIN)) {
             return true;
         }
 

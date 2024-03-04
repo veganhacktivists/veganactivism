@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\IdeaRequest;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -26,6 +27,7 @@ class IdeaCrudController extends CrudController
      */
     public function setup()
     {
+        abort_if(!backpack_user()->hasRole(User::ROLE_SUPER_ADMIN), 403);
         CRUD::setModel(\App\Models\Idea::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/idea');
         CRUD::setEntityNameStrings('idea', 'ideas');

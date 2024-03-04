@@ -9,7 +9,7 @@
       <option value="clicks">Popularity</option>
   </select>
 </div>
-	@if(Auth::check() && backpack_user()->can(\App\Models\BackpackUser::PERMISSION_NAVBAR_VIEW))
+	@if(Auth::check() && backpack_user()->can(\App\Models\User::PERMISSION_NAVBAR_VIEW))
 	<a href="{{backpack_url()}}" style="position: absolute;right: 15px;">
 	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #dc3545;">
 	<i class="fas fa-user-cog mr-2"></i> Administration Panel</button>

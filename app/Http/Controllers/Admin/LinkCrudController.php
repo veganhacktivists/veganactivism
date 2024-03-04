@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\LinkRequest;
-use App\Models\BackpackUser;
 use App\Models\Link;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -23,7 +23,7 @@ class LinkCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -35,7 +35,7 @@ class LinkCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
@@ -53,7 +53,7 @@ class LinkCrudController extends CrudController
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -100,9 +100,8 @@ class LinkCrudController extends CrudController
             'minimum_input_length' => 2, // minimum characters to type before querying results
         ];
 
-        // /* @var \App\Models\BackpackUser $user */
         $user = backpack_user();
-        if ($user->hasRole(BackpackUser::ROLE_ADMIN) && $user->organizations()->count() === 1) {
+        if ($user->hasRole(User::ROLE_ADMIN) && $user->organizations()->count() === 1) {
             $organizationSelectField['default'] = $this->user->organizations()->first()->id;
         }
 
@@ -112,7 +111,7 @@ class LinkCrudController extends CrudController
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */

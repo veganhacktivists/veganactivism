@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Models\Link;
-use App\Models\BackpackUser;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -26,7 +26,7 @@ class LinkRequest extends FormRequest
         $user = backpack_user();
 
         // authorize super admins
-        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if ($user->hasRole(User::ROLE_SUPER_ADMIN)) {
             return true;
         }
 

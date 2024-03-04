@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.3",
         "backpack/crud": "^6.0",
-        "backpack/permissionmanager": "^7.0",
+        "backpack/permissionmanager": "^7.1",
         "backpack/pro": "^2.1",
         "backpack/theme-coreuiv2": "^1.2",
         "barryvdh/laravel-elfinder": "^0.5.2",

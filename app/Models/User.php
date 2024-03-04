@@ -18,6 +18,30 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasRoles;
     use Notifiable;
 
+    const ROLE_SUPER_ADMIN = 'Super Admin';
+    const ROLE_ADMIN = 'Organization Admin';
+
+    // Permissions for Users
+    const PERMISSION_USERS_VIEW = 'View Users';
+    const PERMISSION_USERS_CREATE = 'Create Users';
+    const PERMISSION_USERS_EDIT = 'Edit Users';
+    const PERMISSION_USERS_DELETE = 'Delete Users';
+
+    // Permissions for Organizations
+    const PERMISSION_ORGANIZATIONS_VIEW = 'View Organizations';
+    const PERMISSION_ORGANIZATIONS_CREATE = 'Create Organizations';
+    const PERMISSION_ORGANIZATIONS_EDIT = 'Edit Orgnizations';
+    const PERMISSION_ORGANIZATIONS_DELETE = 'Delete Organizations';
+
+    // Permissions for Links
+    const PERMISSION_LINKS_VIEW = 'View Links';
+    const PERMISSION_LINKS_CREATE = 'Create Links';
+    const PERMISSION_LINKS_EDIT = 'Edit Links';
+    const PERMISSION_LINKS_DELETE = 'Delete Links';
+
+    // Permission for Navbar
+    const PERMISSION_NAVBAR_VIEW = 'View Navbar';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -114,5 +138,11 @@ class User extends Authenticatable implements MustVerifyEmail
     private function isPasswordCorrect(string $password)
     {
         return Hash::check($password, $this->password);
+    }
+
+    public function canEdit(Organization $organization)
+    {
+        return $this->can(self::PERMISSION_ORGANIZATIONS_EDIT)
+            || $this->organizations->contains($organization);
     }
 }

@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
-use App\Models\BackpackUser;
-use App\Models\Organization;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
 class OrganizationRequest extends FormRequest
@@ -26,7 +24,7 @@ class OrganizationRequest extends FormRequest
         $user = backpack_user();
 
         // authorize super admins
-        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if ($user->hasRole(User::ROLE_SUPER_ADMIN)) {
             return true;
         }
 

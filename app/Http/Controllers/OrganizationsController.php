@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Events\OrgLinkClicked;
-use App\Models\BackpackUser;
 use App\Models\Organization;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -39,7 +39,7 @@ class OrganizationsController extends Controller
 
         $results = DB::table('organizations');
 
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
             $results->join('organization_user', 'organization_id', '=', 'id')->where('user_id', $user->id);
         }
 

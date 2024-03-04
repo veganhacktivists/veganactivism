@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\OrganizationRequest;
-use App\Models\BackpackUser;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +23,7 @@ class OrganizationCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -35,7 +35,7 @@ class OrganizationCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
@@ -53,7 +53,7 @@ class OrganizationCrudController extends CrudController
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -67,7 +67,8 @@ class OrganizationCrudController extends CrudController
         CRUD::field('card_content')->label('Card Content')->type('textarea');
         CRUD::field('about')->type('summernote');
         CRUD::field('activism')->type('summernote');
-        if (Auth::user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        $user = backpack_user();
+        if ($user->hasRole(User::ROLE_SUPER_ADMIN)) {
             CRUD::field('featured')->type('checkbox');
             CRUD::field(['name' => 'users', 'type' => 'relationship', 'label' => 'Organization Admins', 'entity' => 'users', 'attribute' => 'name', 'model' => 'App\Models\User', 'pivot' => true]);
         }
@@ -80,7 +81,7 @@ class OrganizationCrudController extends CrudController
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */

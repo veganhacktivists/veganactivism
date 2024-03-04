@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\YoutubeVideoRequest;
-use App\Models\BackpackUser;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -73,9 +73,8 @@ class YoutubeVideoCrudController extends CrudController
             'minimum_input_length' => 2, // minimum characters to type before querying results
         ];
 
-        // /* @var \App\Models\BackpackUser $user */
         $user = backpack_user();
-        if ($user->hasRole(BackpackUser::ROLE_ADMIN) && $user->organizations()->count() === 1) {
+        if ($user->hasRole(User::ROLE_ADMIN) && $user->organizations()->count() === 1) {
             $organizationSelectField['default'] = $this->user->organizations()->first()->id;
         }
 
