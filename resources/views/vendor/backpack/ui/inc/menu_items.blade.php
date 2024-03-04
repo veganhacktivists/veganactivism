@@ -4,3 +4,5 @@
 <x-backpack::menu-item title="Links" icon="la la-link" :link="backpack_url('link')" />
 
 <x-backpack::menu-item title="Youtube Videos" icon="la la-youtube" :link="backpack_url('youtube-video')" />
+
+<x-backpack::menu-item title="Ideas" icon="la la-lightbulb" :link="backpack_url('idea')" />

@@ -15,7 +15,6 @@ Route::group([
 ], function () { // custom admin routes
     Route::crud('organization', 'OrganizationCrudController');
     Route::crud('link', 'LinkCrudController');
-    // Route::crud('idea', 'IdeaCrudController');
-    // Route::resource('youtubevideo', 'YoutubeVideoCrudController');
+    Route::crud('idea', 'IdeaCrudController');
     Route::crud('youtube-video', 'YoutubeVideoCrudController');
 }); // this should be the absolute last line of this file
