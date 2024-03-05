@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\OrgLinkClicked;
-use App\Models\BackpackUser;
-use App\Organization;
+use App\Models\Organization;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +17,7 @@ class OrganizationsController extends Controller
     public function show(Organization $organization)
     {
         if ($organization->website()) {
-            event(new OrgLinkClicked($organization, auth()->user() ?: null));
+            $organization->increaseClickCount();
         }
 
         return view('organizations.show', compact('organization'));
@@ -39,7 +38,7 @@ class OrganizationsController extends Controller
 
         $results = DB::table('organizations');
 
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
             $results->join('organization_user', 'organization_id', '=', 'id')->where('user_id', $user->id);
         }
 
@@ -55,9 +54,9 @@ class OrganizationsController extends Controller
     /**
      * Return a specific organization.
      *
-     * @param \App\Organization $organization
+     * @param \App\Models\Organization $organization
      *
-     * @return \App\Organization
+     * @return \App\Models\Organization
      */
     public function get(Organization $organization)
     {

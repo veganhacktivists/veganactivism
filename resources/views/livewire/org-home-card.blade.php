@@ -14,11 +14,11 @@
         </a>
       </h5>
       <p class="card-text">{{ $organization['card_content'] }}</p>
-      <div class="my-2 mx-1 row">
-        <a href="{{ $organization['show_route'] }}" class="btn btn-dark py-1"><i class="fas fa-info-circle mr-1"></i>Learn More</a>
-        <a href="{{ $organization['website_url'] }}" target="_blank" class="btn btn-danger ml-3 py-1"
+      <div class="my-2 mx-1 flex">
+        <a href="{{ $organization['show_route'] }}" class="btn btn-dark py-1"><i class="fas fa-info-circle me-1"></i>Learn More</a>
+        <a href="{{ $organization['website_url'] }}" target="_blank" class="btn btn-danger ms-3 py-1"
            onclick="axios.post('{{route('organizations.clicks.store', $organization['slug'])}}')">
-          <i class="fas fa-link mr-1"></i>Visit
+          <i class="fas fa-link me-1"></i>Visit
         </a>
       </div>
       <p class="card-text"><small><strong>{{ number_format($organization['website_clicks'], 0) }}</strong> Activists clicked on this.</small></p>

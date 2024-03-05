@@ -2,9 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\Link;
-use App\Models\BackpackUser;
-use App\Organization;
+use App\Models\Link;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -27,7 +26,7 @@ class LinkRequest extends FormRequest
         $user = backpack_user();
 
         // authorize super admins
-        if ($user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if ($user->hasRole(User::ROLE_SUPER_ADMIN)) {
             return true;
         }
 
@@ -48,7 +47,7 @@ class LinkRequest extends FormRequest
 
         $urlValidation .= $this->input('type') === Link::TYPE_EMAIL ? '|email' : '|url';
 
-        if (!$this->link) {
+        if (!request()->id) {
             $urlValidation .= '|unique:links,url';
         }
 

@@ -1,8 +1,8 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-use App\Models\BackpackUser;
-use App\User;
+use App\Models\User;
+use App\Models\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -28,4 +28,4 @@ $factoryFunction = function (Faker $faker) {
 };
 
 $factory->define(User::class, $factoryFunction);
-$factory->define(BackpackUser::class, $factoryFunction);
+$factory->define(User::class, $factoryFunction);

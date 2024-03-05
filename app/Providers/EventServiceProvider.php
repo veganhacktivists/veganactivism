@@ -3,15 +3,10 @@
 namespace App\Providers;
 
 use App\Events\OrgLinkClicked;
-use App\Listeners\AuthenticateUser;
 use App\Listeners\IncementOrgLinkClicks;
-use App\Listeners\LogoutUser;
-use Illuminate\Auth\Events\Login;
-use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -21,14 +16,6 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        Login::class => [
-            AuthenticateUser::class,
-        ],
-
-        Logout::class => [
-            LogoutUser::class,
-        ],
-
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],

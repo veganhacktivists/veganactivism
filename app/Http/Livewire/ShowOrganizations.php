@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Organization;
+use App\Models\Organization;
 
 class ShowOrganizations extends Component
 {

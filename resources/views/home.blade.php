@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="col-lg-8">
+  <div class="col col-lg-8">
     @include('partials.welcome-card')
 
     @livewire('show-organizations')

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Models\BackpackUser;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IdeaRequest extends FormRequest
@@ -15,7 +15,7 @@ class IdeaRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in and the user is a Super Admin
-        return backpack_auth()->check() && backpack_user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN);
+        return backpack_auth()->check() && backpack_user()->hasRole(User::ROLE_SUPER_ADMIN);
     }
 
     /**

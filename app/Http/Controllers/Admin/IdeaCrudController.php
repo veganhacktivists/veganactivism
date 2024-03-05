@@ -2,81 +2,85 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\IdeaRequest;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\IdeaRequest as StoreRequest;
-use App\Http\Requests\IdeaRequest as UpdateRequest;
-use App\Models\BackpackUser;
-use Backpack\CRUD\CrudPanel;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class IdeaCrudController.
- *
- * @property CrudPanel $crud
+ * Class IdeaCrudController
+ * @package App\Http\Controllers\Admin
+ * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
 class IdeaCrudController extends CrudController
 {
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+
+    /**
+     * Configure the CrudPanel object. Apply settings to all operations.
+     *
+     * @return void
+     */
     public function setup()
     {
-        abort_if(!backpack_user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN), 403);
+        abort_if(!backpack_user()->hasRole(User::ROLE_SUPER_ADMIN), 403);
+        CRUD::setModel(\App\Models\Idea::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/idea');
+        CRUD::setEntityNameStrings('idea', 'ideas');
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Idea');
-        $this->crud->setRoute(config('backpack.base.route_prefix').'/idea');
-        $this->crud->setEntityNameStrings('idea', 'ideas');
+    /**
+     * Define what happens when the List operation is loaded.
+     *
+     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+     * @return void
+     */
+    protected function setupListOperation()
+    {
+        $this->crud->addColumn('title');
+        $this->crud->addColumn('description');
+        $this->crud->addColumn([
+            'name' => 'color',
+            'type' => 'color',
+            'label' => 'Color Code (HEX)',
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-
-        $this->crud->addColumn(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
-        $this->crud->addColumn(['name' => 'description', 'type' => 'text', 'label' => 'Decription']);
-        $this->crud->addColumn(['name' => 'color', 'type' => 'text', 'label' => 'Color Code in HEX']);
-
-        $this->crud->addField([
-            'name' => 'title',
-            'label' => 'Title',
-            'type' => 'text',
         ]);
+    }
 
+    /**
+     * Define what happens when the Create operation is loaded.
+     *
+     * @see https://backpackforlaravel.com/docs/crud-operation-create
+     * @return void
+     */
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(IdeaRequest::class);
+        $this->crud->addField('title');
         $this->crud->addField([
             'name' => 'description',
-            'label' => 'Description',
             'type' => 'textarea',
         ]);
-
         $this->crud->addField([
             'name' => 'color',
-            'label' => 'Color Code in HEX',
-            'type' => 'text',
+            'type' => 'color',
+            'label' => 'Color Code (HEX)',
+            'default' => '#000000',
         ]);
-
-        // add asterisk for fields that are required in IdeaRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
 
-    public function store(StoreRequest $request)
+    /**
+     * Define what happens when the Update operation is loaded.
+     *
+     * @see https://backpackforlaravel.com/docs/crud-operation-update
+     * @return void
+     */
+    protected function setupUpdateOperation()
     {
-        // your additional operations before save here
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    public function update(UpdateRequest $request)
-    {
-        // your additional operations before save here
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->setupCreateOperation();
     }
 }

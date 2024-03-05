@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\OrgLinkClicked;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Request;
 
 class IncementOrgLinkClicks
 {
@@ -14,21 +15,12 @@ class IncementOrgLinkClicks
      */
     public function handle(OrgLinkClicked $event)
     {
-        if (!$event->user) {
-            $event->organization->website()->increment('click_count');
-
-            return;
-        }
-
-        $redisSet = $event->user->redisOrgLinksSet();
-
-        $orgRedisKey = strval($event->organization->id);
-
-        $hasClickedOrg = Redis::command('sismember', [$redisSet, $orgRedisKey]);
-
-        if (!$hasClickedOrg) {
-            Redis::command('sadd', [$redisSet, $orgRedisKey]);
-
+        $orgsClicked = app('request')->session()->get('orgs_clicked', []);
+        // dd($orgsClicked);
+        if (!in_array($event->organization->id, $orgsClicked)) {
+            $orgsClicked[] = $event->organization->id;
+            app('request')->session()->put('orgs_clicked', $orgsClicked);
+            // session()->put('orgs_clicked', json_encode($orgsClicked));
             $event->organization->website()->increment('click_count');
         }
     }

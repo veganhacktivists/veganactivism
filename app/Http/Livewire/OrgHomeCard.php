@@ -8,7 +8,7 @@ class OrgHomeCard extends Component
 {
     public $organization;
 
-    public function mount($organization)
+    public function mount($organization = null)
     {
         $this->organization = $organization;
     }

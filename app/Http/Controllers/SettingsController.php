@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SettingsController extends Controller
 {
@@ -19,6 +18,7 @@ class SettingsController extends Controller
 
     public function update(Request $request)
     {
+        /** @var App\Models\User $user */
         $user = Auth::user();
 
         $request->validate([
