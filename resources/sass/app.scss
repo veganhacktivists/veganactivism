@@ -19,15 +19,57 @@
 //Utilities
 @import '_utilities';
 
+a {
+    text-decoration: none;
+}
+
+.btn {
+    border-width: 2px!important;
+}
+
 .card {
     --bs-card-spacer-y: 1.5rem;
     --bs-card-spacer-x: 1.5rem;
     --bs-card-bg: #fff;
 }
+
+.card-body {
+    --bs-card-spacer-x: 1.25rem;
+    --bs-card-spacer-y: 1.25rem;
+}
+
+.container {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 0;
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
 .row {
-    --bs-gutter-x: 1.8rem;
+    --bs-gutter-x: 30px;
     --bs-gutter-y: 0;
 }
+
+// .organization-container {
+//     // @media(min-width: 1200px) {
+//     //     max-width: 1140px;
+//     // }
+//     // @media(min-width: 992px) {
+//     //     max-width: 960px;
+//     // }
+//     // @media(min-width: 768px) {
+//     //     max-width: 720px;
+//     // }
+//     // @media(min-width: 576px) {
+//     //     max-width: 540px;
+//     // }
+// }
+//
+// // .row {
+// //     --bs-gutter-x: 1.8rem;
+// //     --bs-gutter-y: 0;
+// // }
 
 .btn-purple {
   background-color: $purple;

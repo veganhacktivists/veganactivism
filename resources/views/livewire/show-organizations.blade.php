@@ -11,19 +11,24 @@
 </div>
 	@if(Auth::check() && backpack_user()->can(\App\Models\User::PERMISSION_NAVBAR_VIEW))
 	<a href="{{backpack_url()}}" style="position: absolute;right: 15px;">
-	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #dc3545;">
+	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple mb-0" style="background-color: #dc3545;">
 	<i class="fas fa-user-cog mr-2"></i> Administration Panel</button>
 	</a>
 	@else
 	<a href="/login">
-	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #343a40;">
+	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple mb-0" style="background-color: #343a40;">
 	Login&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
 	</a>
 	@endif
 </div>
 
     <div class="row">
-
+        @foreach ($featuredOrganizations as $organization)
+          @livewire('org-home-card', ['organization' => $organization], key($organization['id']))
+        @endforeach
+        @foreach ($regularOrganizations as $organization)
+          @livewire('org-home-card', ['organization' => $organization], key($organization['id']))
+        @endforeach
         <div class="col-md-6 col-lg-6">
             <div class="card my-3 border-0">
                 <img src="https://veganactivism.org/banners/add-your-organization.jpg" class="card-img-top" alt="Add your organization">
