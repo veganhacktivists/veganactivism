@@ -7,7 +7,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Storage;
-use Parsedown;
+use League\CommonMark\CommonMarkConverter;
 
 class Organization extends Model
 {
@@ -98,10 +98,11 @@ class Organization extends Model
         } else {
             $contents = '';
         }
+        $converter = new CommonMarkConverter();
 
         return new HtmlString(
             // @TODO Verify and set security options
-            Parsedown::instance()->text($contents)
+            $converter->convert($contents)
         );
     }
 
