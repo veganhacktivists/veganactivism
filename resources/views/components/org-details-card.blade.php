@@ -2,7 +2,7 @@
         <img src="{{ $organization->image_full_url}}" class="card-img-top embed-responsive-item" alt="...">
     <div class="card-body">
         <div class="row px-4 justify-content-between">
-          <span class="card-title font-weight-bold" style="color:#292929;">Get involved with {{ $organization->title }}!</span>
+          <span class="card-title fw-bold" style="color:#292929;">Get involved with {{ $organization->title }}!</span>
 
           @if(Auth::check() && backpack_user()->canEdit($organization))
             <a href="/admin/organization/{{$organization->id}}/edit">
@@ -40,7 +40,7 @@
           </p>
       @endif
 
-        <div class="row">
+        <div class="flex">
             @foreach($organization->links as $link)
               @if(View::exists('components.links.' . $link->type))
                 @include('components.links.' . $link->type, ['url' => $link->url])
@@ -57,7 +57,7 @@
             <a href="/" class="font-weight-bold primary" style="color:#292929;"><i class="fas fa-arrow-left"></i> Go back to homepage</a>
           </div>
 
-          <div class="col-sm-6 post-navigation text-right">
+          <div class="col-sm-6 post-navigation text-end">
             <div class="small text-muted">Page last updated: {{ \Carbon\Carbon::parse($organization->updated_at)->diffForHumans() }}</div>
           </div>
         </div>
