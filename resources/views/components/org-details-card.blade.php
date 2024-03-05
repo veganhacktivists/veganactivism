@@ -4,7 +4,7 @@
         <div class="row px-4 justify-content-between">
           <span class="card-title fw-bold" style="color:#292929;">Get involved with {{ $organization->title }}!</span>
 
-          @if(Auth::check() && backpack_user()->canEdit($organization))
+          @if(Auth::check() && backpack_user()?->canEdit($organization))
             <a href="/admin/organization/{{$organization->id}}/edit">
               <button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple" style="background-color: #343a40;">
                 Edit&nbsp;&nbsp;<i class="fas fa-sign-in-alt"></i></button>
