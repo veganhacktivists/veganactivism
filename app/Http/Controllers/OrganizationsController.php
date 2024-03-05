@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\OrgLinkClicked;
 use App\Models\Organization;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -18,7 +17,7 @@ class OrganizationsController extends Controller
     public function show(Organization $organization)
     {
         if ($organization->website()) {
-            event(new OrgLinkClicked($organization, auth()->user() ?: null));
+            $organization->increaseClickCount();
         }
 
         return view('organizations.show', compact('organization'));

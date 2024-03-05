@@ -16,5 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::post('/organizations/{organization}/clicks', 'OrganizationClicksController@store')->name('organizations.clicks.store');

@@ -18,9 +18,5 @@ class DatabaseSeeder extends Seeder
         $this->call(LinksTableSeeder::class);
         $this->call(IdeasTableSeeder::class);
         $this->call(YoutubeVideosTableSeeder::class);
-        $this->call(VisitorRegistryTableSeeder::class);
-        \App\Models\Link::where(['type' => \App\Models\Link::TYPE_WEBSITE])->get()->each(function ($link) {
-            $link->increment('click_count', 30);
-        });
     }
 }

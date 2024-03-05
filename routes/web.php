@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -26,6 +28,7 @@ Route::get('/contact', 'RedirectController@contact')->name('contact.form');
 Route::get('/pages/{organization}', 'OrganizationsController@show')->name('organizations.show');
 Route::get('/organizations', 'OrganizationsController@index')->name('organizations.index');
 Route::get('/organizations/{organization}', 'OrganizationsController@get');
+Route::post('/organizations/{organization}/clicks', 'OrganizationClicksController@store')->name('organizations.clicks.store');
 
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}', 'UsersController@get');

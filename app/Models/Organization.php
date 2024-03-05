@@ -49,6 +49,16 @@ class Organization extends Model
         return $this->links()->where('type', Link::TYPE_WEBSITE)->first();
     }
 
+    public function increaseClickCount()
+    {
+        $orgsClicked = request()->session()->get('orgs_clicked', []);
+        if (!in_array($this->id, $orgsClicked)) {
+            $orgsClicked[] = $this->id;
+            request()->session()->put('orgs_clicked', $orgsClicked);
+            $this->website()->increment('click_count');
+        }
+    }
+
     public function hasDetails()
     {
         return strlen($this->details) > 0;
