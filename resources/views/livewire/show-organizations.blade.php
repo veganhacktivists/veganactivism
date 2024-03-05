@@ -10,7 +10,7 @@
   </select>
 </div>
 	@if(Auth::check() && backpack_user()->can(\App\Models\User::PERMISSION_NAVBAR_VIEW))
-	<a href="{{backpack_url()}}" style="position: absolute;right: 15px;">
+	<a href="{{backpack_url()}}">
 	<button type="submit" class="btn rounded-1 btn-shadow button-link bg-color-purple mb-0" style="background-color: #dc3545;">
 	<i class="fas fa-user-cog mr-2"></i> Administration Panel</button>
 	</a>

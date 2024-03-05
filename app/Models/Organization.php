@@ -15,6 +15,13 @@ class Organization extends Model
 
     protected $guarded = [];
 
+    protected static function booted(): void
+    {
+        static::saving(function (Organization $organization) {
+            $organization->image_card_url = $organization->image_full_url;
+        });
+    }
+
     public function scopeFeatured($query)
     {
         return $query->where('featured', true);

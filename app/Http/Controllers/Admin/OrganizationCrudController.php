@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Auth;
 class OrganizationCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation { store as traitStore; }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation { update as traitUpdate; }
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
@@ -72,7 +72,8 @@ class OrganizationCrudController extends CrudController
         CRUD::field('slug')->type('text');
         CRUD::field('image_full_url')->label('Full Image url')->type('text');
         CRUD::field('call_to_action')->label('Call to Action')->type('textarea');
-        CRUD::field('card_content')->label('Card Content')->type('textarea');
+        // CRUD::field('card_content')->label('Card Content')->type('textarea')->limit(500);
+        CRUD::field(['name' => 'card_content', 'label' => 'Card Content', 'type' => 'textarea', 'limit' => 500]);
         CRUD::field('about')->type('summernote');
         CRUD::field('activism')->type('summernote');
         $user = backpack_user();
@@ -102,10 +103,10 @@ class OrganizationCrudController extends CrudController
     {
         $this->crud->addColumn('title');
         $this->crud->addColumn('slug');
-        $this->crud->addColumn('about');
+        $this->crud->addColumn(['name' => 'about', 'type' => 'summernote']);
         $this->crud->addColumn(['name' => 'activism', 'type' => 'summernote']);
-        $this->crud->addColumn(['name' => 'call_to_action', 'label' => 'Call to Action' ,  'type' => 'summernote']);
-        $this->crud->addColumn(['name' => 'card_content', 'label' => 'Card Content' ,  'type' => 'summernote']);
+        $this->crud->addColumn(['name' => 'call_to_action', 'label' => 'Call to Action']);
+        $this->crud->addColumn(['name' => 'card_content', 'label' => 'Card Content']);
         $this->crud->addColumn(['name' => 'image_full_url', 'label' => 'Image url']);
         $this->crud->addColumn('featured');
 
