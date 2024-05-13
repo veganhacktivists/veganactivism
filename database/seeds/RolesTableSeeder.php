@@ -12,7 +12,7 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        $role = Role::create(['name' => User::ROLE_SUPER_ADMIN]);
+        $role = Role::create(['name' => User::ROLE_SUPER_ADMIN, 'guard_name' => config('auth.defaults.guard')]);
         $superAdminPermissionIds = Permission::whereIn('name', [
             User::PERMISSION_USERS_VIEW,
             User::PERMISSION_USERS_CREATE,
@@ -30,7 +30,7 @@ class RolesTableSeeder extends Seeder
         ])->pluck('id')->toArray();
         $role->permissions()->attach($superAdminPermissionIds);
 
-        $role = Role::create(['name' => User::ROLE_ADMIN]);
+        $role = Role::create(['name' => User::ROLE_ADMIN, 'guard_name' => config('auth.defaults.guard')]);
         $adminPermissionIds = Permission::whereIn('name', [
             User::PERMISSION_ORGANIZATIONS_VIEW,
             User::PERMISSION_ORGANIZATIONS_EDIT,
