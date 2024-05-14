@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use App\Organization;
+use App\Models\Organization;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
-use Backpack\CRUD\CrudTrait;
 
 class YoutubeVideo extends Model
 {

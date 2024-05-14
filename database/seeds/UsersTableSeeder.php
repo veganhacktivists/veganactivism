@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\BackpackUser;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
@@ -11,16 +12,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $admin = BackpackUser::create([
+        $admin = User::create([
             'name' => 'Admin User',
             'email' => 'admin@'.preg_replace('/https?:\/\//', '', config('app.url')),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
         ]);
 
-        $admin->assignRole(BackpackUser::ROLE_SUPER_ADMIN);
-
-        factory(BackpackUser::class, 5)->create();
+        $admin->assignRole(User::ROLE_SUPER_ADMIN);
     }
 }

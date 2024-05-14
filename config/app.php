@@ -164,7 +164,6 @@ return [
          * Package Service Providers...
          */
         Barryvdh\Debugbar\ServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -175,7 +174,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\MailchimpServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Weboap\Visitor\VisitorServiceProvider::class,
     ],
 
     /*

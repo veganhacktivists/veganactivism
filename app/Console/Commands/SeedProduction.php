@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Role;
-use App\Models\BackpackUser;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
@@ -72,7 +72,7 @@ class SeedProduction extends Command
         do {
             $password = $this->secret('Password');
         } while (!$password);
-        $user = (new BackpackUser())->fill([
+        $user = (new User())->fill([
             'name' => $name,
             'email' => $email,
             'password' => Hash::make($password),
@@ -92,7 +92,7 @@ class SeedProduction extends Command
 
     private function seedCustomData()
     {
-        $org = \App\Organization::create([
+        $org = \App\Models\Organization::create([
             'title' => 'Anonymous for the Voiceless',
             'slug' => 'anonymous-for-the-voiceless',
             'image_card_url' => 'https://veganactivism.org/banners/anonymous-for-the-voiceless.jpg',

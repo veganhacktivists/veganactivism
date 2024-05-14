@@ -8,35 +8,31 @@
     ],
     "license": "MIT",
     "require": {
-        "xrstf/ip-utils": "1.1.0",
-        "php": "^7.3",
-        "backpack/crud": "^3.6",
-        "backpack/permissionmanager": "^4.0",
-        "barryvdh/laravel-cors": "^0.11.4",
-        "barryvdh/laravel-elfinder": "^0.4.3",
-        "fideloper/proxy": "^4.0",
-        "guzzlehttp/guzzle": "~6.0",
-        "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.8.0",
-        "livewire/livewire": "^0.3.6",
-        "predis/predis": "^1.1",
-        "weboap/visitor": "^2.0"
+        "php": "^8.3",
+        "backpack/crud": "^6.0",
+        "backpack/permissionmanager": "^7.1",
+        "backpack/pro": "^2.1",
+        "backpack/theme-coreuiv2": "^1.2",
+        "barryvdh/laravel-elfinder": "^0.5.2",
+        "guzzlehttp/guzzle": "~7.2",
+        "laravel/framework": "^10.0",
+        "laravel/tinker": "^2.1",
+        "laravel/ui": "^4.4",
+        "league/commonmark": "^2.4",
+        "livewire/livewire": "^2.5"
     },
     "require-dev": {
-        "backpack/generators": "^1.2",
-        "barryvdh/laravel-debugbar": "^3.2",
-        "barryvdh/laravel-ide-helper": "^2.6",
-        "beyondcode/laravel-dump-server": "^1.0",
-        "brainmaestro/composer-git-hooks": "^2.7",
-        "filp/whoops": "^2.0",
-        "friendsofphp/php-cs-fixer": "^2.15",
-        "fzaninotto/faker": "^1.4",
+        "backpack/generators": "^4.0",
+        "barryvdh/laravel-debugbar": "^3.9",
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "beyondcode/laravel-dump-server": "^1.9",
+        "brainmaestro/composer-git-hooks": "^3.0",
+        "fakerphp/faker": "^1.23",
+        "friendsofphp/php-cs-fixer": "^3.49",
         "laracasts/generators": "dev-master",
-        "mockery/mockery": "^1.0",
-        "mpratt/relativetime": "^1.5",
-        "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^7.5"
+        "laravel/sail": "*",
+        "mockery/mockery": "^1.6",
+        "mpratt/relativetime": "^1.5"
     },
     "config": {
         "optimize-autoloader": true,
@@ -91,10 +87,16 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "post-install-cmd": "vendor/bin/cghooks add --ignore-lock --force-win",
+        "post-install-cmd": ["php artisan storage:link --quiet"],
         "post-update-cmd": "vendor/bin/cghooks update",
         "cghooks": "vendor/bin/cghooks",
-        "php-cs-fixer": "vendor/bin/php-cs-fixer fix $(git diff --cached --name-only --diff-filter=ACM -- '*.php') --stop-on-violation --config .php_cs",
+        "php-cs-fixer": "vendor/bin/php-cs-fixer fix $(git diff --cached --name-only --diff-filter=ACM -- '*.php') --stop-on-violation --config .php-cs-fixer.php",
         "prettier": "yarn run prettier"
+    },
+    "repositories": {
+        "backpack": {
+            "type": "composer",
+            "url": "https://repo.backpackforlaravel.com/"
+        }
     }
 }

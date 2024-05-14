@@ -2,46 +2,73 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\BackpackUser;
+use App\Http\Requests\YoutubeVideoRequest;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\YoutubeVideoRequest as StoreRequest;
-use App\Http\Requests\YoutubeVideoRequest as UpdateRequest;
-use Backpack\CRUD\CrudPanel;
-use Illuminate\Support\Facades\Auth;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class YoutubeVideoCrudController.
- *
- * @property CrudPanel $crud
+ * Class YoutubeVideoCrudController
+ * @package App\Http\Controllers\Admin
+ * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
 class YoutubeVideoCrudController extends CrudController
 {
-    private $user;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
+    /**
+     * Configure the CrudPanel object. Apply settings to all operations.
+     *
+     * @return void
+     */
     public function setup()
     {
-        $this->user = Auth::user();
+        CRUD::setModel(\App\Models\YoutubeVideo::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/youtube-video');
+        CRUD::setEntityNameStrings('youtube video', 'youtube videos');
+        $user = backpack_user();
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess('delete');
+            $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
+                $query->whereHas('users', function ($query) use ($user) {
+                    $query->where('id', $user->id);
+                });
+            });
+        }
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Models\YoutubeVideo');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/youtubevideo');
-        $this->crud->setEntityNameStrings('youtubevideo', 'youtube_videos');
+    /**
+     * Define what happens when the List operation is loaded.
+     *
+     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+     * @return void
+     */
+    protected function setupListOperation()
+    {
+        $this->crud->addColumn([
+            'name' => 'url',
+            'label' => 'URL',
+        ]);
+    }
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-
-        $this->crud->addColumn(['name' => 'url', 'type' => 'url', 'label' => 'URL']);
-
-        $this->crud->addField(['name' => 'url', 'type' => 'url', 'label' => 'URL']);
-
+    /**
+     * Define what happens when the Create operation is loaded.
+     *
+     * @see https://backpackforlaravel.com/docs/crud-operation-create
+     * @return void
+     */
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(YoutubeVideoRequest::class);
+        $this->crud->addField([
+            'name' => 'url',
+            'label' => 'URL',
+            'type' => 'url',
+        ]);
         $organizationSelectField = [
             // 1-n relationship
             'label' => 'Organization', // Table column heading
@@ -49,88 +76,42 @@ class YoutubeVideoCrudController extends CrudController
             'name' => 'organization_id', // the column that contains the ID of that connected entity
             'entity' => 'organization', // the method that defines the relationship in the Model
             'attribute' => 'title', // foreign key attribute that is shown to the user
-            'model' => 'App\Organization', // foreign key model
+            'model' => 'App\Models\Organization', // foreign key model
             'data_source' => url('organizations'), // url to controller search function (with /{id} should return model)
             'placeholder' => 'Select the organization', // placeholder for the select
             'minimum_input_length' => 2, // minimum characters to type before querying results
         ];
 
-        if ($this->user->hasRole(BackpackUser::ROLE_ADMIN) && $this->user->organizations()->count() === 1) {
-            $organizationSelectField['default'] = $this->user->organizations()->first()->id;
+        $user = backpack_user();
+        if ($user->hasRole(User::ROLE_ADMIN) && $user->organizations()->count() === 1) {
+            $organizationSelectField['default'] = $user->organizations()->first()->id;
         }
 
         $this->crud->addField($organizationSelectField);
 
-        $this->manageButtons();
-
-        // add asterisk for fields that are required in YoutubeVideoRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
+        /**
+         * Fields can be defined using the fluent syntax:
+         * - CRUD::field('price')->type('number');
+         */
     }
 
-    // Override the edit method that displays the form for updating an organization
-    public function edit($id)
+    /**
+     * Define what happens when the Update operation is loaded.
+     *
+     * @see https://backpackforlaravel.com/docs/crud-operation-update
+     * @return void
+     */
+    protected function setupUpdateOperation()
     {
-        $user = $this->user;
-
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $organization = $user->organizations()->where('id', $this->crud->getEntry($id)->organization_id)->first();
-
-            abort_if(!$organization, 403);
-        }
-
-        return parent::edit($id);
+        $this->setupCreateOperation();
     }
 
-    public function store(StoreRequest $request)
+    protected function setupShowOperation()
     {
-        // your additional operations before save here
-        $request->merge(['url' => $this->getEmbedYoutubeUrl($request->input('url'))]);
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    public function update(UpdateRequest $request)
-    {
-        // your additional operations before save here
-        $request->merge(['url' => $this->getEmbedYoutubeUrl($request->input('url'))]);
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
-    }
-
-    // Override the search method that displays records in the youtube_videos table
-    public function search()
-    {
-        $user = $this->user;
-
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $this->crud->addClause('whereHas', 'organization', function ($query) use ($user) {
-                $query->whereHas('users', function ($query) use ($user) {
-                    $query->where('id', $user->id);
-                });
-            });
-        }
-
-        return parent::search();
-    }
-
-    // Manage default buttons by setting access
-    private function manageButtons()
-    {
-        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $this->crud->denyAccess('delete');
-        }
-    }
-
-    // Convert a YouTube link to an embeddable url 
-    private function getEmbedYoutubeUrl($url)
-    {
-        $pattern = "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i";
-        $replacement = "www.youtube.com/embed/$2";
-        return preg_replace($pattern, $replacement, $url);
+        $this->crud->addColumn('url', 'URL');
+        $this->crud->addColumn([
+            'name' => 'organization.title',
+            'label' => 'Organization',
+        ]);
     }
 }

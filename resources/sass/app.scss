@@ -18,3 +18,120 @@
 
 //Utilities
 @import '_utilities';
+
+a {
+    text-decoration: none;
+}
+
+.small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.btn {
+    border-width: 2px!important;
+}
+
+.card {
+    --bs-card-spacer-y: 1.5rem;
+    --bs-card-spacer-x: 1.5rem;
+    --bs-card-bg: #fff;
+}
+
+.card-body {
+    --bs-card-spacer-x: 1.25rem;
+    --bs-card-spacer-y: 1.25rem;
+}
+
+.container {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 0;
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 0;
+}
+
+// .organization-container {
+//     // @media(min-width: 1200px) {
+//     //     max-width: 1140px;
+//     // }
+//     // @media(min-width: 992px) {
+//     //     max-width: 960px;
+//     // }
+//     // @media(min-width: 768px) {
+//     //     max-width: 720px;
+//     // }
+//     // @media(min-width: 576px) {
+//     //     max-width: 540px;
+//     // }
+// }
+//
+// // .row {
+// //     --bs-gutter-x: 1.8rem;
+// //     --bs-gutter-y: 0;
+// // }
+
+.btn-purple {
+  background-color: $purple;
+  color: $white;
+  border: 1px solid transparent;
+  &:hover:not(.no-hover) {
+    background-color: darken($purple, 10%);
+  }
+  &.no-hover {
+    background-color: $purple;
+  }
+}
+
+.btn-blue {
+  background-color: $blue;
+  color: $white;
+  border: 1px solid transparent;
+  &:hover:not(.no-hover) {
+    background-color: darken($blue, 10%);
+  }
+  &.no-hover {
+    background-color: $blue;
+  }
+}
+
+.btn-yellow {
+  background-color: $yellow;
+  color: $white;
+  border: 1px solid transparent;
+  &:hover:not(.no-hover) {
+    background-color: darken($yellow, 10%);
+  }
+  &.no-hover {
+    background-color: $yellow;
+  }
+}
+
+.btn-dark-green {
+  background-color: $dark-green;
+  color: $white;
+  border: 1px solid transparent;
+  &:hover:not(.no-hover) {
+    background-color: darken($dark-green, 10%);
+  }
+  &.no-hover {
+    background-color: $dark-green;
+  }
+}
+
+.btn-red {
+    background-color: $resource-red;
+    color: $white;
+    border: 1px solid transparent;
+    &:hover:not(.no-hover) {
+      background-color: darken($resource-red, 10%);
+    }
+    &.no-hover {
+      background-color: $resource-red;
+    }
+}

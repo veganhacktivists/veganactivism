@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Models\BackpackUser;
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UserRequest extends FormRequest
@@ -14,7 +14,7 @@ class UserRequest extends FormRequest
      */
     public function authorize()
     {
-        return backpack_auth()->check() && backpack_user()->hasRole(BackpackUser::ROLE_SUPER_ADMIN);
+        return backpack_auth()->check() && backpack_user()->hasRole(User::ROLE_SUPER_ADMIN);
     }
 
     /**

@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Idea;
+use App\Models\Idea;
 
 class ShowMicroactivsm extends Component
 {

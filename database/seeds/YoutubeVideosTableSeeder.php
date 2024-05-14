@@ -53,7 +53,7 @@ class YoutubeVideosTableSeeder extends Seeder
         ];
 
         foreach ($linksForSlug as $slug => $linksArr) {
-            $org = \App\Organization::where(['slug' => $slug])->first();
+            $org = \App\Models\Organization::where(['slug' => $slug])->first();
 
             foreach ($linksArr as $youtubeVideoUrl) {
                 $org->youtubeVideos()->create([

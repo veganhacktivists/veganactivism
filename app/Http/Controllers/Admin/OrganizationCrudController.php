@@ -2,202 +2,114 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\OrganizationRequest;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-// VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\OrganizationRequest as StoreRequest;
-use App\Http\Requests\OrganizationRequest as UpdateRequest;
-use App\Models\BackpackUser;
-use Backpack\CRUD\CrudPanel;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Class OrganizationCrudController.
- *
- * @property CrudPanel $crud
+ * Class OrganizationCrudController
+ * @package App\Http\Controllers\Admin
+ * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
 class OrganizationCrudController extends CrudController
 {
-    private $user;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation { store as traitStore; }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation { update as traitUpdate; }
+    use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+    use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
+    /**
+     * Configure the CrudPanel object. Apply settings to all operations.
+     *
+     * @return void
+     */
     public function setup()
     {
-        $this->user = Auth::user();
+        CRUD::setModel(\App\Models\Organization::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/organization');
+        CRUD::setEntityNameStrings('organization', 'organizations');
+        $user = backpack_user();
 
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Basic Information
-        |--------------------------------------------------------------------------
-        */
-        $this->crud->setModel('App\Organization');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/organization');
-        $this->crud->setEntityNameStrings('organization', 'organizations');
-
-        /*
-        |--------------------------------------------------------------------------
-        | CrudPanel Configuration
-        |--------------------------------------------------------------------------
-        */
-
-        //Columns
-        $this->crud->addColumn(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
-        $this->crud->addColumn(['name' => 'slug', 'type' => 'text', 'label' => 'Slug']);
-        $this->crud->addColumn(['name' => 'about', 'type' => 'text', 'label' => 'About']);
-        $this->crud->addColumn(['name' => 'activism', 'type' => 'textarea', 'label' => 'Activism']);
-        $this->crud->addColumn(['name' => 'call_to_action', 'type' => 'text', 'label' => 'Call to Action']);
-        $this->crud->addColumn(['name' => 'card_content', 'type' => 'text', 'label' => 'Card Content']);
-        $this->crud->addColumn(['name' => 'image_full_url', 'type' => 'text', 'label' => 'Image url']);
-        $this->crud->addColumn(['name' => 'featured', 'type' => 'checkbox', 'label' => 'Featured']);
-
-        // Fields
-        $this->crud->addField(
-            [
-                'name' => 'title',
-                'type' => 'text',
-                'label' => 'Title',
-                'attributes' => [
-                    'placeholder' => 'Organization title',
-                ],
-            ]
-        );
-        $this->crud->addField(
-            [
-                'name' => 'slug',
-                'type' => 'text',
-                'label' => 'Slug',
-                'attributes' => [
-                    'placeholder' => 'Organization slug',
-                ],
-            ]
-        );
-        $this->crud->addField([
-            'name' => 'image_full_url',
-            'type' => 'url',
-            'label' => 'Full Image url',
-            'attributes' => [
-                'placeholder' => 'URL to full banner image (1280x386)',
-            ],
-        ]);
-        $this->crud->addField([
-            'name' => 'call_to_action',
-            'type' => 'textarea',
-            'label' => 'Call to Action (max 65 characters)',
-            'attributes' => [
-                'placeholder' => 'Call to action text',
-                'maxLength' => 65
-            ],
-            ''
-        ]);
-        $this->crud->addField([
-            'name' => 'card_content',
-            'type' => 'textarea',
-            'label' => 'Card Content (max 125 characters)',
-            'attributes' => [
-                'placeholder' => 'Card content',
-                'maxLength' => 125
-            ],
-        ]);
-        $this->crud->addField([
-            'name' => 'about',
-            'type' => 'summernote',
-            'label' => 'About',
-            'attributes' => [
-                'placeholder' => 'About the organization',
-            ],
-        ]);
-        $this->crud->addField([
-            'name' => 'activism',
-            'type' => 'summernote',
-            'label' => 'Activism',
-            'attributes' => [
-                'placeholder' => 'Type of activism',
-            ],
-        ]);
-
-        if ($this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $this->crud->addField([
-                'name' => 'featured',
-                'type' => 'checkbox',
-                'label' => 'Featured',
-            ]);
-
-            $this->crud->addField([
-                // n-n relationship
-                'label' => 'Organization Admins', // Table column heading
-                'type' => 'select2_from_ajax_multiple',
-                'name' => 'users', // the column that contains the ID of that connected entity
-                'entity' => 'user', // the method that defines the relationship in your Model
-                'attribute' => 'name', // foreign key attribute that is shown to user
-                'model' => 'App\User', // foreign key model
-                'data_source' => url('users'), // url to controller search function (with /{id} should return model)
-                'placeholder' => 'Select a user', // placeholder for the select
-                'minimum_input_length' => 2, // minimum characters to type before querying results
-                'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
-            ]);
-        }
-
-        $this->manageButtons();
-
-        // add asterisk for fields that are required in OrganizationRequest
-        $this->crud->setRequiredFields(StoreRequest::class, 'create');
-        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
-    }
-
-    // Manage default buttons by setting access
-    private function manageButtons()
-    {
-        $this->crud->allowAccess('show');
-
-        if (!$this->user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $this->crud->denyAccess('create');
-            $this->crud->denyAccess('delete');
-        }
-    }
-
-    // Override the search method that displays records in the organizations table
-    public function search()
-    {
-        $user = $this->user;
-
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
+        if (!$user->hasRole(User::ROLE_SUPER_ADMIN)) {
+            $this->crud->denyAccess(['create', 'delete']);
             $this->crud->addClause('whereHas', 'users', function ($query) use ($user) {
                 $query->where('user_id', $user->id);
             });
         }
-
-        return parent::search();
     }
 
-    // Override the edit method that displays the form for updating an organization
-    public function edit($id)
+    /**
+     * Define what happens when the List operation is loaded.
+     *
+     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+     * @return void
+     */
+    protected function setupListOperation()
     {
-        $user = $this->user;
+        $this->crud->addColumn('title');
+        $this->crud->addColumn('slug');
+        $this->crud->addColumn('about');
 
-        if (!$user->hasRole(BackpackUser::ROLE_SUPER_ADMIN)) {
-            $organization = $user->organizations()->where('id', $id)->first();
+        /**
+         * Columns can be defined using the fluent syntax:
+         * - CRUD::column('price')->type('number');
+         */
+    }
 
-            abort_if(!$organization, 403);
+    /**
+     * Define what happens when the Create operation is loaded.
+     *
+     * @see https://backpackforlaravel.com/docs/crud-operation-create
+     * @return void
+     */
+    protected function setupCreateOperation()
+    {
+        CRUD::setValidation(OrganizationRequest::class);
+        CRUD::field('title')->type('text');
+        CRUD::field('slug')->type('text');
+        CRUD::field('image_full_url')->label('Full Image url')->type('text');
+        CRUD::field('call_to_action')->label('Call to Action')->type('textarea');
+        // CRUD::field('card_content')->label('Card Content')->type('textarea')->limit(500);
+        CRUD::field(['name' => 'card_content', 'label' => 'Card Content', 'type' => 'textarea', 'limit' => 500]);
+        CRUD::field('about')->type('summernote');
+        CRUD::field('activism')->type('summernote');
+        $user = backpack_user();
+        if ($user->hasRole(User::ROLE_SUPER_ADMIN)) {
+            CRUD::field('featured')->type('checkbox');
+            CRUD::field(['name' => 'users', 'type' => 'relationship', 'label' => 'Organization Admins', 'entity' => 'users', 'attribute' => 'name', 'model' => 'App\Models\User', 'pivot' => true]);
         }
 
-        return parent::edit($id);
+        /**
+         * Fields can be defined using the fluent syntax:
+         * - CRUD::field('price')->type('number');
+         */
     }
 
-    public function store(StoreRequest $request)
+    /**
+     * Define what happens when the Update operation is loaded.
+     *
+     * @see https://backpackforlaravel.com/docs/crud-operation-update
+     * @return void
+     */
+    protected function setupUpdateOperation()
     {
-        // your additional operations before save here
-        $request->merge(['image_card_url' => $request->input('image_full_url')]);
-        $redirect_location = parent::storeCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->setupCreateOperation();
     }
 
-    public function update(UpdateRequest $request)
+    protected function setupShowOperation()
     {
-        // your additional operations before save here
-        $request->merge(['image_card_url' => $request->input('image_full_url')]);
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        $this->crud->addColumn('title');
+        $this->crud->addColumn('slug');
+        $this->crud->addColumn(['name' => 'about', 'type' => 'summernote']);
+        $this->crud->addColumn(['name' => 'activism', 'type' => 'summernote']);
+        $this->crud->addColumn(['name' => 'call_to_action', 'label' => 'Call to Action']);
+        $this->crud->addColumn(['name' => 'card_content', 'label' => 'Card Content']);
+        $this->crud->addColumn(['name' => 'image_full_url', 'label' => 'Image url']);
+        $this->crud->addColumn('featured');
+
+
     }
 }

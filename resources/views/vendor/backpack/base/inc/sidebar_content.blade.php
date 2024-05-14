@@ -24,7 +24,7 @@
   </a>
 </li>
 
-@role(\App\Models\BackpackUser::ROLE_SUPER_ADMIN)
+@role(\App\Models\User::ROLE_SUPER_ADMIN)
 <li>
   <a href='{{ backpack_url('idea') }}'>
     <i class="far fa-hand-peace"></i> <span>Ideas</span>
