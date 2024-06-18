@@ -1,6 +1,6 @@
 <div class="card my-3">
     <div class="card-body">
-        <a href="https://veganactivism.org"><img src="https://i.imgur.com/NgQ72ay.png" class="img-full"></a>
+        <a href="https://veganactivism.org"><img src="{{ asset('images/va-logo.png') }}" alt="VeganActivism.org" class="img-full"></a>
     </div>
 </div>
 
@@ -22,7 +22,8 @@ padding-bottom: 14px !important;
                     Vegan Activist Community
                 </button>
             </a>
-			<a href="https://activisthub.org" target="_blank">
+
+            <a href="https://activisthub.org" target="_blank">
                 <button type="submit" class="btn btn-red no-hover rounded-1 btn-shadow button-link">
                     <i class="fas fa-leaf me-2"></i>
                     Track your activist impact
@@ -109,11 +110,12 @@ padding-bottom: 14px !important;
         Feel free to <a href="{{ route('contact.form') }}" target="_blank">contact us</a>, or
         <a href="https://veganhacktivists.org/support" target="_blank">donate if you can</a>,
         it's very appreciated! <i class="fas fa-hand-holding-heart ml-1"></i>
+    </ul>
 
 </div>
 
 <div class="card p-3 my-3 bg-color-gray text-center pt-4 pb-4" style="background-color: #292929;">
-    <a href="https://veganhacktivists.org" target="_blank"><img src="https://i.imgur.com/4L6Hvgn.png" style="width:200px;padding-bottom: 10px;"></a>
+    <a href="https://veganhacktivists.org" target="_blank"><img src="{{ asset('images/vh-logo.png') }}" alt="Vegan Hacktivists" style="width:200px;padding-bottom: 10px;"></a>
     <span style="color:white;" class="pt-2">Designed with love by</span> <a href="https://veganhacktivists.org" target="_blank">Vegan Hacktivists</a>
 
 </div>
