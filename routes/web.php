@@ -35,4 +35,4 @@ Route::get('/users/{user}', 'UsersController@get');
 
 Route::get('/redirect/{to}', 'RedirectController@index')->name('redirect.to');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home2');
