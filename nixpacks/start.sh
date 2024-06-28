@@ -12,6 +12,8 @@ php artisan config:cache
 # Optimize Laravel
 php artisan optimize
 
+php artisan livewire:discover
+
 # Transform the nginx configuration
 node /assets/scripts/prestart.mjs ./nixpacks/nginx.template.conf /etc/nginx.conf
 
