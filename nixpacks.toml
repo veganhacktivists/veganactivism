@@ -1,14 +1,14 @@
 [phases.setup]
 nixPkgs = [
   "...",
-  "python311Packages.supervisor"
+  "python311Packages.supervisor",
+
+  # error: collision between `/nix/store/6bd7w78kvs8lv6bpbrpxnkk4j5h73r7m-pnpm/LICENSE' and `/nix/store/9l48l88x57rzxhkvv3y43wjky3wzbqh6-composer-2.7.7/LICENSE'
+  "(lib.hiPrio php83Packages.composer)",
 ]
 
 [phases.install]
-cmds = [
-  'corepack enable',
-  '...',
-]
+cmds = ['corepack enable', '...']
 
 [phases.build]
 cmds = [
@@ -17,7 +17,7 @@ cmds = [
   "cp /app/nixpacks/supervisord.conf /etc/supervisord.conf",
   "cp /app/nixpacks/start.sh /assets/start.sh",
   "chmod +x /assets/start.sh",
-  "..."
+  "...",
 ]
 
 [start]
