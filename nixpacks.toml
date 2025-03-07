@@ -16,6 +16,8 @@ cmds = [
   "cp /app/nixpacks/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf",
   "cp /app/nixpacks/supervisord.conf /etc/supervisord.conf",
   "cp /app/nixpacks/start.sh /assets/start.sh",
+  "chown -R wwww-data /app/storage",
+  "chown -R wwww-data /app/bootstrap",
   "chmod +x /assets/start.sh",
   "...",
 ]
