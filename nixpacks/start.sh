@@ -17,6 +17,7 @@ php artisan livewire:discover
 php artisan basset:clear
 
 chown -R www-data /app/storage
+chown -R www-data /app/vendor
 
 # Transform the nginx configuration
 node /assets/scripts/prestart.mjs ./nixpacks/nginx.template.conf /etc/nginx.conf
