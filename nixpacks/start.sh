@@ -14,6 +14,10 @@ php artisan optimize
 
 php artisan livewire:discover
 
+php artisan basset:clear
+
+chown -R www-data /app/storage
+
 # Transform the nginx configuration
 node /assets/scripts/prestart.mjs ./nixpacks/nginx.template.conf /etc/nginx.conf
 
