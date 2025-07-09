@@ -8,7 +8,11 @@ nixPkgs = [
 ]
 
 [phases.install]
-cmds = ['corepack prepare pnpm@9.14.2 --activate', '...']
+cmds = [
+  'composer config http-basic.${COMPOSER_DOMAIN} ${COMPOSER_USERNAME} ${COMPOSER_PASSWORD}',
+  'corepack prepare pnpm@9.14.2 --activate',
+  '...',
+]
 
 [phases.build]
 cmds = [
