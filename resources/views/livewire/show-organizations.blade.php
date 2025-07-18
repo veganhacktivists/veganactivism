@@ -24,10 +24,10 @@
 
     <div class="row">
         @foreach ($featuredOrganizations as $organization)
-          @livewire('org-home-card', ['organization' => $organization], key($organization['id']))
+          @livewire('org-home-card', ['organization' => $organization], key: $organization['id'])
         @endforeach
         @foreach ($regularOrganizations as $organization)
-          @livewire('org-home-card', ['organization' => $organization], key($organization['id']))
+          @livewire('org-home-card', ['organization' => $organization], key: $organization['id'])
         @endforeach
         <div class="col-md-6 col-lg-6">
             <div class="card my-3 border-0">

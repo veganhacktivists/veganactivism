@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Organization;
+use Livewire\Attributes\Locked;
 
 class ShowOrganizations extends Component
 {
     public $sort;
 
-    public $featuredOrganizations;
+    #[Locked]
+    public $featuredOrganizations = [];
 
-    public $regularOrganizations;
+    #[Locked]
+    public $regularOrganizations = [];
 
     public function mount()
     {

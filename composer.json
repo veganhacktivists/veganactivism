@@ -15,24 +15,22 @@
         "backpack/theme-coreuiv2": "^1.2",
         "barryvdh/laravel-elfinder": "^0.5.2",
         "guzzlehttp/guzzle": "~7.2",
-        "laravel/framework": "^10.0",
-        "laravel/tinker": "^2.1",
-        "laravel/ui": "^4.4",
+        "laravel/framework": "^12.0",
+        "laravel/tinker": "^2.10",
+        "laravel/ui": "^4.5",
         "league/commonmark": "^2.4",
-        "livewire/livewire": "^2.5"
+        "livewire/livewire": "^3.0"
     },
     "require-dev": {
-        "backpack/generators": "^4.0",
-        "barryvdh/laravel-debugbar": "^3.9",
-        "barryvdh/laravel-ide-helper": "^2.13",
-        "beyondcode/laravel-dump-server": "^1.9",
+        "barryvdh/laravel-debugbar": "^3.13",
+        "barryvdh/laravel-ide-helper": "^3.0",
         "brainmaestro/composer-git-hooks": "^3.0",
         "fakerphp/faker": "^1.23",
         "friendsofphp/php-cs-fixer": "^3.49",
-        "laracasts/generators": "dev-master",
         "laravel/sail": "*",
         "mockery/mockery": "^1.6",
-        "mpratt/relativetime": "^1.5"
+        "mpratt/relativetime": "^1.5",
+        "phpunit/phpunit": "^11.0"
     },
     "config": {
         "optimize-autoloader": true,
