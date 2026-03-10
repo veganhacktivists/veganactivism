@@ -18,10 +18,10 @@
     },
     "pnpm": {
         "overrides": {
-            "braces": "^3.0.3"
+            "braces": "^3.0.3",
+            "immutable": "^4.3.8"
         }
     },
-
     "dependencies": {
         "@popperjs/core": "^2.11.8"
     },
