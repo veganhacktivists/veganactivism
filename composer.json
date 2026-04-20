@@ -30,7 +30,7 @@
         "laravel/sail": "*",
         "mockery/mockery": "^1.6",
         "mpratt/relativetime": "^1.5",
-        "phpunit/phpunit": "^11.0"
+        "phpunit/phpunit": "^12.5"
     },
     "config": {
         "optimize-autoloader": true,
